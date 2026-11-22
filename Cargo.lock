@@ -113,6 +113,7 @@ name = "b789-sim-cli"
 version = "0.1.0"
 dependencies = [
  "b789-render",
+ "b789-sys-ccs",
  "b789-sys-electrical",
  "b789-tablet",
  "toml",

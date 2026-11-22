@@ -1,3 +1,5 @@
+#[cfg(feature = "aircraft")]
+pub mod aircraft;
 pub mod cli;
 #[cfg(feature = "electrical")]
 pub mod electrical;
@@ -8,6 +10,8 @@ pub mod report;
 pub mod runner;
 #[cfg(feature = "electrical")]
 pub mod stress;
+#[cfg(feature = "aircraft")]
+pub mod stress_aircraft;
 pub mod target;
 pub mod value;
 #[cfg(feature = "electrical")]

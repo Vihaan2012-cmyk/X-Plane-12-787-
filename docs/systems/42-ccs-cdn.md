@@ -1,6 +1,6 @@
 # 42 — Common Core System (CCS) and Common Data Network (CDN)
 
-Status: full plan, not built. Sources: `ata42.txt`, `tat_ata42.txt` (TAT ATA 42, 102 pages), `ata45.txt`, `stm.txt` 1570–2492, `lot_fcom.txt`, AD 2020-06-14; facts in `refs/facts/facts_ccs.verified.md`. **(verify)** = not confirmed. `APPROX` = engineered value in code.
+Status: built (steps 1–7, see Build status). Remaining items are under Open data. Sources: `ata42.txt`, `tat_ata42.txt` (TAT ATA 42, 102 pages), `ata45.txt`, `stm.txt` 1570–2492, `lot_fcom.txt`, AD 2020-06-14; facts in `refs/facts/facts_ccs.verified.md`. **(verify)** = not confirmed. `APPROX` = engineered value in code.
 
 ## Depth target
 | Layer | Depth |
@@ -201,6 +201,28 @@ Status: full plan, not built. Sources: `ata42.txt`, `tat_ata42.txt` (TAT ATA 42,
 5. **Interfaces:** EICAS status messages, maintenance pages, EFB network inspector.
 6. **Electrical on the CDN:** move electrical's internal paths (EICAS, synoptic, CBIC, load management to the RPDUs, BPCU data) onto real frames.
 7. **Failures and tests,** including the 51-day case.
+
+## Build status
+| Step | State | Notes |
+|---|---|---|
+| 1 Platform | Done | PCM power, 18 V switch-over, 11 s HBB hold-up with NVM save, reset hard-off, start modes, cooling LPS/AAF, RDC power from TAT tables |
+| 2 CDN | Done | Frame-level A/B network: BAG shaping with jitter, policing, store-and-forward, 2-priority queues, CRC, BER, integrity and redundancy checks, sequence numbers; quiet-network fast path when nothing changes or fails |
+| 3 RDC | Done | 21 RDCs; 14 IFZs carried as validity bits in each RDC frame; IFZ fault drops only that zone |
+| 4 GPM | Done | 6 IS partitions plus hosted apps per GPM in a 25 ms major frame (`APPROX`); crash, restart, 3 restarts in 60 s holds the partition; dual lanes; data-load mode gated by GND TEST |
+| 5 Interfaces | Done | Crew status messages through CCSHM; `CCS HEALTH MANAGEMENT` when every CCSHM is lost; CCS/CDN maintenance pages 1–3 and 7–11 (4–6 DCAS belong to displays) |
+| 6 Electrical on CDN | Done | Electrical EICAS state goes from the BPCUs (P300/P400) as a dataset to crew alerting on L2/L3/L7/R2/R3; CAS shows it only while its data is valid |
+| 7 Failures and tests | Done | 9 part types, 35 modes (693 failure points), every mode visible (audit test), every link open visible; aircraft stress with invariants and determinism |
+
+### Behaviours worth knowing
+- **Message age uses the source timestamp in the payload**, not reception time. A replaying switch can deliver old frames that pass the integrity check, so the age monitor catches them; after 51 days of power it does not (AD 2020-06-14).
+- **CCR power is constrained by the battery-only bound:** discharge ≥ 30 A for 20 s inhibits discharge (eps24:21949). Boot 220 W, run 250 W `APPROX`; electrical's 220 W CCS stand-in (`STANDIN_CCS_L`) is zeroed when CCS is coupled.
+- **Source corruption before CRC** gives plausible but wrong data: a corrupted BPCU frame shows a false ELEC message.
+
+### Engineered (`APPROX`)
+- ARS placement and fibre ring (FOX L→ARS 5/6, FOX R→ARS 1/2, ARS 1–3, 5–3, 2–4, 6–4); RDC→ARS by location; RDC 1/2 and gateway RPDUs on ACS 10 Mb ports.
+- VL table generated from hosted apps, RDCs, BPCUs and gateway RPDUs (RDC 16 ms, apps and BPCU 32 ms, time 128 ms).
+- Switch latency 20 µs, queue 64 frames, max skew 2 ms, stale after 3 BAG + 2 ms, major frame 25 ms, partition restart 2 s.
+- Cabinet thermal constants and overtemp thresholds.
 
 ## Open data
 - ARS positions, RDC 21 secondary and location, and the sensor-to-RDC map (Locator, ATA books).

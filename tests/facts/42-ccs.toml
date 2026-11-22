@@ -1,0 +1,359 @@
+[[fact]]
+id = "F42-001"
+quantity = "ccs.param.cabinet_count"
+expected = 2
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:10"
+
+[[fact]]
+id = "F42-002"
+quantity = "ccs.param.gpm_per_cabinet"
+expected = 8
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:16"
+
+[[fact]]
+id = "F42-003"
+quantity = "ccs.param.pcm_per_cabinet"
+expected = 2
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:19"
+
+[[fact]]
+id = "F42-004"
+quantity = "ccs.param.acs_per_cabinet"
+expected = 2
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:17"
+
+[[fact]]
+id = "F42-005"
+quantity = "ccs.param.fox_per_cabinet"
+expected = 2
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:18"
+
+[[fact]]
+id = "F42-006"
+quantity = "ccs.param.ars_count"
+expected = 6
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:12"
+
+[[fact]]
+id = "F42-007"
+quantity = "ccs.param.ars_per_channel"
+expected = 3
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:13"
+
+[[fact]]
+id = "F42-008"
+quantity = "ccs.param.acs_ports"
+expected = 24
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:50"
+
+[[fact]]
+id = "F42-009"
+quantity = "ccs.param.acs_100m_ports"
+expected = 20
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:52"
+
+[[fact]]
+id = "F42-010"
+quantity = "ccs.param.ars_ports"
+expected = 24
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:64"
+
+[[fact]]
+id = "F42-011"
+quantity = "ccs.param.ars_fibre_ports"
+expected = 4
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:65"
+
+[[fact]]
+id = "F42-012"
+quantity = "ccs.param.pcm_switch_v"
+expected = 18
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:120"
+
+[[fact]]
+id = "F42-013"
+quantity = "ccs.param.pcm_out_v"
+expected = 12.5
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:115"
+
+[[fact]]
+id = "F42-014"
+quantity = "ccs.param.hbb_holdup_s"
+expected = 11
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:119"
+
+[[fact]]
+id = "F42-015"
+quantity = "ccs.param.full_pbit_max_s"
+expected = 180
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:184"
+
+[[fact]]
+id = "F42-016"
+quantity = "ccs.param.ccr_startup_min_s"
+expected = 120
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:186"
+
+[[fact]]
+id = "F42-017"
+quantity = "ccs.param.ccr_startup_max_s"
+expected = 180
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:186"
+
+[[fact]]
+id = "F42-018"
+quantity = "ccs.param.inhibited_displays_s"
+expected = 60
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:196"
+
+[[fact]]
+id = "F42-019"
+quantity = "ccs.param.inhibited_hosted_min_s"
+expected = 55
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:197"
+
+[[fact]]
+id = "F42-020"
+quantity = "ccs.param.inhibited_hosted_max_s"
+expected = 75
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:197"
+
+[[fact]]
+id = "F42-021"
+quantity = "ccs.param.network_boot_max_s"
+expected = 45
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:198"
+
+[[fact]]
+id = "F42-022"
+quantity = "ccs.param.fibre_mbps"
+expected = 100
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:32"
+
+[[fact]]
+id = "F42-023"
+quantity = "ccs.param.copper_inside_mbps"
+expected = 100
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:34"
+
+[[fact]]
+id = "F42-024"
+quantity = "ccs.param.copper_outside_mbps"
+expected = 10
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:35"
+
+[[fact]]
+id = "F42-025"
+quantity = "ccs.param.is_partitions"
+expected = 6
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:155"
+
+[[fact]]
+id = "F42-026"
+quantity = "ccs.param.rdc_ifz"
+expected = 14
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:85"
+
+[[fact]]
+id = "F42-027"
+quantity = "ccs.param.rdc_can_ifz"
+expected = 10
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:86"
+
+[[fact]]
+id = "F42-028"
+quantity = "ccs.param.rdc_analog_ifz"
+expected = 4
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:87"
+
+[[fact]]
+id = "F42-029"
+quantity = "ccs.param.gpm_cpus"
+expected = 2
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:138"
+
+[[fact]]
+id = "F42-030"
+quantity = "ccs.param.stale_monitor_days"
+expected = 51
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "AD 2020-06-14"
+
+[[fact]]
+id = "F42-031"
+quantity = "ccs.param.gpm_total"
+expected = 16
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:158"
+
+[[fact]]
+id = "F42-032"
+quantity = "ccs.param.gnd_test_delay_s"
+expected = 2.5
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:269"
+
+[[fact]]
+id = "F42-033"
+quantity = "ccs.param.rdc_analog_discrete_io"
+expected = 120
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:80"
+
+[[fact]]
+id = "F42-034"
+quantity = "ccs.param.rdc_a429_tx"
+expected = 6
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:81"
+
+[[fact]]
+id = "F42-035"
+quantity = "ccs.param.rdc_can_channels"
+expected = 10
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:82"
+
+[[fact]]
+id = "F42-036"
+quantity = "ccs.param.gpm_cpu_mhz"
+expected = 800
+unit = ""
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_ccs.verified.md:138"

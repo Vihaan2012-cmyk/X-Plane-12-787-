@@ -17,11 +17,13 @@ path = "src/main.rs"
 [features]
 default = []
 electrical = ["dep:b789-sys-electrical"]
+aircraft = ["electrical", "dep:b789-sys-ccs"]
 
 [dependencies]
 b789-render.workspace = true
 b789-tablet.workspace = true
 b789-sys-electrical = { workspace = true, optional = true }
+b789-sys-ccs = { workspace = true, optional = true }
 toml = "0.8.23"
 
 [lints]

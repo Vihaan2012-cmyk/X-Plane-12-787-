@@ -1,0 +1,84 @@
+[scenario]
+id = "42_01_battery_powerup_left_ccr_only"
+title = "Cold and dark, battery ON: only the left CCR starts, uninhibited, 2-3 minutes"
+system = "42-ccs"
+aircraft = "787-9"
+engines = "trent1000"
+tick_hz = 1000
+summary = "On battery only the left CCR is powered and does a full PBIT; the right CCR stays off."
+
+[initial]
+airplane_state = "cold_dark"
+on_ground = true
+battery_switch = "OFF"
+ext_pwr_fwd_l = "unplugged"
+ext_pwr_fwd_r = "unplugged"
+ext_pwr_aft = "unplugged"
+gen_ctrl_switches = "ON"
+oat_c = 15.0
+
+[[step]]
+t_s = 0.0
+actor = "crew"
+action = "press"
+target = "BATTERY"
+value = "ON"
+
+[[step]]
+t_s = 200.0
+actor = "sim"
+action = "advance"
+target = "clock_s"
+value = 200.0
+
+[[expect]]
+id = "42_01.e01"
+t_s = 10.0
+signal = "ccs.ccr.l.state"
+op = "eq"
+value = "booting"
+approx = false
+cite = "ata42.txt uninhibited start-up mode"
+
+[[expect]]
+id = "42_01.e02"
+t_s = 10.0
+signal = "ccs.ccr.l.mode"
+op = "eq"
+value = "uninhibited"
+approx = false
+cite = "ata42.txt uninhibited start-up mode"
+
+[[expect]]
+id = "42_01.e03"
+t_s = 100.0
+signal = "ccs.ccr.l.displays_ready"
+op = "false"
+approx = false
+cite = "ata42.txt left CCR start-up 2-3 minutes"
+
+[[expect]]
+id = "42_01.e04"
+t_s = 190.0
+signal = "ccs.ccr.l.state"
+op = "eq"
+value = "operational"
+approx = false
+cite = "ata42.txt PBIT up to 3 minutes"
+
+[[expect]]
+id = "42_01.e05"
+t_s = 190.0
+signal = "ccs.ccr.r.state"
+op = "eq"
+value = "off"
+approx = false
+cite = "ata42.txt on battery only the left CCR is powered"
+
+[[expect]]
+id = "42_01.e06"
+t_s = 60.0
+signal = "ccs.rdc.11.running"
+op = "true"
+approx = false
+cite = "ata42.txt RDCs start in less than 45 s"

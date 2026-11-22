@@ -235,6 +235,23 @@ impl Electrical {
         self.plant.bus_v(bus)
     }
 
+    pub fn set_external_load(&mut self, name: &str, watts: f64) -> bool {
+        let base = self.fault_link.load_base.get(name).copied();
+        let ok = match base {
+            Some(_) => {
+                self.fault_link.load_base.insert(name.to_string(), watts);
+                true
+            }
+            None => self.plant.net_mut().set_load(name, watts),
+        };
+        self.pace.quiet = 0;
+        ok
+    }
+
+    pub fn fuel_run(&self, engine: usize) -> bool {
+        self.rig.engine.get(engine).is_some_and(|e| e.fuel)
+    }
+
     fn apply_crew(&mut self, cmds: &[CrewCommand]) {
         for c in cmds {
             self.apply_command(*c);

@@ -108,6 +108,8 @@ fn make_target(o: &Options) -> Result<Box<dyn Target>, String> {
         "mock" => Ok(Box::new(MockTarget::new())),
         #[cfg(feature = "electrical")]
         "electrical" => Ok(Box::new(crate::electrical::ElectricalTarget::new(&o.data_dir)?)),
+        #[cfg(feature = "aircraft")]
+        "aircraft" => Ok(Box::new(crate::aircraft::AircraftTarget::new(&o.data_dir)?)),
         other => Err(format!("unknown target '{other}'")),
     }
 }
@@ -157,6 +159,38 @@ pub fn render_tablet(path: &Path) -> Result<(), String> {
 }
 
 fn execute(o: &Options) -> Result<i32, String> {
+    #[cfg(feature = "aircraft")]
+    if o.command == "stress-aircraft" {
+        let seeds: Vec<u64> = (o.start_seed..o.start_seed + o.seeds).collect();
+        let threads = std::thread::available_parallelism()
+            .map(|n| n.get())
+            .unwrap_or(4)
+            .max(1);
+        let mut reports = Vec::new();
+        for chunk in seeds.chunks(threads) {
+            let mut part: Vec<crate::stress_aircraft::AircraftReport> = std::thread::scope(|sc| {
+                let hs: Vec<_> = chunk
+                    .iter()
+                    .map(|&seed| {
+                        let dir = o.data_dir.clone();
+                        let (sim_s, det) = (o.sim_s, o.determinism);
+                        sc.spawn(move || crate::stress_aircraft::run_seed(&dir, seed, sim_s, det))
+                    })
+                    .collect();
+                hs.into_iter().filter_map(|h| h.join().ok()).collect()
+            });
+            reports.append(&mut part);
+        }
+        let text = crate::stress_aircraft::summary(&reports);
+        print!("{text}");
+        if let Some(p) = &o.report {
+            fs::write(p, &text).map_err(|e| format!("{}: {e}", p.display()))?;
+        }
+        let failed = reports
+            .iter()
+            .any(|r| r.panicked.is_some() || !r.violations.is_empty() || r.deterministic == Some(false));
+        return Ok(if failed { 1 } else { 0 });
+    }
     #[cfg(feature = "electrical")]
     if o.command == "stress" {
         let seeds: Vec<u64> = (o.start_seed..o.start_seed + o.seeds).collect();

@@ -151,6 +151,17 @@ fn main() -> ExitCode {
             layers()
                 && cargo(&["fmt", "--all", "--check"])
                 && cargo(&["clippy", "--workspace", "--all-targets", "--", "-D", "warnings"])
+                && cargo(&[
+                    "clippy",
+                    "-p",
+                    "b789-sim-cli",
+                    "--all-targets",
+                    "--features",
+                    "aircraft",
+                    "--",
+                    "-D",
+                    "warnings",
+                ])
                 && cargo(&["test", "--workspace", "--quiet"])
         }
         _ => {

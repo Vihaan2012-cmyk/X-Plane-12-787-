@@ -19,6 +19,8 @@ const EXT_X: f64 = 0.005;
 const APPROX_HVDC_CIRCUIT_W: f64 = 100.0;
 const APPROX_HBB_STANDBY_W: f64 = 1.0;
 const APPROX_DC_BREAKER_LOAD_FRACTION: f64 = 0.1;
+pub const CCS_STANDIN_LOAD: &str = "STANDIN_CCS_L";
+pub const APPROX_CCS_STANDIN_W: f64 = 220.0;
 const APPROX_AC_BREAKER_LOAD_FRACTION: f64 = 0.02;
 const APPROX_INSTRUMENT_BREAKER_LOAD_FRACTION: f64 = 0.01;
 const APPROX_UNRATED_BREAKER_A: f64 = 5.0;
@@ -1083,7 +1085,7 @@ impl ElectricalNet {
             ("DC28_R", 0.0),
             ("CIB", 0.0),
             ("FIB", 0.0),
-            ("HBB_MAIN", 280.0),
+            ("HBB_MAIN", 60.0),
             ("HBB_APU", 0.0),
         ] {
             if let Some(n) = b.nodes.get(name).copied() {
@@ -1099,6 +1101,9 @@ impl ElectricalNet {
                 };
                 b.load(&format!("LOAD_{name}"), n, vn, w, true)?;
             }
+        }
+        if let Some(n) = b.nodes.get("CIB").copied() {
+            b.load(CCS_STANDIN_LOAD, n, 28.0, APPROX_CCS_STANDIN_W, true)?;
         }
         let contactor_names = b.contactors.iter().map(|c| c.name.clone()).collect();
         let mbr = b.contactors.iter().position(|c| c.name == "MBR");
