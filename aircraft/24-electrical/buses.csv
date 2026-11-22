@@ -1,0 +1,20 @@
+id,voltage,kind,panel,grade,source
+L1,235 VAC,AC3,P100,VERIFIED,ata24.txt:3066 ata24.txt:4647 ata24.txt:416
+L2,235 VAC,AC3,P100,VERIFIED,ata24.txt:3066 ata24.txt:4647 ata24.txt:416
+R1,235 VAC,AC3,P200,VERIFIED,ata24.txt:3066 ata24.txt:4647 ata24.txt:416
+R2,235 VAC,AC3,P200,VERIFIED,ata24.txt:3066 ata24.txt:4647 ata24.txt:416
+LTB,235 VAC,AC3,P100,VERIFIED,ata24.txt:3066 ata24.txt:4647 ata24.txt:416
+RTB,235 VAC,AC3,P200,VERIFIED,ata24.txt:3066 ata24.txt:4647 ata24.txt:416
+BB,235 VAC,AC3,P400,VERIFIED,ata24.txt:1691 eps24.txt:2759
+AC115_L,115 VAC,AC3,P300,APPROX,ata24.txt:1415 ata24.txt:418 rule panel-by-side
+AC115_R,115 VAC,AC3,P400,APPROX,ata24.txt:1415 ata24.txt:418 rule panel-by-side
+HVDC_L1,+/-270 VDC,DC+-,P700,APPROX,ata24.txt:838 ata24.txt:838 ata24.txt:2608 rule panel-by-side
+HVDC_L2,+/-270 VDC,DC+-,P700,APPROX,ata24.txt:838 ata24.txt:838 ata24.txt:2608 rule panel-by-side
+HVDC_R1,+/-270 VDC,DC+-,P800,APPROX,ata24.txt:838 ata24.txt:838 ata24.txt:2608 rule panel-by-side
+HVDC_R2,+/-270 VDC,DC+-,P800,APPROX,ata24.txt:838 ata24.txt:838 ata24.txt:2608 rule panel-by-side
+DC28_L,28 VDC,DC,P300,APPROX,ata24.txt:1719 ata24.txt:422 ata24.txt:418 rule panel-by-side
+DC28_R,28 VDC,DC,P400,APPROX,ata24.txt:1719 ata24.txt:422 ata24.txt:418 rule panel-by-side
+CIB,28 VDC,DC,P300,APPROX,ata24.txt:1719 ata24.txt:422 ata24.txt:418 rule panel-by-side
+FIB,28 VDC,DC,P400,APPROX,ata24.txt:1719 ata24.txt:422 ata24.txt:418 rule panel-by-side
+HBB_MAIN,28 VDC,DC,P300,VERIFIED,ata24.txt:460 ata24.txt:588
+HBB_APU,28 VDC,DC,P49,VERIFIED,ata24.txt:597

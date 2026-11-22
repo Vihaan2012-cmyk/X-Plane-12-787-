@@ -1,0 +1,231 @@
+[scenario]
+id = "01_cold_dark_battery_on"
+title = "Cold and dark, main battery ON, only APU-start loads powered"
+system = "24-electrical"
+aircraft = "787-9"
+engines = "trent1000"
+tick_hz = 1000
+summary = "Single press of BATTERY on a cold airplane; only battery-only ground mode loads and APU start capability available."
+
+[initial]
+airplane_state = "cold_dark"
+on_ground = true
+battery_switch = "OFF"
+apu_battery_connected = true
+ext_pwr_fwd_l = "unplugged"
+ext_pwr_fwd_r = "unplugged"
+ext_pwr_aft = "unplugged"
+gen_ctrl_switches = "ON"
+oat_c = 15.0
+
+[[step]]
+t_s = 0.0
+actor = "crew"
+action = "press"
+target = "BATTERY"
+value = "ON"
+
+[[step]]
+t_s = 60.0
+actor = "sim"
+action = "advance"
+target = "clock_s"
+value = 60.0
+
+[[expect]]
+id = "01_cold_dark_battery_on.e01"
+t_s = 0.05
+signal = "elec.hbb_main.voltage"
+op = "within"
+value = 29.5
+tol = 5.5
+unit = "V"
+approx = false
+cite = "elec2_r5_batteries_backup.md:61"
+
+[[expect]]
+id = "01_cold_dark_battery_on.e02"
+t_s = 1.0
+signal = "elec.mbr.closed"
+op = "true"
+approx = false
+cite = "elec2_r5_batteries_backup.md:38"
+
+[[expect]]
+id = "01_cold_dark_battery_on.e03"
+t_s = 1.0
+signal = "elec.mode"
+op = "eq"
+value = "on_ground_battery_only"
+approx = false
+cite = "elec_conditions.verified.md:46"
+
+[[expect]]
+id = "01_cold_dark_battery_on.e04"
+t_s = 1.0
+signal = "elec.bus.captain_instr.energized"
+op = "true"
+approx = false
+cite = "elec2_r5_batteries_backup.md:68"
+
+[[expect]]
+id = "01_cold_dark_battery_on.e05"
+t_s = 1.0
+signal = "elec.bus.fo_instr.energized"
+op = "true"
+approx = false
+cite = "elec2_r5_batteries_backup.md:68"
+
+[[expect]]
+id = "01_cold_dark_battery_on.e06"
+t_s = 1.0
+signal = "elec.bus.L1_235.energized"
+op = "false"
+approx = false
+cite = "facts_elec_dist.verified.md:43"
+
+[[expect]]
+id = "01_cold_dark_battery_on.e07"
+t_s = 1.0
+signal = "elec.bus.L2_235.energized"
+op = "false"
+approx = false
+cite = "facts_elec_dist.verified.md:43"
+
+[[expect]]
+id = "01_cold_dark_battery_on.e08"
+t_s = 1.0
+signal = "elec.bus.R1_235.energized"
+op = "false"
+approx = false
+cite = "facts_elec_dist.verified.md:43"
+
+[[expect]]
+id = "01_cold_dark_battery_on.e09"
+t_s = 1.0
+signal = "elec.bus.R2_235.energized"
+op = "false"
+approx = false
+cite = "facts_elec_dist.verified.md:43"
+
+[[expect]]
+id = "01_cold_dark_battery_on.e10"
+t_s = 1.0
+signal = "elec.bus.L_115.energized"
+op = "false"
+approx = false
+cite = "facts_elec_dist.verified.md:50"
+
+[[expect]]
+id = "01_cold_dark_battery_on.e11"
+t_s = 1.0
+signal = "elec.bus.R_115.energized"
+op = "false"
+approx = false
+cite = "facts_elec_dist.verified.md:50"
+
+[[expect]]
+id = "01_cold_dark_battery_on.e12"
+t_s = 1.0
+signal = "elec.bus.backup.energized"
+op = "false"
+approx = false
+cite = "facts_elec_dist.verified.md:65"
+
+[[expect]]
+id = "01_cold_dark_battery_on.e13"
+t_s = 30.0
+signal = "elec.load.apu_start_capability"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:49"
+
+[[expect]]
+id = "01_cold_dark_battery_on.e14"
+t_s = 30.0
+signal = "elec.load.apu_controller"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:109"
+
+[[expect]]
+id = "01_cold_dark_battery_on.e15"
+t_s = 30.0
+signal = "elec.load.apu_fuel_shutoff_valve"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:110"
+
+[[expect]]
+id = "01_cold_dark_battery_on.e16"
+t_s = 30.0
+signal = "elec.load.engine_apu_fire_detection"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:53"
+
+[[expect]]
+id = "01_cold_dark_battery_on.e17"
+t_s = 30.0
+signal = "elec.load.galley_power"
+op = "false"
+approx = true
+cite = "none"
+
+[[expect]]
+id = "01_cold_dark_battery_on.e18"
+t_s = 30.0
+signal = "elec.load.pecs"
+op = "false"
+approx = false
+cite = "elec_conditions.verified.md:39"
+
+[[expect]]
+id = "01_cold_dark_battery_on.e19"
+t_s = 30.0
+signal = "elec.load.ife"
+op = "false"
+approx = true
+cite = "none"
+
+[[expect]]
+id = "01_cold_dark_battery_on.e20"
+t_s = 30.0
+signal = "elec.load.hydraulic_pumps_ac"
+op = "false"
+approx = true
+cite = "none"
+
+[[expect]]
+id = "01_cold_dark_battery_on.e21"
+t_s = 30.0
+signal = "elec.load.packs"
+op = "false"
+approx = false
+cite = "elec_conditions.verified.md:74"
+
+[[expect]]
+id = "01_cold_dark_battery_on.e22"
+t_s = 30.0
+signal = "elec.rat.deployed"
+op = "false"
+approx = true
+cite = "none"
+
+[[expect]]
+id = "01_cold_dark_battery_on.e23"
+t_s = 30.0
+signal = "elec.batt_main.discharge_current"
+op = "lt"
+value = 30.0
+unit = "A"
+approx = false
+cite = "elec2_r5_batteries_backup.md:52"
+
+[[expect]]
+id = "01_cold_dark_battery_on.e24"
+t_s = 30.0
+signal = "elec.msg.MAIN_BATTERY_LOW"
+op = "absent"
+approx = false
+cite = "elec2_r5_batteries_backup.md:58"

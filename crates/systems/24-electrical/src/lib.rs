@@ -1,1 +1,22 @@
-//! ATA 24: electrical power generation, conversion, distribution, protection.
+#[cfg(feature = "control")]
+pub mod control;
+#[cfg(feature = "crew")]
+pub mod crew;
+#[cfg(feature = "faults")]
+pub mod faults;
+#[cfg(feature = "heat")]
+pub mod heat;
+#[cfg(feature = "inspector")]
+pub mod inspector;
+#[cfg(feature = "net")]
+pub mod net;
+#[cfg(feature = "pdu")]
+pub mod pdu;
+#[cfg(feature = "protection")]
+pub mod protection;
+#[cfg(feature = "sources")]
+pub mod sources;
+#[cfg(feature = "storage")]
+pub mod storage;
+#[cfg(feature = "system")]
+pub mod system;

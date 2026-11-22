@@ -1,0 +1,94 @@
+[scenario]
+id = "11_ac_bus_r1_failure"
+title = "R1 235 VAC bus failure, QRH inoperative items"
+system = "24-electrical"
+aircraft = "787-9"
+engines = "trent1000"
+tick_hz = 1000
+summary = "R1 bus lost with lockout; QRH inoperative item list per conditions file rows."
+
+[initial]
+airplane_state = "cruise"
+on_ground = false
+battery_switch = "ON"
+apu_battery_connected = true
+ext_pwr_fwd_l = "unplugged"
+ext_pwr_fwd_r = "unplugged"
+ext_pwr_aft = "unplugged"
+gen_ctrl_switches = "ON"
+oat_c = 15.0
+engines_running = [true, true]
+apu_running = false
+alt_ft = 35000.0
+
+[[step]]
+t_s = 10.0
+actor = "fault"
+action = "bus_fail"
+target = "R1_235"
+value = "dead_short_lockout"
+
+[[expect]]
+id = "11_ac_bus_r1_failure.e01"
+t_s = 10.1
+signal = "elec.bus.R1_235.energized"
+op = "false"
+approx = false
+cite = "facts_elec_dist.verified.md:45"
+
+[[expect]]
+id = "11_ac_bus_r1_failure.e02"
+t_s = 10.6
+signal = "elec.msg.ELEC_AC_BUS_R1"
+op = "present"
+approx = false
+cite = "elec2_r7_crew_interface.verified.md:195"
+
+[[expect]]
+id = "11_ac_bus_r1_failure.e03"
+t_s = 10.5
+signal = "elec.load.c2_hydraulic_pump"
+op = "false"
+approx = false
+cite = "elec_conditions.verified.md:15"
+
+[[expect]]
+id = "11_ac_bus_r1_failure.e04"
+t_s = 10.5
+signal = "elec.load.right_forward_fuel_pump"
+op = "false"
+approx = false
+cite = "elec_conditions.verified.md:16"
+
+[[expect]]
+id = "11_ac_bus_r1_failure.e05"
+t_s = 10.5
+signal = "elec.load.captain_and_fo_huds"
+op = "false"
+approx = false
+cite = "elec_conditions.verified.md:17"
+
+[[expect]]
+id = "11_ac_bus_r1_failure.e06"
+t_s = 10.5
+signal = "elec.load.forward_cargo_heat"
+op = "false"
+approx = false
+cite = "elec_conditions.verified.md:18"
+
+[[expect]]
+id = "11_ac_bus_r1_failure.e07"
+t_s = 10.5
+signal = "elec.rat.deployed"
+op = "false"
+approx = true
+cite = "none"
+
+[[expect]]
+id = "11_ac_bus_r1_failure.e08"
+t_s = 10.5
+signal = "elec.other_ac_buses.energized_count"
+op = "eq"
+value = 3
+approx = true
+cite = "none"

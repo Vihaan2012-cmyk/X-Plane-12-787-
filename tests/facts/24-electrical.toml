@@ -1,0 +1,2599 @@
+[[fact]]
+id = "F24-001"
+quantity = "vfsg.count_total"
+expected = 4
+unit = "count"
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_elec_gen.verified.md:7"
+
+[[fact]]
+id = "F24-002"
+quantity = "vfsg.count_per_engine"
+expected = 2
+unit = "count"
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_elec_gen.verified.md:7"
+
+[[fact]]
+id = "F24-003"
+quantity = "asg.count"
+expected = 2
+unit = "count"
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_elec_gen.verified.md:9"
+
+[[fact]]
+id = "F24-004"
+quantity = "gcu.count"
+expected = 6
+unit = "count"
+tol = 0
+condition = "L1,L2,AL,AR,R1,R2"
+approx = false
+cite = "facts_elec_gen.verified.md:16"
+
+[[fact]]
+id = "F24-005"
+quantity = "bpcu.count"
+expected = 2
+unit = "count"
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_elec_gen.verified.md:16"
+
+[[fact]]
+id = "F24-006"
+quantity = "cmsc.count"
+expected = 8
+unit = "count"
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_elec_gen.verified.md:16"
+
+[[fact]]
+id = "F24-007"
+quantity = "ext_pwr.receptacle_count"
+expected = 3
+unit = "count"
+tol = 0
+condition = "2 fwd 1 aft"
+approx = false
+cite = "facts_elec_gen.verified.md:11"
+
+[[fact]]
+id = "F24-008"
+quantity = "atru.count"
+expected = 4
+unit = "count"
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_elec_gen.verified.md:17"
+
+[[fact]]
+id = "F24-009"
+quantity = "atu.count"
+expected = 2
+unit = "count"
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_elec_gen.verified.md:17"
+
+[[fact]]
+id = "F24-010"
+quantity = "tru.count"
+expected = 4
+unit = "count"
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_elec_gen.verified.md:17"
+
+[[fact]]
+id = "F24-011"
+quantity = "spu.count"
+expected = 1
+unit = "count"
+tol = 0
+condition = "all"
+approx = false
+cite = "facts_elec_gen.verified.md:17"
+
+[[fact]]
+id = "F24-012"
+quantity = "vfsg.rating_kva"
+expected = 250.0
+unit = "kVA"
+tol = 0.0
+condition = "POR continuous"
+approx = false
+cite = "facts_elec_gen.verified.md:24"
+
+[[fact]]
+id = "F24-013"
+quantity = "vfsg.voltage_vll"
+expected = 235.0
+unit = "V"
+tol = 0.0
+condition = "nominal"
+approx = false
+cite = "facts_elec_gen.verified.md:24"
+
+[[fact]]
+id = "F24-014"
+quantity = "vfsg.freq_min"
+expected = 360.0
+unit = "Hz"
+tol = 0.0
+condition = "output range"
+approx = false
+cite = "facts_elec_gen.verified.md:25"
+
+[[fact]]
+id = "F24-015"
+quantity = "vfsg.freq_max"
+expected = 800.0
+unit = "Hz"
+tol = 0.0
+condition = "output range"
+approx = false
+cite = "facts_elec_gen.verified.md:25"
+
+[[fact]]
+id = "F24-016"
+quantity = "vfsg.pf_min_lagging"
+expected = 0.85
+unit = "ratio"
+tol = 0.0
+condition = "rating valid range"
+approx = false
+cite = "facts_elec_gen.verified.md:28"
+
+[[fact]]
+id = "F24-017"
+quantity = "vfsg.pf_max"
+expected = 1.0
+unit = "ratio"
+tol = 0.0
+condition = "rating valid range"
+approx = false
+cite = "facts_elec_gen.verified.md:28"
+
+[[fact]]
+id = "F24-018"
+quantity = "vfsg.pole_count"
+expected = 6
+unit = "count"
+tol = 0
+condition = "generator"
+approx = false
+cite = "facts_elec_gen.verified.md:26"
+
+[[fact]]
+id = "F24-019"
+quantity = "vfsg.dry_weight_lb"
+expected = 207.9
+unit = "lb"
+tol = 0.1
+condition = "dry"
+approx = false
+cite = "facts_elec_gen.verified.md:31"
+
+[[fact]]
+id = "F24-020"
+quantity = "vfsg.mode_count"
+expected = 4
+unit = "count"
+tol = 0
+condition = "stop,start,motor,generator"
+approx = false
+cite = "facts_elec_gen.verified.md:33"
+
+[[fact]]
+id = "F24-021"
+quantity = "vfsg.start_torque_ftlb"
+expected = 300.0
+unit = "ft-lb"
+tol = 0.0
+condition = "start mode"
+approx = false
+cite = "facts_elec_gen.verified.md:34"
+
+[[fact]]
+id = "F24-022"
+quantity = "vfsg.motor_torque_ftlb"
+expected = 150.0
+unit = "ft-lb"
+tol = 0.0
+condition = "maintenance motoring"
+approx = false
+cite = "facts_elec_gen.verified.md:35"
+
+[[fact]]
+id = "F24-023"
+quantity = "vfsg.gen_mode_entry_freq_hz"
+expected = 370.0
+unit = "Hz"
+tol = 0.0
+condition = "ground idle"
+approx = false
+cite = "facts_elec_gen.verified.md:37"
+
+[[fact]]
+id = "F24-024"
+quantity = "vfsg.gen_mode_entry_rpm"
+expected = 7400.0
+unit = "rpm"
+tol = 0.0
+condition = "ground idle"
+approx = false
+cite = "facts_elec_gen.verified.md:37"
+
+[[fact]]
+id = "F24-025"
+quantity = "vfsg.duty_cycle_full_torque_min"
+expected = 3.0
+unit = "min"
+tol = 0.0
+condition = "start"
+approx = false
+cite = "facts_elec_gen.verified.md:39"
+
+[[fact]]
+id = "F24-026"
+quantity = "vfsg.duty_cycle_cooldown_min"
+expected = 30.0
+unit = "min"
+tol = 0.0
+condition = "at 50 percent torque limit"
+approx = false
+cite = "facts_elec_gen.verified.md:39"
+
+[[fact]]
+id = "F24-027"
+quantity = "vfsg.cooldown_torque_limit_pct"
+expected = 50.0
+unit = "%"
+tol = 0.0
+condition = "cool down"
+approx = false
+cite = "facts_elec_gen.verified.md:39"
+
+[[fact]]
+id = "F24-028"
+quantity = "vfsg.shear_section_in_lb_per_rad"
+expected = 79500.0
+unit = "in-lb/rad"
+tol = 0.0
+condition = "input shaft"
+approx = false
+cite = "facts_elec_gen.verified.md:47"
+
+[[fact]]
+id = "F24-029"
+quantity = "vfsg.thermal_disconnect_temp_f"
+expected = 390.0
+unit = "F"
+tol = 0.0
+condition = "sump oil"
+approx = false
+cite = "facts_elec_gen.verified.md:48"
+
+[[fact]]
+id = "F24-030"
+quantity = "vfsg.thermal_disconnect_temp_c"
+expected = 199.0
+unit = "C"
+tol = 0.5
+condition = "sump oil"
+approx = false
+cite = "facts_elec_gen.verified.md:48"
+
+[[fact]]
+id = "F24-031"
+quantity = "vfsg.oil_normal_min_f"
+expected = 104.0
+unit = "F"
+tol = 0.0
+condition = "normal operating"
+approx = false
+cite = "facts_elec_gen.verified.md:51"
+
+[[fact]]
+id = "F24-032"
+quantity = "vfsg.oil_normal_max_f"
+expected = 265.0
+unit = "F"
+tol = 0.0
+condition = "normal operating"
+approx = false
+cite = "facts_elec_gen.verified.md:51"
+
+[[fact]]
+id = "F24-033"
+quantity = "vfsg.oil_normal_min_c"
+expected = 40.0
+unit = "C"
+tol = 0.0
+condition = "normal operating"
+approx = false
+cite = "facts_elec_gen.verified.md:51"
+
+[[fact]]
+id = "F24-034"
+quantity = "vfsg.oil_normal_max_c"
+expected = 129.0
+unit = "C"
+tol = 0.0
+condition = "normal operating"
+approx = false
+cite = "facts_elec_gen.verified.md:51"
+
+[[fact]]
+id = "F24-035"
+quantity = "vfsg.drive_disc_condition_time_ms"
+expected = 50.0
+unit = "ms"
+tol = 0.0
+condition = "drive disconnect condition"
+approx = false
+cite = "elec2_r2_sources.md:63"
+
+[[fact]]
+id = "F24-036"
+quantity = "vfsg.drive_switch_max_press_s"
+expected = 3.0
+unit = "s"
+tol = 0.0
+condition = "solenoid heat limit"
+approx = false
+cite = "elec2_r2_sources.md:65"
+
+[[fact]]
+id = "F24-037"
+quantity = "vfsg.drive_switch_wait_s"
+expected = 60.0
+unit = "s"
+tol = 0.0
+condition = "before pressing again"
+approx = false
+cite = "elec2_r2_sources.md:65"
+
+[[fact]]
+id = "F24-038"
+quantity = "vfsg.lop_auto_disconnect_time_ms"
+expected = 500.0
+unit = "ms"
+tol = 0.0
+condition = "low oil pressure with underfrequency trip"
+approx = false
+cite = "facts_elec_gen.verified.md:76"
+
+[[fact]]
+id = "F24-039"
+quantity = "vfsg.overload_125pct_kva"
+expected = 312.5
+unit = "kVA"
+tol = 0.0
+condition = "duration 5 min"
+approx = false
+cite = "elec2_r2_sources.md:40"
+
+[[fact]]
+id = "F24-040"
+quantity = "vfsg.overload_125pct_time_s"
+expected = 300.0
+unit = "s"
+tol = 0.0
+condition = "125 percent"
+approx = false
+cite = "elec2_r2_sources.md:40"
+
+[[fact]]
+id = "F24-041"
+quantity = "vfsg.overload_175pct_kva"
+expected = 437.5
+unit = "kVA"
+tol = 0.0
+condition = "duration 5 s"
+approx = false
+cite = "elec2_r2_sources.md:41"
+
+[[fact]]
+id = "F24-042"
+quantity = "vfsg.overload_175pct_time_s"
+expected = 5.0
+unit = "s"
+tol = 0.0
+condition = "175 percent"
+approx = false
+cite = "elec2_r2_sources.md:41"
+
+[[fact]]
+id = "F24-043"
+quantity = "gec1.close_pmg_hz_max"
+expected = 585.0
+unit = "Hz"
+tol = 0.0
+condition = "MES mode"
+approx = false
+cite = "facts_elec_gen.verified.md:94"
+
+[[fact]]
+id = "F24-044"
+quantity = "gec1.close_input_rpm"
+expected = 3900.0
+unit = "rpm"
+tol = 0.0
+condition = "gate speed"
+approx = false
+cite = "facts_elec_gen.verified.md:96"
+
+[[fact]]
+id = "F24-045"
+quantity = "gec1.open_pmg_hz_above"
+expected = 600.0
+unit = "Hz"
+tol = 0.0
+condition = "opens"
+approx = false
+cite = "facts_elec_gen.verified.md:95"
+
+[[fact]]
+id = "F24-046"
+quantity = "gec2.close_pmg_hz_max"
+expected = 825.0
+unit = "Hz"
+tol = 0.0
+condition = "MES mode"
+approx = false
+cite = "facts_elec_gen.verified.md:98"
+
+[[fact]]
+id = "F24-047"
+quantity = "gec2.close_input_rpm"
+expected = 5500.0
+unit = "rpm"
+tol = 0.0
+condition = "gate speed"
+approx = false
+cite = "facts_elec_gen.verified.md:98"
+
+[[fact]]
+id = "F24-048"
+quantity = "gec2.open_pmg_hz_min"
+expected = 1050.0
+unit = "Hz"
+tol = 0.0
+condition = "opens"
+approx = false
+cite = "facts_elec_gen.verified.md:99"
+
+[[fact]]
+id = "F24-049"
+quantity = "gec2.open_input_rpm"
+expected = 7000.0
+unit = "rpm"
+tol = 0.0
+condition = "gate speed"
+approx = false
+cite = "facts_elec_gen.verified.md:99"
+
+[[fact]]
+id = "F24-054"
+quantity = "start.ext_pwr_min_fwd_sources"
+expected = 2
+unit = "count"
+tol = 0
+condition = "engine start on external power"
+approx = false
+cite = "facts_elec_gen.verified.md:156"
+
+[[fact]]
+id = "F24-055"
+quantity = "start.ext_pwr_fwd_source_kva"
+expected = 90.0
+unit = "kVA"
+tol = 0.0
+condition = "each source"
+approx = false
+cite = "facts_elec_gen.verified.md:156"
+
+[[fact]]
+id = "F24-060"
+quantity = "start.vfsg_torque_full_s"
+expected = 180.0
+unit = "s"
+tol = 0.0
+condition = "100 percent then 50 percent"
+approx = false
+cite = "facts_elec_gen.verified.md:140"
+
+[[fact]]
+id = "F24-068"
+quantity = "asg.rating_kva"
+expected = 225.0
+unit = "kVA"
+tol = 0.0
+condition = "each, POR continuous"
+approx = false
+cite = "facts_elec_gen.verified.md:168"
+
+[[fact]]
+id = "F24-069"
+quantity = "asg.voltage_vll"
+expected = 235.0
+unit = "V"
+tol = 0.0
+condition = "regulated at the POR; leading particulars give 235/400 V at the POR, the page-3 figure callout 230/400 V is the nameplate summary"
+approx = false
+cite = "facts_elec_gen.verified.md:171"
+
+[[fact]]
+id = "F24-072"
+quantity = "asg.freq_min"
+expected = 360.0
+unit = "Hz"
+tol = 0.0
+condition = "generator mode"
+approx = false
+cite = "facts_elec_gen.verified.md:175"
+
+[[fact]]
+id = "F24-073"
+quantity = "asg.freq_max"
+expected = 440.0
+unit = "Hz"
+tol = 0.0
+condition = "generator mode"
+approx = false
+cite = "facts_elec_gen.verified.md:175"
+
+[[fact]]
+id = "F24-074"
+quantity = "apu.continuous_kva_sea_level"
+expected = 450.0
+unit = "kVA"
+tol = 0.0
+condition = "both ASGs"
+approx = false
+cite = "facts_elec_gen.verified.md:169"
+
+[[fact]]
+id = "F24-075"
+quantity = "apu.continuous_kva_43100ft"
+expected = 100.0
+unit = "kVA"
+tol = 0.0
+condition = "43100 ft"
+approx = false
+cite = "facts_elec_gen.verified.md:170"
+
+[[fact]]
+id = "F24-076"
+quantity = "apu.ready_to_load_delay_s"
+expected = 2.0
+unit = "s"
+tol = 0.0
+condition = "after 95 percent speed"
+approx = false
+cite = "elec2_r2_sources.md:79"
+
+[[fact]]
+id = "F24-077"
+quantity = "apu.ready_to_load_speed_pct"
+expected = 95.0
+unit = "%"
+tol = 0.0
+condition = "max operating speed"
+approx = false
+cite = "elec2_r2_sources.md:79"
+
+[[fact]]
+id = "F24-078"
+quantity = "ext_pwr.fwd_rating_kva"
+expected = 90.0
+unit = "kVA"
+tol = 0.0
+condition = "each forward receptacle"
+approx = false
+cite = "facts_elec_gen.verified.md:230"
+
+[[fact]]
+id = "F24-079"
+quantity = "ext_pwr.aft_rating_kva"
+expected = 90.0
+unit = "kVA"
+tol = 0.0
+condition = "receptacle rating"
+approx = false
+cite = "facts_elec_gen.verified.md:231"
+
+[[fact]]
+id = "F24-080"
+quantity = "ext_pwr.aft_system_limit_kva"
+expected = 65.0
+unit = "kVA"
+tol = 0.0
+condition = "system limit"
+approx = false
+cite = "facts_elec_gen.verified.md:231"
+
+[[fact]]
+id = "F24-081"
+quantity = "ext_pwr.voltage_vll"
+expected = 115.0
+unit = "V"
+tol = 0.0
+condition = "each receptacle"
+approx = false
+cite = "facts_elec_gen.verified.md:232"
+
+[[fact]]
+id = "F24-082"
+quantity = "ext_pwr.freq_hz"
+expected = 400.0
+unit = "Hz"
+tol = 0.0
+condition = "each receptacle"
+approx = false
+cite = "facts_elec_gen.verified.md:232"
+
+[[fact]]
+id = "F24-083"
+quantity = "ext_pwr.receptacle_pin_count"
+expected = 6
+unit = "count"
+tol = 0
+condition = "each receptacle"
+approx = false
+cite = "facts_elec_gen.verified.md:233"
+
+[[fact]]
+id = "F24-084"
+quantity = "ext_pwr.fwd_quality_time_ms"
+expected = 150.0
+unit = "ms"
+tol = 10.0
+condition = "no UV OV UF"
+approx = false
+cite = "elec2_r8_timing_loads.md:39"
+
+[[fact]]
+id = "F24-085"
+quantity = "ext_pwr.transfer_delay_ms"
+expected = 300.0
+unit = "ms"
+tol = 0.0
+condition = "before contactor change"
+approx = false
+cite = "elec2_r8_timing_loads.md:40"
+
+[[fact]]
+id = "F24-086"
+quantity = "ext_pwr.fwd_off_voltage_rms"
+expected = 20.0
+unit = "Vrms"
+tol = 0.0
+condition = "3-phase average below"
+approx = false
+cite = "elec2_r8_timing_loads.md:42"
+
+[[fact]]
+id = "F24-087"
+quantity = "ext_pwr.fwd_off_current_arms"
+expected = 10.0
+unit = "A"
+tol = 0.0
+condition = "all phases below"
+approx = false
+cite = "elec2_r8_timing_loads.md:42"
+
+[[fact]]
+id = "F24-088"
+quantity = "ext_pwr.fwd_off_time_ms"
+expected = 50.0
+unit = "ms"
+tol = 0.0
+condition = "commanded off"
+approx = false
+cite = "elec2_r8_timing_loads.md:42"
+
+[[fact]]
+id = "F24-089"
+quantity = "ext_pwr.aft_fail_close_current_a"
+expected = 10.0
+unit = "A"
+tol = 0.0
+condition = "phase currents below"
+approx = false
+cite = "elec2_r8_timing_loads.md:43"
+
+[[fact]]
+id = "F24-090"
+quantity = "ext_pwr.aft_fail_close_time_ms"
+expected = 150.0
+unit = "ms"
+tol = 0.0
+condition = "after close command"
+approx = false
+cite = "elec2_r8_timing_loads.md:43"
+
+[[fact]]
+id = "F24-091"
+quantity = "ext_pwr.oc_stage1_tier1_a"
+expected = 270.0
+unit = "A"
+tol = 0.0
+condition = "duration 300 s"
+approx = false
+cite = "elec2_r8_timing_loads.md:45"
+
+[[fact]]
+id = "F24-092"
+quantity = "ext_pwr.oc_stage1_tier1_time_s"
+expected = 300.0
+unit = "s"
+tol = 0.0
+condition = "270 A"
+approx = false
+cite = "elec2_r8_timing_loads.md:45"
+
+[[fact]]
+id = "F24-093"
+quantity = "ext_pwr.oc_stage1_tier2_a"
+expected = 326.0
+unit = "A"
+tol = 0.0
+condition = "duration 5.2 s"
+approx = false
+cite = "elec2_r8_timing_loads.md:46"
+
+[[fact]]
+id = "F24-094"
+quantity = "ext_pwr.oc_stage1_tier2_time_s"
+expected = 5.2
+unit = "s"
+tol = 0.0
+condition = "326 A"
+approx = false
+cite = "elec2_r8_timing_loads.md:46"
+
+[[fact]]
+id = "F24-095"
+quantity = "ext_pwr.epc_chatter_changes"
+expected = 4
+unit = "count"
+tol = 0
+condition = "more than, in 5 s"
+approx = false
+cite = "elec2_r8_timing_loads.md:47"
+
+[[fact]]
+id = "F24-096"
+quantity = "ext_pwr.epc_chatter_window_s"
+expected = 5.0
+unit = "s"
+tol = 0.0
+condition = "state change window"
+approx = false
+cite = "elec2_r8_timing_loads.md:47"
+
+[[fact]]
+id = "F24-097"
+quantity = "ext_pwr.ov_rms"
+expected = 130.0
+unit = "Vrms"
+tol = 0.0
+condition = "highest phase, inverse time 10 s max"
+approx = false
+cite = "elec2_r2_sources.md:118"
+
+[[fact]]
+id = "F24-098"
+quantity = "ext_pwr.uv_rms"
+expected = 104.5
+unit = "Vrms"
+tol = 0.0
+condition = "lowest phase"
+approx = false
+cite = "elec2_r2_sources.md:120"
+
+[[fact]]
+id = "F24-099"
+quantity = "ext_pwr.uv_delay_s"
+expected = 9.0
+unit = "s"
+tol = 0.0
+condition = "trip"
+approx = false
+cite = "elec2_r2_sources.md:120"
+
+[[fact]]
+id = "F24-100"
+quantity = "ext_pwr.of_hz"
+expected = 429.0
+unit = "Hz"
+tol = 0.0
+condition = "1 s delay, reset 427"
+approx = false
+cite = "elec2_r2_sources.md:122"
+
+[[fact]]
+id = "F24-101"
+quantity = "ext_pwr.of_reset_hz"
+expected = 427.0
+unit = "Hz"
+tol = 0.0
+condition = "reset"
+approx = false
+cite = "elec2_r2_sources.md:122"
+
+[[fact]]
+id = "F24-102"
+quantity = "ext_pwr.uf_hz"
+expected = 371.0
+unit = "Hz"
+tol = 0.0
+condition = "1 s delay, reset 373"
+approx = false
+cite = "elec2_r2_sources.md:123"
+
+[[fact]]
+id = "F24-103"
+quantity = "ext_pwr.uf_reset_hz"
+expected = 373.0
+unit = "Hz"
+tol = 0.0
+condition = "reset"
+approx = false
+cite = "elec2_r2_sources.md:123"
+
+[[fact]]
+id = "F24-104"
+quantity = "ext_pwr.freq_trip_delay_s"
+expected = 1.0
+unit = "s"
+tol = 0.0
+condition = "OF and UF"
+approx = false
+cite = "elec2_r2_sources.md:122"
+
+[[fact]]
+id = "F24-105"
+quantity = "ext_pwr.load_shed_5min_kva"
+expected = 90.0
+unit = "kVA"
+tol = 0.0
+condition = "5 minute overload"
+approx = false
+cite = "elec2_r8_timing_loads.md:49"
+
+[[fact]]
+id = "F24-106"
+quantity = "ext_pwr.load_shed_5s_kva"
+expected = 112.5
+unit = "kVA"
+tol = 0.0
+condition = "5 second overload"
+approx = false
+cite = "elec2_r8_timing_loads.md:50"
+
+[[fact]]
+id = "F24-107"
+quantity = "ext_pwr.load_shed_interval_s"
+expected = 5.0
+unit = "s"
+tol = 0.0
+condition = "sequential"
+approx = false
+cite = "elec2_r8_timing_loads.md:51"
+
+[[fact]]
+id = "F24-108"
+quantity = "load_mgmt.hpx_repeat_window_min"
+expected = 20.0
+unit = "min"
+tol = 0.0
+condition = "second exceedance"
+approx = false
+cite = "elec2_r8_timing_loads.md:52"
+
+[[fact]]
+id = "F24-109"
+quantity = "load_mgmt.pecs_thermal_shed_f"
+expected = 148.0
+unit = "F"
+tol = 0.0
+condition = "liquid above"
+approx = false
+cite = "elec2_r8_timing_loads.md:54"
+
+[[fact]]
+id = "F24-110"
+quantity = "load_mgmt.pecs_thermal_shed_c"
+expected = 64.0
+unit = "C"
+tol = 0.0
+condition = "liquid above"
+approx = false
+cite = "elec2_r8_timing_loads.md:54"
+
+[[fact]]
+id = "F24-111"
+quantity = "load_mgmt.ep_cmsc_stop_current_a"
+expected = 260.0
+unit = "A"
+tol = 0.0
+condition = "for 4 min"
+approx = false
+cite = "elec2_r8_timing_loads.md:55"
+
+[[fact]]
+id = "F24-112"
+quantity = "load_mgmt.ep_cmsc_stop_time_min"
+expected = 4.0
+unit = "min"
+tol = 0.0
+condition = "at 260 A"
+approx = false
+cite = "elec2_r8_timing_loads.md:55"
+
+[[fact]]
+id = "F24-113"
+quantity = "load_mgmt.ep_cmsc_stop_current_fast_a"
+expected = 313.0
+unit = "A"
+tol = 0.0
+condition = "for 5 s"
+approx = false
+cite = "elec2_r8_timing_loads.md:55"
+
+[[fact]]
+id = "F24-114"
+quantity = "load_mgmt.ground_handling_freq_limit_hz"
+expected = 440.0
+unit = "Hz"
+tol = 0.0
+condition = "loads shed before VFSGs"
+approx = false
+cite = "facts_elec_dist.verified.md:191"
+
+[[fact]]
+id = "F24-115"
+quantity = "atru.rating_787_9_continuous_kva"
+expected = 155.0
+unit = "kVA"
+tol = 0.0
+condition = "235 VAC input"
+approx = false
+cite = "facts_elec_gen.verified.md:262"
+
+[[fact]]
+id = "F24-116"
+quantity = "atru.rating_787_9_10min_kva"
+expected = 165.0
+unit = "kVA"
+tol = 0.0
+condition = "10 min per 60 min"
+approx = false
+cite = "facts_elec_gen.verified.md:263"
+
+[[fact]]
+id = "F24-117"
+quantity = "atru.rating_787_9_5min_kva"
+expected = 187.5
+unit = "kVA"
+tol = 0.0
+condition = "5 min"
+approx = false
+cite = "facts_elec_gen.verified.md:264"
+
+[[fact]]
+id = "F24-118"
+quantity = "atru.rating_787_9_30s_kva"
+expected = 200.0
+unit = "kVA"
+tol = 0.0
+condition = "30 s"
+approx = false
+cite = "facts_elec_gen.verified.md:265"
+
+[[fact]]
+id = "F24-119"
+quantity = "atru.rating_787_9_5s_kva"
+expected = 245.0
+unit = "kVA"
+tol = 0.0
+condition = "5 s per 60 min"
+approx = false
+cite = "facts_elec_gen.verified.md:266"
+
+[[fact]]
+id = "F24-120"
+quantity = "atru.rating_115v_input_kva"
+expected = 65.0
+unit = "kVA"
+tol = 0.0
+condition = "115 VAC input"
+approx = false
+cite = "facts_elec_gen.verified.md:260"
+
+[[fact]]
+id = "F24-121"
+quantity = "atru.out_vdc_nominal_half"
+expected = 280.0
+unit = "V"
+tol = 0.0
+condition = "plus/minus nominal"
+approx = false
+cite = "elec2_r3_conversion.md:39"
+
+[[fact]]
+id = "F24-122"
+quantity = "atru.out_vdc_min_half"
+expected = 250.0
+unit = "V"
+tol = 0.0
+condition = "plus/minus min"
+approx = false
+cite = "elec2_r3_conversion.md:39"
+
+[[fact]]
+id = "F24-123"
+quantity = "atru.out_vdc_max_half"
+expected = 320.0
+unit = "V"
+tol = 0.0
+condition = "plus/minus max"
+approx = false
+cite = "elec2_r3_conversion.md:39"
+
+[[fact]]
+id = "F24-124"
+quantity = "atru.in_freq_min_hz"
+expected = 360.0
+unit = "Hz"
+tol = 0.0
+condition = "235 VAC input"
+approx = false
+cite = "elec2_r3_conversion.md:30"
+
+[[fact]]
+id = "F24-125"
+quantity = "atru.in_freq_max_hz"
+expected = 800.0
+unit = "Hz"
+tol = 0.0
+condition = "235 VAC input"
+approx = false
+cite = "elec2_r3_conversion.md:30"
+
+[[fact]]
+id = "F24-126"
+quantity = "atru.in_115_freq_min_hz"
+expected = 380.0
+unit = "Hz"
+tol = 0.0
+condition = "115 VAC input"
+approx = false
+cite = "elec2_r3_conversion.md:31"
+
+[[fact]]
+id = "F24-127"
+quantity = "atru.in_115_freq_max_hz"
+expected = 430.0
+unit = "Hz"
+tol = 0.0
+condition = "115 VAC input"
+approx = false
+cite = "elec2_r3_conversion.md:31"
+
+[[fact]]
+id = "F24-128"
+quantity = "atru.start_apu_out_vdc_half"
+expected = 135.0
+unit = "V"
+tol = 0.0
+condition = "R2 ATRU battery start"
+approx = false
+cite = "elec2_r3_conversion.md:28"
+
+[[fact]]
+id = "F24-129"
+quantity = "atru.aft_ep_pu_a"
+expected = 188.0
+unit = "A"
+tol = 0.0
+condition = "1 pu"
+approx = false
+cite = "elec2_r3_conversion.md:44"
+
+[[fact]]
+id = "F24-130"
+quantity = "atru.pu_a"
+expected = 212.0
+unit = "A"
+tol = 0.0
+condition = "1 pu at input"
+approx = false
+cite = "elec2_r3_conversion.md:43"
+
+[[fact]]
+id = "F24-131"
+quantity = "cmsc.rating_kw"
+expected = 105.0
+unit = "kW"
+tol = 0.0
+condition = "787-8 and 787-9"
+approx = false
+cite = "facts_elec_gen.verified.md:268"
+
+[[fact]]
+id = "F24-132"
+quantity = "cmsc.overload_kw"
+expected = 150.0
+unit = "kW"
+tol = 0.0
+condition = "3 min"
+approx = false
+cite = "facts_elec_gen.verified.md:268"
+
+[[fact]]
+id = "F24-133"
+quantity = "cmsc.overload_time_min"
+expected = 3.0
+unit = "min"
+tol = 0.0
+condition = "150 kW"
+approx = false
+cite = "facts_elec_gen.verified.md:268"
+
+[[fact]]
+id = "F24-134"
+quantity = "rat.rating_kva"
+expected = 10.0
+unit = "kVA"
+tol = 0.0
+condition = "continuous"
+approx = false
+cite = "elec2_r8_timing_loads.md:31"
+
+[[fact]]
+id = "F24-135"
+quantity = "rat.voltage_vll"
+expected = 230.0
+unit = "V"
+tol = 4.0
+condition = "regulated 0 to 10 kVA"
+approx = false
+cite = "elec2_r2_sources.md:8"
+
+[[fact]]
+id = "F24-136"
+quantity = "rat.rcb_close_min_hz"
+expected = 380.0
+unit = "Hz"
+tol = 0.0
+condition = "minimum frequency"
+approx = false
+cite = "elec2_r2_sources.md:7"
+
+[[fact]]
+id = "F24-137"
+quantity = "rat.deploy_loss_time_s"
+expected = 15.0
+unit = "s"
+tol = 0.0
+condition = "BPCU standby request"
+approx = false
+cite = "elec2_r8_timing_loads.md:27"
+
+[[fact]]
+id = "F24-138"
+quantity = "rat.deploy_cmd_max_ms"
+expected = 200.0
+unit = "ms"
+tol = 0.0
+condition = "after BPCU request"
+approx = false
+cite = "elec2_r8_timing_loads.md:29"
+
+[[fact]]
+id = "F24-143"
+quantity = "rat.rcb_rating_a"
+expected = 65.0
+unit = "A"
+tol = 0.0
+condition = "235 VAC 3PST"
+approx = false
+cite = "elec2_r2_sources.md:34"
+
+[[fact]]
+id = "F24-144"
+quantity = "bus.main_235_count"
+expected = 4
+unit = "count"
+tol = 0
+condition = "L1,L2,R1,R2"
+approx = false
+cite = "elec2_r1a_conflicts_structure.md:57"
+
+[[fact]]
+id = "F24-145"
+quantity = "bus.btb_count"
+expected = 6
+unit = "count"
+tol = 0
+condition = "L1,L2,L3,R1,R2,R3"
+approx = false
+cite = "elec2_r1a_conflicts_structure.md:61"
+
+[[fact]]
+id = "F24-146"
+quantity = "bus.ring_bus_count"
+expected = 6
+unit = "count"
+tol = 0
+condition = "includes ties"
+approx = false
+cite = "elec2_r1a_conflicts_structure.md:52"
+
+[[fact]]
+id = "F24-147"
+quantity = "bus.l_r_115_count"
+expected = 2
+unit = "count"
+tol = 0
+condition = "L and R"
+approx = false
+cite = "facts_elec_dist.verified.md:50"
+
+[[fact]]
+id = "F24-148"
+quantity = "bus.primary_235_loads_approx"
+expected = 40
+unit = "count"
+tol = 5
+condition = "approximate"
+approx = false
+cite = "facts_elec_dist.verified.md:49"
+
+[[fact]]
+id = "F24-149"
+quantity = "rpdu.small_load_limit_a"
+expected = 10.0
+unit = "A"
+tol = 0.0
+condition = "fed by RPDU"
+approx = false
+cite = "facts_elec_dist.verified.md:58"
+
+[[fact]]
+id = "F24-150"
+quantity = "rpdu.ac12_sspc_count"
+expected = 12
+unit = "count"
+tol = 0
+condition = "AC12 module"
+approx = false
+cite = "elec2_r6_distribution_units.md:11"
+
+[[fact]]
+id = "F24-151"
+quantity = "rpdu.dc19_sspc_count"
+expected = 19
+unit = "count"
+tol = 0
+condition = "DC19 module"
+approx = false
+cite = "elec2_r6_distribution_units.md:13"
+
+[[fact]]
+id = "F24-152"
+quantity = "rpdu.loads_under_10a_count"
+expected = 900
+unit = "count"
+tol = 0
+condition = "at least"
+approx = false
+cite = "elec2_r6_distribution_units.md:149"
+
+[[fact]]
+id = "F24-153"
+quantity = "spdu.max_dc_a"
+expected = 50.0
+unit = "A"
+tol = 0.0
+condition = "per load"
+approx = false
+cite = "elec2_r6_distribution_units.md:108"
+
+[[fact]]
+id = "F24-154"
+quantity = "spdu.max_ac_a"
+expected = 45.0
+unit = "A"
+tol = 0.0
+condition = "per load"
+approx = false
+cite = "elec2_r6_distribution_units.md:108"
+
+[[fact]]
+id = "F24-155"
+quantity = "spdu.dc2_sspc_a"
+expected = 50.0
+unit = "A"
+tol = 0.0
+condition = "two per card"
+approx = false
+cite = "elec2_r6_distribution_units.md:111"
+
+[[fact]]
+id = "F24-156"
+quantity = "spdu.ac1_sspc_a"
+expected = 45.0
+unit = "A"
+tol = 0.0
+condition = "window heat"
+approx = false
+cite = "elec2_r6_distribution_units.md:109"
+
+[[fact]]
+id = "F24-157"
+quantity = "spdu.ac2_sspc_a"
+expected = 22.5
+unit = "A"
+tol = 0.0
+condition = "window anti-fog"
+approx = false
+cite = "elec2_r6_distribution_units.md:110"
+
+[[fact]]
+id = "F24-158"
+quantity = "spdu.sspc_150plus_dc_loads"
+expected = 150
+unit = "count"
+tol = 0
+condition = "at least"
+approx = false
+cite = "elec2_r6_distribution_units.md:149"
+
+[[fact]]
+id = "F24-159"
+quantity = "prot.ov_tier1_vrms"
+expected = 320.0
+unit = "Vrms"
+tol = 0.0
+condition = "duration 0.03 s"
+approx = false
+cite = "facts_elec_gen.verified.md:289"
+
+[[fact]]
+id = "F24-160"
+quantity = "prot.ov_tier1_time_s"
+expected = 0.03
+unit = "s"
+tol = 0.0
+condition = "320 Vrms"
+approx = false
+cite = "facts_elec_gen.verified.md:289"
+
+[[fact]]
+id = "F24-161"
+quantity = "prot.ov_tier9_vrms"
+expected = 240.0
+unit = "Vrms"
+tol = 0.0
+condition = "duration 2.8 s"
+approx = false
+cite = "facts_elec_gen.verified.md:289"
+
+[[fact]]
+id = "F24-162"
+quantity = "prot.ov_tier9_time_s"
+expected = 2.8
+unit = "s"
+tol = 0.0
+condition = "240 Vrms"
+approx = false
+cite = "facts_elec_gen.verified.md:289"
+
+[[fact]]
+id = "F24-163"
+quantity = "prot.uv_inhibit_vfsg_a"
+expected = 620.0
+unit = "A"
+tol = 0.0
+condition = "overcurrent above"
+approx = false
+cite = "facts_elec_gen.verified.md:296"
+
+[[fact]]
+id = "F24-164"
+quantity = "prot.uv_inhibit_asg_a"
+expected = 399.0
+unit = "A"
+tol = 0.0
+condition = "overcurrent above"
+approx = false
+cite = "facts_elec_gen.verified.md:296"
+
+[[fact]]
+id = "F24-165"
+quantity = "prot.phase_seq_delay_ms"
+expected = 100.0
+unit = "ms"
+tol = 0.0
+condition = "closure inhibit"
+approx = false
+cite = "facts_elec_gen.verified.md:297"
+
+[[fact]]
+id = "F24-166"
+quantity = "prot.dc_content_a"
+expected = 50.0
+unit = "A"
+tol = 0.0
+condition = "any phase"
+approx = false
+cite = "facts_elec_gen.verified.md:299"
+
+[[fact]]
+id = "F24-167"
+quantity = "prot.dc_content_time_ms"
+expected = 175.0
+unit = "ms"
+tol = 0.0
+condition = "trip delay"
+approx = false
+cite = "facts_elec_gen.verified.md:299"
+
+[[fact]]
+id = "F24-168"
+quantity = "prot.dc_content_reset_a"
+expected = 32.0
+unit = "A"
+tol = 0.0
+condition = "all phases below"
+approx = false
+cite = "facts_elec_gen.verified.md:300"
+
+[[fact]]
+id = "F24-169"
+quantity = "prot.vfsg_oc_a"
+expected = 375.0
+unit = "A"
+tol = 0.0
+condition = "highest phase"
+approx = false
+cite = "facts_elec_gen.verified.md:305"
+
+[[fact]]
+id = "F24-170"
+quantity = "prot.vfsg_oc_reset_a"
+expected = 360.0
+unit = "A"
+tol = 0.0
+condition = "reset"
+approx = false
+cite = "facts_elec_gen.verified.md:306"
+
+[[fact]]
+id = "F24-171"
+quantity = "prot.vfsg_oc_min_time_s"
+expected = 5.1
+unit = "s"
+tol = 0.0
+condition = "inverse time min"
+approx = false
+cite = "facts_elec_gen.verified.md:309"
+
+[[fact]]
+id = "F24-172"
+quantity = "prot.vfsg_oc_max_time_s"
+expected = 330.0
+unit = "s"
+tol = 0.0
+condition = "inverse time max"
+approx = false
+cite = "facts_elec_gen.verified.md:309"
+
+[[fact]]
+id = "F24-173"
+quantity = "prot.asg_oc_a"
+expected = 340.0
+unit = "A"
+tol = 14.0
+condition = "highest phase"
+approx = false
+cite = "facts_elec_gen.verified.md:307"
+
+[[fact]]
+id = "F24-174"
+quantity = "prot.asg_oc_reset_a"
+expected = 325.0
+unit = "A"
+tol = 0.0
+condition = "reset"
+approx = false
+cite = "facts_elec_gen.verified.md:308"
+
+[[fact]]
+id = "F24-175"
+quantity = "prot.open_phase_time_s"
+expected = 4.0
+unit = "s"
+tol = 0.0
+condition = "lowest below 11 A, next above 55 A"
+approx = false
+cite = "facts_elec_gen.verified.md:310"
+
+[[fact]]
+id = "F24-176"
+quantity = "prot.open_phase_low_a"
+expected = 11.0
+unit = "A"
+tol = 0.0
+condition = "lowest phase"
+approx = false
+cite = "facts_elec_gen.verified.md:310"
+
+[[fact]]
+id = "F24-177"
+quantity = "prot.open_phase_next_a"
+expected = 55.0
+unit = "A"
+tol = 0.0
+condition = "next lowest"
+approx = false
+cite = "facts_elec_gen.verified.md:310"
+
+[[fact]]
+id = "F24-178"
+quantity = "prot.diff_trip_time_ms"
+expected = 70.0
+unit = "ms"
+tol = 0.0
+condition = "max"
+approx = false
+cite = "facts_elec_gen.verified.md:312"
+
+[[fact]]
+id = "F24-179"
+quantity = "prot.diff_sw_delay_ms"
+expected = 30.0
+unit = "ms"
+tol = 0.0
+condition = "software"
+approx = false
+cite = "elec2_r8_timing_loads.md:66"
+
+[[fact]]
+id = "F24-180"
+quantity = "prot.diff_threshold_a"
+expected = 30.0
+unit = "A"
+tol = 0.0
+condition = "gen current up to 450 A"
+approx = false
+cite = "facts_elec_gen.verified.md:313"
+
+[[fact]]
+id = "F24-181"
+quantity = "prot.tie_diff_threshold_a"
+expected = 30.0
+unit = "A"
+tol = 0.0
+condition = "tie bus"
+approx = false
+cite = "facts_elec_gen.verified.md:314"
+
+[[fact]]
+id = "F24-182"
+quantity = "prot.tie_diff_time_s"
+expected = 0.05
+unit = "s"
+tol = 0.0
+condition = "tie bus"
+approx = false
+cite = "facts_elec_gen.verified.md:314"
+
+[[fact]]
+id = "F24-183"
+quantity = "prot.tie_diff_sw_delay_ms"
+expected = 210.0
+unit = "ms"
+tol = 0.0
+condition = "software"
+approx = false
+cite = "elec2_r8_timing_loads.md:67"
+
+[[fact]]
+id = "F24-184"
+quantity = "prot.ground_fault_a"
+expected = 15.0
+unit = "A"
+tol = 0.0
+condition = "main feeder"
+approx = false
+cite = "facts_elec_gen.verified.md:315"
+
+[[fact]]
+id = "F24-185"
+quantity = "prot.ground_fault_time_s"
+expected = 0.05
+unit = "s"
+tol = 0.0
+condition = "main feeder"
+approx = false
+cite = "facts_elec_gen.verified.md:315"
+
+[[fact]]
+id = "F24-186"
+quantity = "prot.srd_time_s"
+expected = 4.0
+unit = "s"
+tol = 0.0
+condition = "exciter DC link above normal"
+approx = false
+cite = "facts_elec_gen.verified.md:316"
+
+[[fact]]
+id = "F24-187"
+quantity = "prot.unbalanced_feeder_a"
+expected = 45.0
+unit = "A"
+tol = 0.0
+condition = "parallel feeder"
+approx = false
+cite = "facts_elec_gen.verified.md:317"
+
+[[fact]]
+id = "F24-188"
+quantity = "prot.unbalanced_feeder_time_s"
+expected = 2.75
+unit = "s"
+tol = 0.0
+condition = "delay"
+approx = false
+cite = "facts_elec_gen.verified.md:317"
+
+[[fact]]
+id = "F24-189"
+quantity = "prot.susp_time_s"
+expected = 0.2
+unit = "s"
+tol = 0.0
+condition = "max"
+approx = false
+cite = "facts_elec_gen.verified.md:318"
+
+[[fact]]
+id = "F24-190"
+quantity = "prot.vfsg_underfreq_pmg_hz"
+expected = 1083.0
+unit = "Hz"
+tol = 0.0
+condition = "361 Hz POR"
+approx = false
+cite = "facts_elec_gen.verified.md:319"
+
+[[fact]]
+id = "F24-191"
+quantity = "prot.vfsg_underfreq_por_hz"
+expected = 361.0
+unit = "Hz"
+tol = 0.0
+condition = "POR equivalent"
+approx = false
+cite = "facts_elec_gen.verified.md:319"
+
+[[fact]]
+id = "F24-192"
+quantity = "prot.vfsg_overfreq_pmg_hz"
+expected = 2397.0
+unit = "Hz"
+tol = 0.0
+condition = "799 Hz POR, 100 ms"
+approx = false
+cite = "facts_elec_gen.verified.md:320"
+
+[[fact]]
+id = "F24-193"
+quantity = "prot.vfsg_overfreq_por_hz"
+expected = 799.0
+unit = "Hz"
+tol = 0.0
+condition = "POR equivalent"
+approx = false
+cite = "facts_elec_gen.verified.md:320"
+
+[[fact]]
+id = "F24-194"
+quantity = "prot.vfsg_overfreq_time_ms"
+expected = 100.0
+unit = "ms"
+tol = 0.0
+condition = "trip"
+approx = false
+cite = "facts_elec_gen.verified.md:320"
+
+[[fact]]
+id = "F24-195"
+quantity = "prot.engine_idle_pmg_hz"
+expected = 1110.0
+unit = "Hz"
+tol = 0.0
+condition = "370 Hz POR"
+approx = false
+cite = "facts_elec_gen.verified.md:322"
+
+[[fact]]
+id = "F24-196"
+quantity = "prot.asg_of1_pmg_hz"
+expected = 1998.0
+unit = "Hz"
+tol = 0.0
+condition = "444 Hz POR, 2.1 s"
+approx = false
+cite = "facts_elec_gen.verified.md:323"
+
+[[fact]]
+id = "F24-197"
+quantity = "prot.asg_of1_time_s"
+expected = 2.1
+unit = "s"
+tol = 0.0
+condition = "trip"
+approx = false
+cite = "facts_elec_gen.verified.md:323"
+
+[[fact]]
+id = "F24-198"
+quantity = "prot.asg_of2_pmg_hz"
+expected = 2065.5
+unit = "Hz"
+tol = 0.0
+condition = "459 Hz POR, 100 ms"
+approx = false
+cite = "facts_elec_gen.verified.md:324"
+
+[[fact]]
+id = "F24-199"
+quantity = "prot.asg_uf1_pmg_hz"
+expected = 1624.5
+unit = "Hz"
+tol = 0.0
+condition = "361 Hz POR, 1.5 s"
+approx = false
+cite = "facts_elec_gen.verified.md:325"
+
+[[fact]]
+id = "F24-200"
+quantity = "prot.asg_uf1_time_s"
+expected = 1.5
+unit = "s"
+tol = 0.0
+condition = "trip"
+approx = false
+cite = "facts_elec_gen.verified.md:325"
+
+[[fact]]
+id = "F24-201"
+quantity = "prot.asg_uf2_pmg_hz"
+expected = 1579.5
+unit = "Hz"
+tol = 0.0
+condition = "351 Hz POR, 200 ms"
+approx = false
+cite = "facts_elec_gen.verified.md:326"
+
+[[fact]]
+id = "F24-202"
+quantity = "prot.asg_uf2_time_ms"
+expected = 200.0
+unit = "ms"
+tol = 0.0
+condition = "trip"
+approx = false
+cite = "facts_elec_gen.verified.md:326"
+
+[[fact]]
+id = "F24-203"
+quantity = "prot.pmg_to_por_ratio_vfsg"
+expected = 3.0
+unit = "ratio"
+tol = 0.0
+condition = "PMG over POR frequency"
+approx = false
+cite = "elec2_r8_timing_loads.md:58"
+
+[[fact]]
+id = "F24-204"
+quantity = "prot.pmg_to_por_ratio_asg"
+expected = 4.5
+unit = "ratio"
+tol = 0.0
+condition = "PMG over POR frequency"
+approx = false
+cite = "elec2_r8_timing_loads.md:57"
+
+[[fact]]
+id = "F24-205"
+quantity = "prot.vfsg_rpm_to_por_ratio"
+expected = 20.0
+unit = "rpm/Hz"
+tol = 0.0
+condition = "rotor speed over POR frequency"
+approx = false
+cite = "elec2_r8_timing_loads.md:59"
+
+[[fact]]
+id = "F24-206"
+quantity = "prot.field_driver_vr_disable_ms"
+expected = 10.0
+unit = "ms"
+tol = 0.0
+condition = "max"
+approx = false
+cite = "facts_elec_gen.verified.md:331"
+
+[[fact]]
+id = "F24-207"
+quantity = "prot.field_driver_breaker_open_ms"
+expected = 50.0
+unit = "ms"
+tol = 0.0
+condition = "GCB, APB, GEC3"
+approx = false
+cite = "facts_elec_gen.verified.md:331"
+
+[[fact]]
+id = "F24-208"
+quantity = "prot.field_driver_fault_time_ms"
+expected = 15.0
+unit = "ms"
+tol = 0.0
+condition = "fault set"
+approx = false
+cite = "facts_elec_gen.verified.md:332"
+
+[[fact]]
+id = "F24-209"
+quantity = "prot.gcb_status_disagree_ms"
+expected = 150.0
+unit = "ms"
+tol = 0.0
+condition = "ELEC GEN OFF"
+approx = false
+cite = "facts_elec_gen.verified.md:364"
+
+[[fact]]
+id = "F24-210"
+quantity = "prot.gcu_28v_fail_s"
+expected = 1.5
+unit = "s"
+tol = 0.0
+condition = "ELEC GEN OFF"
+approx = false
+cite = "facts_elec_gen.verified.md:366"
+
+[[fact]]
+id = "F24-211"
+quantity = "prot.ovtpu_reset_ms"
+expected = 200.0
+unit = "ms"
+tol = 0.0
+condition = "reset"
+approx = false
+cite = "elec2_r8_timing_loads.md:71"
+
+[[fact]]
+id = "F24-212"
+quantity = "prot.ovtpu_uv_inhibit_ms"
+expected = 100.0
+unit = "ms"
+tol = 0.0
+condition = "UV after clear"
+approx = false
+cite = "elec2_r8_timing_loads.md:72"
+
+[[fact]]
+id = "F24-213"
+quantity = "prot.ovtpu_srd_inhibit_ms"
+expected = 10.0
+unit = "ms"
+tol = 0.0
+condition = "SRD after clear"
+approx = false
+cite = "elec2_r8_timing_loads.md:72"
+
+[[fact]]
+id = "F24-214"
+quantity = "prot.fail_to_close_bsb_tru_ms"
+expected = 190.0
+unit = "ms"
+tol = 0.0
+condition = "aux contact"
+approx = false
+cite = "elec2_r8_timing_loads.md:74"
+
+[[fact]]
+id = "F24-215"
+quantity = "prot.fail_to_close_btb_ms"
+expected = 150.0
+unit = "ms"
+tol = 0.0
+condition = "BB iso rly, BTBs"
+approx = false
+cite = "elec2_r8_timing_loads.md:75"
+
+[[fact]]
+id = "F24-216"
+quantity = "prot.tru_oc_tier1_a"
+expected = 280.0
+unit = "A"
+tol = 0.0
+condition = "305 s"
+approx = false
+cite = "elec2_r8_timing_loads.md:76"
+
+[[fact]]
+id = "F24-217"
+quantity = "prot.tru_oc_tier1_time_s"
+expected = 305.0
+unit = "s"
+tol = 0.0
+condition = "280 A"
+approx = false
+cite = "elec2_r8_timing_loads.md:76"
+
+[[fact]]
+id = "F24-218"
+quantity = "prot.tru_oc_tier2_a"
+expected = 360.0
+unit = "A"
+tol = 0.0
+condition = "48 s"
+approx = false
+cite = "elec2_r8_timing_loads.md:77"
+
+[[fact]]
+id = "F24-219"
+quantity = "prot.tru_oc_tier2_time_s"
+expected = 48.0
+unit = "s"
+tol = 0.0
+condition = "360 A"
+approx = false
+cite = "elec2_r8_timing_loads.md:77"
+
+[[fact]]
+id = "F24-220"
+quantity = "prot.tru_oc_tier3_a"
+expected = 420.0
+unit = "A"
+tol = 0.0
+condition = "12 s"
+approx = false
+cite = "elec2_r8_timing_loads.md:78"
+
+[[fact]]
+id = "F24-221"
+quantity = "prot.tru_oc_tier3_time_s"
+expected = 12.0
+unit = "s"
+tol = 0.0
+condition = "420 A"
+approx = false
+cite = "elec2_r8_timing_loads.md:78"
+
+[[fact]]
+id = "F24-222"
+quantity = "prot.atu_diff_a"
+expected = 40.0
+unit = "A"
+tol = 0.0
+condition = "trip"
+approx = false
+cite = "elec2_r8_timing_loads.md:68"
+
+[[fact]]
+id = "F24-223"
+quantity = "prot.atu_diff_time_ms"
+expected = 100.0
+unit = "ms"
+tol = 0.0
+condition = "max"
+approx = false
+cite = "elec2_r8_timing_loads.md:68"
+
+[[fact]]
+id = "F24-224"
+quantity = "msg.apu_batt_overheat_s"
+expected = 1.0
+unit = "s"
+tol = 0.0
+condition = "ELEC APU BATTERY OVERHEAT"
+approx = false
+cite = "facts_elec_gen.verified.md:342"
+
+[[fact]]
+id = "F24-225"
+quantity = "msg.apu_batt_charger_s"
+expected = 1.0
+unit = "s"
+tol = 0.0
+condition = "ELEC APU BATTERY CHARGER"
+approx = false
+cite = "facts_elec_gen.verified.md:343"
+
+[[fact]]
+id = "F24-226"
+quantity = "msg.elec_28v_bus_v"
+expected = 18.0
+unit = "V"
+tol = 0.0
+condition = "below"
+approx = false
+cite = "facts_elec_gen.verified.md:344"
+
+[[fact]]
+id = "F24-227"
+quantity = "msg.elec_28v_bus_time_s"
+expected = 1.38
+unit = "s"
+tol = 0.0
+condition = "duration"
+approx = false
+cite = "facts_elec_gen.verified.md:344"
+
+[[fact]]
+id = "F24-228"
+quantity = "msg.elec_235v_bus_uv_vrms"
+expected = 130.5
+unit = "Vrms"
+tol = 0.0
+condition = "below"
+approx = false
+cite = "facts_elec_gen.verified.md:345"
+
+[[fact]]
+id = "F24-229"
+quantity = "msg.elec_235v_bus_uv_time_ms"
+expected = 500.0
+unit = "ms"
+tol = 0.0
+condition = "duration"
+approx = false
+cite = "facts_elec_gen.verified.md:345"
+
+[[fact]]
+id = "F24-230"
+quantity = "msg.tru_current_a"
+expected = 11.0
+unit = "A"
+tol = 0.0
+condition = "below while AC supplies TRU"
+approx = false
+cite = "facts_elec_gen.verified.md:377"
+
+[[fact]]
+id = "F24-231"
+quantity = "batt.main_capacity_ah"
+expected = 50.0
+unit = "Ah"
+tol = 15.0
+condition = "ata24 and eps24 value; stm gives 65"
+approx = false
+cite = "elec2_r5_batteries_backup.md:5"
+
+[[fact]]
+id = "F24-232"
+quantity = "batt.apu_start_attempt_s"
+expected = 45.0
+unit = "s"
+tol = 0.0
+condition = "each"
+approx = false
+cite = "elec2_r5_batteries_backup.md:10"
+
+[[fact]]
+id = "F24-233"
+quantity = "batt.apu_start_attempts"
+expected = 3
+unit = "count"
+tol = 0
+condition = "consecutive"
+approx = false
+cite = "elec2_r5_batteries_backup.md:10"
+
+[[fact]]
+id = "F24-234"
+quantity = "batt.apu_holdup_s"
+expected = 10.0
+unit = "s"
+tol = 0.0
+condition = "hydraulic CMSC input"
+approx = false
+cite = "elec2_r5_batteries_backup.md:11"
+
+[[fact]]
+id = "F24-235"
+quantity = "batt.burst_disc_psig"
+expected = 18.0
+unit = "psig"
+tol = 0.0
+condition = "ruptures above"
+approx = false
+cite = "elec2_r5_batteries_backup.md:20"
+
+[[fact]]
+id = "F24-236"
+quantity = "batt.indicator_psid"
+expected = 3.0
+unit = "psid"
+tol = 0.0
+condition = "button extends above"
+approx = false
+cite = "elec2_r5_batteries_backup.md:23"
+
+[[fact]]
+id = "F24-237"
+quantity = "batt.enclosure_wall_in"
+expected = 0.125
+unit = "in"
+tol = 0.0
+condition = "stainless"
+approx = false
+cite = "elec2_r5_batteries_backup.md:17"
+
+[[fact]]
+id = "F24-238"
+quantity = "batt.charger_current_a"
+expected = 46.0
+unit = "A"
+tol = 0.0
+condition = "regulated"
+approx = false
+cite = "elec2_r5_batteries_backup.md:35"
+
+[[fact]]
+id = "F24-239"
+quantity = "batt.charger_voltage_v"
+expected = 32.2
+unit = "V"
+tol = 0.0
+condition = "regulated"
+approx = false
+cite = "elec2_r5_batteries_backup.md:35"
+
+[[fact]]
+id = "F24-240"
+quantity = "batt.bcu_charge_pct"
+expected = 20.0
+unit = "%"
+tol = 0.0
+condition = "in 1.5 h"
+approx = false
+cite = "facts_elec_dist.verified.md:127"
+
+[[fact]]
+id = "F24-241"
+quantity = "batt.bcu_charge_time_h"
+expected = 1.5
+unit = "h"
+tol = 0.0
+condition = "to 20 percent"
+approx = false
+cite = "facts_elec_dist.verified.md:127"
+
+[[fact]]
+id = "F24-242"
+quantity = "batt.mbr_open_delay_s"
+expected = 15.0
+unit = "s"
+tol = 0.0
+condition = "after close command lost"
+approx = false
+cite = "elec2_r5_batteries_backup.md:39"
+
+[[fact]]
+id = "F24-243"
+quantity = "batt.shutdown_period_s"
+expected = 20.0
+unit = "s"
+tol = 0.0
+condition = "ground, no sources"
+approx = false
+cite = "elec2_r5_batteries_backup.md:43"
+
+[[fact]]
+id = "F24-244"
+quantity = "batt.ccs_holdup_after_mbr_s"
+expected = 11.0
+unit = "s"
+tol = 0.0
+condition = "dedicated HBB output"
+approx = false
+cite = "elec2_r5_batteries_backup.md:42"
+
+[[fact]]
+id = "F24-245"
+quantity = "batt.mbr_ccs_shutdown_max_s"
+expected = 30.0
+unit = "s"
+tol = 0.0
+condition = "battery OFF, forward EP lost"
+approx = false
+cite = "facts_elec_dist.verified.md:148"
+
+[[fact]]
+id = "F24-246"
+quantity = "batt.battery_off_delay_min_s"
+expected = 30.0
+unit = "s"
+tol = 0.0
+condition = "ata24 value; FCOM text gives up to 2 min"
+approx = false
+cite = "elec2_r5_batteries_backup.md:73"
+
+[[fact]]
+id = "F24-247"
+quantity = "batt.battery_off_delay_max_s"
+expected = 120.0
+unit = "s"
+tol = 0.0
+condition = "FCOM text value"
+approx = false
+cite = "elec2_r5_batteries_backup.md:75"
+
+[[fact]]
+id = "F24-248"
+quantity = "batt.transfer_interrupt_ms"
+expected = 30.0
+unit = "ms"
+tol = 0.0
+condition = "primary to battery-only"
+approx = false
+cite = "elec2_r5_batteries_backup.md:45"
+
+[[fact]]
+id = "F24-249"
+quantity = "batt.standby_parallel_ms"
+expected = 50.0
+unit = "ms"
+tol = 0.0
+condition = "max"
+approx = false
+cite = "elec2_r5_batteries_backup.md:71"
+
+[[fact]]
+id = "F24-250"
+quantity = "batt.standby_parallel_instr_bus_v"
+expected = 24.0
+unit = "V"
+tol = 0.0
+condition = "at or below"
+approx = false
+cite = "elec2_r5_batteries_backup.md:71"
+
+[[fact]]
+id = "F24-251"
+quantity = "batt.standby_parallel_tru_a"
+expected = 360.0
+unit = "A"
+tol = 0.0
+condition = "TRU current below"
+approx = false
+cite = "elec2_r5_batteries_backup.md:71"
+
+[[fact]]
+id = "F24-252"
+quantity = "batt.cit_ground_to_air_s"
+expected = 120.0
+unit = "s"
+tol = 0.0
+condition = "closed on transition"
+approx = false
+cite = "elec2_r5_batteries_backup.md:67"
+
+[[fact]]
+id = "F24-253"
+quantity = "batt.cit_post_transfer_s"
+expected = 15.0
+unit = "s"
+tol = 0.0
+condition = "after transfer completes"
+approx = false
+cite = "elec2_r5_batteries_backup.md:70"
+
+[[fact]]
+id = "F24-254"
+quantity = "batt.fault_sense_s"
+expected = 15.0
+unit = "s"
+tol = 0.0
+condition = "charger discrete"
+approx = false
+cite = "elec2_r5_batteries_backup.md:47"
+
+[[fact]]
+id = "F24-255"
+quantity = "batt.disch_inhibit_a"
+expected = 30.0
+unit = "A"
+tol = 0.0
+condition = "for 20 s"
+approx = false
+cite = "elec2_r5_batteries_backup.md:52"
+
+[[fact]]
+id = "F24-256"
+quantity = "batt.disch_inhibit_time_s"
+expected = 20.0
+unit = "s"
+tol = 0.0
+condition = "at 30 A"
+approx = false
+cite = "elec2_r5_batteries_backup.md:52"
+
+[[fact]]
+id = "F24-257"
+quantity = "batt.disch_inhibit_low_a"
+expected = 5.0
+unit = "A"
+tol = 0.0
+condition = "lower bound for 10 min"
+approx = false
+cite = "elec2_r5_batteries_backup.md:53"
+
+[[fact]]
+id = "F24-258"
+quantity = "batt.disch_inhibit_low_time_min"
+expected = 10.0
+unit = "min"
+tol = 0.0
+condition = "5 to 30 A"
+approx = false
+cite = "elec2_r5_batteries_backup.md:53"
+
+[[fact]]
+id = "F24-259"
+quantity = "batt.disch_inhibit_hbb_v"
+expected = 24.0
+unit = "V"
+tol = 0.0
+condition = "below for 60 s"
+approx = false
+cite = "elec2_r5_batteries_backup.md:54"
+
+[[fact]]
+id = "F24-260"
+quantity = "batt.disch_inhibit_hbb_time_s"
+expected = 60.0
+unit = "s"
+tol = 0.0
+condition = "below 24 V"
+approx = false
+cite = "elec2_r5_batteries_backup.md:54"
+
+[[fact]]
+id = "F24-261"
+quantity = "batt.disch_clear_a"
+expected = 5.0
+unit = "A"
+tol = 0.0
+condition = "below for 1 s"
+approx = false
+cite = "elec2_r5_batteries_backup.md:55"
+
+[[fact]]
+id = "F24-262"
+quantity = "batt.disch_clear_hbb_v"
+expected = 29.0
+unit = "V"
+tol = 0.0
+condition = "above for 1.5 s"
+approx = false
+cite = "elec2_r5_batteries_backup.md:56"
+
+[[fact]]
+id = "F24-263"
+quantity = "batt.disch_msg_low_a"
+expected = 3.0
+unit = "A"
+tol = 0.0
+condition = "to 30 A for 10 min"
+approx = false
+cite = "elec2_r5_batteries_backup.md:57"
+
+[[fact]]
+id = "F24-264"
+quantity = "batt.low_msg_hbb_v"
+expected = 22.0
+unit = "V"
+tol = 0.0
+condition = "below for 1.5 s"
+approx = false
+cite = "elec2_r5_batteries_backup.md:58"
+
+[[fact]]
+id = "F24-265"
+quantity = "batt.low_msg_time_s"
+expected = 1.5
+unit = "s"
+tol = 0.0
+condition = "below 22 V"
+approx = false
+cite = "elec2_r5_batteries_backup.md:58"
+
+[[fact]]
+id = "F24-266"
+quantity = "batt.low_msg_reset_v"
+expected = 24.0
+unit = "V"
+tol = 0.0
+condition = "above for 1.5 s"
+approx = false
+cite = "elec2_r8_timing_loads.md:21"
+
+[[fact]]
+id = "F24-267"
+quantity = "batt.hbb_uv_v"
+expected = 24.0
+unit = "V"
+tol = 0.0
+condition = "fault, 15 s"
+approx = false
+cite = "elec2_r5_batteries_backup.md:61"
+
+[[fact]]
+id = "F24-268"
+quantity = "batt.hbb_uv_time_s"
+expected = 15.0
+unit = "s"
+tol = 0.0
+condition = "fault"
+approx = false
+cite = "elec2_r5_batteries_backup.md:61"
+
+[[fact]]
+id = "F24-269"
+quantity = "batt.hbb_ov_v"
+expected = 35.0
+unit = "V"
+tol = 0.0
+condition = "fault, 60 s"
+approx = false
+cite = "elec2_r5_batteries_backup.md:62"
+
+[[fact]]
+id = "F24-270"
+quantity = "batt.hbb_ov_time_s"
+expected = 60.0
+unit = "s"
+tol = 0.0
+condition = "fault"
+approx = false
+cite = "elec2_r5_batteries_backup.md:62"
+
+[[fact]]
+id = "F24-271"
+quantity = "batt.charge_high_min"
+expected = 60.0
+unit = "min"
+tol = 0.0
+condition = "light HIGH above 30.1 V"
+approx = false
+cite = "elec2_r8_timing_loads.md:5"
+
+[[fact]]
+id = "F24-272"
+quantity = "batt.charge_high_v"
+expected = 30.1
+unit = "V"
+tol = 0.0
+condition = "light HIGH above"
+approx = false
+cite = "elec2_r8_timing_loads.md:5"
+
+[[fact]]
+id = "F24-273"
+quantity = "batt.charge_med_min"
+expected = 30.0
+unit = "min"
+tol = 0.0
+condition = "light MEDIUM 29.7 to 30.1 V"
+approx = false
+cite = "elec2_r8_timing_loads.md:6"
+
+[[fact]]
+id = "F24-274"
+quantity = "batt.charge_low_min"
+expected = 15.0
+unit = "min"
+tol = 0.0
+condition = "light LOW below 29.7 V"
+approx = false
+cite = "elec2_r8_timing_loads.md:7"
+
+[[fact]]
+id = "F24-275"
+quantity = "batt.charge_low_v"
+expected = 29.7
+unit = "V"
+tol = 0.0
+condition = "threshold"
+approx = false
+cite = "elec2_r8_timing_loads.md:7"
+
+[[fact]]
+id = "F24-276"
+quantity = "batt.full_charge_v"
+expected = 31.0
+unit = "V"
+tol = 0.0
+condition = "at or above and under 5 A"
+approx = false
+cite = "elec2_r8_timing_loads.md:10"
+
+[[fact]]
+id = "F24-277"
+quantity = "batt.full_charge_a"
+expected = 5.0
+unit = "A"
+tol = 0.0
+condition = "below while charging"
+approx = false
+cite = "elec2_r8_timing_loads.md:10"
+
+[[fact]]
+id = "F24-278"
+quantity = "batt.full_charge_time_max_min"
+expected = 90.0
+unit = "min"
+tol = 0.0
+condition = "range upper"
+approx = false
+cite = "elec2_r8_timing_loads.md:9"
+
+[[fact]]
+id = "F24-282"
+quantity = "batt.switch_off_msg_s"
+expected = 1.0
+unit = "s"
+tol = 0.0
+condition = "OFF sets message"
+approx = false
+cite = "elec2_r8_timing_loads.md:24"
+
+[[fact]]
+id = "F24-283"
+quantity = "batt.ground_battery_only_off_delay_s"
+expected = 30.0
+unit = "s"
+tol = 0.0
+condition = "ata24"
+approx = false
+cite = "elec2_r5_batteries_backup.md:73"
+
+[[fact]]
+id = "F24-284"
+quantity = "gcu.counter_limit_days"
+expected = 248.55
+unit = "days"
+tol = 0.01
+condition = "APPROX no repo citation: 2^31 centiseconds"
+approx = true
+cite = "none"

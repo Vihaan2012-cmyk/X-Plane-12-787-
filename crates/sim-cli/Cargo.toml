@@ -6,15 +6,23 @@ edition.workspace = true
 rust-version.workspace = true
 publish.workspace = true
 
+[lib]
+name = "sim_cli"
+path = "src/lib.rs"
+
 [[bin]]
 name = "sim-cli"
 path = "src/main.rs"
 
+[features]
+default = []
+electrical = ["dep:b789-sys-electrical"]
+
 [dependencies]
-b789-clock.workspace = true
-b789-store.workspace = true
+b789-render.workspace = true
 b789-tablet.workspace = true
-b789-sys-electrical.workspace = true
+b789-sys-electrical = { workspace = true, optional = true }
+toml = "0.8.23"
 
 [lints]
 workspace = true

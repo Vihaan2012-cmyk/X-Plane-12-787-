@@ -1,5 +1,4 @@
-//! Offline runner. Builds the aircraft from `aircraft/`, runs scenarios, shows the tablet screen.
-
 fn main() {
-    println!("sim-cli {} (skeleton)", env!("CARGO_PKG_VERSION"));
+    let args: Vec<String> = std::env::args().skip(1).collect();
+    std::process::exit(sim_cli::cli::run(&args));
 }

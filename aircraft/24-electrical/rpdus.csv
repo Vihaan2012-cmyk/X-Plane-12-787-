@@ -1,0 +1,18 @@
+id,gateway,station,buttline,waterline,location_source,feeds,grade,source
+RPDU 21,N,807,41L,305,locator.txt:2410,RPDU 22 slot 2 (control backup); 115 VAC 3ph + 28 VDC,VERIFIED,eps24.txt:33016 eps24.txt:33030 ata24.txt:1960 eps24.txt:33406 locator.txt:2410
+RPDU 22,N,,,,,RPDU 21 slot 2 (control backup); 115 VAC 3ph + 28 VDC,APPROX,eps24.txt:33016 eps24.txt:33030 ata24.txt:1960 eps24.txt:33405
+RPDU 31,N,,,,,115 VAC 3ph + 28 VDC,APPROX,eps24.txt:33016 eps24.txt:33030 ata24.txt:1960
+RPDU 32,N,,,,,115 VAC 3ph + 28 VDC,APPROX,eps24.txt:33016 eps24.txt:33030 ata24.txt:1960
+RPDU 33,N,,,,,115 VAC 3ph + 28 VDC,APPROX,eps24.txt:33016 eps24.txt:33030 ata24.txt:1960
+RPDU 34,N,,,,,115 VAC 3ph + 28 VDC,APPROX,eps24.txt:33016 eps24.txt:33030 ata24.txt:1960
+RPDU 41,N,,,,,RPDU 42 slot 3 (control backup); 115 VAC 3ph + 28 VDC,APPROX,eps24.txt:33016 eps24.txt:33030 ata24.txt:1960 eps24.txt:33412
+RPDU 42,N,,,,,115 VAC 3ph + 28 VDC,APPROX,eps24.txt:33016 eps24.txt:33030 ata24.txt:1960
+RPDU 71,Y,226,64R,162,locator.txt:2362,P300 SPDU slot 5 CIB (standby); 115 VAC 3ph + 28 VDC,VERIFIED,eps24.txt:33016 eps24.txt:33030 ata24.txt:1960 eps24.txt:33399 locator.txt:2362
+RPDU 72,Y,225,64R,175,locator.txt:2359,P400 SPDU slot 3 FIB (standby); 115 VAC 3ph + 28 VDC,VERIFIED,eps24.txt:33016 eps24.txt:33030 ata24.txt:1960 eps24.txt:33404 locator.txt:2359
+RPDU 73,N,225,56R,150,locator.txt:2365,P300 SPDU slot 3 CIB (standby); 115 VAC 3ph + 28 VDC,VERIFIED,eps24.txt:33016 eps24.txt:33030 ata24.txt:1960 eps24.txt:33401 locator.txt:2365
+RPDU 74,N,224,65L,172,locator.txt:2361,P400 SPDU slot 5 FIB (standby); 115 VAC 3ph + 28 VDC,VERIFIED,eps24.txt:33016 eps24.txt:33030 ata24.txt:1960 eps24.txt:33402 locator.txt:2361
+RPDU 75,N,224,52L,146,locator.txt:2367,115 VAC 3ph + 28 VDC,VERIFIED,eps24.txt:33016 eps24.txt:33030 ata24.txt:1960 locator.txt:2367
+RPDU 76,N,226,55L,159,locator.txt:2364,RPDU 73 slot 3 (control backup); 115 VAC 3ph + 28 VDC,VERIFIED,eps24.txt:33016 eps24.txt:33030 ata24.txt:1960 eps24.txt:33413 locator.txt:2364
+RPDU 81,Y,1267,35L,177,locator.txt:2380,P300 SPDU slot 5 CIB (standby); 28 VDC only,VERIFIED,eps24.txt:33016 eps24.txt:33030 ata24.txt:1960 eps24.txt:33400 locator.txt:2380
+RPDU 82,Y,1580,93R,181,locator.txt:2392,P400 SPDU slot 5 FIB (standby); 28 VDC only,VERIFIED,eps24.txt:33016 eps24.txt:33030 ata24.txt:1960 eps24.txt:33403 locator.txt:2392
+RPDU 92,N,1267,37r,178,locator.txt:2382,RPDU 81 slot 3 (control backup); 115 VAC 3ph + 28 VDC,VERIFIED,eps24.txt:33016 eps24.txt:33030 ata24.txt:1960 eps24.txt:33415 locator.txt:2382

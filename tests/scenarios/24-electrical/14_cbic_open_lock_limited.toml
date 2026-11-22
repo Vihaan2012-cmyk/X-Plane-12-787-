@@ -1,0 +1,192 @@
+[scenario]
+id = "14_cbic_open_lock_limited"
+title = "CBIC open, lock, limited mode"
+system = "24-electrical"
+aircraft = "787-9"
+engines = "trent1000"
+tick_hz = 1000
+summary = "Electronic breaker open, lock, close; TCB refused; main-bus ELCC without CBIC function; BPCU loss gives limited CBIC."
+
+[initial]
+airplane_state = "cold_dark"
+on_ground = true
+battery_switch = "ON"
+apu_battery_connected = true
+ext_pwr_fwd_l = "unplugged"
+ext_pwr_fwd_r = "unplugged"
+ext_pwr_aft = "unplugged"
+gen_ctrl_switches = "ON"
+oat_c = 15.0
+ext_power_on = true
+
+[[step]]
+t_s = 0.0
+actor = "crew"
+action = "open_page"
+target = "CBIC"
+
+[[step]]
+t_s = 5.0
+actor = "crew"
+action = "cbic_open"
+target = "CE1471831"
+
+[[step]]
+t_s = 10.0
+actor = "crew"
+action = "cbic_lock"
+target = "CE1471831"
+
+[[step]]
+t_s = 15.0
+actor = "crew"
+action = "cbic_close"
+target = "CE1471831"
+
+[[step]]
+t_s = 20.0
+actor = "crew"
+action = "cbic_open"
+target = "CT3209101"
+
+[[step]]
+t_s = 25.0
+actor = "crew"
+action = "cbic_open"
+target = "CK2421501"
+
+[[step]]
+t_s = 30.0
+actor = "fault"
+action = "bpcu_fail"
+target = "L_AND_R"
+
+[[step]]
+t_s = 40.0
+actor = "crew"
+action = "cbic_open"
+target = "CE1471831"
+
+[[expect]]
+id = "14_cbic_open_lock_limited.e01"
+t_s = 5.1
+signal = "elec.cb.CE1471831.state"
+op = "eq"
+value = "open"
+approx = false
+cite = "elec2_r6_distribution_units.md:97"
+
+[[expect]]
+id = "14_cbic_open_lock_limited.e02"
+t_s = 5.1
+signal = "elec.cb.CE1471831.load_current"
+op = "eq"
+value = 0.0
+tol = 0.01
+unit = "A"
+approx = false
+cite = "elec2_r6_distribution_units.md:97"
+
+[[expect]]
+id = "14_cbic_open_lock_limited.e03"
+t_s = 10.1
+signal = "elec.cb.CE1471831.locked"
+op = "true"
+approx = false
+cite = "elec2_r1a_conflicts_structure.md:72"
+
+[[expect]]
+id = "14_cbic_open_lock_limited.e04"
+t_s = 15.1
+signal = "elec.cb.CE1471831.state"
+op = "eq"
+value = "open"
+approx = false
+cite = "elec2_r1a_conflicts_structure.md:72"
+
+[[expect]]
+id = "14_cbic_open_lock_limited.e05"
+t_s = 20.1
+signal = "elec.cb.CT3209101.state"
+op = "eq"
+value = "closed"
+approx = false
+cite = "facts_elec_dist.verified.md:72"
+
+[[expect]]
+id = "14_cbic_open_lock_limited.e06"
+t_s = 20.1
+signal = "elec.cbic.cmd_rejected_tcb"
+op = "true"
+approx = false
+cite = "facts_elec_dist.verified.md:72"
+
+[[expect]]
+id = "14_cbic_open_lock_limited.e07"
+t_s = 25.1
+signal = "elec.cb.CK2421501.state"
+op = "eq"
+value = "open"
+approx = false
+cite = "elec2_r1a_conflicts_structure.md:72"
+
+[[expect]]
+id = "14_cbic_open_lock_limited.e08"
+t_s = 0.1
+signal = "elec.cb.prefix.ECB"
+op = "eq"
+value = "CE"
+approx = false
+cite = "elec2_r1a_conflicts_structure.md:67"
+
+[[expect]]
+id = "14_cbic_open_lock_limited.e09"
+t_s = 0.1
+signal = "elec.cb.prefix.ELCC"
+op = "eq"
+value = "CK"
+approx = false
+cite = "elec2_r1a_conflicts_structure.md:68"
+
+[[expect]]
+id = "14_cbic_open_lock_limited.e10"
+t_s = 0.1
+signal = "elec.cb.prefix.TCB"
+op = "eq"
+value = "CT"
+approx = false
+cite = "elec2_r1a_conflicts_structure.md:69"
+
+[[expect]]
+id = "14_cbic_open_lock_limited.e11"
+t_s = 0.1
+signal = "elec.cbic.main_bus_elcc_controlled"
+op = "false"
+approx = false
+cite = "elec2_r1a_conflicts_structure.md:71"
+
+[[expect]]
+id = "14_cbic_open_lock_limited.e12"
+t_s = 40.1
+signal = "elec.cbic.mode"
+op = "eq"
+value = "ground"
+approx = false
+cite = "elec_conditions.verified.md:40"
+
+[[expect]]
+id = "14_cbic_open_lock_limited.e13"
+t_s = 40.1
+signal = "elec.cb.CE1471831.state"
+op = "eq"
+value = "open"
+approx = true
+cite = "none"
+
+[[expect]]
+id = "14_cbic_open_lock_limited.e14"
+t_s = 40.1
+signal = "elec.cbic.battery_ground_open_reset_allowed"
+op = "true"
+approx = false
+cite = "elec2_r5_batteries_backup.md:13"

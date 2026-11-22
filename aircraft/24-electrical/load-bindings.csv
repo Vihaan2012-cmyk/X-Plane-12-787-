@@ -1,0 +1,83 @@
+signal,kind,target,grade,source
+elec.load.captain_inboard_du,sspc,RPDU 71 DC,VERIFIED,loads.csv:570
+elec.load.lower_du,bus,CIB,VERIFIED,elec_conditions.verified.md:47
+elec.load.mcp,sspc,RPDU 71 DC|RPDU 72 DC,VERIFIED,loads.csv:82
+elec.load.apu_start_capability,bus,CIB&HBB_APU,DERIVED,elec_conditions.verified.md:49
+elec.load.ahru_l,bus,DC28_L|HBB_MAIN,VERIFIED,loads.csv:1192
+elec.load.wing_fueling_panel,bus,CIB,APPROX,elec_conditions.verified.md:50
+elec.load.fmc,bus,CIB,APPROX,elec_conditions.verified.md:50
+elec.load.captain_acp,sspc,RPDU 73 DC,VERIFIED,loads.csv:116
+elec.load.ccr_l,bus,CIB|HBB_MAIN,VERIFIED,loads.csv:835
+elec.load.ground_crew_call_horn,bus,HBB_MAIN,VERIFIED,loads.csv:104
+elec.load.engine_apu_fire_detection,bus,HBB_MAIN,VERIFIED,elec_conditions.verified.md:110
+elec.load.vhf_l,sspc,RPDU 73 DC,VERIFIED,loads.csv:93
+elec.load.misc_lighting,bus,CIB|DC28_L,DERIVED,loads.csv:683
+elec.load.tcp_l,sspc,RPDU 73 DC,VERIFIED,loads.csv:113
+elec.load.brakes,bus,HBB_MAIN|DC28_L,VERIFIED,loads.csv:227
+elec.load.fo_displays,bus,DC28_R,VERIFIED,loads.csv:574
+elec.load.cabin_lighting,bus,AC115_L|AC115_R&shed:CABIN_LIGHTING&sw:cabin_util,DERIVED,loads.csv:692
+elec.load.galleys,bus,L2|R2&shed:GALLEY_FWD|shed:GALLEY_AFT&sw:cabin_util,DERIVED,loads.csv:133
+elec.load.galley_power,bus,L2|R2&shed:GALLEY_FWD|shed:GALLEY_AFT&sw:cabin_util,DERIVED,loads.csv:133
+elec.load.ife,bus,L1|L2|R1|R2&shed:IFE&sw:ife,DERIVED,loads.csv:410
+elec.load.ife_limited,bus,AC115_L&AC115_R&sw:ife,DERIVED,elec_conditions.verified.md:72
+elec.load.hydraulic_pumps_ac,bus,L1|L2|R1|R2&shed:HYD_DEMAND_PUMPS,DERIVED,elec_conditions.verified.md:12
+elec.load.hydraulics_limited,bus,L1|R1,APPROX,elec_conditions.verified.md:71
+elec.load.packs,bus,HVDC_L1|HVDC_L2|HVDC_R1|HVDC_R2&shed:ECS_PACKS&!mode:external_power_on,DERIVED,loads.csv:4
+elec.load.ngs,bus,L1|R1,APPROX,elec_conditions.verified.md:70
+elec.load.battery_chargers,bus,CIB|FIB,VERIFIED,loads.csv:212
+elec.load.pecs,bus,L1|L2|R1|R2,VERIFIED,loads.csv:35
+elec.load.c1_hydraulic_pump,bus,L1,VERIFIED,elec_conditions.verified.md:7
+elec.load.left_aft_fuel_pump,bus,L1,VERIFIED,elec_conditions.verified.md:8
+elec.load.captain_and_fo_huds,bus,L1&R1,DERIVED,elec_conditions.verified.md:9
+elec.load.spoilers_one_or_more,bus,L2&R2,DERIVED,elec_conditions.verified.md:11
+elec.load.right_demand_hydraulic_pump,bus,L2,VERIFIED,elec_conditions.verified.md:12
+elec.load.right_aft_fuel_pump,bus,L2,VERIFIED,elec_conditions.verified.md:13
+elec.load.l2_stabilizer,bus,L2,VERIFIED,elec_conditions.verified.md:14
+elec.load.wing_anti_ice,bus,L2|R2|LTB|RTB,DERIVED,elec_conditions.verified.md:10
+elec.load.c2_hydraulic_pump,bus,R1,VERIFIED,elec_conditions.verified.md:15
+elec.load.right_forward_fuel_pump,bus,R1,VERIFIED,elec_conditions.verified.md:16
+elec.load.forward_cargo_heat,bus,R1&shed:CARGO_HEAT,VERIFIED,loads.csv:66
+elec.load.left_demand_hydraulic_pump,bus,R2,VERIFIED,elec_conditions.verified.md:21
+elec.load.left_forward_fuel_pump,bus,R2,VERIFIED,elec_conditions.verified.md:22
+elec.load.r2_stabilizer,bus,R2,VERIFIED,elec_conditions.verified.md:23
+elec.load.captain_flight_instruments,bus,CIB,VERIFIED,elec_conditions.verified.md:75
+elec.load.center_pitot_heat,bus,BB,VERIFIED,loads.csv:526
+elec.load.flight_interphone,bus,CIB,VERIFIED,elec_conditions.verified.md:87
+elec.load.autothrottle,bus,DC28_L|DC28_R,VERIFIED,loads.csv:87
+elec.load.thrust_reversers,bus,DC28_L|DC28_R,APPROX,elec_conditions.verified.md:92
+elec.load.stabilizer_trim,bus,L2|R2,VERIFIED,loads.csv:1314
+elec.load.hf_satcom_tcas_gpws,sspc,RPDU 33 AC,VERIFIED,loads.csv:100
+elec.load.weather_radar_ext_lighting_wips_window_heat,bus,L1|L2|R1|R2&shed:WINDOW_HEAT&shed:EXTERIOR_LIGHTS,DERIVED,elec_conditions.verified.md:94
+elec.load.igniters_standby_source,bus,HBB_MAIN|BB,VERIFIED,loads.csv:1313
+elec.load.apu_controller,bus,HBB_APU,VERIFIED,loads.csv:917
+elec.load.apu_fuel_shutoff_valve,bus,HBB_MAIN,VERIFIED,elec_conditions.verified.md:110
+elec.load.only_tcb_instrument_bus_loads,bus,mode:on_ground_battery_only,VERIFIED,elec2_r5_batteries_backup.md:46
+elec.load.thermal_cb_loads_shed,load_shed,tcb_shed,DERIVED,facts_elec_dist.verified.md:75
+elec.load_shed.active,load_shed,active,VERIFIED,elec2_r8_timing_loads.md:49
+elec.load_shed.step_count,load_shed,count,VERIFIED,elec2_r8_timing_loads.md:49
+elec.load_shed.step_interval_s,load_shed,interval_s,APPROX,elec2_r8_timing_loads.md:51
+elec.load_shed.threshold_5min_kva,load_shed,thr_5min_kva,VERIFIED,elec2_r8_timing_loads.md:49
+elec.load_shed.large_group_threshold_kva,load_shed,thr_5s_kva,VERIFIED,elec2_r8_timing_loads.md:50
+elec.load_shed.group_shed,load_shed,group,DERIVED,elec2_r8_timing_loads.md:50
+elec.load_shed.cabin_lighting_low_before_ife_off,load_shed,order:CABIN_LIGHTING<IFE,DERIVED,elec2_r8_timing_loads.md:56
+elec.load_shed.nonessential_shed_to_remaining_source,load_shed,nonessential,DERIVED,facts_elec_gen.verified.md:128
+elec.load_shed.pecs_thermal_threshold_f,load_shed,const:148.0,VERIFIED,elec2_r8_timing_loads.md:54
+elec.pecs.energized,pecs,L1|L2|R1|R2,VERIFIED,elec_conditions.verified.md:39
+elec.pecs.loops_active,pecs,L1|L2&!ep_r_only;R1|R2&!ep_l_only,VERIFIED,elec_conditions.verified.md:69
+elec.cmsc.apu_start.mode,cmsc,R2=ac_start_left_or_right_asg;HBB_APU=multi_use_right_asg_only;off,VERIFIED,facts_elec_gen.verified.md:219
+elec.cmsc.l1.mode,cmsc,start:0=MES;HVDC_L1=CAC;off,VERIFIED,facts_elec_gen.verified.md:131
+elec.cb.CE1471831.state,breaker,state:1471831=RPDU 71 DC,APPROX,eps24.txt:28700
+elec.cb.CE1471831.load_current,breaker,amps:1471831=RPDU 71 DC,APPROX,elec2_r6_distribution_units.md:97
+elec.cb.CE1471831.locked,breaker,locked:1471831,VERIFIED,elec2_r1a_conflicts_structure.md:72
+elec.cb.CK2421501.state,breaker,state:2421501=elcc_enabled,APPROX,elec2_r1a_conflicts_structure.md:72
+elec.cb.CT3209101.state,breaker,state:3209101=HBB_MAIN,APPROX,facts_elec_dist.verified.md:72
+elec.cb.prefix.ECB,breaker,prefix:ECB,VERIFIED,elec2_r1a_conflicts_structure.md:67
+elec.cb.prefix.ELCC,breaker,prefix:ELCF,DERIVED,elec2_r1a_conflicts_structure.md:68
+elec.cb.prefix.TCB,breaker,prefix:TCB,VERIFIED,elec2_r1a_conflicts_structure.md:69
+elec.prot.fwd_ep_of_trip_hz,protection,EP_OF_HZ,VERIFIED,elec2_r2_sources.md:122
+elec.prot.fwd_ep_of_reset_hz,protection,EP_OF_RESET_HZ,VERIFIED,elec2_r2_sources.md:122
+elec.prot.fwd_ep_uf_trip_hz,protection,EP_UF_HZ,VERIFIED,elec2_r2_sources.md:123
+elec.prot.fwd_ep_uf_reset_hz,protection,EP_UF_RESET_HZ,VERIFIED,elec2_r2_sources.md:123
+elec.prot.fwd_ep_uv_rms,protection,EP_UV_V,VERIFIED,elec2_r2_sources.md:120
+elec.prot.fwd_ep_uv_delay_s,protection,EP_UV_DELAY_S,VERIFIED,elec2_r2_sources.md:120
+elec.prot.fwd_ep_ov_rms,protection,EP_OV_V,APPROX,elec2_r2_sources.md:118

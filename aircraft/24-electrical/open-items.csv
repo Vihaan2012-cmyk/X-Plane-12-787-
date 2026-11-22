@@ -1,0 +1,34 @@
+file,item,issue,sources
+sources.csv,BATT_MAIN/BATT_APU capacity,50 Ah (ata24/eps24) vs 65 Ah (stm.txt:7501); 50 Ah used,ata24.txt:544 eps24.txt:1423 stm.txt:7501
+conversion.csv,TRU_R input and output,right TRU input bus and 28 VDC bus mirrored from left TRU; not stated directly,ata24.txt:1893 ata24.txt:1719
+conversion.csv,CMSC_* identities,"only L1/L2/R1/R2 CAC, left/right EMP, center hydraulic named; EMP ids and HVDC bus mapping assumed",ata24.txt:2592 ata24.txt:6183
+conversion.csv,ATRU_* kVA,155 kVA continuous is the 787-9 value; L2/R2 ATRUs also accept 115 VAC,ata24.txt:6143 ata24.txt:2437
+buses.csv,"DC28_L/R, CIB/FIB, AC115_L/R panels",panel by side rule; not stated per bus,ata24.txt:418 ata24.txt:422
+rpdus.csv,RPDU 74 and 72 gateway flag,backup table labels 74 Gateway and 72 Standard; figures show 72 Gateway and 74 Standard; figures used,eps24.txt:33402 eps24.txt:33404 eps24.txt:33016 eps24.txt:33030
+rpdus.csv,RPDU 22 31 32 33 34 41 42 location,no locator row found,locator.verified.md
+contactors.csv,BB RLY CK2432507 vs BB ISO RLY CK2432502,both listed on the backup bus to R2 path; endpoints assumed R2 and BB,24eps.pdf p757 24eps.pdf p833
+contactors.csv,CK contactor rows from breaker sweep,connected buses not stated in facts; connects_a and connects_b blank,elec_breakers.verified.md
+breakers.csv,CE2124811,dropped grade NAMED · CHECK · EXAMPLE-SCREEN,eps24.txt:6502 eps24.txt:6504 eps24.txt:6513
+breakers.csv,CE2143302,dropped grade NAMED · EXAMPLE-SCREEN,eps24.txt:6574 fig_eps24.txt:14372
+breakers.csv,CE2171802,dropped grade NAMED · OCR · EXAMPLE-SCREEN,eps24.txt:6571 fig_eps24.txt:12350
+breakers.csv,CE2171803,dropped grade NAMED · OCR · EXAMPLE-SCREEN,eps24.txt:6573 fig_eps24.txt:12356
+breakers.csv,CE2211821,dropped grade NAMED · EXAMPLE-SCREEN,eps24.txt:6593 fig_eps24.txt:14444
+breakers.csv,CE3521803,dropped grade NAMED · EXAMPLE-SCREEN,eps24.txt:6596 eps24.txt:29926 fig_eps24.txt:14450
+breakers.csv,CK2421501,dropped grade CONFLICT,eps24.txt:5546 eps24.txt:25927 fig_eps24.txt:44282
+breakers.csv,CK2421502,dropped grade CONFLICT,eps24.txt:5549 eps24.txt:26017 fig_eps24.txt:44212
+breakers.csv,CK2422526,dropped grade CONFLICT,eps24.txt:5564 eps24.txt:26019 fig_eps24.txt:11124
+breakers.csv,CK2425501,dropped grade CONFLICT,eps24.txt:5555 eps24.txt:25938 fig_eps24.txt:44238
+breakers.csv,CK2433503,dropped grade CONFLICT,eps24.txt:29762 eps24.txt:29051 fig_eps24.txt:49978
+breakers.csv,CK2435501,dropped grade CONFLICT,eps24.txt:5558 eps24.txt:25945 fig_eps24.txt:44286
+breakers.csv,CK3011502,dropped grade CONFLICT,eps24.txt:27021 eps24.txt:27155
+breakers.csv,CK3011503,dropped grade CONFLICT,eps24.txt:27027 eps24.txt:27157
+loads.csv,Surveillance camera ECB (RPDU 61 version),unit RPDU 61 not among the 17 RPDUs; dropped,ata23.txt:3067
+loads.csv,RPDU 81 and 82 power source,dropped grade CHECK,ata24.txt:1960
+loads.csv,RPDU 28v dc backup to other RPDUs,dropped grade CHECK,ata24.txt:1973
+loads.csv,J11 SPDU module connector (P300),dropped grade CHECK,eps24.txt:28443
+loads.csv,"Waste tank quantity sensors, right tank",dropped grade CHECK,ata38.txt:2184
+loads.csv,"ARS L, secondary",dropped grade CHECK,ata42.txt:521
+loads.csv,"ARS R, secondary",dropped grade CHECK,ata42.txt:526
+loads.csv,RDC 18 (secondary),dropped grade CHECK,ata42.txt:621
+loads.csv,RDC 23 (secondary),unit RPDU 62 not among the 17 RPDUs; dropped,ata42.txt:624
+loads.csv,EDAS interface power,dropped grade CHECK,diff89ge.txt:3210

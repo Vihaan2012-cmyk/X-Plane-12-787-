@@ -1,0 +1,143 @@
+[scenario]
+id = "15_gcu_248_day_counter_overflow"
+title = "GCU 248-day continuous power counter overflow"
+system = "24-electrical"
+aircraft = "787-9"
+engines = "trent1000"
+tick_hz = 1000
+summary = "Counter wrap after about 248.55 days of continuous GCU power; behaviour after wrap is modeled, not documented, hence all APPROX."
+
+[initial]
+airplane_state = "powered_continuously"
+on_ground = true
+battery_switch = "OFF"
+apu_battery_connected = true
+ext_pwr_fwd_l = "unplugged"
+ext_pwr_fwd_r = "unplugged"
+ext_pwr_aft = "unplugged"
+gen_ctrl_switches = "ON"
+oat_c = 15.0
+engines_running = [true, true]
+apu_running = true
+apu_gens_online = true
+gcu_power_cycled = false
+
+[[step]]
+t_s = 0.0
+actor = "sim"
+action = "set"
+target = "gcu.l1.uptime_days"
+value = 248.513
+
+[[step]]
+t_s = 0.0
+actor = "sim"
+action = "set"
+target = "gcu.l2.uptime_days"
+value = 248.513
+
+[[step]]
+t_s = 0.0
+actor = "sim"
+action = "set"
+target = "gcu.r1.uptime_days"
+value = 248.513
+
+[[step]]
+t_s = 0.0
+actor = "sim"
+action = "set"
+target = "gcu.r2.uptime_days"
+value = 248.513
+
+[[step]]
+t_s = 3600.0
+actor = "sim"
+action = "advance"
+target = "clock_s"
+value = 3600.0
+
+[[step]]
+t_s = 3650.0
+actor = "crew"
+action = "cycle_power"
+target = "ALL_GCU"
+
+[[expect]]
+id = "15_gcu_248_day_counter_overflow.e01"
+t_s = 0.0
+signal = "elec.gcu.counter_limit_days"
+op = "approx"
+value = 248.55
+tol = 0.01
+unit = "days"
+approx = true
+cite = "none"
+
+[[expect]]
+id = "15_gcu_248_day_counter_overflow.e02"
+t_s = 0.0
+signal = "elec.gcu.counter_limit_ticks"
+op = "eq"
+value = 2147483648
+unit = "cs"
+approx = true
+cite = "none"
+
+[[expect]]
+id = "15_gcu_248_day_counter_overflow.e03"
+t_s = 3000.0
+signal = "elec.gcu.l1.fault_failsafe"
+op = "false"
+approx = true
+cite = "none"
+
+[[expect]]
+id = "15_gcu_248_day_counter_overflow.e04"
+t_s = 3601.0
+signal = "elec.gcu.l1.fault_failsafe"
+op = "true"
+approx = true
+cite = "none"
+
+[[expect]]
+id = "15_gcu_248_day_counter_overflow.e05"
+t_s = 3601.0
+signal = "elec.gcb.l1.closed"
+op = "false"
+approx = true
+cite = "none"
+
+[[expect]]
+id = "15_gcu_248_day_counter_overflow.e06"
+t_s = 3601.0
+signal = "elec.gcb.r2.closed"
+op = "false"
+approx = true
+cite = "none"
+
+[[expect]]
+id = "15_gcu_248_day_counter_overflow.e07"
+t_s = 3601.0
+signal = "elec.gcu.simultaneous_loss_all_four"
+op = "true"
+approx = true
+cite = "none"
+
+[[expect]]
+id = "15_gcu_248_day_counter_overflow.e08"
+t_s = 3700.0
+signal = "elec.gcu.l1.uptime_days"
+op = "lt"
+value = 1.0
+unit = "days"
+approx = true
+cite = "none"
+
+[[expect]]
+id = "15_gcu_248_day_counter_overflow.e09"
+t_s = 3700.0
+signal = "elec.gcb.l1.closed"
+op = "true"
+approx = true
+cite = "none"

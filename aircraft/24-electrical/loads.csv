@@ -1,0 +1,1413 @@
+load,system_ata,voltage_bus,unit_rpdu,breaker_id,rating,draw,grade,source
+PCU channels (pack control unit),21,,,,,,VERIFIED,ata21.txt:754
+CAC motor (cabin air compressor),21,235v AC,,,,,VERIFIED,ata21.txt:929
+CAC motor controllers,21,,P700,,,,VERIFIED,ata21.txt:993
+Ram air fan (control data to RFMC/CMSC),21,,P700,,,,VERIFIED,ata21.txt:1847
+Ram air fan,21,,,,,,VERIFIED,ata21.txt:1891
+Ram air fan motor controller (RFMC),21,HVDC (voltage not stated),P700,,,,VERIFIED,ata21.txt:1910
+Lower recirculation fans (CCS-controlled),21,,P100,,,,VERIFIED,ata21.txt:2789
+Recirculation fan motor controllers (left and right),21,235v AC (3-phase induction motor),P100,,,,VERIFIED,ata21.txt:2947
+"Isolation valve, forward cargo left sidewall (boost valve, 28 VDC motor)",21,28v DC,,,,,VERIFIED,ata21.txt:3910
+Boost fan motor,21,28v DC,P300,,,,VERIFIED,ata21.txt:3956
+Boost fan,21,,P300,,,,VERIFIED,ata21.txt:3957
+AVS inlet door actuator,21,28v DC motor,,,,,VERIFIED,ata21.txt:4438
+Trim air pressure regulator valve,21,3-phase (voltage not stated),,,,,VERIFIED,ata21.txt:4063
+Trim air valves,21,3-phase (voltage not stated),,,,,VERIFIED,ata21.txt:4154
+"Humidifier (cabin, humidifier interface unit controlled)",21,28v DC,,,,,VERIFIED,ata21.txt:4867
+Humidifier stop switch (HUMID),21,,,,,,VERIFIED,ata21.txt:4816
+Crew rest humidifiers,21,28v DC,,,,,VERIFIED,ata21.txt:6448
+Zonal duct heaters,21,,,,,,VERIFIED,ata21.txt:5230
+Zonal duct heater (3-phase),21,3-phase (voltage not stated),,,,,VERIFIED,ata21.txt:5265
+Captain and first officer foot rest surface heaters,21,,,,,,VERIFIED,ata21.txt:5549
+Shoulder heaters,21,"115v AC, 3-phase",,,,1000 W,VERIFIED,ata21.txt:5622
+Galley heater,21,"115v AC, 3-phase",,,,1500 W,VERIFIED,ata21.txt:5760
+Passenger entry door floor panel surface heaters,21,,,,,,VERIFIED,ata21.txt:5819
+Zonal dryer controller,21,"115v AC 3-phase variable frequency in, 400 Hz out",,,,,VERIFIED,ata21.txt:6169
+Zonal dryer electric heater,21,"115v AC, 3-phase",,,,,VERIFIED,ata21.txt:6210
+"Zonal dryer controller loads (desiccant rotor motor, heater, fan)",21,,,,,,VERIFIED,ata21.txt:6246
+Zonal dryer fan and desiccant rotor motor,21,115v AC variable frequency to 400 Hz,,,,,VERIFIED,ata21.txt:6272
+OFCR/OFAR duct heater,21,,,,,,VERIFIED,ata21.txt:6426
+LGV fans (fan 1 and fan 2),21,"235v AC, 3-phase",P100,,,,VERIFIED,ata21.txt:7062
+LGV fan motor controllers,21,235v AC,P100,,,,VERIFIED,ata21.txt:7143
+LGV fan motor controller electronics,21,28v DC,,,,,VERIFIED,ata21.txt:7145
+Override jettison (OJ) pumps (2),21,,,,,,VERIFIED,ata21.txt:7366
+PECS pump package pumps,21,"235v AC, 3-phase, variable frequency",P100,,,,VERIFIED,ata21.txt:7394
+Left PECS pump package (power from P100),21,235v AC,P100,,,,VERIFIED,ata21.txt:7395
+PECS pump (each pump) power,21,,,,,,VERIFIED,ata21.txt:7398
+Left PECS pump package pump 1,21,28v DC,,,,,VERIFIED,ata21.txt:7402
+Left PECS pump package pump 2,21,28v DC,P300,,,,VERIFIED,ata21.txt:7405
+Right PECS pump package pump 1,21,28v DC,,,,,VERIFIED,ata21.txt:7406
+Right PECS pump package pump 2,21,28v DC,P400,,,,VERIFIED,ata21.txt:7407
+PECS valve in main gear wheel well (block at 7495),21,28v DC,,,,,VERIFIED,ata21.txt:7503
+PECS liquid ICS and SCU supply SOV,21,28v DC,,,,,VERIFIED,ata21.txt:7624
+SCU compressor motor controller,21,235v AC,,,,,VERIFIED,ata21.txt:8335
+SCU compressor motor controller location,21,235v AC,,,,,VERIFIED,ata21.txt:8353
+Forward EE cooling supply fans (2),21,235v AC 3-phase induction motor,,,,,VERIFIED,ata21.txt:8946
+Forward EE cooling supply fan 1 and fan 2,21,235v AC,P100,,,,VERIFIED,ata21.txt:8954
+Forward EE supply override valve motor 1,21,28v DC motor,RPDU 71,,,,VERIFIED,ata21.txt:8999
+Forward EE supply override valve motor 2,21,28v DC motor,RPDU 73,,,,VERIFIED,ata21.txt:9000
+Forward EE cooling supply flow and temperature sensors,21,28v DC,,,,,VERIFIED,ata21.txt:9044
+"Smoke detector (EE cooling, forward block)",21,28v DC,,,,,VERIFIED,ata21.txt:9122
+Forward EE cooling exhaust fan,21,235v AC,P200,,,,VERIFIED,ata21.txt:9147
+Forward EE cooling exhaust fan motor,21,"235v AC, 3-phase multi-speed",,,,,VERIFIED,ata21.txt:9153
+Forward EE cooling exhaust overboard exhaust valve,21,28v DC motor actuator,,,,,VERIFIED,ata21.txt:9199
+Forward EE cooling exhaust valve power,21,28v DC,,,,,VERIFIED,ata21.txt:9214
+Fans in main landing gear wheel wells,21,235v AC,P100,,,,VERIFIED,ata21.txt:9773
+Aft EE supply override valve motor 1,21,28v DC motor,RPDU 82,,,,VERIFIED,ata21.txt:9815
+Aft EE supply override valve motor 2,21,28v DC motor,RPDU 81,,,,VERIFIED,ata21.txt:9816
+Aft EE cooling supply flow and temperature sensors,21,28v DC,,,,,VERIFIED,ata21.txt:9911
+Aft EE cooling exhaust fan,21,235v AC,P100,,,,VERIFIED,ata21.txt:9967
+Aft EE cooling exhaust fan motor,21,"235v AC, 3-phase multi-speed",,,,,VERIFIED,ata21.txt:9974
+Aft EE cooling exhaust overboard exhaust (skin flush) valve,21,28v DC motor actuator,RPDU 81,,,,VERIFIED,ata21.txt:10052
+Miscellaneous EE cooling exhaust fan,21,235v AC,P100,,,,VERIFIED,ata21.txt:10501
+Miscellaneous EE cooling exhaust fan motor,21,"235v AC, 3-phase multi-speed",,,,,VERIFIED,ata21.txt:10506
+Forward cargo heat electric heater,21,,,,,,VERIFIED,ata21.txt:10703
+Forward cargo electric heater (dual element),21,,,,,,VERIFIED,ata21.txt:10814
+Forward cargo heat exhaust fan,21,235v AC,,,,,VERIFIED,ata21.txt:10879
+Dual-element cargo heater,21,,,,,,VERIFIED,ata21.txt:11004
+Aft cargo heat valve,21,,,,,,VERIFIED,ata21.txt:11189
+"Heating system equipment, aft or bulk cargo",21,,,,,,VERIFIED,ata21.txt:11320
+Bulk cargo heat supply fan,21,,,,,,VERIFIED,ata21.txt:11368
+Bulk cargo heat electric heater,21,,,,,,VERIFIED,ata21.txt:11412
+Bulk cargo heat supply SOV,21,,,,,,VERIFIED,ata21.txt:11453
+"Bulk cargo heater (CARGO TEMP, BULK switch on P5)",21,,,,,,VERIFIED,ata21.txt:11549
+Boost fan (cargo refrigeration unit area),21,"235v AC, 3-phase induction motor",P100,,,,VERIFIED,ata21.txt:11745
+Cargo refrigeration unit (CRU),21,,P100,,,,VERIFIED,ata21.txt:11792
+FCAC cargo refrigeration unit motor controller (BLDC motor),21,"235v AC in, +/-270v DC to motor",P100,,,,VERIFIED,ata21.txt:11885
+VCC (VCU channel),21,28v DC,,,,,VERIFIED,ata21.txt:12471
+RSU,21,28v DC,,,,,VERIFIED,ata21.txt:12534
+Aft cargo heater,21,,,,,,VERIFIED,ata21.txt:13948
+Cargo heater (block at 14040),21,,,,,,VERIFIED,ata21.txt:14041
+Aft cargo heater,21,,,,,,VERIFIED,ata21.txt:14073
+MCP (mode control panel),22,28V DC,RPDU 71,,,,VERIFIED,ata22.txt:528
+MCP (mode control panel),22,28V DC,RPDU 72,,,,VERIFIED,ata22.txt:529
+MODE CTRL PNL-L circuit breaker,22,"28V DC, captain flight instrument bus",RPDU 71,,,,VERIFIED,ata22.txt:532
+MODE CTRL PNL-R circuit breaker,22,"28V DC, F/O flight instrument bus",RPDU 72,,,,VERIFIED,ata22.txt:536
+"C2 ACE backdrive actuator R ECBs (column, control wheel, pedal)",22,28V DC from F/O INST bus,P400,,,,VERIFIED,ata22.txt:691
+Autothrottle servomotors (2),22,28v DC,,,,,VERIFIED,ata22.txt:3759
+Autothrottle servomotors (ASM) power,22,,,,,,VERIFIED,ata22.txt:3734
+Left and right autothrottle servomotors,22,,,,,,VERIFIED,ata22.txt:3753
+Autothrottle servomotors at 80 kt HOLD,22,,,,,,VERIFIED,ata22.txt:3971
+Autothrottle servo power (MCP switch to TCM),22,,,,,,VERIFIED,ata22.txt:4212
+Backdrive actuator (BDA) motor,22,28v DC motor,,,,,VERIFIED,ata22.txt:1349
+L VHF communication transceiver,23,"28v DC, captain instrument bus",RPDU 73,,,,VERIFIED,ata23.txt:680
+R VHF communication transceiver,23,"28v DC, right 28v dc bus",RPDU 34,,,,VERIFIED,ata23.txt:684
+C VHF communication transceiver,23,"28v DC, left 28v dc bus",RPDU 81,,,,VERIFIED,ata23.txt:687
+HF transceiver power supply,23,,,,,,VERIFIED,ata23.txt:1113
+Left HF communication transceiver,23,"115v AC, L 115 volts AC bus",RPDU 33,,,,VERIFIED,ata23.txt:1131
+Right HF communication transceiver,23,"115v AC, R 115v AC bus",RPDU 34,,,,VERIFIED,ata23.txt:1134
+HF couplers,23,115v AC single-phase,,,,,VERIFIED,ata23.txt:1203
+SATCOM receiver transmitter,23,115 V AC left main bus,RPDU 33,,,,VERIFIED,ata23.txt:1547
+SATCOM antenna,23,115 V AC L main bus,RPDU 31,,,,VERIFIED,ata23.txt:1611
+SATCOM diplexer low noise amplifier module,23,115 V AC L main bus,RPDU 31,,,,VERIFIED,ata23.txt:1636
+Ground crew call horn,23,28v DC,SPDU,,,,VERIFIED,ata23.txt:1793
+Ground crew call horn on ERS battery,23,hot battery 28v DC,,,,,VERIFIED,ata23.txt:1802
+Ground crew call horn relay,23,,P300,,,,VERIFIED,ata23.txt:1810
+Ground crew call horn control relay,23,,P300,,,,VERIFIED,ata23.txt:1923
+ERS-on-battery relay for ground crew horn,23,,P300,,,,VERIFIED,ata23.txt:1943
+Ground crew call horn turn-on signal,23,,P300,,,,VERIFIED,ata23.txt:1884
+ELT (emergency locator transmitter),23,internal battery,,,,,VERIFIED,ata23.txt:2002
+Surveillance camera ECB,23,115 VAC from right main bus,,,,,VERIFIED,ata23.txt:3046
+Surveillance camera ECB (in RPDU),23,115 VAC,,,,,VERIFIED,ata23.txt:3048
+Surveillance camera interface unit (SCIU) to cameras,23,12 VDC to cameras,,,,,VERIFIED,ata23.txt:3051
+Left TCP (tuning control panel),23,"28v DC, captain instrument bus",RPDU 73,,,,VERIFIED,ata23_tm.txt:1615
+Right TCP,23,"28v DC, right 28v dc bus",RPDU 76,,,,VERIFIED,ata23_tm.txt:1617
+Center TCP,23,"28v DC, left 28v dc bus",RPDU 75,,,,VERIFIED,ata23_tm.txt:1619
+Captain ACP (audio control panel),23,"28v DC, captain instrument bus",RPDU 73,,,,VERIFIED,ata23_tm.txt:1673
+First officer ACP,23,"28v DC, first officer instrument bus",RPDU 74,,,,VERIFIED,ata23_tm.txt:1685
+Observer ACP,23,"28v DC, right 28v dc bus",RPDU 72,,,,VERIFIED,ata23_tm.txt:1688
+AGU FWD L (audio gateway unit),23,"28v DC, captain instrument bus",RPDU 73,,,,VERIFIED,ata23_tm.txt:1718
+AGU FWD R,23,"28v DC, R 28v dc bus",RPDU 74,,,,VERIFIED,ata23_tm.txt:1719
+AGU AFT L,23,"28v DC, L 28v dc bus",RPDU 33,,,,VERIFIED,ata23_tm.txt:1720
+AGU FWD R (second listing),23,"28v DC, R 28v dc bus",RPDU 34,,,,VERIFIED,ata23_tm.txt:1721
+SATCOM system,23,115v AC,,,,,VERIFIED,ata23_tm.txt:2239
+SATCOM transceiver,23,115v AC left main bus,RPDU 33,,,,VERIFIED,ata23_tm.txt:2287
+SATCOM antenna,23,115v AC main bus,RPDU 31,,,,VERIFIED,ata23_tm.txt:2320
+SATCOM diplexer low noise amplifier module,23,115v AC main bus,RPDU 31,,,,VERIFIED,ata23_tm.txt:2341
+HF transceiver power supply (smoke removal),23,,,,,,VERIFIED,ata23_tm.txt:2035
+Captain seat ECU,25,right dc bus,RPDU 71,,,,VERIFIED,ata25.txt:260
+First officer seat ECU,25,right dc bus,RPDU 72,,,,VERIFIED,ata25.txt:261
+Seat power cut off switch,25,,,,,,VERIFIED,ata25.txt:322
+Medical outlet panel,25,universal AC receptacle and 28v DC receptacle,,,,,VERIFIED,ata25.txt:765
+Service outlets,25,"115v AC, 400 Hz",,,,,VERIFIED,ata25.txt:875
+Galley loads (AC),25,"115v AC, 3-phase, variable frequency",,,,,VERIFIED,ata25.txt:1162
+Galley loads (DC),25,28v DC,,,,,VERIFIED,ata25.txt:1163
+Galleys total electrical power,25,,,,,110 kVA total,VERIFIED,ata25.txt:1165
+Bar units,25,28v DC,,,,,VERIFIED,ata25.txt:1166
+Galley panel emergency OFF switch,25,,,,,,VERIFIED,ata25.txt:1173
+Lavatories,25,115v AC (right or left ac bus) and 28v DC (right or left dc bus),,,,,VERIFIED,ata25.txt:1357
+CMDU (cargo maintenance display unit),25,28v DC,,,,,VERIFIED,ata25.txt:2540
+CMDU (second 28v source),25,28v DC,,,,,VERIFIED,ata25.txt:2680
+"Cargo PDUs (power drive units), 28v control",25,28v DC,,,,,VERIFIED,ata25.txt:2538
+"Cargo PDUs, motor power",25,115v AC,,,,,VERIFIED,ata25.txt:2543
+Cargo MCP,25,28v DC,,,,,VERIFIED,ata25.txt:2634
+Cargo power switch (to CMDU and PDUs),25,,,,,,VERIFIED,ata25.txt:2624
+Cargo joystick,25,28v DC,,,,,VERIFIED,ata25.txt:2764
+CHS power switch,25,,,,,,VERIFIED,ata25.txt:2758
+Cargo door operation,25,,,,,,VERIFIED,ata25.txt:3226
+MEDC channel A (left),26,28v DC,,,,,VERIFIED,ata26.txt:349
+MEDC channel B (left),26,28v DC,,,,,VERIFIED,ata26.txt:350
+MEDC channel A (right),26,28v DC,,,,,VERIFIED,ata26.txt:351
+MEDC channel B (right),26,28v DC,,,,,VERIFIED,ata26.txt:352
+Engine fire switches,26,,,,,,VERIFIED,ata26.txt:742
+APU fire extinguishing system,26,,,,,,VERIFIED,ata26.txt:1562
+APU fire extinguishing bottle squib,26,28v DC,,,,,VERIFIED,ata26.txt:1739
+APU fire switches (2),26,,,,,,VERIFIED,ata26.txt:1904
+Cargo fire protection system (CFPS),26,,,,,,VERIFIED,ata26.txt:1995
+Cargo smoke detectors (list continues beyond hit),26,28v DC,,,,,VERIFIED,ata26.txt:2086
+Cargo fire extinguishing bottle squibs,26,28v DC,,,,,VERIFIED,ata26.txt:2249
+Cargo fire extinguishing flow valve squibs,26,28v DC,,,,,VERIFIED,ata26.txt:2434
+LRD discharge cartridges,26,28V DC,,,,,VERIFIED,ata26.txt:2672
+"Forward set squibs (CARGO FIRE ARM FWD, DISCH)",26,28v DC,,,,,VERIFIED,ata26.txt:2750
+"Aft set squibs (CARGO FIRE ARM AFT, DISCH)",26,28v DC,,,,,VERIFIED,ata26.txt:2787
+LRD bottle squibs (after 15 min),26,28v DC,,,,,VERIFIED,ata26.txt:2755
+Smoke detector LEDs,26,,,,,,VERIFIED,ata26.txt:3266
+PCM L (secondary source),27,28v DC secondary,,,,,VERIFIED,ata27.txt:801
+PCM R (secondary source),27,28v DC secondary,,,,,VERIFIED,ata27.txt:634
+PCM C1 (secondary source),27,28v DC secondary,,,,,VERIFIED,ata27.txt:660
+PCM C2 (secondary source),27,28v DC secondary,,,,,VERIFIED,ata27.txt:664
+PCM C1 and C2 (backup source),27,28v DC backup,,,,,VERIFIED,ata27.txt:661
+PCM C1 (primary source),27,235v AC PMG (primary),,,,,VERIFIED,ata27.txt:659
+"PCM thermal circuit breaker (FCE cabinet LRMs, FCE, ACE)",27,28 VDC,,,5 A,,VERIFIED,ata27.txt:820
+PCM BATT INTLK breaker (battery input SSR),27,,,,,,VERIFIED,ata27.txt:825
+Wing and tail surface lock (electric surfaces),27,,,,,,VERIFIED,ata27.txt:1300
+Aileron and flaperon REUs,27,28v DC from PCM,,,,,VERIFIED,ata27.txt:2900
+Roll REUs,27,28v DC from PCM,,,,,VERIFIED,ata27.txt:2906
+Rudder REUs,27,28v DC from PCM,,,,,VERIFIED,ata27.txt:4749
+Rudder pedal BDA,27,28v DC,,,,,VERIFIED,ata27.txt:4302
+Stick shakers,27,28v DC motors,,,,,VERIFIED,ata27.txt:5318
+Spoiler EMA motor overheat protection,27,,,,,,VERIFIED,ata27.txt:3392
+Spoiler EMA motor,27,650 V 3-phase brushless DC,,,,,VERIFIED,ata27.txt:3462
+Spoiler EMCU,27,235 VAC variable-frequency 3-phase,,,,,VERIFIED,ata27.txt:3535
+Spoiler EMCU float mode,27,235 VAC,,,,,VERIFIED,ata27.txt:3505
+Horizontal stabilizer cutout switches,27,,,,,,VERIFIED,ata27.txt:6000
+Horizontal stabilizer cutout switches L2 and R2,27,,,,,,VERIFIED,ata27.txt:6413
+HSTA EMCU R2,27,235v AC from 235v AC R2 bus,,,,,VERIFIED,ata27.txt:6107
+HSTA EMCU L2,27,235v AC from 235v AC L2 bus,,,,,VERIFIED,ata27.txt:6108
+HSTA electric motor temperature sensor,27,,,,,,VERIFIED,ata27.txt:6191
+EMCU motor and brake supply,27,235v AC converted,,,,,VERIFIED,ata27.txt:6250
+EDAS (Empennage Door Actuation System) motor controller,27,28v DC,,,,,VERIFIED,ata27.txt:6979
+EDAS controller power on failure,27,,,,,,VERIFIED,ata27.txt:6945
+HLF PDU electric motor (via EMCU),27,,,,,,VERIFIED,ata27.txt:7165
+Flap and slat EMCU control power,27,28v DC,,,,,VERIFIED,ata27.txt:7334
+TE flap PDU electric motor (EMCU),27,270v DC,,,,,VERIFIED,ata27.txt:7335
+LE slat EMCU control power,27,28v DC,,,,,VERIFIED,ata27.txt:8284
+LE slat PDU electric motors,27,270v DC,,,,,VERIFIED,ata27.txt:8286
+TE flap EMCU control power,27,28v DC,,,,,VERIFIED,ata27.txt:8288
+TE flap PDU electric motor,27,270v DC,,,,,VERIFIED,ata27.txt:8289
+Hydraulic control module solenoid valves,27,28v DC,,,,,VERIFIED,ata27.txt:8278
+Flap and slat EMCUs,27,235 VAC,P100,,,,VERIFIED,ata27.txt:8349
+Alternate flap control power,27,,ELCU in,,,,VERIFIED,ata27.txt:8909
+VCTU brake and clutch control,27,28 VDC,,,,,VERIFIED,ata27.txt:9352
+Vertical stabilizer pressure transducers,27,,,,,,VERIFIED,ata27.txt:4479
+Flap lever position sensors (excitation),27,,,,,,VERIFIED,ata27.txt:7811
+main battery to hot battery bus (HBB),24,28v dc HBB,P300,,,,VERIFIED,ata24.txt:554
+hot battery bus (HBB) location,24,hot battery bus,P300,,,,VERIFIED,ata24.txt:555
+main battery location,24,28v dc,,,,,VERIFIED,ata24.txt:557
+main battery to HBB path,24,28v dc,,,,,VERIFIED,ata24.txt:558
+battery diode module (BDM) breaker,24,28v dc main battery to HBB,P300,,75,,VERIFIED,ata24.txt:765
+BDM location,24,,,,,,VERIFIED,ata24.txt:766
+main battery relay (MBR),24,28v dc captain and first officer instrument buses,P300,,,,VERIFIED,ata24.txt:4846
+captain instrument bus from hot battery bus,24,28v dc captain instrument bus,,,,,VERIFIED,ata24.txt:1607
+main battery charger,24,28v dc from captain instrument bus,,,,,VERIFIED,ata24.txt:684
+main battery charger output,24,regulated 32.2v dc,,,,46 A output,VERIFIED,ata24.txt:694
+APU battery charger,24,28v dc from first officer instrument bus,,,,,VERIFIED,ata24.txt:686
+APU hot battery bus,24,APU hot battery bus 28v dc,P49,,,,VERIFIED,ata24.txt:565
+APU battery location,24,28v dc,,,,,VERIFIED,ata24.txt:564
+APU battery to APU start power unit (SPU),24,28v dc,,,,,VERIFIED,ata24.txt:541
+captain instrument tie (CIT) relay,24,28v dc captain / standby instrument bus,P300,,,,VERIFIED,ata24.txt:1767
+L DC tie (DCT) relay,24,28v dc L bus,P300,,,,VERIFIED,ata24.txt:1749
+TRU relays,24,235v ac to TRUs,P300,,,,VERIFIED,ata24.txt:1806
+TRU relays list,24,235v ac to TRUs,,,,,VERIFIED,ata24.txt:1780
+TRU input through relay,24,235v ac to 28v dc,,,,,VERIFIED,ata24.txt:1465
+TRU control by ELCU,24,235v ac to 28v dc,,,,,VERIFIED,ata24.txt:1468
+TRU (Left and C1),24,235v ac to 28v dc,P500,,,,VERIFIED,ata24.txt:1458
+TRU (C2 and Right),24,235v ac to 28v dc,P600,,,,VERIFIED,ata24.txt:1459
+TRU output,24,28v dc bus and electric brake power supply unit (EBPSU),,,,,VERIFIED,ata24.txt:1461
+electric brake power supply unit (EBPSU),24,28v dc inputs from TRU and hot battery bus,P500,,,,VERIFIED,ata24.txt:1488
+EBPSU inputs,24,28v dc from TRU and hot battery bus,,,,,VERIFIED,ata24.txt:1485
+EBPSU backup,24,28v dc hot battery bus,,,,,VERIFIED,ata24.txt:1497
+brake power,24,+/-130v dc,,,,,VERIFIED,ata24.txt:1387
+autotransformer unit (ATU) P500,24,235v ac to 115v ac,P500,,,,VERIFIED,ata24.txt:1429
+autotransformer unit (ATU) P600,24,235v ac to 115v ac,P600,,,,VERIFIED,ata24.txt:1430
+ATU contactor,24,235v ac bus,,,,,VERIFIED,ata24.txt:1420
+ATU 115v ac output,24,115v ac left and right buses,,,,,VERIFIED,ata24.txt:1415
+ATU 235v ac output,24,235v ac,,,,,VERIFIED,ata24.txt:1417
+ATU protection,24,,ELCU,,,,VERIFIED,ata24.txt:1426
+galley autotransformer unit (GATU),24,235v ac 3-phase to 115v ac 3-phase,P100,,,,VERIFIED,ata24.txt:1575
+GATU connection,24,L2 235v ac bus,P100,,,,VERIFIED,ata24.txt:1560
+P500/P600 power conversion panel contactors,24,,P500,,,,VERIFIED,ata24.txt:1534
+P500/P600 power conversion panel relays,24,,P500,,,,VERIFIED,ata24.txt:1536
+generator control unit (GCU) P100,24,28v dc PMG fallback,P100,,,,VERIFIED,ata24.txt:3993
+generator control unit (GCU) P200,24,28v dc PMG fallback,P200,,,,VERIFIED,ata24.txt:3994
+GCU power source,24,28v dc,,,,,VERIFIED,ata24.txt:3987
+GCU alternate power,24,28v dc bus,,,,,VERIFIED,ata24.txt:3990
+generator control breaker (GCB),24,235v ac VFSG to related 235v ac bus,,,,,VERIFIED,ata24.txt:4022
+overvoltage/transient protection unit (OVTPU),24,28 VDC from GCU,P100,,,,VERIFIED,ata24.txt:4058
+generator neutral relay (GNR),24,,P100,,,,VERIFIED,ata24.txt:4082
+235v ac bus tie breakers L1/L2/L3,24,235v ac,P100,,,,VERIFIED,ata24.txt:4338
+235v ac bus tie breakers R1/R2/R3,24,235v ac,P200,,,,VERIFIED,ata24.txt:4339
+P100 ESIC 115v ac source breaker L ATUC,24,115v ac,P100,,,,VERIFIED,ata24.txt:4625
+"P100 ESIC 270v dc source breakers L1 ATRUC, L2 ATRUC",24,+/-270v dc,P100,,,,VERIFIED,ata24.txt:4626
+P200 ESIC backup relay BB RLY,24,235v ac,P200,,,,VERIFIED,ata24.txt:4632
+P200 ESIC 115v ac source breaker R ATUC,24,115v ac,P200,,,,VERIFIED,ata24.txt:4633
+"P200 ESIC 270v dc source breakers R1 ATRUC, R2 ATRUC",24,+/-270v dc,P200,,,,VERIFIED,ata24.txt:4634
+P300 ESIC 115v ac bus tie breaker L BTB,24,115v ac,P300,,,,VERIFIED,ata24.txt:4639
+P300 ESIC 115v ac bus source breaker L BSB,24,115v ac,P300,,,,VERIFIED,ata24.txt:4640
+P300 ESIC 28v dc bus tie L DCT,24,28v dc,P300,,,,VERIFIED,ata24.txt:4641
+P300 ESIC standby bus tie CIT,24,28v dc standby,P300,,,,VERIFIED,ata24.txt:4642
+"P300 ESIC 28v dc source relays L TRU RLY, C1 TRU ISO RLY",24,28v dc,P300,,,,VERIFIED,ata24.txt:4643
+P400 ESIC 115v ac bus tie breaker R BTB,24,115v ac,P400,,,,VERIFIED,ata24.txt:4648
+P400 ESIC 115v ac bus source breaker R BSB,24,115v ac,P400,,,,VERIFIED,ata24.txt:4649
+P400 ESIC 28v dc bus tie R DCT,24,28v dc,P400,,,,VERIFIED,ata24.txt:4650
+P400 ESIC standby bus tie FIT,24,28v dc standby,P400,,,,VERIFIED,ata24.txt:4651
+"P400 ESIC 28v dc source relays R TRU RLY, C1 TRU RLY",24,28v dc,P400,,,,VERIFIED,ata24.txt:4652
+P400 ESIC 235v ac backup relay BB ISO RLY,24,235v ac,P400,,,,VERIFIED,ata24.txt:4653
+ESIC access rule,24,28v dc,P400,,,,VERIFIED,ata24.txt:4667
+ELCU locations,24,"235v ac, 115v ac, 28v dc contactors",P300,,,,VERIFIED,ata24.txt:4409
+electrical load control contactor (ELCC) use,24,235v ac,,,,,VERIFIED,ata24.txt:4455
+ELCC source voltage,24,235v ac,,,,,VERIFIED,ata24.txt:4453
+ELCC use above TCB rating,24,235v ac,,,,,VERIFIED,ata24.txt:4450
+ELCU P300 and P400 ELCU_P cards,24,,P300,,,,VERIFIED,ata24.txt:4417
+ELCU P100 and P200 ELCU_P cards,24,,P100,,,,VERIFIED,ata24.txt:4416
+ELCU communications cards,24,,ELCU,,,,VERIFIED,ata24.txt:4413
+ELCU P-only contactor (ATRU),24,,ELCU P,,,,VERIFIED,ata24.txt:4385
+ELCU control of contactors in its own panel,24,,,,,,VERIFIED,ata24.txt:4389
+autotransformer rectifier unit (ATRU) P700 and P800,24,235v ac or 115v ac to +/-270v dc,P700,,,,VERIFIED,ata24.txt:2352
+ATRU contactor control,24,235v ac,,,,,VERIFIED,ata24.txt:2422
+ATRU contactor protection,24,235v ac,ELCU,,,,VERIFIED,ata24.txt:2423
+ATRU left panel,24,+/-270v dc,P700,,,,VERIFIED,ata24.txt:2504
+ATRU L2 aft external power input,24,115v ac aft external power to +/-270v dc,,,,,VERIFIED,ata24.txt:2442
+ATRU input connectors,24,115v ac / 230v ac 3-phase,,,,,VERIFIED,ata24.txt:2454
+ATRU 115v ac input rating,24,115v ac 3-phase,,,,65 kVA input; 200 A nominal,VERIFIED,ata24.txt:2464
+ATRU output,24,+/-270v dc,,,,,VERIFIED,ata24.txt:2452
+common motor start controller (CMSC) power input,24,+/-270v dc in; 28v dc internal,P700,,,,VERIFIED,ata24.txt:2558
+CMSC power source,24,+/-270v dc,,,,,VERIFIED,ata24.txt:2539
+L1 CAC CMSC,24,+/-270v dc to variable frequency ac,P700,,,,VERIFIED,ata24.txt:6015
+R1 CAC CMSC,24,+/-270v dc to variable frequency ac,P800,,,,VERIFIED,ata24.txt:6049
+P700 contactor L1 CC,24,,P700,,,,VERIFIED,ata24.txt:5980
+P800 contactor L1 CC,24,,P800,,,,VERIFIED,ata24.txt:5992
+787-9 L1 RFC contactor (ram fan),24,,P700,,,,VERIFIED,ata24.txt:5890
+787-9 additional P700 contactor,24,,P700,,,,VERIFIED,ata24.txt:5886
+L1 CAC CMSC to L1 ram fan contactor,24,28 vdc,,,,,VERIFIED,ata24.txt:6165
+L1 CAC CMSC to L1 start contactor (SC),24,28 vdc,P100,,,,VERIFIED,ata24.txt:6167
+left APU start contactor (LA SC),24,28 vdc,P150,,,,VERIFIED,ata24.txt:6174
+left APU start contactor (SC),24,28v dc from L1 CAC CMSC,,,,,VERIFIED,ata24.txt:3002
+right APU start contactor (SC),24,28v dc,,,,,VERIFIED,ata24.txt:3006
+APU start contactor (SC),24,28v dc from CMSC,,,,,VERIFIED,ata24.txt:2989
+VFSG start contactor (SC),24,28v dc from CMSC,P100,,,,VERIFIED,ata24.txt:4103
+VFSG start contactor 28v dc source,24,28v dc,,,,,VERIFIED,ata24.txt:4110
+variable frequency starter generator (VFSG) rating,24,235v ac 3-phase 360-800 Hz,,,,250 kVA,VERIFIED,ata24.txt:3925
+VFSG output frequency,24,235v ac 360-800 Hz,,,,,VERIFIED,ata24.txt:3124
+VFSG to main AC buses,24,"235v ac L1, L2, R1, R2",,,,,VERIFIED,ata24.txt:3149
+VFSG pair per engine,24,235v ac,,,,,VERIFIED,ata24.txt:3139
+VFSG count,24,235v ac,,,,,VERIFIED,ata24.txt:3397
+VFSG main bus output,24,235v ac,,,,,VERIFIED,ata24.txt:3463
+APU starter generator (ASG) rating,24,235v ac,,,,225 kVA,VERIFIED,ata24.txt:2691
+APU starter generators (ASG) output,24,235v ac to main buses,,,,,VERIFIED,ata24.txt:2704
+APU generator control units (AGCU),24,,P150,,,,VERIFIED,ata24.txt:2785
+ASG generator control units,24,,P150,,,,VERIFIED,ata24.txt:2745
+auxiliary power breaker (APB),24,235v ac ASG to related 235v ac tie bus,,,,,VERIFIED,ata24.txt:2799
+APU generator neutral relay (AGNR),24,,P150,,,,VERIFIED,ata24.txt:2830
+P150 panel input,24,235v ac from ASG,P150,,,,VERIFIED,ata24.txt:2853
+P150 panel output,24,235v ac left tie bus (LTB),P150,,,,VERIFIED,ata24.txt:2854
+P49 start power unit contactor (SPUC),24,28v dc,P49,,,,VERIFIED,ata24.txt:2918
+P49 start power unit supply,24,28v dc APU hot battery bus,P49,,,,VERIFIED,ata24.txt:2929
+P49 input,24,28v dc,P49,,,,VERIFIED,ata24.txt:2932
+P49 RAT deploy and towing lighting,24,28v dc,P49,,,,VERIFIED,ata24.txt:2920
+P49 PPDS breaker,24,,P49,,,,VERIFIED,ata24.txt:2935
+start power unit (SPU),24,28v dc APU battery in; 200v ac out,,,,13.5 kW total output,VERIFIED,ata24.txt:2971
+SPU output rating,24,200v ac,,,,13.5 kW,VERIFIED,ata24.txt:2974
+SPU to R2 ATRU,24,115v ac SPU to 135v dc,,,,,VERIFIED,ata24.txt:2948
+P800 ATRU from SPU,24,115v ac SPU to +/-135v dc,P800,,,,VERIFIED,ata24.txt:2413
+APU battery start path,24,28v dc APU battery,,,,,VERIFIED,ata24.txt:2589
+APU battery start SPUC,24,28v dc,,,,,VERIFIED,ata24.txt:2954
+external power receptacles (forward),24,115v ac 3-phase 400 Hz,,,,,VERIFIED,ata24.txt:906
+external power receptacle (aft),24,115v ac 3-phase 400 Hz,,,,,VERIFIED,ata24.txt:912
+external power receptacles to EPC,24,115v ac 3-phase 400 Hz,,,,,VERIFIED,ata24.txt:922
+forward external power to ATU P500,24,115v ac,P500,,,,VERIFIED,ata24.txt:928
+forward external power to ATU P600,24,115v ac,P600,,,,VERIFIED,ata24.txt:929
+aft external power to ATRU,24,115v ac aft EP to +/-270v dc,,,,,VERIFIED,ata24.txt:936
+left external power contactor (EPC),24,115v ac,P300,,,,VERIFIED,ata24.txt:1125
+right external power contactor (EPC),24,115v ac,P400,,,,VERIFIED,ata24.txt:1126
+aft external power contactor (EPC),24,115v ac aft,P700,,,,VERIFIED,ata24.txt:1127
+left and right EPC connections,24,115v ac buses; ATU,,,,,VERIFIED,ata24.txt:1093
+external power TRU for L BPCU,24,115v ac to 28v dc,P300,,,,VERIFIED,ata24.txt:1128
+external power TRU for R BPCU,24,115v ac to 28v dc,P400,,,,VERIFIED,ata24.txt:1129
+forward external power TRUs,24,115v ac to 28v dc,P300,,,,VERIFIED,ata24.txt:1063
+BPCU 28v dc sources,24,28v dc,,,,,VERIFIED,ata24.txt:1051
+BPCU 28v dc from hot battery bus,24,28v dc,,,,,VERIFIED,ata24.txt:1054
+BPCU 28v dc from forward external TRU,24,28v dc,,,,,VERIFIED,ata24.txt:1070
+bus power control units (BPCU) location,24,,P300,,,,VERIFIED,ata24.txt:995
+bus source breaker (BSB) control,24,115v ac left and right buses,,,,,VERIFIED,ata24.txt:1711
+BPCU operates BSB by ELCU,24,115v ac,,,,,VERIFIED,ata24.txt:1730
+BTB control,24,115v ac,,,,,VERIFIED,ata24.txt:1724
+115v ac bus source,24,115v ac,P300,,,,VERIFIED,ata24.txt:1594
+115v ac bus source external power,24,115v ac,P300,,,,VERIFIED,ata24.txt:1596
+28v dc buses from TRU,24,28v dc L and R buses,P300,,,,VERIFIED,ata24.txt:1601
+L DC tie (DCT) relays function,24,28v dc left and right buses,,,,,VERIFIED,ata24.txt:1746
+SPDU location,24,,P300,,,,VERIFIED,ata24.txt:1883
+SPDU 28v dc to RPDU and local loads,24,28v dc,SPDU,,,,VERIFIED,ata24.txt:1909
+SPDU 115v ac window heat,24,115v ac,SPDU,,,,VERIFIED,ata24.txt:1910
+SPDU bus sources (115v ac),24,115v ac left and right (window heat only),SPDU,,,,VERIFIED,ata24.txt:1650
+SPDU bus sources (28v dc),24,28v dc left and right,SPDU,,,,VERIFIED,ata24.txt:1651
+SPDU bus sources (instrument),24,captain and first officer instrument bus,SPDU,,,,VERIFIED,ata24.txt:1652
+SPDU 28v dc loads,24,28v dc,SPDU,,,,VERIFIED,ata24.txt:1613
+SPDU 115v ac loads,24,115v ac window heat,SPDU,,,,VERIFIED,ata24.txt:1614
+SPDU AC-1 card,24,115v ac window heat anti-ice,SPDU,,45,,VERIFIED,ata24.txt:1871
+SPDU AC-2 card,24,115v ac window heat anti-fog,SPDU,,22.5,2 SSPCs,VERIFIED,ata24.txt:1873
+SPDU DC-2 card,24,28v dc,SPDU,,50,2 SSPCs,VERIFIED,ata24.txt:1875
+SPDU DC-4 card,24,28v dc,SPDU,,35; 15,3 x 35 A and 1 x 15 A SSPCs,VERIFIED,ata24.txt:1876
+SPDU DC-19 card,24,28v dc,SPDU,,10; 5; 2.5,"2 x 10 A, 5 x 5 A, 12 x 2.5 A",VERIFIED,ata24.txt:1877
+SPDU loads ratings,24,28v dc and 115v ac,SPDU,,50 dc; 45 ac,,VERIFIED,ata24.txt:1894
+SPDU power modules,24,28v dc and 115v ac,SPDU,,,,VERIFIED,ata24.txt:1866
+SPDU wire fault protection,24,,SPDU,,,,VERIFIED,ata24.txt:1645
+SPDU gets power from panel buses,24,28v dc and 115v ac,P300,,,,VERIFIED,ata24.txt:1886
+thermal circuit breakers P300 and P400,24,28v dc buses,P300,,,,VERIFIED,ata24.txt:1820
+TCB loads at P300 and P400,24,28v dc,P300,,,,VERIFIED,ata24.txt:1628
+TCB panel list,24,,P300,,,,VERIFIED,ata24.txt:1840
+TCB panel list P500/P600,24,,P500,,,,VERIFIED,ata24.txt:1841
+TCB panel list P49,24,,P49,,,,VERIFIED,ata24.txt:1842
+RPDU power sources 115v ac,24,115v ac,P300,,,,VERIFIED,ata24.txt:1966
+RPDU power sources 28v dc,24,28v dc,P300,,,,VERIFIED,ata24.txt:1967
+RPDU extra 28v dc from instrument bus,24,28v dc,,,,,VERIFIED,ata24.txt:1970
+RPDU extra 28v dc from SPDU,24,28v dc,,,,,VERIFIED,ata24.txt:1971
+RPDU load limit,24,28v dc and 115v ac,,,,10 A,VERIFIED,ata24.txt:1941
+RPDU standard load limit,24,28v dc and 115v ac,,,,10 A,VERIFIED,ata24.txt:2048
+RPDU gateway forward EE bay,24,,,,,,VERIFIED,ata24.txt:2093
+RPDU gateway functions,24,,,,,,VERIFIED,ata24.txt:2070
+RPDU gateway control,24,,,,,,VERIFIED,ata24.txt:2071
+RPDU processor modules,24,28v dc control inputs,,,,,VERIFIED,ata24.txt:1992
+RPDU active/standby processor,24,,,,,,VERIFIED,ata24.txt:1982
+RPDU DC lightning protection unit,24,,,,,,VERIFIED,ata24.txt:1945
+RPDU differential protection,24,,,,,,VERIFIED,ata24.txt:1946
+standard RPDU location,24,,,,,,VERIFIED,ata24.txt:2051
+RPDU SSPC dc channels,24,28v dc,,,10; 5; 2.5,"2 x 10 A, 5 x 5 A, 12 x 2.5 A",VERIFIED,ata24.txt:2003
+RPDU SSPC ac channels,24,115v ac,,,2.5; 5; 7.5; 10,3 each,VERIFIED,ata24.txt:2008
+ELCU P100 / P200,24,"235v ac, 115v ac, 28v dc",P100,,,,VERIFIED,ata24.txt:4407
+ELCU P300 / P400,24,"235v ac, 115v ac, 28v dc",P300,,,,VERIFIED,ata24.txt:4410
+ELCU channels,24,,,,,,VERIFIED,ata24.txt:4378
+ELCU function to shed loads,24,,,,,,VERIFIED,ata24.txt:4376
+ELCU P module control,24,,,,,,VERIFIED,ata24.txt:4379
+ELCU P module direct commands,24,,,,,,VERIFIED,ata24.txt:4381
+ELCU operation with GCU,24,,,,,,VERIFIED,ata24.txt:4437
+235v ac loads (no circuit breakers),24,235v ac,,,,,VERIFIED,ata24.txt:4295
+primary 235v ac loads,24,235v ac,,,,,VERIFIED,ata24.txt:4308
+thermal circuit breakers not shed,24,,P300,,,,VERIFIED,ata24.txt:5294
+thermal circuit breaker power on,24,,,,,,VERIFIED,ata24.txt:5316
+thermal circuit breaker overrides,24,,,,,,VERIFIED,ata24.txt:5407
+CBIC electronic circuit breaker prefix,24,,,,,,VERIFIED,ata24.txt:2220
+CBIC ELCF prefix,24,,,,,,VERIFIED,ata24.txt:2221
+CBIC ECB and SSR control,24,,,,,,VERIFIED,ata24.txt:2111
+CBIC flight control SSR,24,,,,,,VERIFIED,ata24.txt:2112
+CBIC TCB indications,24,,,,,,VERIFIED,ata24.txt:2115
+CBIC main menu scope,24,,,,,,VERIFIED,ata24.txt:2253
+CBIC access from MFD,24,,,,,,VERIFIED,ata24.txt:2123
+CBIC ground-only control on laptop,24,,,,,,VERIFIED,ata24.txt:2125
+CBIC dispatch lock with INOP tag,24,,,,,,VERIFIED,ata24.txt:2249
+CBIC data page for shed load,24,,,,,,VERIFIED,ata24.txt:1876
+battery switch MBR closes in air,24,,,,,,VERIFIED,ata24.txt:4849
+IFE and passenger seat loads,24,,,,,,VERIFIED,ata24.txt:4863
+cabin and utility loads,24,,,,,,VERIFIED,ata24.txt:4888
+APU generator switch,24,235v ac,,,,,VERIFIED,ata24.txt:4971
+RAT generator standby,24,235v ac,,,,,VERIFIED,ata24.txt:4768
+RAT backup bus supply,24,235v ac,,,,,VERIFIED,ata24.txt:4746
+RAT backup bus to C1 and C2 TRU and center pitot ATU,24,235v ac,,,,,VERIFIED,ata24.txt:4749
+RAT GCU,24,,,,,,VERIFIED,ata24.txt:4819
+RAT only captain and FO buses,24,235v ac,,,,,VERIFIED,ata24.txt:4773
+main battery standby loads,24,28v dc,,,,,VERIFIED,ata24.txt:4743
+main battery to captain and FO instrument bus in air,24,28v dc,,,,,VERIFIED,ata24.txt:4739
+external power receptacles (large motor),24,270v dc,,,,,VERIFIED,ata24.txt:5023
+SPDU bus source (115v ac) for window heat,24,115v ac,P300,,,,VERIFIED,ata24.txt:1614
+787-9 contactor L1 RFC allows both ram fans on ground,24,,P700,,,,VERIFIED,ata24.txt:5887
+ram fan on 787-9,24,,,,,,VERIFIED,ata24.txt:5251
+large motor controller power,24,+/-270v dc,,,,,VERIFIED,ata24.txt:2343
+ground handling bus SSPC and contactors,24,,,,,,VERIFIED,ata24.txt:1239
+APU hot battery bus loads in ground handling,24,28v dc,,,,,VERIFIED,ata24.txt:1238
+ground service bus ELCC and RPDU,24,,,,,,VERIFIED,ata24.txt:1330
+ground service bus RPDU,24,,,,,,VERIFIED,ata24.txt:1331
+ground handling mode condition,24,,,,,,VERIFIED,ata24.txt:1245
+ground handling bus loads,24,,,,,,VERIFIED,ata24.txt:1232
+CMSC APU start from SPU,24,115v ac to +/-135v dc,,,,,VERIFIED,ata24.txt:2954
+RCP (refuel control panel),28,28v dc,,,,,VERIFIED,ata28.txt:1095
+RCP power source,28,captain instrument bus,,,,,VERIFIED,ata28.txt:1361
+"RCP power, refuel door proximity signal",28,,,,,,VERIFIED,ata28.txt:1024
+Refuel valve actuator,28,28v dc,,,,,VERIFIED,ata28.txt:1244
+Refuel valve actuator,28,28v dc,,,,,VERIFIED,ata28.txt:1248
+Ball valve actuator (fuel valve),28,28 V dc,,,,,VERIFIED,ata28.txt:3889
+APU dc fuel pump,28,"28v dc, CAPT INSTR BUS",P300,,,,VERIFIED,ata28.txt:1855
+APU dc fuel pump,28,28v dc,,,,,VERIFIED,ata28.txt:1604
+APU shutoff valve,28,28v dc CAPT INSTR BUS,,,,,VERIFIED,ata28.txt:1868
+APU shutoff valve,28,28v dc CAPT INSTR BUS,,,,,VERIFIED,ata28.txt:1869
+"APU shutoff valve, close power backup",28,28v dc F/O INSTR BUS,,,,,VERIFIED,ata28.txt:1881
+APU shutoff valve power sources,28,28v dc CAPT INSTR BUS; 28v dc F/O INSTR BUS; FSM,,,,,VERIFIED,ata28.txt:1863
+APU fuel shutoff valve actuator,28,28v dc,,,,,VERIFIED,ata28.txt:1683
+APU fuel shutoff valve actuator,28,28v dc,,,,,VERIFIED,ata28.txt:1689
+"APU fuel shutoff valve actuator, close input",28,,P40,,,,VERIFIED,ata28.txt:1690
+APU EXT shutdown relay,28,28v dc hot battery bus,P40,,,,VERIFIED,ata28.txt:1877
+FSM (fuel shutoff module) usual power,28,28v dc F/O INSTR BUS,,,,,VERIFIED,ata28.txt:2837
+FSM (fuel shutoff module),28,24v dc,,,,,VERIFIED,ata28.txt:2694
+FSM backup power,28,,,,,,VERIFIED,ata28.txt:1693
+FSM valve wiring protection,28,,,,,,VERIFIED,ata28.txt:2684
+Engine and APU shutoff valves backup,28,,,,,,VERIFIED,ata28.txt:3892
+Engine fuel shutoff valves,28,28v dc,,,,,VERIFIED,ata28.txt:2640
+Fuel scavenge isolation valves,28,28v dc,,,,,VERIFIED,ata28.txt:2549
+Fuel crossfeed valve,28,28v dc,,,,,VERIFIED,ata28.txt:2596
+Main tank boost pumps (VF),28,235v ac 3-phase aircraft power bus,,,,,VERIFIED,ata28.txt:2156
+Main tank boost pumps,28,230v ac (as stated),,,,,VERIFIED,ata28.txt:2131
+Main tank boost pumps,28,,ELCU,,,,VERIFIED,ata28.txt:2132
+Main tank boost pumps,28,,ELCU,,,,VERIFIED,ata28.txt:1955
+Main tank boost pumps,28,"235v ac, 360 to 800 Hz",ELCU,,,,VERIFIED,ata28.txt:2156
+Main tank boost pumps (speed control),28,"235v ac, 800 Hz",ELCU,,,,VERIFIED,ata28.txt:2083
+Main tank boost pumps (variable frequency),28,369 Hz,ELCU,,,,VERIFIED,ata28.txt:2082
+Main tank boost pumps protection,28,,ELCU,,,,VERIFIED,ata28.txt:2084
+Main tank boost pump thermal fuse,28,,,,,,VERIFIED,ata28.txt:2872
+ELCU load-shed control,28,,,,,,VERIFIED,ata28.txt:2851
+ELCU protection,28,,ELCU,,,,VERIFIED,ata28.txt:2849
+O/J pumps (center tank),28,235v ac (OJMC output),,,,,VERIFIED,ata28.txt:2851
+O/J pumps motor power,28,270v dc converted to 235v ac,,,,,VERIFIED,ata28.txt:2341
+O/J pump motor controller input,28,270v dc (rectified HVDC bus),,,,,VERIFIED,ata28.txt:2415
+O/J pump motor controller input,28,+/- 270v dc,,,,,VERIFIED,ata28.txt:2449
+O/J pump motor controller input,28,270v dc,,,,,VERIFIED,ata28.txt:2854
+O/J pump motor controller output,28,"320 V ac 3-phase, 363 Hz",,,,,VERIFIED,ata28.txt:2407
+O/J pump motor controller output,28,230v ac,,,,,VERIFIED,ata28.txt:2468
+O/J pump motor controller location,28,,,,,,VERIFIED,ata28.txt:2444
+O/J pump motor controller location,28,,,,,,VERIFIED,ata28.txt:2414
+O/J motor controller protection,28,,,,,,VERIFIED,ata28.txt:2342
+O/J pump enable from RPDU,28,,,,,,VERIFIED,ata28.txt:2860
+O/J motor controller power commands,28,,,,,,VERIFIED,ata28.txt:4433
+Fuel jettison nozzle valves,28,28v dc,,,,,VERIFIED,ata28.txt:3490
+Fuel jettison nozzle valves,28,28v dc,,,,,VERIFIED,ata28.txt:3821
+Jettison nozzle valve on-ground inhibit,28,,,,,,VERIFIED,ata28.txt:3774
+Jettison nozzle valve on-ground inhibit,28,,,,,,VERIFIED,ata28.txt:3775
+Fuel jettison isolation valves,28,28v dc,,,,,VERIFIED,ata28.txt:3553
+Fuel jettison isolation valves,28,28v dc,,,,,VERIFIED,ata28.txt:3842
+Defuel/isolation valves,28,28v dc,,,,,VERIFIED,ata28.txt:3228
+Defuel/isolation valve actuators,28,,,,,,VERIFIED,ata28.txt:3165
+Fuel quantity data concentrators (FQDC),28,28v dc,,,,,VERIFIED,ata28.txt:4088
+FQDC sensor excitation,28,,,,,,VERIFIED,ata28.txt:4223
+Fuel indicating system (FQMS),28,28v dc,,,,,VERIFIED,ata28.txt:4323
+FQMS power switching,28,,,,,,VERIFIED,ata28.txt:4392
+Fuel valve and OJ motor controller commands,28,28V,,,,,VERIFIED,ata28.txt:4418
+Boost pump commands,28,,,,,,VERIFIED,ata28.txt:4418
+Left EMP,29,235Vac,,,,,VERIFIED,ata29.txt:1806
+Right EMP,29,235Vac,,,,,VERIFIED,ata29.txt:1805
+Left and right EMPs,29,235Vac,,,,,VERIFIED,ata29.txt:438
+Center system EMPs C1 and C2,29,,,,,,VERIFIED,ata29.txt:441
+EMP motor start control,29,,,,,,VERIFIED,ata29.txt:1819
+C1 EMP (isolated mode),29,,,,,,VERIFIED,ata29.txt:2245
+Reservoir pressure transducer,29,,,,,,VERIFIED,ata29.txt:1010
+Reservoir auto-bleed valves (on ground),29,,,,,,VERIFIED,ata29.txt:1149
+Engine supply shutoff valve (ESSOV),29,28 Vdc,,,,,VERIFIED,ata29.txt:1571
+EDP depressurization solenoid valve,29,,,,,,VERIFIED,ata29.txt:1592
+EDP solenoid circuit breaker,29,,,,,,VERIFIED,ata29.txt:667
+RAT deploy switch,29,,,,,,VERIFIED,ata29.txt:3525
+RAT deploy switch,29,,,,,,VERIFIED,ata29.txt:659
+RAT generator,29,235 V ac 3-phase variable frequency,,,,10 kVA,VERIFIED,ata29.txt:3177
+RAT generator control,29,,,,,,VERIFIED,ata29.txt:3172
+RAT generator output to Backup Bus,29,"235 V ac, 3 phase",,,,10 kVA,VERIFIED,ata29.txt:3539
+RAT stow valve solenoid,29,,,,,,VERIFIED,ata29.txt:3425
+Ice detector probe heater and processor,30,115v ac on-side main bus,,,,,VERIFIED,ata30.txt:145
+Ice detector,30,115v ac,,,,,VERIFIED,ata30.txt:202
+Ice detector,30,115vac,,,,,VERIFIED,ata30.txt:205
+Left ice detector probe,30,115v ac left main bus,,,,,VERIFIED,ata30.txt:208
+Right ice detector probe,30,115v ac right main bus,,,,,VERIFIED,ata30.txt:208
+Engine anti-ice PRSOV valve controller torque motor,30,,,,,,VERIFIED,ata30.txt:344
+Slat heater mats,30,235v ac,P100,,,,VERIFIED,ata30.txt:1133
+Slat heater mats,30,235v ac,P100,,,,VERIFIED,ata30.txt:1429
+Slat heater mat control,30,,,,,,VERIFIED,ata30.txt:1438
+WIPCU sequence controller card,30,28vdc,,,,,VERIFIED,ata30.txt:1244
+WIPCU DC operating power,30,28vdc,,,,,VERIFIED,ata30.txt:1262
+WIPCU AC heater power,30,235v ac,P100,,,,VERIFIED,ata30.txt:1263
+WIPCU power input,30,28vdc,,,,,VERIFIED,ata30.txt:1138
+WIPS heater zone power,30,235 v ac,,,,,VERIFIED,ata30.txt:1139
+Heater element (unnamed in excerpt),30,3-phase 115v ac,P300,,,,VERIFIED,ata30.txt:1528
+Air data sensor heaters,30,115v ac,P300,,,,VERIFIED,ata30.txt:1792
+Center pitot probe heater,30,235v ac backup bus,P400,,,,VERIFIED,ata30.txt:1800
+Center pitot probe heater,30,235/115v ac,,,,,VERIFIED,ata30.txt:1801
+Center pitot probe,30,235v backup bus,,,,,VERIFIED,ata30.txt:1927
+Center pitot probe 115v ac,30,115v ac,P400,,,,VERIFIED,ata30.txt:1928
+"Pitot heat, ground reduced level",30,115v ac,,,,,VERIFIED,ata30.txt:1854
+Air data probe heaters,30,115v ac,,,,,VERIFIED,ata30.txt:1849
+AOA sensor heating,30,115v ac,,,,,VERIFIED,ata30.txt:1973
+AOA heating control,30,,,,,,VERIFIED,ata30.txt:1976
+TAT probe heater,30,115v ac left bus,,,,,VERIFIED,ata30.txt:2011
+TAT probe heater,30,115v ac single phase,,,,,VERIFIED,ata30.txt:2019
+Probe heat on/off,30,,,,,,VERIFIED,ata30.txt:2069
+Window heaters,30,115v ac,P300,,,,VERIFIED,ata30.txt:2146
+"Window heat, P300 panel",30,115v ac,P300,,,,VERIFIED,ata30.txt:2149
+"Window heat, left forward anti-ice",30,115v ac,P300,,,,VERIFIED,ata30.txt:2150
+"Window heat, P400 panel",30,115v ac,P400,,,,VERIFIED,ata30.txt:2155
+"Window heat, P300 AC-1 SSPCs",30,115v ac 2-phase,SPDU,,,,VERIFIED,ata30.txt:2186
+"Window heat, P300 AC-2 SSPC",30,115v ac single-phase,P300,,,,VERIFIED,ata30.txt:2189
+"Window heat, P300 AC-2 SSPC output",30,115v ac,P300,,,,VERIFIED,ata30.txt:2190
+"Window heat, P400 AC-1 SSPCs",30,115v ac 2-phase,P400,,,,VERIFIED,ata30.txt:2193
+"Window heat, P400 AC-2 SSPC",30,115v ac single-phase,P400,,,,VERIFIED,ata30.txt:2198
+"Window heat, SSPC anti-fog and anti-ice",30,115v ac,P300,,,,VERIFIED,ata30.txt:2184
+"Window heat, SPDU circuit card",30,115v ac,SPDU,,,,VERIFIED,ata30.txt:2181
+"Window heat, side window relays",30,28v dc,P300,,,,VERIFIED,ata30.txt:2197
+"Window heat, backup relays",30,28v dc,P300,,,,VERIFIED,ata30.txt:2204
+"Window heat, relay power RPDUs",30,28v dc,P300,,,,VERIFIED,ata30.txt:2178
+Window heat protection unit (WHPU),30,115v ac,,,,,VERIFIED,ata30.txt:2242
+Windshield wiper motors,30,115v ac,,,,,VERIFIED,ata30.txt:2341
+Windshield washer pump,30,28v dc left main bus,,,,,VERIFIED,ata30.txt:2347
+Windshield washer pumps,30,28v dc,,,,,VERIFIED,ata30.txt:2595
+Windshield washer pumps,30,28v dc,,,,,VERIFIED,ata30.txt:2596
+Windshield wiper controller,30,115v ac,,,,,VERIFIED,ata30.txt:2478
+Windshield wiper controller,30,115v ac,,,,,VERIFIED,ata30.txt:2521
+Water line heater circuit,30,115v ac,,,,,VERIFIED,ata30.txt:2730
+Potable water and vacuum waste heaters,30,115v ac,,,,,VERIFIED,ata30.txt:2740
+Water heaters (CCR hosted control),30,115v ac,,,,,VERIFIED,ata30.txt:2743
+Drain valve heater blanket,30,115v ac,,,,,VERIFIED,ata30.txt:2869
+Waste tank rinse fitting heaters,30,115v ac,,,,,VERIFIED,ata30.txt:2921
+"Water heaters, RPDU electronic switches",30,,,,,,VERIFIED,ata30.txt:2940
+Water line ice protection heaters,30,115v ac,,,,,VERIFIED,ata30.txt:2961
+"RPDU 72, right HDD (RIB)",31,28v dc right 28v dc bus,RPDU 72,,,,VERIFIED,ata31.txt:360
+"RPDU 74, right EFIS/DSP, right MFK, right CCD",31,28v dc right 28v dc bus,RPDU 74,,,,VERIFIED,ata31.txt:363
+"RPDU 76, right HUD projector",31,28v dc right 28v dc bus,RPDU 76,,,,VERIFIED,ata31.txt:370
+"RPDU 75, left HUD projector",31,28v dc left 28v dc bus,RPDU 75,,,,VERIFIED,ata31.txt:381
+"RPDU 73, left outboard HDD and left EFIS",31,28v dc captain instrument bus,RPDU 73,,,,VERIFIED,ata31.txt:385
+"RPDU 71, left inboard HDD",31,28v dc captain instrument bus,RPDU 71,,,,VERIFIED,ata31.txt:389
+"P300 PDP, lower HDD and other loads",31,28v dc captain instrument bus,P300,,,,VERIFIED,ata31.txt:393
+"P300 PDP, lower HDD and other loads",31,28v dc,P300,,,,VERIFIED,ata31.txt:394
+"Left outboard, left inboard and lower HDDs",31,28v dc captain instrument bus,,,,,VERIFIED,ata31.txt:473
+Right inboard and right outboard HDDs,31,28v dc right main bus,,,,,VERIFIED,ata31.txt:475
+Left HUD projector,31,28v dc left main bus,,,,,VERIFIED,ata31.txt:540
+Right HUD projector,31,28v dc right bus,,,,,VERIFIED,ata31.txt:541
+Left EFIS/DSP,31,28v dc captain instrument bus,RPDU 73,,,,VERIFIED,ata31.txt:701
+Right EFIS/DSP,31,28v dc right main bus,RPDU 74,,,,VERIFIED,ata31.txt:702
+Left MFK,31,28v dc captain instrument bus,P300,,,,VERIFIED,ata31.txt:719
+Right MFK,31,28v dc right main bus,RPDU 74,,,,VERIFIED,ata31.txt:720
+Captain CCD,31,28v dc captain instrument bus,P300,,,,VERIFIED,ata31.txt:763
+First officer CCD,31,28v dc right main bus,RPDU 74,,,,VERIFIED,ata31.txt:764
+Left stick shaker,31,28v dc captain instrument bus,RPDU 73,,,,VERIFIED,ata31.txt:3085
+Right stick shaker,31,28v dc first officer instrument bus,RPDU 72,,,,VERIFIED,ata31.txt:3086
+Stick shaker motors,31,28v dc,,,,,VERIFIED,ata31.txt:3084
+Stick shaker power command,31,28v dc,,,,,VERIFIED,ata31.txt:3065
+Aft flight recorder (FR),31,28v dc,,,,,VERIFIED,ata31.txt:3489
+Aft flight recorder (FR),31,28v dc right bus,RPDU 42,,,,VERIFIED,ata31.txt:3593
+Aft flight recorder (FR),31,28v dc right bus,RPDU 42,,,,VERIFIED,ata31.txt:3594
+Forward flight recorder (FR) and area mic preamp,31,28v dc left bus,RPDU 75,,,,VERIFIED,ata31.txt:3595
+Forward flight recorder (FR),31,28v dc via RIPS,,,,,VERIFIED,ata31.txt:3491
+RIPS battery fallback,31,RPDU power below 18v dc,,,,,VERIFIED,ata31.txt:3596
+RIPS battery supply to forward FR,31,battery,,,,,VERIFIED,ata31.txt:3600
+Area microphone,31,aircraft power via RIPS; battery on failure,,,,,VERIFIED,ata31.txt:3661
+Area microphone,31,battery,,,,,VERIFIED,ata31.txt:3662
+Area microphone,31,,P40,,,,VERIFIED,ata31.txt:3663
+Printer,31,115v ac,RPDU 75,,,,VERIFIED,ata31.txt:3887
+ULB (underwater locator beacon),31,9.6 volt battery,,,,,VERIFIED,ata31.txt:3554
+"CBIC, electronic circuit breakers",31,,,,,,VERIFIED,ata31.txt:2404
+"CBIC, thermal circuit breakers",31,,,,,,VERIFIED,ata31.txt:2405
+"ESIC, breakers not on CBIC",31,,P100,,,,VERIFIED,ata31.txt:2313
+Brake: left main channel 28v dc,32,28v dc,,,,,VERIFIED,ata32.txt:6526
+Brake: right BSCU 28v dc,32,28v dc,,,,,VERIFIED,ata32.txt:6527
+Brake: MLG axle RDC supply,32,40v dc,,,,,VERIFIED,ata32.txt:6528
+Brake: NLG axle RDC supply,32,28v dc,,,,,VERIFIED,ata32.txt:6530
+Brake: EBPSU outputs,32,28v dc and +/-130v dc,,,,,VERIFIED,ata32.txt:6822
+Brake: EBPSU outputs,32,+/-130v dc,,,,,VERIFIED,ata32.txt:6525
+Brake: EBPSU inputs,32,28v dc from TRU and HBB,,,,,VERIFIED,ata32.txt:6820
+Brake: EBPSU inputs (TRU and HBB),32,28v dc,,,,,VERIFIED,ata32.txt:6821
+"Brake: BSCU power, four circuit breakers",32,28 V DC,,,,,VERIFIED,ata32.txt:6787
+Brake: BSCU 40 V DC to MLG ARDCs,32,40 V DC,,,,,VERIFIED,ata32.txt:6788
+Brake: right outboard BSCU to NG ARDCs,32,28 V DC,,,,,VERIFIED,ata32.txt:6789
+Brake: EBPSU battery auxiliary,32,28 V DC,,,,,VERIFIED,ata32.txt:6790
+Brake: EBAC power,32,,,,,,VERIFIED,ata32.txt:6865
+Brake: BSCU power enable to EBPSU,32,,,,,,VERIFIED,ata32.txt:7213
+Brake: BSCU arm,32,,,,,,VERIFIED,ata32.txt:7441
+Brake: BSCU LVDT and MLG ARDC power,32,,,,,,VERIFIED,ata32.txt:6785
+Brake: autobrake selector solenoid,32,28v dc,,,,,VERIFIED,ata32.txt:7426
+Brake: right outboard BSCU lights (air/ground),32,28 vdc,,,,,VERIFIED,ata32.txt:7896
+Brake: parking brake lever solenoid,32,,,,,,VERIFIED,ata32.txt:7912
+Brake: EBAC on 28v dc pair,32,,,,,,VERIFIED,ata32.txt:6490
+Brake: electric brakes supplied by EBPSUs,32,,,,,,VERIFIED,ata32.txt:6819
+Brake: EBPSU 28v dc input and BSCU,32,28v dc,,,,,VERIFIED,ata32.txt:6484
+Brake: 28 v dc to BSCUs,32,28 v dc,,,,,VERIFIED,ata32.txt:6485
+Brake: towing power switch,32,"battery (hot battery bus, APU hot battery bus)",,,,,VERIFIED,ata32.txt:7584
+Brake: towing HBB loads,32,hot battery bus; APU hot battery bus,,,,,VERIFIED,ata32.txt:7605
+MLG control valve module solenoids,32,28v dc,,,,,VERIFIED,ata32.txt:2117
+NLG control valve module solenoids,32,28v dc,,,,,VERIFIED,ata32.txt:3234
+Landing gear lever lock solenoid,32,28v dc,,,,,VERIFIED,ata32.txt:1469
+Landing gear lever lock,32,,,,,,VERIFIED,ata32.txt:1475
+Landing gear lever lock override,32,,,,,,VERIFIED,ata32.txt:1477
+Landing gear lever lock,32,,,,,,VERIFIED,ata32.txt:1478
+"Bypass/auto-off valve modules, enable solenoid",32,28v dc,,,,,VERIFIED,ata32.txt:1528
+"Bypass/auto-off valve modules, enable relay",32,28v dc,,,,,VERIFIED,ata32.txt:1535
+"Bypass/auto-off valve modules, relay inhibit",32,28v dc,,,,,VERIFIED,ata32.txt:1536
+"Door safety valve module, slow close",32,,,,,,VERIFIED,ata32.txt:1707
+Solenoid coil power and ground,32,,,,,,VERIFIED,ata32.txt:1716
+MLG bypass/off relay,32,28v dc,,,,,VERIFIED,ata32.txt:2393
+MLG door close relay,32,28v dc,,,,,VERIFIED,ata32.txt:2396
+"MLG door safety valve modules, slow close",32,28v dc,P56,,,,VERIFIED,ata32.txt:2376
+"Valve module solenoids, RPDU side",32,28v dc,,,,,VERIFIED,ata32.txt:2382
+Valve module relays disconnect RPDU power,32,,,,,,VERIFIED,ata32.txt:2389
+MLG downlock and uplock sensing valves,32,28v dc,,,,,VERIFIED,ata32.txt:2349
+"NLG valve modules, alt extension relays",32,,,,,,VERIFIED,ata32.txt:3364
+NLG door close: P40 power to RDC 1,32,28v dc,,,,,VERIFIED,ata32.txt:4667
+MLG door close: P56 power to RDC 9,32,28v dc,,,,,VERIFIED,ata32.txt:4621
+MLG door close: P56 ARM and MLG DOORS CLOSE,32,28v dc,P56,,,,VERIFIED,ata32.txt:4620
+NLG door close: P40 switches,32,28v dc,P40,,,,VERIFIED,ata32.txt:4634
+Reset relay (LGA/NWS to RPDU),32,28v dc,,,,,VERIFIED,ata32.txt:4713
+Alternate extend power pack,32,28v dc,,,,,VERIFIED,ata32.txt:3916
+Alternate extend power pack motor,32,28v dc,,,,,VERIFIED,ata32.txt:3934
+Alternate extend power pack (HBB),32,28v dc hot battery bus,,,,,VERIFIED,ata32.txt:4393
+Alternate extension on ground,32,28v dc hot battery bus,P56,,,,VERIFIED,ata32.txt:3670
+"Alternate extension, DOWN position",32,28v dc hot battery bus,,,,,VERIFIED,ata32.txt:3875
+"Alternate extension, motor",32,28v dc hot battery bus,,,,,VERIFIED,ata32.txt:3849
+Alternate extension components on ground,32,28v dc hot battery bus,,,,,VERIFIED,ata32.txt:3669
+"Alternate extension, NORM position",32,28v dc hot battery bus,,,,,VERIFIED,ata32.txt:3881
+Alternate release actuators (doors),32,28V dc hot battery bus,,,,,VERIFIED,ata32.txt:8193
+Alternate release power pack,32,hot battery bus (HBB),,,,,VERIFIED,ata32.txt:8190
+NLG and MLG reset relays via RPDU,32,28v dc,,,,,VERIFIED,ata32.txt:4721
+"Door unsafe light, NWW (HBB)",32,28v dc hot battery bus,P40,,,,VERIFIED,ata32.txt:4264
+"Door unsafe light, MWW (HBB)",32,28v dc hot battery bus,P56,,,,VERIFIED,ata32.txt:4246
+Door unsafe light source,32,28v dc hot battery bus,,,,,VERIFIED,ata32.txt:4260
+Door safety valve module switch,32,28v dc hot battery bus,,,,,VERIFIED,ata32.txt:5015
+Nose gear door test circuit,32,28v dc hot battery bus,,,,,VERIFIED,ata32.txt:4241
+PSDC power for proximity sensors,32,28v dc,,,,,VERIFIED,ata32.txt:4993
+PSDC provides power for MLG sensors,32,,,,,,VERIFIED,ata32.txt:4979
+Landing gear control,32,28v dc,,,,,VERIFIED,ata32.txt:1076
+"Relay disconnect, MLG door close",32,,,,,,VERIFIED,ata32.txt:4578
+Lock solenoid on MLG control,32,28v dc,,,,,VERIFIED,ata32.txt:4593
+"Relays, ALTN GEAR and P56 HBB",32,28v dc hot battery bus,P56,,,,VERIFIED,ata32.txt:4573
+"Landing gear actuation, RPDU list",32,,,,,,VERIFIED,ata32.txt:1652
+Landing gear: dual coil solenoid,32,,,,,,VERIFIED,ata32.txt:1715
+Landing gear: MLG control valves,32,28v dc,,,,,VERIFIED,ata32.txt:2528
+Landing gear: uplock,32,,,,,,VERIFIED,ata32.txt:2758
+"Flight deck lights, PCU list",33,,,,,,VERIFIED,ata33.txt:185
+"Flight deck lights, PCU power",33,28v dc,,,,,VERIFIED,ata33.txt:206
+"Flight deck lights, PCU power",33,28v dc,,,,,VERIFIED,ata33.txt:260
+Dome lights,33,,,,,,VERIFIED,ata33.txt:279
+Captain aft and FO forward dome lights,33,,,,,,VERIFIED,ata33.txt:282
+Flood lights,33,,,,,,VERIFIED,ata33.txt:396
+Lights during tow operations,33,battery,,,,,VERIFIED,ata33.txt:327
+Miscellaneous light PCU,33,28v dc,,,,,VERIFIED,ata33.txt:651
+Task lights,33,28v dc,,,,,VERIFIED,ata33.txt:727
+Utility light,33,28v dc,,,,,VERIFIED,ata33.txt:795
+Utility light,33,,,,,,VERIFIED,ata33.txt:789
+Lighting control panels,33,,,,,,VERIFIED,ata33.txt:525
+Work lights,33,115v ac,,,,,VERIFIED,ata33.txt:1002
+Work lights,33,115v ac,,,,,VERIFIED,ata33.txt:1061
+Cabin area lights,33,115v ac,,,,,VERIFIED,ata33.txt:1149
+Reading lights,33,115v ac,,,,,VERIFIED,ata33.txt:1163
+Cabin lights,33,115v ac,,,,,VERIFIED,ata33.txt:1292
+Cabin 28v dc loads,33,28v dc,,,,,VERIFIED,ata33.txt:1295
+Full height closet lights,33,,,,,,VERIFIED,ata33.txt:1330
+Underbin closet lights,33,,,,,,VERIFIED,ata33.txt:1334
+Closet lights,33,28v dc right main bus and 28v dc left main bus,,,,,VERIFIED,ata33.txt:1356
+Smart signs,33,115v ac,,,,,VERIFIED,ata33.txt:1452
+Information signs,33,115v ac,,,,,VERIFIED,ata33.txt:1453
+Information signs,33,28v dc,,,,,VERIFIED,ata33.txt:2034
+Lavatory lights,33,115v ac,,,,,VERIFIED,ata33.txt:1615
+Galley area lights,33,115v ac,,,,,VERIFIED,ata33.txt:1773
+Area and reading lights (crew rest/cabin),33,115v ac,,,,,VERIFIED,ata33.txt:2031
+Backup lights (WELS),33,battery,,,,,VERIFIED,ata33.txt:2037
+WELS WCU charge power,33,115v ac,,,,,VERIFIED,ata33.txt:2541
+WELS WCU charge power,33,115v ac,,,,,VERIFIED,ata33.txt:2542
+WCU battery charging,33,115v ac,,,,,VERIFIED,ata33.txt:2507
+WCU battery charging,33,115v ac,,,,,VERIFIED,ata33.txt:2506
+WCU ARMED mode,33,28v dc,,,,,VERIFIED,ata33.txt:2537
+WCU OFF mode,33,11v dc,,,,,VERIFIED,ata33.txt:2536
+Emergency lights,33,115v ac monitored,,,,,VERIFIED,ata33.txt:2562
+"Emergency lights, 115v ac loss",33,115v ac,,,,,VERIFIED,ata33.txt:2584
+"Emergency lights, WCU battery",33,battery,,,,,VERIFIED,ata33.txt:2209
+Service lights,33,28v dc,,,,,VERIFIED,ata33.txt:2715
+Service light circuit breaker,33,28v dc,,,,,VERIFIED,ata33.txt:2678
+Refuel panel lighting,33,virtual ground handling bus,,,,,VERIFIED,ata33.txt:2686
+Virtual ground handling bus lights,33,virtual ground handling bus,,,,,VERIFIED,ata33.txt:2919
+Interior cargo lights,33,28v dc,,,,,VERIFIED,ata33.txt:2953
+Exterior cargo lights,33,115v ac,,,,,VERIFIED,ata33.txt:2872
+Loading light transformer,33,"115v ac in, 12v ac out",,,,,VERIFIED,ata33.txt:2905
+Logo lights,33,115v ac,,,,,VERIFIED,ata33.txt:4097
+Wing illumination lights,33,115v ac,,,,,VERIFIED,ata33.txt:3148
+"Landing, runway turnoff and taxi lights (HID)",33,115v ac,,,,,VERIFIED,ata33.txt:3481
+Nose landing light power supply,33,115v ac,,,,,VERIFIED,ata33.txt:3448
+Taxi light power supply,33,115v ac,,,,,VERIFIED,ata33.txt:3550
+Forward position lights,33,28v dc,,,,,VERIFIED,ata33.txt:3640
+Tailcone position lights,33,28v dc,,,,,VERIFIED,ata33.txt:3738
+Position lights,33,28v dc,,,,,VERIFIED,ata33.txt:3818
+Beacon lights,33,28v dc,,,,,VERIFIED,ata33.txt:3948
+Wing anti-collision strobe lights,33,28v dc,,,,,VERIFIED,ata33.txt:3994
+Tailcone anti-collision lights,33,28v dc,,,,,VERIFIED,ata33.txt:4013
+Light power supply control,33,,,,,,VERIFIED,ata33.txt:4123
+"Triple power supply, runway turnoff",33,115v ac,,,,,VERIFIED,ata33.txt:3208
+Nose landing gear light power supply,33,115v ac,,,,,VERIFIED,ata33.txt:3445
+Taxi light power supply channels,33,,,,,,VERIFIED,ata33.txt:3508
+Light power supply from RPDU,33,115v ac,,,,,VERIFIED,ata33.txt:3470
+Backup Bus,,235 VAC,,,,,VERIFIED,eps24.txt:716
+Ring Tie Bus,,,,,,,VERIFIED,eps24.txt:714
+Main battery and battery charger,,,,,,,VERIFIED,eps24.txt:712
+APU battery and APU battery charger,,,,,,,VERIFIED,eps24.txt:715
+VFSG (2 per engine),,235 VAC,,,250 kVA,,VERIFIED,eps24.txt:2859
+ASG,,235 VAC,P150,,225 kVA,,VERIFIED,eps24.txt:12129
+APU starter generators (ASG),24-22-02,235 VAC,,,225 kVA,,VERIFIED,eps24.txt:2962
+APU start power (SPU),24-31-02,28 VDC in / 115 VAC 3-phase out,,,,,VERIFIED,eps24.txt:2978
+L ASG start (exciter stator supply),,,RPDU 33,,,,VERIFIED,eps24.txt:12211
+Left ASG start,,,RPDU 33,,,,VERIFIED,eps24.txt:12241
+Right ASG start,,,,,,,VERIFIED,eps24.txt:12242
+CMSC controlling right ASG (APU start),,270 VDC,,,,,VERIFIED,eps24.txt:2981
+CMSC starting left or right ASG,,235 VAC,,,,,VERIFIED,eps24.txt:2984
+APU battery (APU start and control),24-31-01,28 VDC,,,,,VERIFIED,eps24.txt:3252
+APU battery charger output,,,P49,,,,VERIFIED,eps24.txt:3345
+APU battery charger input,,,P400,,,,VERIFIED,eps24.txt:3344
+Center hydraulic EMP-C1 battery feed,,,P49,,,,VERIFIED,eps24.txt:3690
+Center hydraulic EMP-C2 battery feed,,,P49,,,,VERIFIED,eps24.txt:3696
+Center system EMP C1 and C2 (motor controllers),,270 VDC,,,,,VERIFIED,eps24.txt:3673
+RAT generator output,,235 VAC,P400,,,,VERIFIED,eps24.txt:2675
+28 VDC from TRUs (P300/P400),,28 VDC,P300,,,,VERIFIED,eps24.txt:2671
+115 VAC from ATUs (P300/P400),,115 VAC,P300,,,,VERIFIED,eps24.txt:2670
+235 VAC distribution (P100/P200),,235 VAC,P100,,,,VERIFIED,eps24.txt:2667
+115 VAC / 28 VDC secondary distribution,,115 VAC / 28 VDC,SPDU,,,,VERIFIED,eps24.txt:457
+115 VAC / 28 VDC remote loads,,115 VAC / 28 VDC,,,,,VERIFIED,eps24.txt:459
+115 VAC and 28 VDC loads,24-71-01,115 VAC / 28 VDC,,,,,VERIFIED,eps24.txt:443
+RPDU / SPDU loads,,,SPDU,,,,VERIFIED,eps24.txt:5758
+Ground service loads,,,SPDU,,,,VERIFIED,eps24.txt:18535
+Flight control SSRs,,,,,,,VERIFIED,eps24.txt:5767
+Main bus power (ELCC),,,,,,,VERIFIED,eps24.txt:6011
+VFSG GEN DRIVE DISC solenoid supply,,28 VDC,RPDU 22,,,,VERIFIED,eps24.txt:12925
+VFSG GEN DRIVE DISC solenoid,,28 VDC,,,,,VERIFIED,eps24.txt:12909
+Aft EP to L2 ATRU and L2 +/-270 VDC bus,,+/-270 VDC,P700,,,,VERIFIED,eps24.txt:1309
+Forward EP 115 VAC,,115 VAC,P300,,,,VERIFIED,eps24.txt:775
+115 VAC ground power receptacles (2 forward),,115 VAC,,,90 kVA each,,VERIFIED,eps24.txt:3439
+115 VAC aft ground power receptacle,,115 VAC,,,,,VERIFIED,eps24.txt:3443
+Hydraulics (aft EP to P700 loads),,,P700,,,,VERIFIED,eps24.txt:18465
+"Captain and F/O instrument buses (TCB-protected loads, ground mode)",,28 VDC,,,,,VERIFIED,eps24.txt:1423
+Captain and F/O instrument buses via MBR,,28 VDC (HBB),,,,,VERIFIED,eps24.txt:1433
+"Main aircraft battery (lithium ion, 50 amp-hours at end of life)",,28 VDC,,,,,VERIFIED,eps24.txt:1421
+GCU power input,,28 VDC,,,,,VERIFIED,eps24.txt:12557
+Captain Instrument Bus (standby power),,28 VDC,,,,,VERIFIED,eps24.txt:790
+Center hydraulic system (all-engine failure provision),,,,,,,VERIFIED,eps24.txt:797
+Battery refueling loads,,,SPDU,,,,VERIFIED,eps24.txt:1685
+ATRU group (235 VAC to 270 VDC),,235 VAC to 270 VDC,,,,,VERIFIED,eps24.txt:3513
+"CMSC, RFMC and fuel jettison pump",,+/- 270 VDC,P700,,,,VERIFIED,eps24.txt:786
+ATU 115 VAC to 235 VAC (main AC buses),,115 VAC to 235 VAC,P500,,,,VERIFIED,eps24.txt:782
+115 VAC and 28 VDC from 235 VAC,,235 VAC to 115 VAC and 28 VDC,P500,,,,VERIFIED,eps24.txt:722
+Brake system,,28 VDC to +/-130 VDC,P500,,,,VERIFIED,eps24.txt:723
+115 VAC / 28 VDC distribution (load management),,115 VAC / 28 VDC,P400,,,,VERIFIED,eps24.txt:697
+L1.2.8 spare pre-wired (ELCC),24,235 VAC Bus L1,ELCU PL1,,15,,VERIFIED,eps24.txt:25905
+L2.3.6 spare pre-wired (ELCC),24,235 VAC Bus L2,ELCU PL1,,15,,VERIFIED,eps24.txt:25995
+R1.2.6 spare pre-wired (ELCC),24,235 VAC Bus R1,ELCU PR2,,15,,VERIFIED,eps24.txt:26721
+R1.2.7 spare pre-wired (ELCC),24,235 VAC Bus R1,ELCU PR2,,15,,VERIFIED,eps24.txt:26723
+S1.1 spare pre-wired (ELCC),24,235 VAC Bus R2,ELCU PR2,,15,,VERIFIED,eps24.txt:26812
+S1.3 spare pre-wired (ELCC),24,235 VAC Bus R2,ELCU PR2,,15,,VERIFIED,eps24.txt:26814
+ELCC L3 (BPCU/LPU area),24,,P300,,,,VERIFIED,eps24.txt:21550
+ELCC R3 (BPCU area),24,,P400,,,,VERIFIED,eps24.txt:21565
+Main Hot Battery Bus (main battery),24,"28 VDC (Hot Battery Bus, line 19389)",P300,,,,VERIFIED,eps24.txt:21633
+APU Hot Battery Bus,24,,P49,,,,VERIFIED,eps24.txt:21650
+Captain's Instrument Bus (CIT contactor path),24,28 VDC,P300,,,,VERIFIED,eps24.txt:19382
+F/O Instrument Bus (FIT contactor path),24,28 VDC,P400,,,,VERIFIED,eps24.txt:19388
+CIT and FIT contactors (instrument bus paralleling),24,28 VDC,,,,,VERIFIED,eps24.txt:19173
+"Fwd EP overcurrent OC1 (highest phase, 300 s); trips Fwd EPC, BTB, BSB, ATUC",24,Fwd EP (external power),,,270,,VERIFIED,eps24.txt:23463
+"Fwd EP overcurrent OC2 (5.2 s); trips Fwd EPC, BTB, BSB, ATUC",24,Fwd EP (external power),,,326,,VERIFIED,eps24.txt:23464
+Fwd EP open-phase OP (lowest phase > 20 A or next-lowest diff < 45 A),24,Fwd EP (external power),,,20,,VERIFIED,eps24.txt:23380
+"Fwd EP underfrequency-type trip (lowest < 11 A and next-lowest diff > 55 A, 4.0 s)",24,Fwd EP (external power),,,11,,VERIFIED,eps24.txt:23371
+ATU DP protection (any phase); trips Fwd EPC and related BSB,24,Fwd EP / ATU,,,40,,VERIFIED,eps24.txt:23585
+Pin F overcurrent (EP interlock),24,28 VDC,,,2.0,,VERIFIED,eps24.txt:22891
+Pin F hold-in supply to manual ground contactor coil,24,28 VDC,,,,0.5 A min,VERIFIED,eps24.txt:23771
+"Pin F supply to manual ground contactor coil (close, 0.5 s max)",24,28 VDC,,,,1.0 A min,VERIFIED,eps24.txt:23779
+Main DC bus TRU OC1 (305 s); adjacent TRU relay / LdcT or RdcT,24,28 VDC,,,280,,VERIFIED,eps24.txt:23694
+Main DC bus TRU OC2 (48 s),24,28 VDC,,,360,,VERIFIED,eps24.txt:23690
+Main DC bus TRU OC3 (12 s),24,28 VDC,,,420,,VERIFIED,eps24.txt:23686
+Main DC bus TRU OC4 (5.75 s),24,28 VDC,,,560,,VERIFIED,eps24.txt:23682
+Main DC bus TRU OC5 (2.6 s),24,28 VDC,,,900,,VERIFIED,eps24.txt:23678
+Main DC bus TRU OC6 (715 ms),24,28 VDC,,,1200,,VERIFIED,eps24.txt:23674
+"CIT overcurrent tier 1 (hall-effect sensor, by L BPCU); trips CIT",24,28 VDC,,,200,,VERIFIED,eps24.txt:22974
+Main battery fault: discharge (trips MBR via L BPCU),24,Hot Battery Bus (28 VDC),,,30,,VERIFIED,eps24.txt:21949
+Standby / CIT paralleling: IB <= 24 VDC and TRU current below threshold,24,28 VDC Capt/F/O instrument bus,,,360,,VERIFIED,eps24.txt:22209
+Battery-only / battery-refuel TRU current test (15 s),24,28 VDC,,,20,,VERIFIED,eps24.txt:22503
+GCU L1 CAPT,,28 VDC instrument bus,P300,,,,VERIFIED,eps24.txt:28112
+KEYPAD / CURSOR CTRL L,,28 VDC instrument bus,P300,,,,VERIFIED,eps24.txt:28112
+GCU L2 CAPT,,28 VDC instrument bus,P300,,,,VERIFIED,eps24.txt:28115
+DISPLAY UNIT LWR,,28 VDC instrument bus,P300,,,,VERIFIED,eps24.txt:28116
+GND CREW CALL HORN,,28 VDC HBB,P300,,,,VERIFIED,eps24.txt:28118
+ELCU P100 L2 CAPT,,28 VDC instrument bus,P300,,,,VERIFIED,eps24.txt:28119
+MAN OFV FWD,,28 VDC instrument bus,P300,,,,VERIFIED,eps24.txt:28121
+RDC FWD EE BAY 1L PRI,,28 VDC instrument bus,P300,,,,VERIFIED,eps24.txt:28122
+IGNITION 1 CHAN A L ENGINE,,L28 VDC,P300,,,,VERIFIED,eps24.txt:28124
+IGNITION 2 CHAN B (engine label printed R ENGINE),,28 VDC instrument bus,P300,,,,VERIFIED,eps24.txt:28126
+NETWORK SWITCH AFT CHEEK L PRI,,28 VDC instrument bus,P300,,,,VERIFIED,eps24.txt:28127
+ELCU P300 L4 CAPT,,TRU C1 28 VDC,P300,,,,VERIFIED,eps24.txt:28130
+NETWORK SWITCH CROWN DR 3 L PRI,,28 VDC instrument bus,P300,,,,VERIFIED,eps24.txt:28131
+RDC AFT EE BAY L PRI,,28 VDC instrument bus,P300,,,,VERIFIED,eps24.txt:28133
+GCU L2 CAPT,,28 VDC instrument bus,P300,,,,VERIFIED,eps24.txt:28135
+RDC CROWN DR 3 L PRI,,28 VDC instrument bus,P300,,,,VERIFIED,eps24.txt:28136
+PSDC 3A,,28 VDC instrument bus,P300,,,,VERIFIED,eps24.txt:28138
+RDC FLT DK L PRI,,28 VDC instrument bus,P300,,,,VERIFIED,eps24.txt:28140
+CABINET CCR L PRI,,28 VDC instrument bus,P300,,,,VERIFIED,eps24.txt:28152
+ELCU P100 L1 CAPT,,28 VDC instrument bus,P300,,,,VERIFIED,eps24.txt:28156
+NETWORK SWITCH FWD EE BAY L PRI,,28 VDC instrument bus,P300,,,,VERIFIED,eps24.txt:28159
+PSDC 2A,,28 VDC instrument bus,P300,,,,VERIFIED,eps24.txt:28163
+BPCU L CAPT,,TRU C1 28 VDC,P300,,,,VERIFIED,eps24.txt:28166
+SPDU P300 L2 CAPT,,28 VDC instrument bus,P300,,,,VERIFIED,eps24.txt:28169
+SPDU P300 L1 CAPT,,28 VDC instrument bus,P300,,,,VERIFIED,eps24.txt:28172
+FCE CABINET C1 BAT,,28 VDC HBB,P300,,,,VERIFIED,eps24.txt:28222
+TOWS LTS FLT DK,,28 VDC HBB,P300,,,,VERIFIED,eps24.txt:28222
+LG ALTN EXT MOTOR REMOTE,,28 VDC HBB,P300,,,,VERIFIED,eps24.txt:28225
+ATT HDG REF UNIT BATTERY L,,28 VDC HBB,P300,,,,VERIFIED,eps24.txt:28225
+CABINET CCR R BAT,,28 VDC HBB,P300,,,,VERIFIED,eps24.txt:28228
+FIRE EXT BOTTLE ENGINE R2,,28 VDC HBB,P300,,,,VERIFIED,eps24.txt:28229
+CABINET CCR L BAT,,28 VDC HBB,P300,,,,VERIFIED,eps24.txt:28231
+FIRE EXT BOTTLE ENGINE R1,,28 VDC HBB,P300,,,,VERIFIED,eps24.txt:28232
+FCE CABINET C2 BAT,,28 VDC HBB,P300,,,,VERIFIED,eps24.txt:28234
+RAT MANUAL CTRL 1,,28 VDC HBB,P300,,,,VERIFIED,eps24.txt:28235
+FIRE EXT BOTTLE ENG L1,,28 VDC HBB,P300,,,,VERIFIED,eps24.txt:28237
+GND CREW CALL HORN TRANSFER PWR,,28 VDC HBB,P300,,,,VERIFIED,eps24.txt:28238
+FIRE EXT BOTTLE ENG L2,,28 VDC HBB,P300,,,,VERIFIED,eps24.txt:28240
+EMER LTS CONTROL,,28 VDC HBB,P300,,,,VERIFIED,eps24.txt:28242
+ATT HDG REF UNIT BATTERY R,,28 VDC HBB,P300,,,,VERIFIED,eps24.txt:28243
+IRU BATTERY L,,28 VDC HBB,P300,,,,VERIFIED,eps24.txt:28245
+IRU BATTERY R,,28 VDC HBB,P300,,,,VERIFIED,eps24.txt:28247
+LG ALTN EXT CTRL,,28 VDC HBB,P300,,,,VERIFIED,eps24.txt:28249
+BPCU L BAT,,28 VDC HBB,P300,,,,VERIFIED,eps24.txt:28261
+BPCU R BAT,,28 VDC HBB,P300,,,,VERIFIED,eps24.txt:28264
+LG DOOR CLOSE GND ACCESS IND,,28 VDC HBB,P300,,,,VERIFIED,eps24.txt:28267
+FIRE EXT BOTTLE APU,,28 VDC HBB,P300,,,,VERIFIED,eps24.txt:28270
+BATTERY SOC TOWING,,28 VDC HBB,P300,,,,VERIFIED,eps24.txt:28273
+APU REMOTE FIRE IND AUTO DISCH ARM,,28 VDC HBB,P300,,,,VERIFIED,eps24.txt:28276
+EBPSU R BAT,,28 VDC instrument bus,P300,,,,VERIFIED,eps24.txt:28306
+EBPSU L BAT,,28 VDC instrument bus,P300,,,,VERIFIED,eps24.txt:28310
+MAIN BAT CHARGER INPUT,,28 VDC instrument bus,P300,,,,VERIFIED,eps24.txt:28314
+MAIN BAT CHARGER OUTPUT,,28 VDC instrument bus,P300,,,,VERIFIED,eps24.txt:28318
+EBPSU C1 BAT,,28 VDC instrument bus,P300,,,,VERIFIED,eps24.txt:28322
+EBPSU C2 BAT,,28 VDC instrument bus,P300,,,,VERIFIED,eps24.txt:28326
+T/R ISOLATION VLV L ENGINE,,28 VDC L 28VDC bus,P300,,,,VERIFIED,eps24.txt:28357
+EEC ALTN POWER CHAN B L ENGINE,,115 VAC phase C,P300,,,,VERIFIED,eps24.txt:28357
+GCU R1 L28,,28 VDC L 28VDC bus,P300,,,,VERIFIED,eps24.txt:28361
+EEC ALTN POWER CHAN A L ENGINE,,115 VAC phase C,P300,,,,VERIFIED,eps24.txt:28361
+ELCU P200 R1 L28,,28 VDC L 28VDC bus,P300,,,,VERIFIED,eps24.txt:28364
+ELCU P200 R2 L28,,28 VDC L 28VDC bus,P300,,,,VERIFIED,eps24.txt:28367
+ELCU P400 R4 L28,,28 VDC L 28VDC bus,P300,,,,VERIFIED,eps24.txt:28370
+BPCU L L28,,28 VDC L 28VDC bus,P300,,,,VERIFIED,eps24.txt:28373
+BPCU ELCU-L EP L,,28 VDC (115 VAC external power REP TRU),P300,,,,VERIFIED,eps24.txt:28376
+BPCU R EP L,,28 VDC (115 VAC external power REP TRU),P300,,,,VERIFIED,eps24.txt:28381
+ELCU P400 R4 FO,,TRU C2 28 VDC,P400,,,,VERIFIED,eps24.txt:29406
+ELCU P200 R1 FO,,28 VDC instrument bus,P400,,,,VERIFIED,eps24.txt:29406
+PSDC 4A,,28 VDC instrument bus,P400,,,,VERIFIED,eps24.txt:29409
+IGNITION 1 CHAN A R ENGINE,,28 VDC instrument bus,P400,,,,VERIFIED,eps24.txt:29409
+APU GCU R FO,,28 VDC instrument bus,P400,,,,VERIFIED,eps24.txt:29412
+NETWORK SWITCH FWD EE BAY R PRI,,28 VDC instrument bus,P400,,,,VERIFIED,eps24.txt:29412
+NETWORK SWITCH AFT EE BAY R PRI,,28 VDC instrument bus,P400,,,,VERIFIED,eps24.txt:29416
+PSDC 5A,,28 VDC instrument bus,P400,,,,VERIFIED,eps24.txt:29415
+BPCU R FO,,C2 TRU 28 VDC,P400,,,,VERIFIED,eps24.txt:29418
+NETWORK SWITCH CROWN DOOR 3 R PRI,,28 VDC instrument bus,P400,,,,VERIFIED,eps24.txt:29420
+RDC FWD EE BAY 1R PRI,,28 VDC instrument bus,P400,,,,VERIFIED,eps24.txt:29421
+MAN OFV AFT,,28 VDC instrument bus,P400,,,,VERIFIED,eps24.txt:29424
+RDC FLT DK R PRI,,28 VDC instrument bus,P400,,,,VERIFIED,eps24.txt:29425
+GCU R2 FO,,28 VDC instrument bus,P400,,,,VERIFIED,eps24.txt:29427
+RDC CROWN DR 3 R PRI,,28 VDC instrument bus,P400,,,,VERIFIED,eps24.txt:29428
+GCU R1 FO,,28 VDC instrument bus,P400,,,,VERIFIED,eps24.txt:29430
+RDC AFT EE BAY R PRI,,28 VDC instrument bus,P400,,,,VERIFIED,eps24.txt:29432
+ELCU P200 R2 FO,,28 VDC instrument bus,P400,,,,VERIFIED,eps24.txt:29436
+SPDU P400 R1 FO,,28 VDC instrument bus,P400,,,,VERIFIED,eps24.txt:29448
+SPDU P400 R2 FO,,28 VDC instrument bus,P400,,,,VERIFIED,eps24.txt:29451
+IGNITION 2 CHAN B L ENGINE,,28 VDC instrument bus,P400,,,,VERIFIED,eps24.txt:29454
+CABINET CCR L SEC,,28 VDC instrument bus,P400,,,,VERIFIED,eps24.txt:29458
+EXT PWR TRU-R,,28 VDC (115 VAC external power TRU-R),P400,,,,VERIFIED,eps24.txt:29462
+T/R ISOLATION VLV R ENGINE,,28 VDC R 28VDC bus,P400,,,,VERIFIED,eps24.txt:29548
+EEC ALTN POWER CHAN B R ENGINE,,115 VAC phase C,P400,,,,VERIFIED,eps24.txt:29548
+GCU L1 R28,,28 VDC R 28VDC bus,P400,,,,VERIFIED,eps24.txt:29552
+EEC ALTN POWER CHAN A R ENGINE,,115 VAC phase C,P400,,,,VERIFIED,eps24.txt:29552
+ELCU P100 L1 R28,,28 VDC R 28VDC bus,P400,,,,VERIFIED,eps24.txt:29555
+PITOT PROBE HTR-C,,115 VAC phase A and C,P400,,,,VERIFIED,eps24.txt:29556
+ELCU P100 L2 R28,,28 VDC R 28VDC bus,P400,,,,VERIFIED,eps24.txt:29558
+APU BAT CHRG INPUT,,28 VDC (APU battery charger to F/O bus),P400,,,,VERIFIED,eps24.txt:29559
+ELCU P300 L4 R28,,28 VDC R 28VDC bus,P400,,,,VERIFIED,eps24.txt:29561
+BPCU R R28,,28 VDC R 28VDC bus,P400,,,,VERIFIED,eps24.txt:29564
+BPCU ELCU R EP R,,28 VDC (115 VAC external power REP TRU),P400,,,,VERIFIED,eps24.txt:29567
+BPCU L EP R,,28 VDC (115 VAC external power REP TRU),P400,,,,VERIFIED,eps24.txt:29572
+APUC-1,,28 VDC APU HBB,P49,,,,VERIFIED,eps24.txt:30454
+ACTR APU INLET DR,,28 VDC APU HBB,P49,,,,VERIFIED,eps24.txt:30454
+HYD EMP L BAT,,28 VDC APU HBB,P49,,,,VERIFIED,eps24.txt:30460
+HYD EMP R BAT,,28 VDC APU HBB,P49,,,,VERIFIED,eps24.txt:30466
+HYD EMP C1 BAT,,28 VDC APU HBB,P49,,,,VERIFIED,eps24.txt:30471
+HYD EMP C2 BAT,,28 VDC APU HBB,P49,,,,VERIFIED,eps24.txt:30476
+GCU RX BAT,,28 VDC APU HBB,P49,,,,VERIFIED,eps24.txt:30481
+GCU LX BAT,,28 VDC APU HBB,P49,,,,VERIFIED,eps24.txt:30487
+TOW NAV LTS,,28 VDC APU HBB,P49,,,,VERIFIED,eps24.txt:30491
+SPU HOLD ON CONTROL,,28 VDC APU HBB,P49,,,,VERIFIED,eps24.txt:30462
+RAT MAN CTRL 2,,28 VDC APU HBB,P49,,,,VERIFIED,eps24.txt:30469
+APU FUEL CTRL,,28 VDC APU HBB,P49,,,,VERIFIED,eps24.txt:30527
+APU BAT CHARGER OUTPUT,,28 VDC APU HBB,P49,,,,VERIFIED,eps24.txt:30531
+C1 SPUC contactor (SPUC),,28 VDC APU HBB,P49,,,,VERIFIED,eps24.txt:30661
+K2433210 relay (name unpaired),,28 VDC APU HBB,P49,,15,,VERIFIED,eps24.txt:30651
+MAN RAT DEPLOY,,28 VDC APU HBB,P49,,15,,VERIFIED,eps24.txt:30652
+APU INLET DOOR CONTROL,,28 VDC APU HBB,P49,,15,,VERIFIED,eps24.txt:30653
+relay (name unpaired),,28 VDC APU HBB,P49,,,,VERIFIED,eps24.txt:30654
+SPARE pre-wired ELCC S3.1,,115 VAC,P300,,65,,VERIFIED,eps24.txt:28611
+SPARE pre-wired ELCC S3.2,,115 VAC,P300,,65,,VERIFIED,eps24.txt:28613
+SPARE pre-wired ELCC S3.3,,115 VAC,P300,,65,,VERIFIED,eps24.txt:28615
+SPARE pre-wired ELCC S3.4,,115 VAC,P300,,65,,VERIFIED,eps24.txt:28617
+SPARE pre-wired ELCC S4.2,,115 VAC,P400,,65,,VERIFIED,eps24.txt:29809
+SPARE pre-wired ELCC S4.3,,115 VAC,P400,,65,,VERIFIED,eps24.txt:29811
+SPARE pre-wired ELCC S4.4,,115 VAC,P400,,65,,VERIFIED,eps24.txt:29813
+RLY ENG TR DCV L,,28 VDC,P300,,5,,VERIFIED,eps24.txt:28629
+RLY EEC ALT PWR L,,28 VDC,P300,,2.5,,VERIFIED,eps24.txt:28631
+RLY ENG IGN L1,,28 VDC,P300,,15,,VERIFIED,eps24.txt:28633
+RLY ENG IGN L2,,28 VDC,P300,,15,,VERIFIED,eps24.txt:28635
+RELAY FRIT SPAR VLV START SWITCH/AIR GND LEFT,,28 VDC,P300,,15,,VERIFIED,eps24.txt:28637
+ALTN EXT RELAY B (Alternate nose gear gauge B),,28 VDC,P300,,50,,VERIFIED,eps24.txt:28639
+ALTN EXT RELAY A (Alternate nose gear gauge A),,28 VDC,P300,,50,,VERIFIED,eps24.txt:28641
+PITOT PROBE HTR L,,115 VAC,P300,,15,,VERIFIED,eps24.txt:28643
+WDO HT 1R BU,,115 VAC,P300,,25,,VERIFIED,eps24.txt:28645
+WDO HT 2R,,115 VAC,P300,,25,,VERIFIED,eps24.txt:28647
+APU REMOTE WARNING,,28 VDC,P300,,15,,VERIFIED,eps24.txt:28649
+APU EXT SHUTDOWN RELAY MASTER,,28 VDC,P300,,15,,VERIFIED,eps24.txt:28651
+APU EXT SHUTDOWN RELAY SLAVE,,28 VDC,P300,,15,,VERIFIED,eps24.txt:28653
+APU FIRE EXT BTL AUTO DISCHARGE,,28 VDC,P300,,10,,VERIFIED,eps24.txt:28655
+GROUND CREW CALL HORN TRANSFER RELAY,,28 VDC,P300,,2,,VERIFIED,eps24.txt:28657
+GROUND CREW CALL HORN PWR SUPPLY,,28 VDC,P300,,2,,VERIFIED,eps24.txt:28659
+RELAY ENG FUEL CONT #2 LEFT,,28 VDC,P300,,2,,VERIFIED,eps24.txt:28661
+RELAY ENG FUEL CONT #1 LEFT,,28 VDC,P300,,2,,VERIFIED,eps24.txt:28663
+RELAY ENG FUEL CONT T/D #2 LEFT,,28 VDC,P300,,2,,VERIFIED,eps24.txt:28665
+RELAY ENG FUEL CONT T/D #1 LEFT,,28 VDC,P300,,2,,VERIFIED,eps24.txt:28667
+NLG CTRL SYS 1,,28 VDC,P300,,10,,VERIFIED,eps24.txt:28669
+NLG BYPASS/OFF SYS 1,,28 VDC,P300,,10,,VERIFIED,eps24.txt:28671
+NLG DR CLOSE SYS 1,,28 VDC,P300,,10,,VERIFIED,eps24.txt:28673
+RESET SYS 1,,28 VDC,P300,,15,,VERIFIED,eps24.txt:28675
+FLT OK GND PWR TOW RLY,,28 VDC,P300,,15,,VERIFIED,eps24.txt:28677
+RLY ENG TR DCV R (ID not printed on line),,28 VDC,P400,,5,,VERIFIED,eps24.txt:29826
+RLY EEC ALT PWR R,,28 VDC,P400,,2.5,,VERIFIED,eps24.txt:29827
+RLY ENG IGN R1,,28 VDC,P400,,15,,VERIFIED,eps24.txt:29828
+RLY ENG IGN R2,,28 VDC,P400,,15,,VERIFIED,eps24.txt:29829
+RELAY FRIT SPAR VLV START SWITCH/AIR GND RIGHT,,28 VDC,P400,,15,,VERIFIED,eps24.txt:29830
+PITOT PROBE HEATER C ON/OFF CTRL,,115/200 VAC,P400,,15,,VERIFIED,eps24.txt:29831
+PITOT PROBE HEATER C HI/LO CTRL,,115/200 VAC,P400,,15,,VERIFIED,eps24.txt:29832
+WDO HT 1R BU,,115/200 VAC,P400,,25,,VERIFIED,eps24.txt:29833
+WDO HT 2L,,115/200 VAC,P400,,25,,VERIFIED,eps24.txt:29834
+RELAY FUEL CONT #2 RIGHT,,28 VDC,P400,,2,,VERIFIED,eps24.txt:29835
+RELAY FUEL CONT #1 RIGHT,,28 VDC,P400,,2,,VERIFIED,eps24.txt:29836
+RELAY ENG FUEL CONT T/D #2 RIGHT,,28 VDC,P400,,2,,VERIFIED,eps24.txt:29837
+RELAY ENG FUEL CONT T/D #1 RIGHT,,28 VDC,P400,,2,,VERIFIED,eps24.txt:29838
+RELAY PITOT PROBE HEATER RIGHT,,115/200 VAC,P400,,15,,VERIFIED,eps24.txt:29839
+NLG CTRL SYS 2,,28 VDC,P400,,10,,VERIFIED,eps24.txt:29840
+NLG BYPASS/OFF SYS 2,,28 VDC,P400,,10,,VERIFIED,eps24.txt:29841
+NLG DR CLOSE SYS 2,,28 VDC,P400,,10,,VERIFIED,eps24.txt:29842
+RESET SYS 2,,28 VDC,P400,,15,,VERIFIED,eps24.txt:29843
+"RESET SYS 2 (second ID, unpaired)",,28 VDC,P400,,,,VERIFIED,eps24.txt:29844
+L TRU RLY (235 VAC to L TRU in P500),,235 VAC,ELCU_P,,,,VERIFIED,eps24.txt:27614
+L DCT (28 VDC left DC tie bus),,28 VDC,P300,,,,VERIFIED,eps24.txt:27622
+CIT (28 VDC captain instrument bus to tie bus),,28 VDC,P300,,,,VERIFIED,eps24.txt:27625
+MAIN BATTERY RELAY (28 VDC HBB to instrument bus),,28 VDC,P300,,,,VERIFIED,eps24.txt:27628
+SPARE PRE-WIRED ELCC S3.1 to S3.4 control,,115 VAC,P300,,,,VERIFIED,eps24.txt:27631
+J01 SPDU module connector (P300),,28 VDC control voltage,SPDU,,,,VERIFIED,eps24.txt:28443
+J02 SPDU module connector (P300),,28 VDC standby DC for RPDU 73,SPDU,,,,VERIFIED,eps24.txt:28448
+J15 SPDU module connector (P300),,28 VDC FCE cabinet L and RPDU 31 main DC,SPDU,,,,VERIFIED,eps24.txt:28455
+J05 SPDU module connector (P300),,"28 VDC FCE cabinet C1, RPDU 71 and 81 standby DC",SPDU,,,,VERIFIED,eps24.txt:28457
+J06 SPDU module connector (P300),,115 VAC left forward and side window heat,SPDU,,,,VERIFIED,eps24.txt:28461
+J07 SPDU module connector (P300),,115 VAC right forward and side window heat,SPDU,,,,VERIFIED,eps24.txt:28464
+J08 SPDU module connector (P300),,28 VDC main DC RPDUs 71 and 73,SPDU,,,,VERIFIED,eps24.txt:28467
+J09 SPDU module connector (P300),,28 VDC CCR cabinet and main DC RPDU 75,SPDU,,,,VERIFIED,eps24.txt:28470
+J10 SPDU module connector (P300),,28 VDC main DC RPDU 81 and 33,SPDU,,,,VERIFIED,eps24.txt:28473
+J30 (P300 external connector),,"28 VDC, 115 VAC, power GND",P300,,,,VERIFIED,eps24.txt:28466
+J44 (P300 external connector),,115 VAC RPDU 73 and pitot heat,P300,,,,VERIFIED,eps24.txt:28536
+J50 (P300 external connector),,115 VAC RPDUs 75 and 33,P300,,,,VERIFIED,eps24.txt:28545
+J51 (P300 external connector),,115 VAC RPDUs 71 and 73,P300,,,,VERIFIED,eps24.txt:28546
+J53 (P300 external connector),,115 VAC RPDU 41 and spare,P300,,,,VERIFIED,eps24.txt:28548
+J54 (P300 external connector),,115 VAC RPDU 21 and 31,P300,,,,VERIFIED,eps24.txt:28550
+DC TIE BUS terminal L23,,28 VDC tie bus,P300,,,,VERIFIED,eps24.txt:28493
+C1 TRU terminal L22,,28 VDC C1 TRU interconnect,P300,,,,VERIFIED,eps24.txt:28494
+LEFT EP terminals L4 to L6,,115 VAC external power inputs,P300,,,,VERIFIED,eps24.txt:28493
+AC TIE BUS terminals L1 to L3,,115 VAC out to Left Tie Bus (LTB),P300,,,,VERIFIED,eps24.txt:28496
+L TRU terminal L21,,28 VDC L TRU interconnect,P300,,,,VERIFIED,eps24.txt:28497
+MAIN BATT terminal L14,,main battery input to HBB,P300,,,,VERIFIED,eps24.txt:28509
+ATU OUTPUT terminals L7 to L9,,115 VAC to ATU on P500,P300,,,,VERIFIED,eps24.txt:28490
+J01 SPDU module connector (P400),,"28 VDC control voltage (pitot heater, P200 ELCU, PECS pump)",SPDU,,,,VERIFIED,eps24.txt:29637
+J10 SPDU module connector (P400),,28 VDC main DC RPDUs 82 and 34,SPDU,,,,VERIFIED,eps24.txt:29637
+J11 SPDU module connector (P400),,28 VDC main DC RPDUs 42 and 92,SPDU,,,,VERIFIED,eps24.txt:29640
+J02 SPDU module connector (P400),,28 VDC spare and RPDU 72 DC2 voltage,SPDU,,,,VERIFIED,eps24.txt:29641
+J12 SPDU module connector (P400),,28 VDC spare and main DC RPDU 22,SPDU,,,,VERIFIED,eps24.txt:29644
+J05 SPDU module connector (P400),,28 VDC FCE cabinet C2 and standby DC RPDUs 74 and 82,SPDU,,,,VERIFIED,eps24.txt:29650
+J15 SPDU module connector (P400),,"28 VDC right FCE cabinet, spare DC, main feed RPDU 32",SPDU,,,,VERIFIED,eps24.txt:29654
+J06 SPDU module connector (P400),,115 VAC phase B and C right forward anti ice window heat,SPDU,,,,VERIFIED,eps24.txt:29654
+J07 SPDU module connector (P400),,115 VAC left forward and side window heat,SPDU,,,,VERIFIED,eps24.txt:29657
+J08 SPDU module connector (P400),,28 VDC main DC RPDUs 72 and 74,SPDU,,,,VERIFIED,eps24.txt:29660
+J09 SPDU module connector (P400),,28 VDC right CCR cabinet and main DC RPDU 76,SPDU,,,,VERIFIED,eps24.txt:29663
+J54 (P400 external connector),,115 VAC RPDUs 22 and 32,P400,,,,VERIFIED,eps24.txt:29665
+J53 (P400 external connector),,115 VAC RPDU 42 and spare,P400,,,,VERIFIED,eps24.txt:29668
+J52 (P400 external connector),,115 VAC spare,P400,,,,VERIFIED,eps24.txt:29671
+J51 (P400 external connector),,115 VAC RPDUs 72 and 74,P400,,,,VERIFIED,eps24.txt:29682
+J50 (P400 external connector),,115 VAC RPDUs 76 and 34,P400,,,,VERIFIED,eps24.txt:29685
+J49 (P400 external connector),,115 VAC RPDU 92 and DC ground,P400,,,,VERIFIED,eps24.txt:29688
+J48 (P400 external connector),,"28 VDC network switch, right GCU, RDCs, left CCR",P400,,,,VERIFIED,eps24.txt:29691
+J47 (P400 external connector),,"28 VDC ELCUs in P200, engine ignition relay",P400,,,,VERIFIED,eps24.txt:29694
+J44 (P400 external connector),,115 VAC pitot heater; 28 VDC Sys 2 controls,P400,,,,VERIFIED,eps24.txt:29697
+J43 (P400 external connector),,28 VDC fuel control relays,P400,,,,VERIFIED,eps24.txt:29701
+J42 (P400 external connector),,28 VDC nose landing gear controls,P400,,,,VERIFIED,eps24.txt:29703
+J40 (P400 external connector),,28 VDC right engine ignition,P400,,,,VERIFIED,eps24.txt:29706
+J62 (P400 external connector),,28 VDC CT supply and returns,P400,,,,VERIFIED,eps24.txt:29709
+J60 (P400 external connector),,235 VAC to tie breakers,P400,,,,VERIFIED,eps24.txt:29712
+J37 (P400 external connector),,28 VDC hydraulic pressure shutoff valve,P400,,,,VERIFIED,eps24.txt:29725
+J36 (P400 external connector),,28 VDC right engine ignition and fire switch relays,P400,,,,VERIFIED,eps24.txt:29728
+J35 (P400 external connector),,28 VDC fuel cutoff switches,P400,,,,VERIFIED,eps24.txt:29731
+J34 (P400 external connector),,235 VAC to P600 R-TRU,P400,,,,VERIFIED,eps24.txt:29732
+J33 (P400 external connector),,"235 VAC RAT POR, TRU RLY C1, RAT generator output",P400,,,,VERIFIED,eps24.txt:29735
+J32 (P400 external connector),,235 VAC to P600 C2-TRU,P400,,,,VERIFIED,eps24.txt:29740
+J30 (P400 external connector),,"115 VAC right EEC; 28 VDC BSB, RCB, EPC auxiliary contactors",P400,,,,VERIFIED,eps24.txt:29742
+AC TIE BUS terminals L1 to L3 (P400),,115 VAC out to Right Tie Bus (RTB),P400,,,,VERIFIED,eps24.txt:29689
+RIGHT EP terminals L4 to L6 (P400),,115 VAC external power inputs,P400,,,,VERIFIED,eps24.txt:29692
+ATU OUTPUT terminals L7 to L9 (P400),,115 VAC to ATU on P600,P400,,,,VERIFIED,eps24.txt:29695
+BATT CHARGER INPUT terminal L13 (P400),,APU battery charger input to F/O instrument bus,P400,,,,VERIFIED,eps24.txt:29702
+C2 TRU terminal L14 (P400),,28 VDC C2 TRU interconnect,P400,,,,VERIFIED,eps24.txt:29706
+INST TIE BUS terminal L15 (P400),,28 VDC F/O instrument tie bus,P400,,,,VERIFIED,eps24.txt:29709
+R TRU terminal L16 (P400),,28 VDC R TRU interconnect,P400,,,,VERIFIED,eps24.txt:29712
+DC TIE BUS terminal L17 (P400),,28 VDC tie bus,P400,,,,VERIFIED,eps24.txt:29724
+RPDU 71 standby DC power,24,Captains Instrument Bus,RPDU 71,,,,VERIFIED,eps24.txt:33399
+RPDU 81 standby DC power,24,Captains Instrument Bus,RPDU 81,,,,VERIFIED,eps24.txt:33400
+RPDU 73 standby DC power,24,Captains Instrument Bus,RPDU 73,,,,VERIFIED,eps24.txt:33401
+RPDU 74 standby DC power,24,First Officer's Instrument Bus,RPDU 74,,,,VERIFIED,eps24.txt:33402
+RPDU 82 standby DC power,24,First Officer's Instrument Bus,RPDU 82,,,,VERIFIED,eps24.txt:33403
+RPDU 72 standby DC power,24,First Officer's Instrument Bus,RPDU 72,,,,VERIFIED,eps24.txt:33404
+RPDU 22 power supply backup,24,Left Main DC Bus (provider bus),RPDU 22,,,,VERIFIED,eps24.txt:33405
+RPDU 21 power supply backup,24,Right Main DC Bus (provider bus),RPDU 21,,,,VERIFIED,eps24.txt:33406
+RPDU 34 power supply backup,24,Left Main DC Bus (provider bus),RPDU 34,,,,VERIFIED,eps24.txt:33407
+RPDU 32 power supply backup,24,Left Main DC Bus (provider bus),RPDU 32,,,,VERIFIED,eps24.txt:33408
+RPDU 33 power supply backup,24,Right Main DC Bus (provider bus),RPDU 33,,,,VERIFIED,eps24.txt:33409
+RPDU 31 power supply backup,24,Right Main DC Bus (provider bus),RPDU 31,,,,VERIFIED,eps24.txt:33410
+RPDU 42 power supply backup,24,Left Main DC Bus (provider bus),RPDU 42,,,,VERIFIED,eps24.txt:33411
+RPDU 41 power supply backup,24,Right Main DC Bus (provider bus),RPDU 41,,,,VERIFIED,eps24.txt:33412
+RPDU 76 power supply backup,24,Left Main DC Bus (provider bus),RPDU 76,,,,VERIFIED,eps24.txt:33413
+RPDU 75 power supply backup,24,Right Main DC Bus (provider bus),RPDU 75,,,,VERIFIED,eps24.txt:33414
+RPDU 92 power supply backup,24,Left Main DC Bus (provider bus),RPDU 92,,,,VERIFIED,eps24.txt:33415
+Soft Start Relay Module (ref LCB; part M2441700),24,Upstream of P700 ATRU,P700,,,,VERIFIED,eps24.txt:35832
+L1 ATRU,24,235 VAC in from L1 235 VAC Bus; +/-270 VDC to L1 HVDC bus,P700,,,,VERIFIED,eps24.txt:35860
+L2 ATRU,24,235 VAC from Aft EPC or L2 235 VAC bus; +/-270 VDC to L2 HVDC bus,P700,,,,VERIFIED,eps24.txt:35861
+Right Channel 1 ATRU (ref R1 ATRU; part M2435003),24,235 VAC from R1 235 VAC Bus; +/-270 VDC to R1 HVDC bus,P800,,,,VERIFIED,eps24.txt:35879
+R2 ATRU,24,235 VAC from Aft EPC or R2 235 VAC bus; +/-270 VDC to R2 HVDC bus,P800,,,,VERIFIED,eps24.txt:35929
+unpaired ID (near HNGC),24,,P800,,,,VERIFIED,eps24.txt:35902
+Warning Indicator Module (ref WIM; part M2409066),24,LEDs show power on 235 VAC inputs to ATRU,P800,,,,VERIFIED,eps24.txt:35916
+Captain and First Officer Instrument Bus loads (non-normal 3x90 kVA EP start),24,Captain and First Officer Instrument Bus,,,,,VERIFIED,eps24.txt:34896
+CMSC (HVDC motor controller),24,270 VDC in; 3-phase 0-235 VAC out,P700,,,110 kW (150 kW overload 3 min),VERIFIED,eps24.txt:36425
+RPDU 33 AC12 card feeding Left ASG exciter,24,"115 VAC, 360-800 Hz",RPDU 33,,10,,VERIFIED,eps24.txt:39939
+Right ASG exciter supply,24,"115 VAC, 750 Hz",,,,,VERIFIED,eps24.txt:39942
+L 115V AC Ph B phase feed (ELCU_PL3),24,L 115V AC Ph B,ELCU_PL3,,,,VERIFIED,eps24.txt:35496
+L 115V AC (ELCU_CL3 contactor card),24,L 115V AC,ELCU_CL3,,,,VERIFIED,eps24.txt:35501
+R 115V AC Ph C phase feed (ELCU_PR3),24,R 115V AC Ph C,ELCU_PR3,,,,VERIFIED,eps24.txt:35551
+R 115V AC (ELCU_CR3 contactor card),24,R 115V AC,ELCU_CR3,,,,VERIFIED,eps24.txt:35556
+window heat failsafe SSPC (unpaired),24,115 VAC Bus,RPDU 71,,,,VERIFIED,eps24.txt:35459
+window heat failsafe SSPC (unpaired),24,R 115 VAC Bus,RPDU 72,,,,VERIFIED,eps24.txt:35459
+L Fwd bkup window ht (unpaired),24,,RPDU 73,,,,VERIFIED,eps24.txt:35464
+unpaired SSPC load (Left Windshield Heater (De-Fog) adjacent),24,R 28 VDC,RPDU 74,,,,VERIFIED,eps24.txt:35571
+unpaired SSPC load,24,R 28 VDC,RPDU 72,,,,VERIFIED,eps24.txt:35574
+unpaired SSPC load,24,L 28 VDC,RPDU 73,,,,VERIFIED,eps24.txt:35516
+unpaired SSPC load (Right Windshield Heater (De-Fog) adjacent),24,L 28 VDC,RPDU 71,,,,VERIFIED,eps24.txt:35519
+DC 28V_1 controller supply (column unresolved),24,28 VDC,RPDU 81,,,,VERIFIED,eps24.txt:36491
+DC 28V_2 controller supply (column unresolved),24,28 VDC,RPDU 82,,,,VERIFIED,eps24.txt:36492
+DC 28V_3 controller supply (column unresolved),24,28 VDC,RPDU 73,,,,VERIFIED,eps24.txt:36494
+unpaired (device not named in hits),24,,P100,,,,VERIFIED,eps24.txt:40574
+Left ASG,24*,,RPDU 33,,,,VERIFIED,fig_eps24.txt:28778
+ASG (location label),24*,,P150,,,,VERIFIED,fig_ata24.txt:20118
+PIPE (as printed),24*,28 VDC,,,,,VERIFIED,fig_ata24.txt:6038
+OCR-damaged (ID only),24*,,,,,,VERIFIED,fig_ata24.txt:11376
+VOLTAGE (as printed),24*,,,,,,VERIFIED,fig_ata24.txt:11474
+OCR-damaged (printed: 21-8 12 / Bee 19),24*,,SPDU,,2.5,,VERIFIED,fig_eps24.txt:58390
+OCR-damaged (printed: 21-812 / B2e61819),24*,,SPDU,,2.5,,VERIFIED,fig_eps24.txt:58408
+OCR-damaged (ID only),24*,,SPDU,,,,VERIFIED,fig_eps24.txt:57724
+OCR-damaged (ID only),24*,,SPDU,CE2,,,VERIFIED,fig_eps24.txt:58402
+OCR-damaged (ID only),24*,,SPDU,,,,VERIFIED,fig_eps24.txt:58448
+OCR-damaged (ID only),24*,,SPDU,,,,VERIFIED,fig_eps24.txt:58848
+SPDU connector J6: AC1 115 VAC for left (as labeled),24*,115 VAC,SPDU,,,,VERIFIED,fig_eps24.txt:55832
+SPDU connector J7: AC2 115 VAC backup right window heat,24*,115 VAC,SPDU,,,,VERIFIED,fig_eps24.txt:55854
+RPDU connector J1,24*,Main 28 VDC,,,,,VERIFIED,fig_eps24.txt:60326
+RPDU connectors J11 and J81,24*,28 VDC,,,,,VERIFIED,fig_eps24.txt:60384
+SPU,24*,28 VDC,P49,,,,VERIFIED,fig_eps24.txt:53432
+APU battery,24*,28 VDC,P49,,,,VERIFIED,fig_eps24.txt:53436
+APU battery charger,24*,28 VDC,P49,,,,VERIFIED,fig_eps24.txt:53442
+EBPSU,24*,,P500,,,,VERIFIED,fig_ata24.txt:6144
+"R & C2 TRU, R ATU, LO & RO EBPSU",24*,,P600,,,,VERIFIED,fig_ata24.txt:3666
+"CMSCs, L1 & L2 ATRU, L RFMC",24*,,P700,,,,VERIFIED,fig_ata24.txt:3672
+"CMSCs, R1 & R2 ATRU, R RFMC",24*,,P800,,,,VERIFIED,fig_ata24.txt:3676
+L1 ATRU,24*,235 VAC Bus L1 (input),,,,,VERIFIED,fig_eps24.txt:64564
+R1 ATRU,24*,235 VAC Bus R1 (input),,,,,VERIFIED,fig_eps24.txt:64720
+L 28 VDC Bus,24*,28 VDC,P300,,,,VERIFIED,fig_eps24.txt:42676
+R 28 VDC Bus,24*,28 VDC,P400,,,,VERIFIED,fig_eps24.txt:42694
+235 VAC Bus L1 (backup source),24*,from 28 VDC C1-TRU,,,,,VERIFIED,fig_eps24.txt:42880
+235 VAC Backup Bus,24*,from 28 VDC C1-TRU,,,,,VERIFIED,fig_eps24.txt:42890
+230 VAC Backup Bus (as printed),24*,from 28 VDC C2-TRU,,,,,VERIFIED,fig_eps24.txt:43092
+PSDC,24*,,,,3 A,,VERIFIED,fig_eps24.txt:48444
+PSDC (rating as printed),24*,,,,4a (OCR),,VERIFIED,fig_eps24.txt:50538
+PSDC / BPCU R FO (as printed),24*,,,,5 A,,VERIFIED,fig_eps24.txt:50620
+OCR-damaged,24*,,,,,,VERIFIED,fig_eps24.txt:13388
+OCR-damaged,24*,,,,,,VERIFIED,fig_eps24.txt:13394
+OCR-damaged,24*,,,,,,VERIFIED,fig_eps24.txt:13396
+OCR-damaged,24*,,,,,,VERIFIED,fig_eps24.txt:13398
+OCR-damaged,24*,,,,,,VERIFIED,fig_eps24.txt:13400
+OCR-damaged,24*,,,,,,VERIFIED,fig_eps24.txt:13402
+OCR-damaged,24*,,,,,,VERIFIED,fig_eps24.txt:13404
+OCR-damaged,24*,,,,,,VERIFIED,fig_eps24.txt:13406
+OCR-damaged,24*,,,,,,VERIFIED,fig_eps24.txt:13410
+,24*,,P100,,,,VERIFIED,fig_eps24.txt:44018
+,24*,,P100,,,,VERIFIED,fig_eps24.txt:44022
+,24*,,P100,,,,VERIFIED,fig_eps24.txt:44034
+,24*,,P100,,,,VERIFIED,fig_eps24.txt:44046
+,24*,,P100,,,,VERIFIED,fig_eps24.txt:44068
+,24*,,P100,,,,VERIFIED,fig_eps24.txt:44078
+,24*,,P100,,,,VERIFIED,fig_eps24.txt:44082
+,24*,,P100,,,,VERIFIED,fig_eps24.txt:44098
+,24*,,P100,,,,VERIFIED,fig_eps24.txt:44104
+,24*,,P100,,,,VERIFIED,fig_eps24.txt:44120
+,24*,,P100,,,,VERIFIED,fig_eps24.txt:44138
+,24*,,P100,,,,VERIFIED,fig_eps24.txt:44140
+,24*,,P100,,,,VERIFIED,fig_eps24.txt:44142
+,24*,,P100,,,,VERIFIED,fig_eps24.txt:44320
+,24*,,P100,,,,VERIFIED,fig_eps24.txt:44326
+,24*,,P100,,,,VERIFIED,fig_eps24.txt:44342
+,24*,,P100,,,,VERIFIED,fig_eps24.txt:44374
+,24*,,P200,,,,VERIFIED,fig_eps24.txt:45142
+,24*,,P200,,,,VERIFIED,fig_eps24.txt:45144
+,24*,,P200,,,,VERIFIED,fig_eps24.txt:45196
+,24*,,P200,,,,VERIFIED,fig_eps24.txt:45260
+,24*,,P200,,,,VERIFIED,fig_eps24.txt:45286
+,24*,,P200,,,,VERIFIED,fig_eps24.txt:45288
+,24*,,P200,,,,VERIFIED,fig_eps24.txt:45292
+,24*,,P200,,,,VERIFIED,fig_eps24.txt:45296
+,24*,,P200,,,,VERIFIED,fig_eps24.txt:45304
+,24*,,P200,,,,VERIFIED,fig_eps24.txt:45318
+,24*,,P200,,,,VERIFIED,fig_eps24.txt:45320
+,24*,,P200,,,,VERIFIED,fig_eps24.txt:45322
+,24*,,P200,,,,VERIFIED,fig_eps24.txt:45850
+,24*,,P200,,,,VERIFIED,fig_eps24.txt:45926
+,24*,,P200,,,,VERIFIED,fig_eps24.txt:45974
+,24*,,P200,,,,VERIFIED,fig_eps24.txt:45980
+,24*,,P150,,,,VERIFIED,fig_eps24.txt:46594
+,24*,,P150,,,,VERIFIED,fig_eps24.txt:46718
+,24*,,P150,,,,VERIFIED,fig_eps24.txt:46720
+,24*,,P150,,,,VERIFIED,fig_eps24.txt:46722
+,24*,,P150,,,,VERIFIED,fig_eps24.txt:46724
+,24*,,P300,,,,VERIFIED,fig_eps24.txt:47770
+,24*,,P300,,,,VERIFIED,fig_eps24.txt:47780
+,24*,,P300,,,,VERIFIED,fig_eps24.txt:47788
+,24*,,P300,,,,VERIFIED,fig_eps24.txt:47814
+,24*,,P300,,,,VERIFIED,fig_eps24.txt:47816
+,24*,,P300,,,,VERIFIED,fig_eps24.txt:47818
+,24*,,P300,,,,VERIFIED,fig_eps24.txt:47820
+,24*,,P300,,,,VERIFIED,fig_eps24.txt:47822
+,24*,,P400,,,,VERIFIED,fig_eps24.txt:49830
+,24*,,P400,,,,VERIFIED,fig_eps24.txt:49848
+,24*,,P400,,,,VERIFIED,fig_eps24.txt:49866
+,24*,,P400,,,,VERIFIED,fig_eps24.txt:49934
+,24*,,P400,,,,VERIFIED,fig_eps24.txt:49936
+,24*,,P400,,,,VERIFIED,fig_eps24.txt:49938
+,24*,,P400,,,,VERIFIED,fig_eps24.txt:49940
+,24*,,P400,,,,VERIFIED,fig_eps24.txt:49942
+Left IRU (inertial reference unit),34,28 VDC; captain instrument bus (primary),,,,,VERIFIED,ata34.txt:1220
+Left AHRU (attitude heading reference unit),34,28 VDC; left 28 v dc bus,,,,,VERIFIED,ata34.txt:1221
+Right IRU,34,28 VDC; first officer 28v dc instrument bus,,,,,VERIFIED,ata34.txt:1222
+Right AHRU,34,28 VDC; right 28v dc bus,,,,,VERIFIED,ata34.txt:1223
+IRU and AHRU secondary power (all four),34,28 VDC; hot battery bus (HBB),,,,,VERIFIED,ata34.txt:1035
+IRU and AHRU thermal circuit breakers (secondary),34,,P300,,,,VERIFIED,ata34.txt:1216
+IRS switch L (left IRU and left AHRU),34,,,,,,VERIFIED,ata34.txt:980
+IRS switch R (right IRU and right AHRU),34,,,,,,VERIFIED,ata34.txt:981
+INR receiver L,34,28 VDC; from FCE C1,,,,,VERIFIED,ata34.txt:1612
+INR receiver R,34,28 VDC; from FCE C2,,,,,VERIFIED,ata34.txt:1612
+"GPS antenna preamplifier (INR-powered, onside antenna)",34,12 VDC from onside INR receiver,,,,,VERIFIED,ata34.txt:1772
+ISFD (source text spells IFSD),34,28 VDC,,,,,VERIFIED,ata34.txt:2683
+Standby compass (LED),34,28 VDC; hot battery bus (HBB),,,,,VERIFIED,ata34.txt:2681
+Right ADMs (air data modules),34,,,,,,VERIFIED,ata34.txt:409
+Sensor heaters (vane and case),34,115 VAC,,,,,VERIFIED,ata34.txt:481
+TAT probe heater,34,115 VAC,,,,,VERIFIED,ata34.txt:527
+LRRA transceivers (2),34,28 VDC,,,,,VERIFIED,ata34.txt:3089
+LRRA transceiver L,34,28 VDC,,,,,VERIFIED,ata34.txt:3113
+LRRA transceiver R,34,28 VDC,,,,,VERIFIED,ata34.txt:3115
+DME interrogator L,34,115 VAC,RPDU 71,,,,VERIFIED,ata34.txt:3534
+DME interrogator R,34,115 VAC,RPDU 74,,,,VERIFIED,ata34.txt:3534
+ISSPU L,34,115 VAC; left 115v ac bus,RPDU 71,,,,VERIFIED,ata34.txt:4148
+ISSPU R,34,115 VAC; right 115v ac bus,RPDU 72,,,,VERIFIED,ata34.txt:4149
+TCAS/ATC antenna relays,34,,,,,,VERIFIED,ata34.txt:4518
+"RTM (onside, fed by ISSPU)",34,28 VDC,,,,,VERIFIED,ata34.txt:4954
+ISSPU circuit breakers (PWS),34,,,,,,VERIFIED,ata34.txt:5420
+Water pumps (2) power source,38,"115 VAC single phase, 360-800 Hz",,,,,VERIFIED,ata38.txt:669
+"Water pump, aft",38,,RPDU 41,,,,VERIFIED,ata38.txt:673
+"Water pump, forward",38,,RPDU 42,,,,VERIFIED,ata38.txt:672
+Water pumps (2) switching,38,,,,,,VERIFIED,ata38.txt:671
+Water pumps (2) feed,38,115 VAC; separate 115v ac main buses,,,,,VERIFIED,ata38.txt:146
+Water pumps power on/off,38,,,,,,VERIFIED,ata38.txt:714
+UV water treatment unit,38,115 VAC; L 115v ac main bus,RPDU 21,,,,VERIFIED,ata38.txt:365
+UV treatment module (breaker),38,,,,,,VERIFIED,ata38.txt:299
+UV unit (ground power),38,115 VAC 400 Hz ground power,,,,,VERIFIED,ata38.txt:343
+Potable water motor-operated valves (6),38,28 VDC,,,,,VERIFIED,ata38.txt:162
+Potable water vent-overflow valve,38,28 VDC,RPDU 41,,,,VERIFIED,ata38.txt:815
+Potable water tank level sensors (2),38,28 VDC,RPDU 41,,,,VERIFIED,ata38.txt:584
+Potable water Mode Select-Quantity Indication module,38,28 VDC; L 28v dc bus,RPDU 21,,,,VERIFIED,ata38.txt:1027
+Potable water service panel,38,28 VDC; L 28V DC bus,RPDU 21,,,,VERIFIED,ata38.txt:1034
+Water quantity indication system,38,28 VDC; left 28v dc main bus,,,,,VERIFIED,ata38.txt:995
+"Waste tank point level sensor, right",38,28 VDC,RPDU 42,,,,VERIFIED,ata38.txt:2129
+"Waste tank point level sensor, left",38,28 VDC,RPDU 41,,,,VERIFIED,ata38.txt:2130
+"Waste tank quantity sensors, left tank",38,28 VDC,RPDU 41,,,,VERIFIED,ata38.txt:2185
+Vacuum blower motor,38,"235 VAC 3-phase, 360-800 Hz",,,,,VERIFIED,ata38.txt:2314
+"Vacuum blower, left",38,235 VAC,P100,,,,VERIFIED,ata38.txt:2315
+"Vacuum blower, right",38,235 VAC,P200,,,,VERIFIED,ata38.txt:2315
+Vacuum generator input (per phase),38,"230 volt, 3 phase, variable frequency",,,20,,VERIFIED,ata38.txt:2276
+Vacuum blower motor overheat thermostat,38,,,,,,VERIFIED,ata38.txt:2238
+Vacuum blower housing fuses,38,,,,,,VERIFIED,ata38.txt:2234
+FCA control electronics (vacuum toilet),38,28 VDC,,,,,VERIFIED,ata38.txt:1298
+Lavatory 28 VDC power supply (toilets),38,28 VDC,,,,,VERIFIED,ata38.txt:1352
+Toilet controller,38,28 VDC,,,,,VERIFIED,ata38.txt:1385
+Flush valve actuator (toilet),38,28 VDC,,,,,VERIFIED,ata38.txt:1382
+Toilet rinse valve,38,28 VDC,,,,,VERIFIED,ata38.txt:1371
+Bidet,38,115 VAC,,,,,VERIFIED,ata38.txt:1556
+Bidet power switch,38,115 VAC,,,,,VERIFIED,ata38.txt:1643
+Bidet thermostat,38,,,,,,VERIFIED,ata38.txt:1562
+Bidet fuse,38,,,,,,VERIFIED,ata38.txt:1666
+Gray water interface valve (GWIV),38,28 VDC,,,,,VERIFIED,ata38.txt:1745
+"Gray water flush control unit (FCU, GWDU)",38,28 VDC,,,,,VERIFIED,ata38.txt:1842
+Electrical control panel,42,28 VDC; redundant 28v dc buses,,,,,VERIFIED,ata42.txt:1484
+"CCR cabinet L, primary",42,28 VDC; captain instrument bus,,,,,VERIFIED,ata42.txt:485
+"CCR cabinet L, secondary",42,28 VDC; first officer instrument bus,,,,,VERIFIED,ata42.txt:486
+"CCR cabinet R, primary",42,28 VDC; right 28V DC bus,,,,,VERIFIED,ata42.txt:489
+"CCR cabinet R, secondary",42,28 VDC; left 28V DC bus,,,,,VERIFIED,ata42.txt:490
+CCR cabinets (hot battery bus feed),42,hot battery bus (HBB),P300,,,,VERIFIED,ata42.txt:452
+CCR power conditioning modules (2 per cabinet),42,,P300,,,,VERIFIED,ata42.txt:455
+CCR PCM 28 VDC auxiliary fan power,42,28 VDC,,,,,VERIFIED,ata42.txt:818
+"ARS L (ARINC 664 remote switch), primary",42,28 VDC; captain instrument bus,P300,,,,VERIFIED,ata42.txt:515
+"ARS R, primary",42,28 VDC; first officer instrument bus,P400,,,,VERIFIED,ata42.txt:518
+"RDC 11, 1, 9, 7, 3, 13 (primary)",42,28 VDC; captain instrument bus,P300,,,,VERIFIED,ata42.txt:562
+"RDC 12, 2, 10, 8, 4, 14 (primary)",42,28 VDC; first officer instrument bus,P400,,,,VERIFIED,ata42.txt:558
+"RDC 11, 1 (secondary)",42,28 VDC; L 28V DC bus,RPDU 71,,,,VERIFIED,ata42.txt:572
+"RDC 12, 2, 14 (secondary)",42,28 VDC; R 28V DC bus,RPDU 72,,,,VERIFIED,ata42.txt:567
+RDC 10 (secondary),42,28 VDC; R 28V DC bus,RPDU 34,,,,VERIFIED,ata42.txt:572
+RDC 9 (secondary),42,28 VDC; L 28V DC bus,RPDU 33,,,,VERIFIED,ata42.txt:576
+RDC 8 (secondary),42,28 VDC; R 28V DC bus,RPDU 82,,,,VERIFIED,ata42.txt:580
+RDC 4 (secondary),42,28 VDC; R 28V DC bus,RPDU 74,,,,VERIFIED,ata42.txt:582
+RDC 7 (secondary),42,28 VDC; L 28V DC bus,RPDU 81,,,,VERIFIED,ata42.txt:538
+RDC 3 (secondary),42,28 VDC; L 28V DC bus,RPDU 73,,,,VERIFIED,ata42.txt:540
+RDC 13 (secondary),42,28 VDC; L 28V DC bus,RPDU 75,,,,VERIFIED,ata42.txt:542
+"RDC 17, 15, 5 (primary)",42,28 VDC; captain instrument bus,RPDU 81,,,,VERIFIED,ata42.txt:632
+RDC 17 (secondary),42,28 VDC; L 28V DC bus,RPDU 41,,,,VERIFIED,ata42.txt:637
+RDC 15 (secondary),42,28 VDC; L 28V DC bus,RPDU 21,,,,VERIFIED,ata42.txt:639
+RDC 5 (secondary),42,28 VDC; L 28V DC bus,RPDU 31,,,,VERIFIED,ata42.txt:641
+"RDC 16, 6, 18, 23, 19 (primary)",42,28 VDC; first officer instrument bus,RPDU 82,,,,VERIFIED,ata42.txt:607
+RDC 16 (secondary),42,28 VDC; R 28V DC bus,RPDU 22,,,,VERIFIED,ata42.txt:615
+RDC 6 (secondary),42,28 VDC; R 28V DC bus,RPDU 32,,,,VERIFIED,ata42.txt:618
+RDC 19 (secondary),42,28 VDC; R 28V DC bus,RPDU 34,,,,VERIFIED,ata42.txt:627
+RDC 21 (primary),42,28 VDC; captain instrument bus,P300,,,,VERIFIED,ata42.txt:642
+RDC 21 (secondary),42,28 VDC; L 28V DC bus,P300,,,,VERIFIED,ata42.txt:645
+RDC internal electronics and sensors,42,28 VDC; aircraft 28V DC power supply,,,,,VERIFIED,ata42.txt:1284
+CCR cabinet modules (reset),42,,,,,,VERIFIED,ata42.txt:1590
+CWLU-FWD (cabin and cargo),46,28 VDC; L 28V DC bus,RPDU 73,,,,VERIFIED,ata46.txt:514
+CWLU-AFT (cabin),46,28 VDC; L 28V DC bus,RPDU 31,,,,VERIFIED,ata46.txt:516
+"PMM (power management module, core network)",46,115 VAC,RPDU 71,,,,VERIFIED,ata46.txt:544
+PMM input from RPDU,46,115 VAC,,,,,VERIFIED,ata46.txt:520
+PMM outputs (AIM and other cabinet loads),46,12.5 VDC,,,,,VERIFIED,ata46.txt:523
+Terminal cellular unit (TCU),46,115 VAC; L main bus,RPDU 21,,,,VERIFIED,ata46.txt:4130
+Captain electronics unit (EU),46,115 VAC; left 115v ac main bus,,,,,VERIFIED,ata46.txt:4131
+Captain EFB display unit (DU),46,28 VDC; from captain EU,,,,,VERIFIED,ata46.txt:4154
+First officer EU,46,115 VAC; right aircraft main AC bus,,,,,VERIFIED,ata46.txt:4138
+First officer DU,46,28 VDC; from FO EU,,,,,VERIFIED,ata46.txt:4140
+TWLU (terminal wireless LAN unit),46,28 VDC; L 28v dc bus,RPDU 75,,,,VERIFIED,ata46.txt:4167
+Captain EFB electronic unit (EU),46,115 VAC; left main bus,RPDU 71,,,,VERIFIED,ata46.txt:4151
+First officer EFB electronic unit (EU),46,115 VAC; right main bus,RPDU 72,,,,VERIFIED,ata46.txt:4157
+First officer EFB DU,46,28 VDC; from FO EFB EU,,,,,VERIFIED,ata46.txt:4161
+EFB LVPS (internal supply),46,115 VAC in; 28 VDC out,,,,,VERIFIED,ata46.txt:4313
+TCU power supply,46,115 VAC,,,,,VERIFIED,ata46.txt:4534
+Maintenance laptop 115 VAC connection (ethernet port),46,115 VAC,,,,,VERIFIED,ata46.txt:2035
+Flight compartment windows (window heat),56,,,,,,VERIFIED,ata56.txt:60
+Flight deck window heat films,56,controlled power,,,,,VERIFIED,ata56.txt:146
+Passenger window EDW switch/controller,56,28 VDC; left or right main bus (by window location),,,,,VERIFIED,ata56.txt:283
+Passenger window EDW power,56,,,,,,VERIFIED,ata56.txt:286
+Door EDW (door-mounted),56,,,,,,VERIFIED,ata56.txt:352
+Passenger entry door EDW controller,56,28 VDC; left or right main bus (by PED location),,,,,VERIFIED,ata56.txt:455
+Emergency lighting (remote batteries),,battery charged by airplane electrical system,,,,,VERIFIED,aireuropa.txt:186
+L VHF and L TCP,,standby power on electrical power loss,,,,,VERIFIED,aireuropa.txt:1373
+Forward external power receptacles (L and R),,115 VAC; forward system for ground operations,,,,,VERIFIED,aireuropa.txt:1661
+CPT and F/O flight instruments (RAT standby),,RAT energizes CPT's flight instruments,,,,,VERIFIED,aireuropa.txt:1901
+"APU controller, APU inlet door, right APU starter",,APU battery,,,,,VERIFIED,aireuropa.txt:2385
+Engine igniters,,aircraft DC power (normal); standby power (backup),,,,,VERIFIED,aireuropa.txt:2271
+Stabilizer trim electric control unit,,L2 and R2 AC buses,,,,,VERIFIED,aireuropa.txt:2883
+Stabilizer cutout switches (aisle stand),,control power to the channels,,,,,VERIFIED,aireuropa.txt:2891
+Weather radar (WXR),,TCP SYS POWER,,,,,VERIFIED,aireuropa.txt:3932
+Electric brake power supply units (4),,"28 VDC; primary 28Vdc bus, backup main battery",,,,,VERIFIED,aireuropa.txt:1783
+Flight control electronics (PMG-powered),,secondary: 28Vdc bus distribution and main battery,,,,,VERIFIED,aireuropa.txt:1717
+EECs (PMA-powered),,secondary: airplane 115Vac bus distribution,,,,,VERIFIED,aireuropa.txt:1726
+Thrust reverser (engine fire sequence),,power removed by engine fire sequence,,,,,VERIFIED,aireuropa.txt:2502
+HF communication (L HF),,115 VAC,RPDU 33,,,,VERIFIED,diff89ge.txt:1428
+HLFC/EDAS motor controller (EDAS/HLFC block),,28 VDC,,,,,VERIFIED,diff89ge.txt:3314
+EDAS vertical stabilizer door actuation,,28 VDC,RPDU 41,,,,VERIFIED,diff89ge.txt:3502
+EDAS horizontal stabilizer door actuation,,28 VDC,RPDU 41,,,,VERIFIED,diff89ge.txt:3614
+NLG control and extension/retraction components (door close),,28 VDC; L dc bus,RPDU 73,,,,VERIFIED,diff89ge.txt:4548
+Landing gear alternate extension components,,28 VDC; hot battery bus,P300,,,,VERIFIED,diff89ge.txt:4571
+"Alternate extension reset relay, system 1",,28 VDC; left dc bus,P300,,,,VERIFIED,diff89ge.txt:4579
+"Alternate extension reset relay, system 2",,28 VDC; right dc bus,P400,,,,VERIFIED,diff89ge.txt:4580
+MLG control and extension/retraction components (body door close),,28 VDC; L dc bus,RPDU 81,,,,VERIFIED,diff89ge.txt:4583
+Landing gear reset relays,,,,,,,VERIFIED,diff89ge.txt:4836
+MLG control valve module (up solenoids),,,,,,,VERIFIED,diff89ge.txt:4385
+MLG bypass/auto-off and related valve modules,,,,,,,VERIFIED,diff89ge.txt:4313
+Galley heater,,"115 VAC, 3-phase",,,,1500 W,VERIFIED,diff89ge.txt:9376
+Galley heater control path,,CCS and RPDUs,,,,,VERIFIED,diff89ge.txt:9373
+Ram air fan (RFMC),,P700 and P800 HVDC power panels,,,,,VERIFIED,diff89ge.txt:6435
+Left ram air fan (contactor L1 RFC),,P700 panel; powered by CAC L1 CMSC,,,,,VERIFIED,diff89ge.txt:880
+HCM ACE-controlled solenoids,,28 VDC; PCM in FCE cabinets,,,,,VERIFIED,diff89ge.txt:2091
+CCR reset switches (L and R CCR cabinets),,CCR cabinets L and R,,,,,VERIFIED,cbt.txt:1133
+"unpaired (CBIC DATA page; ID shown as 6 chars, not 7 digits)",,230V AC,,CK2153,5.0 A,,VERIFIED,stm.txt:7134
+"unpaired (CBIC DATA page, VOLTAGE OUT field; ID truncated)",,,,CK2154,,,VERIFIED,stm.txt:7140
+CBIC DATA page for CK2127 (ID truncated),,,RPDU 73,CK2127,,,VERIFIED,stm.txt:7116
+"L3 BTB bus tie (K-prefix ID, not CE/CK/CT form)",,235V AC?,P300,,,,VERIFIED,stm.txt:7218
+"NWS tiller module (Capt, F/O) Channel A servo control",,+28V DC,RPDU 71,,,,VERIFIED,stm.txt:18936
+"NWS tiller module (Capt, F/O) Channel B",,+28V DC,RPDU 72,,,,VERIFIED,stm.txt:18944
+PDOS power pack electric motor pump (fan cowl),,115v ac,RPDU 75,,,,VERIFIED,stm.txt:15913
+PDOS power pack solenoids (fan cowl),,28v dc,RPDU 75,,,,VERIFIED,stm.txt:15928
+window heat (forward and side windows),,115v ac,,,,,VERIFIED,stm.txt:27270
+windshield washer switches and pump motors,,28v dc,,,,,VERIFIED,stm.txt:27388
+windshield wiper control (WECU),,,,,,,VERIFIED,stm.txt:27388
+potable water and drain line heater elements,,115v ac,,,,,VERIFIED,stm.txt:27456
+decompression warning horn,,,,,,,VERIFIED,stm.txt:28393
+emergency light battery charge,,115 VAC,,,,,VERIFIED,stm.txt:28826
+emergency lights DC (WCU),,DC,,,,,VERIFIED,stm.txt:28842
+cargo door halogen lights,,DC,,,,,VERIFIED,stm.txt:28992
+servicing lights (air conditioning compartment),,DC,,,,,VERIFIED,stm.txt:29051
+cargo door control valve,,28 VDC,,,,,VERIFIED,stm.txt:29501
+cargo door power pack motor,,115 VAC,,,,,VERIFIED,stm.txt:29502
+cargo handling system (CHS),,,,,,,VERIFIED,stm.txt:30000
+thrust reverser track lock (T/L),,,,,,,VERIFIED,stm.txt:16939
+thrust reverser directional control valve,,,P300,,,,VERIFIED,stm.txt:16945
+engine fire spar valve close,,28v dc,,,,,VERIFIED,stm.txt:16069
+engine igniter unit (1),,28V DC,P300,,,,VERIFIED,stm.txt:16693
+engine igniter unit (captain side),,28V DC,,,,,VERIFIED,stm.txt:16697
+engine igniter unit (other),,28V DC,,,,,VERIFIED,stm.txt:16699
+EEC power (alternate mode),,,,,,,VERIFIED,stm.txt:16126
+APU FMU start power,,28V DC,,,,,VERIFIED,stm.txt:14995
+APU bottle discharge (APU fire),,28V DC,,,,,VERIFIED,stm.txt:25719
+APU fire bottle (fwd of APU firewall),,28V DC,,,,,VERIFIED,stm.txt:25893
+cargo fire bottle discharge,,28V DC,,,,,VERIFIED,stm.txt:26206
+engine fire detection control panel (P8),,28V DC,,,,,VERIFIED,stm.txt:25353
+engine fire squib discharge,,28v dc,,,,,VERIFIED,stm.txt:25692
+ISFD (integrated standby flight display),,28v dc,,,,,VERIFIED,stm.txt:11209
+RCP (refuel control panel),,28v dc,,,,,VERIFIED,stm.txt:13528
+alternate landing gear extend power pack,,28 VDC,,,,,VERIFIED,stm.txt:18315
+electric brake system (towing),,battery,,,,,VERIFIED,stm.txt:18527
+BSCUs and EBPSUs (60 min battery protection),,main battery,,,,,VERIFIED,stm.txt:18813
+EBAC (per EBPSU),,,,,,,VERIFIED,stm.txt:18791
+FCE cabinets C1 and C2 backup,,hot battery bus,,,,,VERIFIED,stm.txt:19258
+FCE PCM primary power,,28V DC,,,,,VERIFIED,stm.txt:19250
+horizontal stabilizer electric motors (cutout),,,,,,,VERIFIED,stm.txt:19925
+flap and slat electric motors,,,,,,,VERIFIED,stm.txt:20341
+flap electric motor controller (display value),,,,,,10.25 A,VERIFIED,stm.txt:20608
+PCU channel control power,,,,,,,VERIFIED,stm.txt:20822
+CAC control power,,+/- 270v dc,,,,,VERIFIED,stm.txt:20954
+WIPS slat heater mats,,235v ac,P100,,,,VERIFIED,stm.txt:26962
+wing anti-ice (WAI) #1 to #4,,28VDC,,,,,VERIFIED,stm.txt:26932
+CIPS heating elements (cabin air compressor inlet),,115v ac,,,,,VERIFIED,stm.txt:27044
+left and right pitot heat,,115v ac; 200v ac,,,,,VERIFIED,stm.txt:27157
+center pitot heat,,115v ac,,,,,VERIFIED,stm.txt:27167
+TAT probe heat,,115v ac,,,,,VERIFIED,stm.txt:27159
+P20/T20 probe heat,,115v ac,,,,,VERIFIED,stm.txt:27169
+AOA probes heat,,115v ac,,,,,VERIFIED,stm.txt:27151
+CCR PCM 28v dc input,,28v dc,,,,,VERIFIED,stm.txt:2044
+CCR PCM 28v dc backup input,,28v dc,,,,,VERIFIED,stm.txt:2045
+flight recorder power (RIPS),,,,,,,VERIFIED,stm.txt:6124
+ATRU P700/P800 outputs,,+/-270V DC,P700,,,,VERIFIED,stm.txt:7807
+ATRUs and motor controllers,,235V AC to +/-270V DC,P700,,,,VERIFIED,stm.txt:7916
+aft external receptacle to L2 +/-270V DC buses,,L2 +/-270V DC,P700,,,,VERIFIED,stm.txt:7399
+left external power contactor (EPC),,115v ac,,,,,VERIFIED,stm.txt:7394
+115V AC bus in P300 (left),,115v ac,P300,,,,VERIFIED,stm.txt:7402
+hot battery bus (HBB) via battery diode module,,hot battery bus,,,,,VERIFIED,stm.txt:7521
+BCU charge,,,,,,,VERIFIED,stm.txt:7521
+APU battery to APU HBB,,,,,,,VERIFIED,stm.txt:7506
+airplane loads incl. engine internal clocks and memories (HBB),,,,,,,VERIFIED,stm.txt:7503
+main battery to essential loads during RAT deployment,,,,,,,VERIFIED,stm.txt:7507
+APU battery to start power unit (SPU),,,,,,,VERIFIED,stm.txt:7514
+captain and F/O instrument buses during RAT,,28V DC,,,,,VERIFIED,stm.txt:8067
+backup bus via RAT control breaker,,,,,,,VERIFIED,stm.txt:8065
+C1 TRU backup relay,,28V DC,,,,,VERIFIED,stm.txt:8043
+C1 TRU isolation relay,,28V DC,,,,,VERIFIED,stm.txt:8046
+BB ISO relay (R2 235V AC bus),,235V AC,,,,,VERIFIED,stm.txt:8069
+RAT generator (normal standby source),,AC,,,,,VERIFIED,stm.txt:8051
+RAT generator AC output,,AC,,,,,VERIFIED,stm.txt:17734

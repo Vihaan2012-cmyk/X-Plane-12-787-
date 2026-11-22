@@ -1,0 +1,250 @@
+[scenario]
+id = "06_engine_start_gen_online_apu_transfer"
+title = "Engine generator online and APU to engine transfer"
+system = "24-electrical"
+aircraft = "787-9"
+engines = "trent1000"
+tick_hz = 1000
+summary = "Left engine autostart with APU ASGs online, VFSG generate mode, then APU generators off and right buses fed from left via ties."
+
+[initial]
+airplane_state = "cold_dark"
+on_ground = true
+battery_switch = "ON"
+apu_battery_connected = true
+ext_pwr_fwd_l = "unplugged"
+ext_pwr_fwd_r = "unplugged"
+ext_pwr_aft = "unplugged"
+gen_ctrl_switches = "ON"
+oat_c = 15.0
+apu_running = true
+apu_gens_online = true
+
+[[step]]
+t_s = 0.0
+actor = "crew"
+action = "rotate"
+target = "ENG_START_L"
+value = "START"
+
+[[step]]
+t_s = 3.0
+actor = "crew"
+action = "move"
+target = "FUEL_CONTROL_L"
+value = "RUN"
+
+[[step]]
+t_s = 130.0
+actor = "crew"
+action = "press"
+target = "APU_GEN_L"
+value = "OFF"
+
+[[step]]
+t_s = 131.0
+actor = "crew"
+action = "press"
+target = "APU_GEN_R"
+value = "OFF"
+
+[[step]]
+t_s = 140.0
+actor = "sim"
+action = "advance"
+target = "clock_s"
+value = 10.0
+
+[[expect]]
+id = "06_engine_start_gen_online_apu_transfer.e01"
+t_s = 0.5
+signal = "elec.cmsc.l1.mode"
+op = "eq"
+value = "MES"
+approx = false
+cite = "facts_elec_gen.verified.md:131"
+
+[[expect]]
+id = "06_engine_start_gen_online_apu_transfer.e02"
+t_s = 0.5
+signal = "elec.vfsg.l1.mode"
+op = "eq"
+value = "start"
+approx = false
+cite = "facts_elec_gen.verified.md:33"
+
+[[expect]]
+id = "06_engine_start_gen_online_apu_transfer.e03"
+t_s = 0.5
+signal = "elec.vfsg.l2.mode"
+op = "eq"
+value = "start"
+approx = false
+cite = "facts_elec_gen.verified.md:33"
+
+[[expect]]
+id = "06_engine_start_gen_online_apu_transfer.e04"
+t_s = 1.0
+signal = "elec.gen_neutral_relay.l1.open"
+op = "true"
+approx = false
+cite = "facts_elec_gen.verified.md:129"
+
+[[expect]]
+id = "06_engine_start_gen_online_apu_transfer.e05"
+t_s = 1.0
+signal = "elec.vfsg.start_torque_ftlb"
+op = "approx"
+value = 300.0
+tol = 3.0
+unit = "ft-lb"
+approx = false
+cite = "facts_elec_gen.verified.md:34"
+
+[[expect]]
+id = "06_engine_start_gen_online_apu_transfer.e06"
+t_s = 65.0
+signal = "elec.vfsg.l.start_time_s"
+op = "within"
+value = 57.5
+tol = 5.0
+unit = "s"
+approx = false
+cite = "facts_elec_gen.verified.md:108"
+
+[[expect]]
+id = "06_engine_start_gen_online_apu_transfer.e07"
+t_s = 70.0
+signal = "elec.start_switch.l"
+op = "eq"
+value = "NORM"
+approx = false
+cite = "facts_elec_gen.verified.md:145"
+
+[[expect]]
+id = "06_engine_start_gen_online_apu_transfer.e08"
+t_s = 76.0
+signal = "elec.vfsg.l1.mode"
+op = "eq"
+value = "generator"
+approx = false
+cite = "facts_elec_gen.verified.md:37"
+
+[[expect]]
+id = "06_engine_start_gen_online_apu_transfer.e09"
+t_s = 70.0
+signal = "elec.vfsg.l1.freq_hz"
+op = "gt"
+value = 360.0
+unit = "Hz"
+approx = false
+cite = "facts_elec_gen.verified.md:25"
+
+[[expect]]
+id = "06_engine_start_gen_online_apu_transfer.e10"
+t_s = 76.0
+signal = "elec.gcb.l1.closed"
+op = "true"
+approx = false
+cite = "facts_elec_gen.verified.md:82"
+
+[[expect]]
+id = "06_engine_start_gen_online_apu_transfer.e11"
+t_s = 76.0
+signal = "elec.gcb.l2.closed"
+op = "true"
+approx = false
+cite = "facts_elec_gen.verified.md:82"
+
+[[expect]]
+id = "06_engine_start_gen_online_apu_transfer.e12"
+t_s = 76.0
+signal = "elec.bus.L1_235.source"
+op = "eq"
+value = "L1_VFSG"
+approx = false
+cite = "facts_elec_dist.verified.md:43"
+
+[[expect]]
+id = "06_engine_start_gen_online_apu_transfer.e13"
+t_s = 76.0
+signal = "elec.bus.L2_235.source"
+op = "eq"
+value = "L2_VFSG"
+approx = false
+cite = "facts_elec_dist.verified.md:43"
+
+[[expect]]
+id = "06_engine_start_gen_online_apu_transfer.e14"
+t_s = 70.0
+signal = "elec.gec1.l1.closed"
+op = "false"
+approx = false
+cite = "facts_elec_gen.verified.md:95"
+
+[[expect]]
+id = "06_engine_start_gen_online_apu_transfer.e15"
+t_s = 70.0
+signal = "elec.gec3.l1.closed"
+op = "true"
+approx = false
+cite = "facts_elec_gen.verified.md:102"
+
+[[expect]]
+id = "06_engine_start_gen_online_apu_transfer.e16"
+t_s = 141.0
+signal = "elec.bus.L1_235.energized"
+op = "true"
+approx = false
+cite = "facts_elec_dist.verified.md:43"
+
+[[expect]]
+id = "06_engine_start_gen_online_apu_transfer.e17"
+t_s = 141.0
+signal = "elec.bus.L2_235.energized"
+op = "true"
+approx = false
+cite = "facts_elec_dist.verified.md:43"
+
+[[expect]]
+id = "06_engine_start_gen_online_apu_transfer.e18"
+t_s = 141.0
+signal = "elec.bus.R1_235.energized"
+op = "true"
+approx = false
+cite = "facts_elec_dist.verified.md:44"
+
+[[expect]]
+id = "06_engine_start_gen_online_apu_transfer.e19"
+t_s = 141.0
+signal = "elec.bus.R2_235.energized"
+op = "true"
+approx = false
+cite = "facts_elec_dist.verified.md:44"
+
+[[expect]]
+id = "06_engine_start_gen_online_apu_transfer.e20"
+t_s = 141.0
+signal = "elec.bus.R1_235.source"
+op = "eq"
+value = "ring_tie_from_left_vfsg"
+approx = false
+cite = "facts_elec_dist.verified.md:44"
+
+[[expect]]
+id = "06_engine_start_gen_online_apu_transfer.e21"
+t_s = 141.0
+signal = "elec.vfsg.l1.load_kva"
+op = "lt"
+value = 250.0
+unit = "kVA"
+approx = false
+cite = "facts_elec_gen.verified.md:20"
+
+[[expect]]
+id = "06_engine_start_gen_online_apu_transfer.e22"
+t_s = 131.0
+signal = "elec.transfer.no_bus_dropout"
+op = "true"
+approx = true
+cite = "none"

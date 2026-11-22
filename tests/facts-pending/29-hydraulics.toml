@@ -1,0 +1,39 @@
+[[fact]]
+id = "F24-139"
+quantity = "rat.pump_flow_min_gpm"
+expected = 10.0
+unit = "gpm"
+tol = 0.0
+condition = "2700 to 4850 psi"
+approx = false
+cite = "elec2_r8_timing_loads.md:32"
+
+[[fact]]
+id = "F24-140"
+quantity = "rat.pump_flow_max_gpm"
+expected = 19.0
+unit = "gpm"
+tol = 0.0
+condition = "2700 to 4850 psi"
+approx = false
+cite = "elec2_r8_timing_loads.md:32"
+
+[[fact]]
+id = "F24-141"
+quantity = "rat.pump_press_min_psi"
+expected = 2700.0
+unit = "psi"
+tol = 0.0
+condition = "flow range"
+approx = false
+cite = "elec2_r8_timing_loads.md:32"
+
+[[fact]]
+id = "F24-142"
+quantity = "rat.pump_press_max_psi"
+expected = 4850.0
+unit = "psi"
+tol = 0.0
+condition = "flow range"
+approx = false
+cite = "elec2_r8_timing_loads.md:32"

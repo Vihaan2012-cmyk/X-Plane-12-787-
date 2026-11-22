@@ -1,0 +1,53 @@
+pub(super) const VFSG_PF_MIN_LAGGING: f64 = 0.85;
+pub(super) const VFSG_PF_MAX: f64 = 1.0;
+pub(super) const VFSG_DRY_WEIGHT_LB: f64 = 207.9;
+pub(super) const VFSG_SHEAR_SECTION_IN_LB_PER_RAD: f64 = 79500.0;
+pub(super) const ASG_FREQ_MIN: f64 = 360.0;
+pub(super) const ASG_FREQ_MAX: f64 = 440.0;
+pub(super) const EXT_PWR_RECEPTACLE_PIN_COUNT: f64 = 6.0;
+pub(super) const ATRU_START_APU_OUT_VDC_HALF: f64 = 135.0;
+pub(super) const ATRU_AFT_EP_PU_A: f64 = 188.0;
+pub(super) const ATRU_PU_A: f64 = 212.0;
+pub(super) const RAT_DEPLOY_CMD_MAX_MS: f64 = 200.0;
+pub(super) const BUS_PRIMARY_235_LOADS_APPROX: f64 = 40.0;
+pub(super) const RPDU_LOADS_UNDER_10A_COUNT: f64 = 900.0;
+pub(super) const SPDU_SSPC_150PLUS_DC_LOADS: f64 = 150.0;
+pub(super) const PROT_DIFF_TRIP_TIME_MS: f64 = 70.0;
+pub(super) const PROT_SUSP_TIME_S: f64 = 0.2;
+pub(super) const BATT_APU_HOLDUP_S: f64 = 10.0;
+pub(super) const BATT_BURST_DISC_PSIG: f64 = 18.0;
+pub(super) const BATT_INDICATOR_PSID: f64 = 3.0;
+pub(super) const BATT_ENCLOSURE_WALL_IN: f64 = 0.125;
+pub(super) const BATT_BCU_CHARGE_PCT: f64 = 20.0;
+pub(super) const BATT_BCU_CHARGE_TIME_H: f64 = 1.5;
+pub(super) const BATT_MBR_CCS_SHUTDOWN_MAX_S: f64 = 30.0;
+pub(super) const BATT_TRANSFER_INTERRUPT_MS: f64 = 30.0;
+pub(super) fn lookup(name: &str) -> Option<f64> {
+    Some(match name {
+        "vfsg.pf_min_lagging" => self::VFSG_PF_MIN_LAGGING,
+        "vfsg.pf_max" => self::VFSG_PF_MAX,
+        "vfsg.dry_weight_lb" => self::VFSG_DRY_WEIGHT_LB,
+        "vfsg.shear_section_in_lb_per_rad" => self::VFSG_SHEAR_SECTION_IN_LB_PER_RAD,
+        "asg.freq_min" => self::ASG_FREQ_MIN,
+        "asg.freq_max" => self::ASG_FREQ_MAX,
+        "ext_pwr.receptacle_pin_count" => self::EXT_PWR_RECEPTACLE_PIN_COUNT,
+        "atru.start_apu_out_vdc_half" => self::ATRU_START_APU_OUT_VDC_HALF,
+        "atru.aft_ep_pu_a" => self::ATRU_AFT_EP_PU_A,
+        "atru.pu_a" => self::ATRU_PU_A,
+        "rat.deploy_cmd_max_ms" => self::RAT_DEPLOY_CMD_MAX_MS,
+        "bus.primary_235_loads_approx" => self::BUS_PRIMARY_235_LOADS_APPROX,
+        "rpdu.loads_under_10a_count" => self::RPDU_LOADS_UNDER_10A_COUNT,
+        "spdu.sspc_150plus_dc_loads" => self::SPDU_SSPC_150PLUS_DC_LOADS,
+        "prot.diff_trip_time_ms" => self::PROT_DIFF_TRIP_TIME_MS,
+        "prot.susp_time_s" => self::PROT_SUSP_TIME_S,
+        "batt.apu_holdup_s" => self::BATT_APU_HOLDUP_S,
+        "batt.burst_disc_psig" => self::BATT_BURST_DISC_PSIG,
+        "batt.indicator_psid" => self::BATT_INDICATOR_PSID,
+        "batt.enclosure_wall_in" => self::BATT_ENCLOSURE_WALL_IN,
+        "batt.bcu_charge_pct" => self::BATT_BCU_CHARGE_PCT,
+        "batt.bcu_charge_time_h" => self::BATT_BCU_CHARGE_TIME_H,
+        "batt.mbr_ccs_shutdown_max_s" => self::BATT_MBR_CCS_SHUTDOWN_MAX_S,
+        "batt.transfer_interrupt_ms" => self::BATT_TRANSFER_INTERRUPT_MS,
+        _ => return None,
+    })
+}

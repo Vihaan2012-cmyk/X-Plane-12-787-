@@ -1,0 +1,204 @@
+[scenario]
+id = "02_battery_only_ground"
+title = "Battery-only on ground: FCOM load list"
+system = "24-electrical"
+aircraft = "787-9"
+engines = "trent1000"
+tick_hz = 1000
+summary = "On-Ground Battery Only mode: captain side items listed; no cabin and no AC-fed loads."
+
+[initial]
+airplane_state = "cold_dark"
+on_ground = true
+battery_switch = "ON"
+apu_battery_connected = true
+ext_pwr_fwd_l = "unplugged"
+ext_pwr_fwd_r = "unplugged"
+ext_pwr_aft = "unplugged"
+gen_ctrl_switches = "ON"
+oat_c = 15.0
+
+[[step]]
+t_s = 0.0
+actor = "sim"
+action = "advance"
+target = "clock_s"
+value = 1200.0
+
+[[expect]]
+id = "02_battery_only_ground.e01"
+t_s = 10.0
+signal = "elec.load.captain_inboard_du"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:46"
+
+[[expect]]
+id = "02_battery_only_ground.e02"
+t_s = 10.0
+signal = "elec.load.lower_du"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:47"
+
+[[expect]]
+id = "02_battery_only_ground.e03"
+t_s = 10.0
+signal = "elec.load.mcp"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:48"
+
+[[expect]]
+id = "02_battery_only_ground.e04"
+t_s = 10.0
+signal = "elec.load.apu_start_capability"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:49"
+
+[[expect]]
+id = "02_battery_only_ground.e05"
+t_s = 10.0
+signal = "elec.load.ahru_l"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:49"
+
+[[expect]]
+id = "02_battery_only_ground.e06"
+t_s = 10.0
+signal = "elec.load.wing_fueling_panel"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:50"
+
+[[expect]]
+id = "02_battery_only_ground.e07"
+t_s = 10.0
+signal = "elec.load.fmc"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:50"
+
+[[expect]]
+id = "02_battery_only_ground.e08"
+t_s = 10.0
+signal = "elec.load.captain_acp"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:51"
+
+[[expect]]
+id = "02_battery_only_ground.e09"
+t_s = 10.0
+signal = "elec.load.ccr_l"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:51"
+
+[[expect]]
+id = "02_battery_only_ground.e10"
+t_s = 10.0
+signal = "elec.load.ground_crew_call_horn"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:52"
+
+[[expect]]
+id = "02_battery_only_ground.e11"
+t_s = 10.0
+signal = "elec.load.engine_apu_fire_detection"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:53"
+
+[[expect]]
+id = "02_battery_only_ground.e12"
+t_s = 10.0
+signal = "elec.load.vhf_l"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:54"
+
+[[expect]]
+id = "02_battery_only_ground.e13"
+t_s = 10.0
+signal = "elec.load.misc_lighting"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:54"
+
+[[expect]]
+id = "02_battery_only_ground.e14"
+t_s = 10.0
+signal = "elec.load.tcp_l"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:55"
+
+[[expect]]
+id = "02_battery_only_ground.e15"
+t_s = 10.0
+signal = "elec.load.brakes"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:55"
+
+[[expect]]
+id = "02_battery_only_ground.e16"
+t_s = 10.0
+signal = "elec.load.fo_displays"
+op = "false"
+approx = true
+cite = "none"
+
+[[expect]]
+id = "02_battery_only_ground.e17"
+t_s = 10.0
+signal = "elec.load.cabin_lighting"
+op = "false"
+approx = true
+cite = "none"
+
+[[expect]]
+id = "02_battery_only_ground.e18"
+t_s = 10.0
+signal = "elec.load.galleys"
+op = "false"
+approx = false
+cite = "elec_conditions.verified.md:102"
+
+[[expect]]
+id = "02_battery_only_ground.e19"
+t_s = 1200.0
+signal = "elec.batt_main.soc_pct"
+op = "lt"
+value = 100.0
+unit = "%"
+approx = true
+cite = "none"
+
+[[expect]]
+id = "02_battery_only_ground.e20"
+t_s = 1200.0
+signal = "elec.msg.MAIN_BATTERY_DISCH"
+op = "true"
+approx = false
+cite = "elec2_r5_batteries_backup.md:57"
+
+[[expect]]
+id = "02_battery_only_ground.e21"
+t_s = 60.0
+signal = "elec.mbr.closed"
+op = "true"
+approx = false
+cite = "elec2_r5_batteries_backup.md:38"
+
+[[expect]]
+id = "02_battery_only_ground.e22"
+t_s = 1.0
+signal = "elec.load.only_tcb_instrument_bus_loads"
+op = "true"
+approx = false
+cite = "elec2_r5_batteries_backup.md:46"

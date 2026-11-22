@@ -1,0 +1,223 @@
+[scenario]
+id = "04_external_power_quality_trip"
+title = "External power quality protection: OV, UV, OF, UF, OC"
+system = "24-electrical"
+aircraft = "787-9"
+engines = "trent1000"
+tick_hz = 1000
+summary = "Frequency and voltage limits on forward external power; trip delays 1 s on frequency, up to 9 s UV, up to 10 s OV inverse time."
+
+[initial]
+airplane_state = "cold_dark"
+on_ground = true
+battery_switch = "ON"
+apu_battery_connected = true
+ext_pwr_fwd_l = "unplugged"
+ext_pwr_fwd_r = "unplugged"
+ext_pwr_aft = "unplugged"
+gen_ctrl_switches = "ON"
+oat_c = 15.0
+
+[[step]]
+t_s = 0.0
+actor = "ground"
+action = "connect"
+target = "EXT_PWR_FWD_L"
+value = { v_ll = 115.0, hz = 400.0, kva = 90.0 }
+
+[[step]]
+t_s = 2.0
+actor = "crew"
+action = "press"
+target = "EXT_PWR_FWD_L"
+value = "ON"
+
+[[step]]
+t_s = 20.0
+actor = "ground"
+action = "set"
+target = "EXT_PWR_FWD_L.hz"
+value = 430.0
+
+[[step]]
+t_s = 30.0
+actor = "ground"
+action = "set"
+target = "EXT_PWR_FWD_L.hz"
+value = 400.0
+
+[[step]]
+t_s = 31.0
+actor = "crew"
+action = "cycle"
+target = "EXT_PWR_FWD_L"
+value = "OFF_ON"
+
+[[step]]
+t_s = 50.0
+actor = "ground"
+action = "set"
+target = "EXT_PWR_FWD_L.hz"
+value = 370.0
+
+[[step]]
+t_s = 60.0
+actor = "ground"
+action = "set"
+target = "EXT_PWR_FWD_L.hz"
+value = 400.0
+
+[[step]]
+t_s = 61.0
+actor = "crew"
+action = "cycle"
+target = "EXT_PWR_FWD_L"
+value = "OFF_ON"
+
+[[step]]
+t_s = 80.0
+actor = "ground"
+action = "set"
+target = "EXT_PWR_FWD_L.v_worst_phase_rms"
+value = 131.0
+
+[[expect]]
+id = "04_external_power_quality_trip.e01"
+t_s = 5.0
+signal = "elec.epc.fwd_l.closed"
+op = "true"
+approx = false
+cite = "elec2_r8_timing_loads.md:39"
+
+[[expect]]
+id = "04_external_power_quality_trip.e02"
+t_s = 21.5
+signal = "elec.epc.fwd_l.closed"
+op = "false"
+approx = false
+cite = "elec2_r2_sources.md:122"
+
+[[expect]]
+id = "04_external_power_quality_trip.e03"
+t_s = 21.5
+signal = "elec.epc.fwd_l.locked_out"
+op = "true"
+approx = false
+cite = "elec2_r2_sources.md:122"
+
+[[expect]]
+id = "04_external_power_quality_trip.e04"
+t_s = 35.0
+signal = "elec.epc.fwd_l.closed"
+op = "true"
+approx = false
+cite = "elec2_r2_sources.md:122"
+
+[[expect]]
+id = "04_external_power_quality_trip.e05"
+t_s = 51.5
+signal = "elec.epc.fwd_l.closed"
+op = "false"
+approx = false
+cite = "elec2_r2_sources.md:123"
+
+[[expect]]
+id = "04_external_power_quality_trip.e06"
+t_s = 65.0
+signal = "elec.epc.fwd_l.closed"
+op = "true"
+approx = false
+cite = "elec2_r2_sources.md:123"
+
+[[expect]]
+id = "04_external_power_quality_trip.e07"
+t_s = 91.0
+signal = "elec.epc.fwd_l.closed"
+op = "false"
+approx = false
+cite = "elec2_r2_sources.md:115"
+
+[[expect]]
+id = "04_external_power_quality_trip.e08"
+t_s = 91.0
+signal = "elec.epc.fwd_l.locked_out"
+op = "true"
+approx = false
+cite = "elec2_r2_sources.md:115"
+
+[[expect]]
+id = "04_external_power_quality_trip.e09"
+t_s = 0.0
+signal = "elec.prot.fwd_ep_of_trip_hz"
+op = "approx"
+value = 429.0
+tol = 0.5
+unit = "Hz"
+approx = false
+cite = "elec2_r2_sources.md:122"
+
+[[expect]]
+id = "04_external_power_quality_trip.e10"
+t_s = 0.0
+signal = "elec.prot.fwd_ep_of_reset_hz"
+op = "approx"
+value = 427.0
+tol = 0.5
+unit = "Hz"
+approx = false
+cite = "elec2_r2_sources.md:122"
+
+[[expect]]
+id = "04_external_power_quality_trip.e11"
+t_s = 0.0
+signal = "elec.prot.fwd_ep_uf_trip_hz"
+op = "approx"
+value = 371.0
+tol = 0.5
+unit = "Hz"
+approx = false
+cite = "elec2_r2_sources.md:123"
+
+[[expect]]
+id = "04_external_power_quality_trip.e12"
+t_s = 0.0
+signal = "elec.prot.fwd_ep_uf_reset_hz"
+op = "approx"
+value = 373.0
+tol = 0.5
+unit = "Hz"
+approx = false
+cite = "elec2_r2_sources.md:123"
+
+[[expect]]
+id = "04_external_power_quality_trip.e13"
+t_s = 0.0
+signal = "elec.prot.fwd_ep_uv_rms"
+op = "approx"
+value = 104.5
+tol = 0.1
+unit = "Vrms"
+approx = false
+cite = "elec2_r2_sources.md:120"
+
+[[expect]]
+id = "04_external_power_quality_trip.e14"
+t_s = 0.0
+signal = "elec.prot.fwd_ep_uv_delay_s"
+op = "approx"
+value = 9.0
+tol = 0.1
+unit = "s"
+approx = false
+cite = "elec2_r2_sources.md:120"
+
+[[expect]]
+id = "04_external_power_quality_trip.e15"
+t_s = 0.0
+signal = "elec.prot.fwd_ep_ov_rms"
+op = "approx"
+value = 130.0
+tol = 0.1
+unit = "Vrms"
+approx = false
+cite = "elec2_r2_sources.md:115"

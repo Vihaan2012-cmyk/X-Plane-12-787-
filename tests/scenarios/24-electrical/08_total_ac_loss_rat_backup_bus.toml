@@ -1,0 +1,371 @@
+[scenario]
+id = "08_total_ac_loss_rat_backup_bus"
+title = "Loss of all AC in flight, RAT auto-deploy, 28 V standby bus loss, backup bus items"
+system = "24-electrical"
+aircraft = "787-9"
+engines = "trent1000"
+tick_hz = 1000
+summary = "Total loss of AC: battery bridges instrument buses, BPCUs request RAT after 15 s, RAT feeds backup bus and center TRUs at up to 10 kVA."
+
+[initial]
+airplane_state = "cruise"
+on_ground = false
+battery_switch = "ON"
+apu_battery_connected = true
+ext_pwr_fwd_l = "unplugged"
+ext_pwr_fwd_r = "unplugged"
+ext_pwr_aft = "unplugged"
+gen_ctrl_switches = "ON"
+oat_c = 15.0
+engines_running = [true, true]
+apu_running = false
+alt_ft = 37000.0
+
+[[step]]
+t_s = 10.0
+actor = "fault"
+action = "all_engines_flameout"
+target = "ALL"
+
+[[step]]
+t_s = 10.0
+actor = "fault"
+action = "gen_loss"
+target = "ALL_VFSG"
+
+[[step]]
+t_s = 12.0
+actor = "sim"
+action = "advance"
+target = "clock_s"
+value = 60.0
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e01"
+t_s = 10.1
+signal = "elec.bus.L1_235.energized"
+op = "false"
+approx = true
+cite = "none"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e02"
+t_s = 10.1
+signal = "elec.bus.R2_235.energized"
+op = "false"
+approx = true
+cite = "none"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e03"
+t_s = 10.1
+signal = "elec.bus.c1_tru.energized"
+op = "false"
+approx = false
+cite = "elec2_r8_timing_loads.md:28"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e04"
+t_s = 10.1
+signal = "elec.bus.c2_tru.energized"
+op = "false"
+approx = false
+cite = "elec2_r8_timing_loads.md:28"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e05"
+t_s = 10.1
+signal = "elec.mode"
+op = "eq"
+value = "in_air_battery_only"
+approx = false
+cite = "elec_conditions.verified.md:97"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e06"
+t_s = 10.2
+signal = "elec.bus.captain_instr.source"
+op = "eq"
+value = "main_battery"
+approx = false
+cite = "elec2_r5_batteries_backup.md:44"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e07"
+t_s = 10.2
+signal = "elec.bus.captain_instr.interrupt_ms"
+op = "approx"
+value = 30.0
+tol = 15.0
+unit = "ms"
+approx = false
+cite = "elec2_r5_batteries_backup.md:45"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e08"
+t_s = 10.2
+signal = "elec.cit.closed"
+op = "true"
+approx = false
+cite = "elec2_r5_batteries_backup.md:70"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e09"
+t_s = 10.2
+signal = "elec.standby_buses.paralleled_ms"
+op = "lt"
+value = 50.0
+unit = "ms"
+approx = false
+cite = "elec2_r5_batteries_backup.md:71"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e10"
+t_s = 24.9
+signal = "elec.rat.deploy_requested"
+op = "false"
+approx = false
+cite = "elec2_r8_timing_loads.md:27"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e11"
+t_s = 25.1
+signal = "elec.rat.deploy_requested"
+op = "true"
+approx = false
+cite = "elec2_r8_timing_loads.md:27"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e12"
+t_s = 25.1
+signal = "elec.bpcu.l.standby_mode"
+op = "true"
+approx = false
+cite = "elec2_r8_timing_loads.md:27"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e13"
+t_s = 25.1
+signal = "elec.bpcu.r.standby_mode"
+op = "true"
+approx = false
+cite = "elec2_r8_timing_loads.md:27"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e14"
+t_s = 25.3
+signal = "elec.rat.deploy_command_delay_ms"
+op = "lt"
+value = 200.0
+unit = "ms"
+approx = false
+cite = "elec2_r8_timing_loads.md:29"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e15"
+t_s = 35.0
+signal = "elec.rat.deployed"
+op = "true"
+approx = false
+cite = "elec2_r8_timing_loads.md:28"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e16"
+t_s = 35.0
+signal = "elec.rcb.closed_requires_bb_iso_rly_open"
+op = "true"
+approx = false
+cite = "elec2_r2_sources.md:29"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e17"
+t_s = 35.0
+signal = "elec.rat_gen.min_rcb_close_hz"
+op = "approx"
+value = 380.0
+tol = 1.0
+unit = "Hz"
+approx = false
+cite = "elec2_r2_sources.md:7"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e18"
+t_s = 40.0
+signal = "elec.rat_gen.voltage_vll"
+op = "within"
+value = 230.0
+tol = 4.0
+unit = "V"
+approx = false
+cite = "elec2_r2_sources.md:8"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e19"
+t_s = 40.0
+signal = "elec.rat_gen.load_kva"
+op = "lt"
+value = 10.0
+unit = "kVA"
+approx = false
+cite = "elec2_r8_timing_loads.md:31"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e20"
+t_s = 40.0
+signal = "elec.bus.backup.energized"
+op = "true"
+approx = false
+cite = "facts_elec_dist.verified.md:67"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e21"
+t_s = 40.0
+signal = "elec.bus.c1_tru.energized"
+op = "true"
+approx = false
+cite = "facts_elec_dist.verified.md:67"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e22"
+t_s = 40.0
+signal = "elec.bus.c2_tru.energized"
+op = "true"
+approx = false
+cite = "facts_elec_dist.verified.md:67"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e23"
+t_s = 40.0
+signal = "elec.bb_iso_rly.open"
+op = "true"
+approx = false
+cite = "elec2_r2_sources.md:19"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e24"
+t_s = 40.0
+signal = "elec.mode"
+op = "eq"
+value = "in_air_rat_only"
+approx = false
+cite = "elec_conditions.verified.md:75"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e25"
+t_s = 40.0
+signal = "elec.load.captain_flight_instruments"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:75"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e26"
+t_s = 40.0
+signal = "elec.load.captain_inboard_du"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:77"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e27"
+t_s = 40.0
+signal = "elec.load.mcp"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:77"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e28"
+t_s = 40.0
+signal = "elec.load.lower_du"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:79"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e29"
+t_s = 40.0
+signal = "elec.load.center_pitot_heat"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:87"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e30"
+t_s = 40.0
+signal = "elec.load.flight_interphone"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:87"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e31"
+t_s = 40.0
+signal = "elec.load.engine_apu_fire_detection"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:88"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e32"
+t_s = 40.0
+signal = "elec.load.vhf_l"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:88"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e33"
+t_s = 40.0
+signal = "elec.load.tcp_l"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:89"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e34"
+t_s = 40.0
+signal = "elec.load.autothrottle"
+op = "false"
+approx = false
+cite = "elec_conditions.verified.md:90"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e35"
+t_s = 40.0
+signal = "elec.load.thrust_reversers"
+op = "false"
+approx = false
+cite = "elec_conditions.verified.md:92"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e36"
+t_s = 40.0
+signal = "elec.load.stabilizer_trim"
+op = "false"
+approx = false
+cite = "elec_conditions.verified.md:92"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e37"
+t_s = 40.0
+signal = "elec.load.hf_satcom_tcas_gpws"
+op = "false"
+approx = false
+cite = "elec_conditions.verified.md:93"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e38"
+t_s = 40.0
+signal = "elec.load.weather_radar_ext_lighting_wips_window_heat"
+op = "false"
+approx = false
+cite = "elec_conditions.verified.md:94"
+
+[[expect]]
+id = "08_total_ac_loss_rat_backup_bus.e39"
+t_s = 40.0
+signal = "elec.load.igniters_standby_source"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:106"

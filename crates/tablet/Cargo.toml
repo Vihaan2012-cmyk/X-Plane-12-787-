@@ -11,7 +11,6 @@ name = "tablet"
 
 [dependencies]
 b789-render.workspace = true
-b789-store.workspace = true
 
 [lints]
 workspace = true

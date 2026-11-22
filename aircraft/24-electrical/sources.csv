@@ -1,0 +1,13 @@
+id,kind,rating,voltage,frequency_range,bus_fed,grade,source
+VFSG_L1,VFSG,250 kVA,235 VAC 3ph,360-800 Hz,L1,VERIFIED,eps24.txt:9636 eps24.txt:9648 bus by rule four-channel-isolated eps24.txt:475
+VFSG_L2,VFSG,250 kVA,235 VAC 3ph,360-800 Hz,L2,VERIFIED,eps24.txt:9636 eps24.txt:9648 bus by rule four-channel-isolated eps24.txt:475
+VFSG_R1,VFSG,250 kVA,235 VAC 3ph,360-800 Hz,R1,VERIFIED,eps24.txt:9636 eps24.txt:9648 bus by rule four-channel-isolated eps24.txt:475
+VFSG_R2,VFSG,250 kVA,235 VAC 3ph,360-800 Hz,R2,VERIFIED,eps24.txt:9636 eps24.txt:9648 bus by rule four-channel-isolated eps24.txt:475
+ASG_L,ASG,225 kVA,235 VAC 3ph,360-440 Hz,LTB,VERIFIED,eps24.txt:12527 eps24.txt:9610 eps24.txt:3046 ata24.txt:4590 eps24.txt:731
+ASG_R,ASG,225 kVA,235 VAC 3ph,360-440 Hz,RTB,VERIFIED,eps24.txt:12527 eps24.txt:9610 eps24.txt:3046 ata24.txt:4590 eps24.txt:731
+RAT_GEN,RAT generator,10 kVA,230 VAC 3ph,min 380 Hz at RCB close,BB,VERIFIED,ata24.txt:5142 stm.txt:8183 ata24.txt:5140 ata24.txt:428
+BATT_MAIN,main battery,50 Ah,28 VDC,DC,HBB_MAIN,VERIFIED,ata24.txt:544 ata24.txt:588
+BATT_APU,APU battery,50 Ah,28 VDC,DC,HBB_APU,VERIFIED,ata24.txt:544 ata24.txt:597 eps24.txt:21589
+EXT_L_FWD,external power receptacle,90 kVA,115 VAC 3ph,400 Hz,AC115_L,VERIFIED,stm.txt:6818 eps24.txt:482 24eps.pdf p804
+EXT_R_FWD,external power receptacle,90 kVA,115 VAC 3ph,400 Hz,AC115_R,VERIFIED,stm.txt:6818 eps24.txt:482 24eps.pdf p833
+EXT_AFT,external power receptacle,188 A max continuous,115 VAC 3ph,400 Hz,ATRU_L2,VERIFIED,eps24.txt:4900 ata24.txt:994 eps24.txt:482

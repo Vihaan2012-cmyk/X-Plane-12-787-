@@ -9,9 +9,5 @@ publish.workspace = true
 [lib]
 name = "solver_thermal"
 
-[dependencies]
-b789-units.workspace = true
-b789-solver-common.workspace = true
-
 [lints]
 workspace = true

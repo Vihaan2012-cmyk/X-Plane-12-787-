@@ -1,0 +1,29 @@
+[[fact]]
+id = "F24-279"
+quantity = "batt.ext_pwr_off_wait_min"
+expected = 30.0
+unit = "min"
+tol = 0.0
+condition = "before main battery disconnect"
+approx = false
+cite = "elec2_r8_timing_loads.md:11"
+
+[[fact]]
+id = "F24-280"
+quantity = "batt.wels_discharge_min"
+expected = 15.0
+unit = "min"
+tol = 0.0
+condition = "approx"
+approx = false
+cite = "elec2_r8_timing_loads.md:12"
+
+[[fact]]
+id = "F24-281"
+quantity = "batt.wels_charge_min_h"
+expected = 2.0
+unit = "h"
+tol = 0.0
+condition = "minimum"
+approx = false
+cite = "elec2_r8_timing_loads.md:12"

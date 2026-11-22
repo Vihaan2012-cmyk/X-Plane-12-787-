@@ -1,0 +1,223 @@
+[scenario]
+id = "05_apu_start_on_battery"
+title = "APU start on APU battery, APU generators online"
+system = "24-electrical"
+aircraft = "787-9"
+engines = "trent1000"
+tick_hz = 1000
+summary = "APU start via SPU and R2 ATRU path, then both ASGs power the four main buses via ring tie loop."
+
+[initial]
+airplane_state = "cold_dark"
+on_ground = true
+battery_switch = "ON"
+apu_battery_connected = true
+ext_pwr_fwd_l = "unplugged"
+ext_pwr_fwd_r = "unplugged"
+ext_pwr_aft = "unplugged"
+gen_ctrl_switches = "ON"
+oat_c = 15.0
+
+[[step]]
+t_s = 0.0
+actor = "crew"
+action = "select"
+target = "APU_SWITCH"
+value = "START"
+
+[[step]]
+t_s = 5.0
+actor = "sim"
+action = "advance"
+target = "clock_s"
+value = 120.0
+
+[[expect]]
+id = "05_apu_start_on_battery.e01"
+t_s = 0.1
+signal = "elec.spu.output_vac"
+op = "approx"
+value = 115.0
+tol = 12.0
+unit = "V"
+approx = false
+cite = "facts_elec_gen.verified.md:210"
+
+[[expect]]
+id = "05_apu_start_on_battery.e02"
+t_s = 0.1
+signal = "elec.atru_r2.output_vdc_each_leg"
+op = "approx"
+value = 135.0
+tol = 15.0
+unit = "V"
+approx = false
+cite = "elec2_r3_conversion.md:28"
+
+[[expect]]
+id = "05_apu_start_on_battery.e03"
+t_s = 0.1
+signal = "elec.cmsc.apu_start.mode"
+op = "eq"
+value = "multi_use_right_asg_only"
+approx = false
+cite = "facts_elec_gen.verified.md:219"
+
+[[expect]]
+id = "05_apu_start_on_battery.e04"
+t_s = 0.1
+signal = "elec.apu_batt.voltage"
+op = "within"
+value = 29.5
+tol = 5.5
+unit = "V"
+approx = false
+cite = "elec2_r5_batteries_backup.md:61"
+
+[[expect]]
+id = "05_apu_start_on_battery.e05"
+t_s = 2.0
+signal = "elec.apu_batt.attempt_limit_s"
+op = "eq"
+value = 45.0
+tol = 0.0
+unit = "s"
+approx = false
+cite = "elec2_r5_batteries_backup.md:10"
+
+[[expect]]
+id = "05_apu_start_on_battery.e06"
+t_s = 2.0
+signal = "elec.apu_batt.attempts_available"
+op = "eq"
+value = 3
+approx = false
+cite = "elec2_r5_batteries_backup.md:10"
+
+[[expect]]
+id = "05_apu_start_on_battery.e07"
+t_s = 65.0
+signal = "elec.apu_ready_to_load"
+op = "true"
+approx = false
+cite = "elec2_r2_sources.md:79"
+
+[[expect]]
+id = "05_apu_start_on_battery.e08"
+t_s = 65.0
+signal = "elec.asg.l.gen_on_bus"
+op = "true"
+approx = false
+cite = "facts_elec_gen.verified.md:178"
+
+[[expect]]
+id = "05_apu_start_on_battery.e09"
+t_s = 65.0
+signal = "elec.asg.r.gen_on_bus"
+op = "true"
+approx = false
+cite = "facts_elec_gen.verified.md:178"
+
+[[expect]]
+id = "05_apu_start_on_battery.e10"
+t_s = 65.0
+signal = "elec.bus.L_tie.energized"
+op = "true"
+approx = false
+cite = "facts_elec_dist.verified.md:35"
+
+[[expect]]
+id = "05_apu_start_on_battery.e11"
+t_s = 65.0
+signal = "elec.bus.R_tie.energized"
+op = "true"
+approx = false
+cite = "facts_elec_dist.verified.md:35"
+
+[[expect]]
+id = "05_apu_start_on_battery.e12"
+t_s = 65.0
+signal = "elec.bus.L1_235.energized"
+op = "true"
+approx = false
+cite = "facts_elec_dist.verified.md:41"
+
+[[expect]]
+id = "05_apu_start_on_battery.e13"
+t_s = 65.0
+signal = "elec.bus.L2_235.energized"
+op = "true"
+approx = false
+cite = "facts_elec_dist.verified.md:41"
+
+[[expect]]
+id = "05_apu_start_on_battery.e14"
+t_s = 65.0
+signal = "elec.bus.R1_235.energized"
+op = "true"
+approx = false
+cite = "facts_elec_dist.verified.md:41"
+
+[[expect]]
+id = "05_apu_start_on_battery.e15"
+t_s = 65.0
+signal = "elec.bus.R2_235.energized"
+op = "true"
+approx = false
+cite = "facts_elec_dist.verified.md:41"
+
+[[expect]]
+id = "05_apu_start_on_battery.e16"
+t_s = 60.0
+signal = "elec.asg.l.freq_hz"
+op = "within"
+value = 400.0
+tol = 40.0
+unit = "Hz"
+approx = false
+cite = "facts_elec_gen.verified.md:175"
+
+[[expect]]
+id = "05_apu_start_on_battery.e17"
+t_s = 60.0
+signal = "elec.asg.l.voltage_vll"
+op = "within"
+value = 230.0
+tol = 8.0
+unit = "V"
+approx = false
+cite = "elec2_r2_sources.md:46"
+
+[[expect]]
+id = "05_apu_start_on_battery.e18"
+t_s = 60.0
+signal = "elec.asg.l.load_kva"
+op = "lt"
+value = 225.0
+unit = "kVA"
+approx = false
+cite = "facts_elec_gen.verified.md:176"
+
+[[expect]]
+id = "05_apu_start_on_battery.e19"
+t_s = 65.0
+signal = "elec.bus.L_115.energized"
+op = "true"
+approx = false
+cite = "facts_elec_dist.verified.md:51"
+
+[[expect]]
+id = "05_apu_start_on_battery.e20"
+t_s = 65.0
+signal = "elec.pecs.energized"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:39"
+
+[[expect]]
+id = "05_apu_start_on_battery.e21"
+t_s = 60.0
+signal = "elec.apu_batt.charging"
+op = "true"
+approx = false
+cite = "elec2_r5_batteries_backup.md:36"

@@ -9,8 +9,5 @@ publish.workspace = true
 [lib]
 name = "solver_common"
 
-[dependencies]
-b789-units.workspace = true
-
 [lints]
 workspace = true

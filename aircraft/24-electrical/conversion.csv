@@ -1,0 +1,20 @@
+id,kind,input_bus,output_bus,rating,grade,source
+ATRU_L1,ATRU,L1,HVDC_L1,155 kVA continuous (787-9),APPROX,ata24.txt:6546 ata24.txt:2608 ata24.txt:838 ata24.txt:838 rule name-pairing
+ATRU_L2,ATRU,L2,HVDC_L2,155 kVA continuous (787-9),APPROX,ata24.txt:6546 ata24.txt:2608 ata24.txt:838 ata24.txt:838 rule name-pairing
+ATRU_R1,ATRU,R1,HVDC_R1,155 kVA continuous (787-9),APPROX,ata24.txt:6546 ata24.txt:2608 ata24.txt:838 ata24.txt:838 rule name-pairing
+ATRU_R2,ATRU,R2,HVDC_R2,155 kVA continuous (787-9),APPROX,ata24.txt:6546 ata24.txt:2608 ata24.txt:838 ata24.txt:838 rule name-pairing
+ATU_L,ATU,L1,AC115_L,260 A per-unit,VERIFIED,ata24.txt:1495 ata24.txt:1415 eps24.txt:4945 eps24.txt:934 24eps.pdf p734
+ATU_R,ATU,R1,AC115_R,260 A per-unit,VERIFIED,ata24.txt:1495 ata24.txt:1415 eps24.txt:4945 eps24.txt:936 24eps.pdf p755
+TRU_L,TRU,L1,DC28_L,,VERIFIED,ata24.txt:1123 ata24.txt:1458 24eps.pdf p606
+TRU_C1,TRU,BB,CIB,,VERIFIED,ata24.txt:1459 ata24.txt:1691 24eps.pdf p833 elec2_r4_topology_bpcu.md
+TRU_C2,TRU,BB,FIB,,VERIFIED,ata24.txt:1459 ata24.txt:1691 elec2_r4_topology_bpcu.md
+TRU_R,TRU,R1,DC28_R,,APPROX,ata24.txt:1459 ata24.txt:1893 ata24.txt:1719 rule name-pairing
+SPU,SPU,HBB_APU,ATRU_R2,13.5 kW,VERIFIED,ata24.txt:2971 ata24.txt:2974 ata24.txt:2948
+CMSC_CAC_L1,CMSC,HVDC_L1,motor/start load,110 kW (150 kW overload 3 min),APPROX,eps24.txt:36425 ata24.txt:49 ata24.txt:6588 rule name-pairing
+CMSC_CAC_L2,CMSC,HVDC_L2,motor/start load,110 kW (150 kW overload 3 min),APPROX,eps24.txt:36425 ata24.txt:49 ata24.txt:6588 rule name-pairing
+CMSC_CAC_R1,CMSC,HVDC_R1,motor/start load,110 kW (150 kW overload 3 min),APPROX,eps24.txt:36425 ata24.txt:49 ata24.txt:6588 rule name-pairing
+CMSC_CAC_R2,CMSC,HVDC_R2,motor/start load,110 kW (150 kW overload 3 min),APPROX,eps24.txt:36425 ata24.txt:49 ata24.txt:6588 rule name-pairing
+CMSC_EMP_L,CMSC,HVDC_L1,motor/start load,110 kW (150 kW overload 3 min),APPROX,eps24.txt:36425 ata24.txt:49 ata24.txt:6588 rule name-pairing
+CMSC_EMP_R,CMSC,HVDC_R1,motor/start load,110 kW (150 kW overload 3 min),APPROX,eps24.txt:36425 ata24.txt:49 ata24.txt:6588 rule name-pairing
+CMSC_EMP_C1,CMSC,HVDC_L2,motor/start load,110 kW (150 kW overload 3 min),APPROX,eps24.txt:36425 ata24.txt:49 ata24.txt:6588 rule name-pairing
+CMSC_EMP_C2,CMSC,HVDC_R2,motor/start load,110 kW (150 kW overload 3 min),APPROX,eps24.txt:36425 ata24.txt:49 ata24.txt:6588 rule name-pairing

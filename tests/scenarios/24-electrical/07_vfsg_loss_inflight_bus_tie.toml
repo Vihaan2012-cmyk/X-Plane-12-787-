@@ -1,0 +1,186 @@
+[scenario]
+id = "07_vfsg_loss_inflight_bus_tie"
+title = "Loss of one VFSG in flight, bus tie behaviour"
+system = "24-electrical"
+aircraft = "787-9"
+engines = "trent1000"
+tick_hz = 1000
+summary = "L1 VFSG disconnected in cruise: L1 bus picked up through the ring tie loop, no AC bus message, APU brought online."
+
+[initial]
+airplane_state = "cruise"
+on_ground = false
+battery_switch = "ON"
+apu_battery_connected = true
+ext_pwr_fwd_l = "unplugged"
+ext_pwr_fwd_r = "unplugged"
+ext_pwr_aft = "unplugged"
+gen_ctrl_switches = "ON"
+oat_c = 15.0
+engines_running = [true, true]
+apu_running = false
+alt_ft = 35000.0
+
+[[step]]
+t_s = 10.0
+actor = "fault"
+action = "vfsg_fail"
+target = "L1"
+value = "drive_disconnect"
+
+[[step]]
+t_s = 60.0
+actor = "crew"
+action = "start"
+target = "APU"
+
+[[step]]
+t_s = 130.0
+actor = "crew"
+action = "press"
+target = "GEN_CTRL_L1"
+value = "OFF_ON"
+
+[[expect]]
+id = "07_vfsg_loss_inflight_bus_tie.e01"
+t_s = 10.1
+signal = "elec.gcb.l1.closed"
+op = "false"
+approx = false
+cite = "facts_elec_gen.verified.md:73"
+
+[[expect]]
+id = "07_vfsg_loss_inflight_bus_tie.e02"
+t_s = 10.2
+signal = "elec.bus.L1_235.energized"
+op = "true"
+approx = false
+cite = "facts_elec_dist.verified.md:44"
+
+[[expect]]
+id = "07_vfsg_loss_inflight_bus_tie.e03"
+t_s = 10.2
+signal = "elec.bus.L1_235.source"
+op = "eq"
+value = "ring_tie"
+approx = false
+cite = "facts_elec_dist.verified.md:44"
+
+[[expect]]
+id = "07_vfsg_loss_inflight_bus_tie.e04"
+t_s = 10.2
+signal = "elec.bus_tie.btb_l1.closed"
+op = "true"
+approx = false
+cite = "facts_elec_dist.verified.md:36"
+
+[[expect]]
+id = "07_vfsg_loss_inflight_bus_tie.e05"
+t_s = 10.2
+signal = "elec.bus.L2_235.source"
+op = "eq"
+value = "L2_VFSG"
+approx = false
+cite = "facts_elec_dist.verified.md:43"
+
+[[expect]]
+id = "07_vfsg_loss_inflight_bus_tie.e06"
+t_s = 10.2
+signal = "elec.bus.R1_235.source"
+op = "eq"
+value = "R1_VFSG"
+approx = false
+cite = "facts_elec_dist.verified.md:43"
+
+[[expect]]
+id = "07_vfsg_loss_inflight_bus_tie.e07"
+t_s = 11.0
+signal = "elec.msg.ELEC_GEN_OFF_L1"
+op = "present"
+approx = false
+cite = "elec2_r7_crew_interface.verified.md:204"
+
+[[expect]]
+id = "07_vfsg_loss_inflight_bus_tie.e08"
+t_s = 10.2
+signal = "elec.msg.ELEC_GEN_DRIVE_L1"
+op = "present"
+approx = false
+cite = "facts_elec_gen.verified.md:66"
+
+[[expect]]
+id = "07_vfsg_loss_inflight_bus_tie.e09"
+t_s = 10.2
+signal = "elec.disc_light.drive_l1"
+op = "true"
+approx = false
+cite = "facts_elec_gen.verified.md:65"
+
+[[expect]]
+id = "07_vfsg_loss_inflight_bus_tie.e10"
+t_s = 10.5
+signal = "elec.bus.L1_235.dropout_s"
+op = "lt"
+value = 0.5
+unit = "s"
+approx = true
+cite = "none"
+
+[[expect]]
+id = "07_vfsg_loss_inflight_bus_tie.e11"
+t_s = 10.5
+signal = "elec.msg.ELEC_AC_BUS_L1"
+op = "absent"
+approx = false
+cite = "facts_elec_dist.verified.md:45"
+
+[[expect]]
+id = "07_vfsg_loss_inflight_bus_tie.e12"
+t_s = 10.5
+signal = "elec.rat.deployed"
+op = "false"
+approx = true
+cite = "none"
+
+[[expect]]
+id = "07_vfsg_loss_inflight_bus_tie.e13"
+t_s = 10.5
+signal = "elec.load_shed.active"
+op = "false"
+approx = true
+cite = "none"
+
+[[expect]]
+id = "07_vfsg_loss_inflight_bus_tie.e14"
+t_s = 60.0
+signal = "elec.mmel.apu_required_with_vfsg_inop"
+op = "true"
+approx = false
+cite = "facts_elec_gen.verified.md:115"
+
+[[expect]]
+id = "07_vfsg_loss_inflight_bus_tie.e15"
+t_s = 150.0
+signal = "elec.asg.l.gen_on_bus"
+op = "true"
+approx = false
+cite = "facts_elec_gen.verified.md:178"
+
+[[expect]]
+id = "07_vfsg_loss_inflight_bus_tie.e16"
+t_s = 150.0
+signal = "elec.vfsg.remaining_load_kva_max"
+op = "lt"
+value = 250.0
+unit = "kVA"
+approx = false
+cite = "facts_elec_gen.verified.md:20"
+
+[[expect]]
+id = "07_vfsg_loss_inflight_bus_tie.e17"
+t_s = 150.0
+signal = "elec.drive.reconnect_inflight"
+op = "eq"
+value = "not_possible"
+approx = false
+cite = "facts_elec_gen.verified.md:69"

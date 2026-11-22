@@ -1,0 +1,166 @@
+[scenario]
+id = "13_load_shed_on_generator_loss"
+title = "Load shed on external power overload and generator loss"
+system = "24-electrical"
+aircraft = "787-9"
+engines = "trent1000"
+tick_hz = 1000
+summary = "External power overloads shed sequentially at 5 s and in large groups; generator loss sheds to remaining source capacity."
+
+[initial]
+airplane_state = "cold_dark"
+on_ground = true
+battery_switch = "ON"
+apu_battery_connected = true
+ext_pwr_fwd_l = "unplugged"
+ext_pwr_fwd_r = "unplugged"
+ext_pwr_aft = "unplugged"
+gen_ctrl_switches = "ON"
+oat_c = 15.0
+apu_running = true
+apu_gens_online = true
+
+[[step]]
+t_s = 0.0
+actor = "ground"
+action = "connect"
+target = "EXT_PWR_FWD_L"
+value = { v_ll = 115.0, hz = 400.0, kva = 90.0 }
+
+[[step]]
+t_s = 2.0
+actor = "crew"
+action = "press"
+target = "EXT_PWR_FWD_L"
+value = "ON"
+
+[[step]]
+t_s = 10.0
+actor = "sim"
+action = "set"
+target = "load.total_kva_on_ext_pwr_fwd_l"
+value = 100.0
+
+[[step]]
+t_s = 40.0
+actor = "sim"
+action = "set"
+target = "load.total_kva_on_ext_pwr_fwd_l"
+value = 120.0
+
+[[step]]
+t_s = 80.0
+actor = "fault"
+action = "asg_fail"
+target = "L"
+
+[[expect]]
+id = "13_load_shed_on_generator_loss.e01"
+t_s = 10.0
+signal = "elec.load_shed.active"
+op = "false"
+approx = true
+cite = "none"
+
+[[expect]]
+id = "13_load_shed_on_generator_loss.e02"
+t_s = 14.0
+signal = "elec.load_shed.step_count"
+op = "gt"
+value = 0
+approx = false
+cite = "elec2_r8_timing_loads.md:49"
+
+[[expect]]
+id = "13_load_shed_on_generator_loss.e03"
+t_s = 20.0
+signal = "elec.load_shed.step_interval_s"
+op = "approx"
+value = 5.0
+tol = 0.2
+unit = "s"
+approx = false
+cite = "elec2_r8_timing_loads.md:51"
+
+[[expect]]
+id = "13_load_shed_on_generator_loss.e04"
+t_s = 20.0
+signal = "elec.load_shed.threshold_5min_kva"
+op = "approx"
+value = 90.0
+tol = 0.0
+unit = "kVA"
+approx = false
+cite = "elec2_r8_timing_loads.md:49"
+
+[[expect]]
+id = "13_load_shed_on_generator_loss.e05"
+t_s = 45.0
+signal = "elec.load_shed.large_group_threshold_kva"
+op = "approx"
+value = 112.5
+tol = 0.0
+unit = "kVA"
+approx = false
+cite = "elec2_r8_timing_loads.md:50"
+
+[[expect]]
+id = "13_load_shed_on_generator_loss.e06"
+t_s = 45.0
+signal = "elec.load_shed.group_shed"
+op = "true"
+approx = false
+cite = "elec2_r8_timing_loads.md:50"
+
+[[expect]]
+id = "13_load_shed_on_generator_loss.e07"
+t_s = 45.0
+signal = "elec.load_shed.cabin_lighting_low_before_ife_off"
+op = "true"
+approx = false
+cite = "elec2_r8_timing_loads.md:56"
+
+[[expect]]
+id = "13_load_shed_on_generator_loss.e08"
+t_s = 80.2
+signal = "elec.bus.L1_235.energized"
+op = "true"
+approx = false
+cite = "facts_elec_dist.verified.md:44"
+
+[[expect]]
+id = "13_load_shed_on_generator_loss.e09"
+t_s = 80.2
+signal = "elec.load_shed.nonessential_shed_to_remaining_source"
+op = "true"
+approx = false
+cite = "facts_elec_gen.verified.md:128"
+
+[[expect]]
+id = "13_load_shed_on_generator_loss.e10"
+t_s = 80.2
+signal = "elec.load.thermal_cb_loads_shed"
+op = "false"
+approx = false
+cite = "facts_elec_dist.verified.md:75"
+
+[[expect]]
+id = "13_load_shed_on_generator_loss.e11"
+t_s = 100.0
+signal = "elec.ground_handling_loads.freq_hz_max"
+op = "lt"
+value = 440.0
+unit = "Hz"
+approx = false
+cite = "facts_elec_dist.verified.md:191"
+
+[[expect]]
+id = "13_load_shed_on_generator_loss.e12"
+t_s = 100.0
+signal = "elec.load_shed.pecs_thermal_threshold_f"
+op = "approx"
+value = 148.0
+tol = 1.0
+unit = "F"
+approx = false
+cite = "elec2_r8_timing_loads.md:54"

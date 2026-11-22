@@ -9,16 +9,25 @@ publish.workspace = true
 [lib]
 name = "sys_electrical"
 
+[features]
+default = ["sources", "storage", "protection", "pdu", "control", "crew", "net", "heat", "faults", "system", "inspector"]
+sources = []
+storage = []
+protection = []
+pdu = ["protection"]
+control = []
+crew = []
+net = ["sources", "storage", "protection", "dep:b789-solver-electrical"]
+heat = ["dep:b789-solver-thermal"]
+faults = ["dep:b789-failures"]
+system = ["sources", "storage", "protection", "pdu", "control", "crew", "net", "heat", "faults"]
+inspector = ["system", "dep:b789-render"]
+
 [dependencies]
-b789-units.workspace = true
-b789-clock.workspace = true
-b789-store.workspace = true
-b789-bus.workspace = true
-b789-lru.workspace = true
-b789-failures.workspace = true
-b789-render.workspace = true
-b789-solver-electrical.workspace = true
-b789-solver-thermal.workspace = true
+b789-solver-electrical = { workspace = true, optional = true }
+b789-solver-thermal = { workspace = true, optional = true }
+b789-failures = { workspace = true, optional = true }
+b789-render = { workspace = true, optional = true }
 
 [lints]
 workspace = true

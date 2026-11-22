@@ -1,0 +1,82 @@
+[scenario]
+id = "16_battery_off_shutdown_sequence"
+title = "Battery OFF shutdown timing and MBR hold"
+system = "24-electrical"
+aircraft = "787-9"
+engines = "trent1000"
+tick_hz = 1000
+summary = "Twenty second shutdown window, MBR opens, CCS held up 11 s by hot battery bus output."
+
+[initial]
+airplane_state = "cold_dark"
+on_ground = true
+battery_switch = "ON"
+apu_battery_connected = true
+ext_pwr_fwd_l = "unplugged"
+ext_pwr_fwd_r = "unplugged"
+ext_pwr_aft = "unplugged"
+gen_ctrl_switches = "ON"
+oat_c = 15.0
+
+[[step]]
+t_s = 0.0
+actor = "sim"
+action = "advance"
+target = "clock_s"
+value = 60.0
+
+[[step]]
+t_s = 60.0
+actor = "crew"
+action = "press"
+target = "BATTERY"
+value = "OFF"
+
+[[expect]]
+id = "16_battery_off_shutdown_sequence.e01"
+t_s = 60.5
+signal = "elec.shutdown.active"
+op = "true"
+approx = false
+cite = "elec2_r8_timing_loads.md:25"
+
+[[expect]]
+id = "16_battery_off_shutdown_sequence.e02"
+t_s = 79.0
+signal = "elec.mbr.closed"
+op = "true"
+approx = false
+cite = "elec2_r5_batteries_backup.md:43"
+
+[[expect]]
+id = "16_battery_off_shutdown_sequence.e03"
+t_s = 81.0
+signal = "elec.mbr.closed"
+op = "false"
+approx = false
+cite = "elec2_r5_batteries_backup.md:39"
+
+[[expect]]
+id = "16_battery_off_shutdown_sequence.e04"
+t_s = 85.0
+signal = "elec.ccs.powered"
+op = "true"
+approx = false
+cite = "elec2_r5_batteries_backup.md:42"
+
+[[expect]]
+id = "16_battery_off_shutdown_sequence.e05"
+t_s = 92.0
+signal = "elec.ccs.powered"
+op = "false"
+approx = false
+cite = "elec2_r5_batteries_backup.md:42"
+
+[[expect]]
+id = "16_battery_off_shutdown_sequence.e06"
+t_s = 92.0
+signal = "elec.mode"
+op = "eq"
+value = "cold_dark"
+approx = true
+cite = "none"

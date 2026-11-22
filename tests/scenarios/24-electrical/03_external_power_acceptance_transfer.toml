@@ -1,0 +1,271 @@
+[scenario]
+id = "03_external_power_acceptance_transfer"
+title = "External power L FWD, R FWD, AFT: accept and transfer"
+system = "24-electrical"
+aircraft = "787-9"
+engines = "trent1000"
+tick_hz = 1000
+summary = "Acceptance sequence for three receptacles, 90/90/65 kVA ratings, 150 ms quality window and 300 ms transfer delay."
+
+[initial]
+airplane_state = "cold_dark"
+on_ground = true
+battery_switch = "ON"
+apu_battery_connected = true
+ext_pwr_fwd_l = "unplugged"
+ext_pwr_fwd_r = "unplugged"
+ext_pwr_aft = "unplugged"
+gen_ctrl_switches = "ON"
+oat_c = 15.0
+apu_running = false
+
+[[step]]
+t_s = 0.0
+actor = "ground"
+action = "connect"
+target = "EXT_PWR_FWD_L"
+value = { v_ll = 115.0, hz = 400.0, kva = 90.0 }
+
+[[step]]
+t_s = 5.0
+actor = "crew"
+action = "press"
+target = "EXT_PWR_FWD_L"
+value = "ON"
+
+[[step]]
+t_s = 10.0
+actor = "ground"
+action = "connect"
+target = "EXT_PWR_FWD_R"
+value = { v_ll = 115.0, hz = 400.0, kva = 90.0 }
+
+[[step]]
+t_s = 12.0
+actor = "crew"
+action = "press"
+target = "EXT_PWR_FWD_R"
+value = "ON"
+
+[[step]]
+t_s = 20.0
+actor = "ground"
+action = "connect"
+target = "EXT_PWR_AFT"
+value = { v_ll = 115.0, hz = 400.0, kva = 90.0 }
+
+[[step]]
+t_s = 22.0
+actor = "crew"
+action = "press"
+target = "EXT_PWR_AFT"
+value = "ON"
+
+[[step]]
+t_s = 40.0
+actor = "crew"
+action = "press"
+target = "EXT_PWR_FWD_L"
+value = "OFF"
+
+[[step]]
+t_s = 50.0
+actor = "crew"
+action = "press"
+target = "EXT_PWR_FWD_R"
+value = "OFF"
+
+[[expect]]
+id = "03_external_power_acceptance_transfer.e01"
+t_s = 1.0
+signal = "elec.mode"
+op = "eq"
+value = "ground_handling"
+approx = false
+cite = "elec_conditions.verified.md:64"
+
+[[expect]]
+id = "03_external_power_acceptance_transfer.e02"
+t_s = 1.0
+signal = "elec.bus.L_115.energized"
+op = "true"
+approx = false
+cite = "facts_elec_dist.verified.md:57"
+
+[[expect]]
+id = "03_external_power_acceptance_transfer.e03"
+t_s = 1.0
+signal = "elec.load.battery_chargers"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:63"
+
+[[expect]]
+id = "03_external_power_acceptance_transfer.e04"
+t_s = 0.1
+signal = "elec.epc.fwd_l.closed"
+op = "false"
+approx = false
+cite = "elec2_r8_timing_loads.md:39"
+
+[[expect]]
+id = "03_external_power_acceptance_transfer.e05"
+t_s = 5.5
+signal = "elec.epc.fwd_l.closed"
+op = "true"
+approx = false
+cite = "elec2_r8_timing_loads.md:40"
+
+[[expect]]
+id = "03_external_power_acceptance_transfer.e06"
+t_s = 6.0
+signal = "elec.mode"
+op = "eq"
+value = "external_power_on"
+approx = false
+cite = "elec_conditions.verified.md:68"
+
+[[expect]]
+id = "03_external_power_acceptance_transfer.e07"
+t_s = 6.0
+signal = "elec.bus.L_115.energized"
+op = "true"
+approx = false
+cite = "facts_elec_dist.verified.md:57"
+
+[[expect]]
+id = "03_external_power_acceptance_transfer.e08"
+t_s = 6.0
+signal = "elec.pecs.loops_active"
+op = "eq"
+value = 1
+approx = false
+cite = "elec_conditions.verified.md:69"
+
+[[expect]]
+id = "03_external_power_acceptance_transfer.e09"
+t_s = 6.0
+signal = "elec.load.packs"
+op = "false"
+approx = false
+cite = "elec_conditions.verified.md:74"
+
+[[expect]]
+id = "03_external_power_acceptance_transfer.e10"
+t_s = 6.0
+signal = "elec.ext_pwr.fwd_l.kva_limit"
+op = "eq"
+value = 90.0
+tol = 0.0
+unit = "kVA"
+approx = false
+cite = "facts_elec_gen.verified.md:230"
+
+[[expect]]
+id = "03_external_power_acceptance_transfer.e11"
+t_s = 13.0
+signal = "elec.epc.fwd_r.closed"
+op = "true"
+approx = false
+cite = "elec2_r8_timing_loads.md:40"
+
+[[expect]]
+id = "03_external_power_acceptance_transfer.e12"
+t_s = 13.0
+signal = "elec.pecs.loops_active"
+op = "eq"
+value = 2
+approx = false
+cite = "elec_conditions.verified.md:73"
+
+[[expect]]
+id = "03_external_power_acceptance_transfer.e13"
+t_s = 13.0
+signal = "elec.bus.L_115.separated_from_R_115"
+op = "true"
+approx = false
+cite = "facts_elec_dist.verified.md:54"
+
+[[expect]]
+id = "03_external_power_acceptance_transfer.e14"
+t_s = 13.0
+signal = "elec.load.ngs"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:70"
+
+[[expect]]
+id = "03_external_power_acceptance_transfer.e15"
+t_s = 13.0
+signal = "elec.load.hydraulics_limited"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:71"
+
+[[expect]]
+id = "03_external_power_acceptance_transfer.e16"
+t_s = 13.0
+signal = "elec.load.ife_limited"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:72"
+
+[[expect]]
+id = "03_external_power_acceptance_transfer.e17"
+t_s = 23.0
+signal = "elec.bus.L2_270vdc.energized"
+op = "true"
+approx = false
+cite = "facts_elec_gen.verified.md:244"
+
+[[expect]]
+id = "03_external_power_acceptance_transfer.e18"
+t_s = 23.0
+signal = "elec.ext_pwr.aft.kva_limit"
+op = "eq"
+value = 65.0
+tol = 0.0
+unit = "kVA"
+approx = false
+cite = "facts_elec_gen.verified.md:231"
+
+[[expect]]
+id = "03_external_power_acceptance_transfer.e19"
+t_s = 23.0
+signal = "elec.aft_ep.path"
+op = "eq"
+value = "L2_ATRU"
+approx = false
+cite = "facts_elec_gen.verified.md:244"
+
+[[expect]]
+id = "03_external_power_acceptance_transfer.e20"
+t_s = 41.0
+signal = "elec.bus.L_115.energized"
+op = "true"
+approx = false
+cite = "facts_elec_dist.verified.md:55"
+
+[[expect]]
+id = "03_external_power_acceptance_transfer.e21"
+t_s = 41.0
+signal = "elec.bus.R_115.energized"
+op = "true"
+approx = false
+cite = "facts_elec_dist.verified.md:55"
+
+[[expect]]
+id = "03_external_power_acceptance_transfer.e22"
+t_s = 41.0
+signal = "elec.bus_tie_115.both_closed"
+op = "false"
+approx = false
+cite = "facts_elec_dist.verified.md:55"
+
+[[expect]]
+id = "03_external_power_acceptance_transfer.e23"
+t_s = 51.0
+signal = "elec.bus.L_115.energized"
+op = "true"
+approx = false
+cite = "facts_elec_dist.verified.md:57"

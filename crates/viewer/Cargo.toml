@@ -1,0 +1,22 @@
+[package]
+name = "b789-viewer"
+description = "Desktop sim tablet viewer: live electrical system with seeded states and fault keys."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[[bin]]
+name = "viewer"
+path = "src/main.rs"
+
+[dependencies]
+b789-render.workspace = true
+b789-tablet.workspace = true
+b789-sys-electrical.workspace = true
+winit = "0.30.5"
+softbuffer = "0.4.6"
+ab_glyph = "0.2.32"
+
+[lints]
+workspace = true

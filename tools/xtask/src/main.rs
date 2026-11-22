@@ -1,9 +1,3 @@
-//! Project checks.
-//!
-//! `cargo xtask layers` checks that local crate dependencies only point the allowed way:
-//! systems -> solvers -> core, tablet -> core, and only the hosts (sim-cli, xp-host) see everything.
-//! `cargo xtask check` runs the layering check, then fmt, clippy and the tests.
-
 use std::collections::BTreeMap;
 use std::fs;
 use std::path::{Path, PathBuf};
@@ -29,7 +23,7 @@ fn layer_of(path: &str) -> Option<Layer> {
         Some(Layer::System)
     } else if p == "crates/tablet" {
         Some(Layer::Tablet)
-    } else if p == "crates/sim-cli" || p == "crates/xp-host" {
+    } else if p == "crates/sim-cli" || p == "crates/viewer" || p == "crates/xp-host" {
         Some(Layer::Host)
     } else if p.starts_with("tools/") {
         Some(Layer::Tool)
@@ -38,14 +32,11 @@ fn layer_of(path: &str) -> Option<Layer> {
     }
 }
 
-/// May a crate in `from` depend on `to` (named `dep`)?
 fn allowed(from: Layer, to: Layer, dep: &str) -> bool {
     use Layer::*;
     match from {
         Core => to == Core,
-        // Solvers know nothing about the aircraft; they may share only the common maths crate.
         Solver => to == Core || (to == Solver && dep == "b789-solver-common"),
-        // Systems never depend on each other.
         System => to == Core || to == Solver,
         Tablet => to == Core,
         Host => to != Tool,
@@ -60,7 +51,6 @@ fn root() -> PathBuf {
         .expect("workspace root")
 }
 
-/// Local packages from `[workspace.dependencies]` in the root manifest: name -> relative path.
 fn local_packages(root: &Path) -> BTreeMap<String, String> {
     let text = fs::read_to_string(root.join("Cargo.toml")).expect("root Cargo.toml");
     let mut out = BTreeMap::new();
@@ -84,7 +74,6 @@ fn local_packages(root: &Path) -> BTreeMap<String, String> {
     out
 }
 
-/// Names of local (`b789-`) crates a manifest depends on, in any dependency section.
 fn local_deps(manifest: &str) -> Vec<String> {
     let mut out = Vec::new();
     let mut in_deps = false;
@@ -111,6 +100,7 @@ fn layers() -> bool {
     let mut members: Vec<(String, String)> = pkgs.iter().map(|(n, p)| (n.clone(), p.clone())).collect();
     members.push(("b789-sim-cli".into(), "crates/sim-cli".into()));
     members.push(("b789-xp-host".into(), "crates/xp-host".into()));
+    members.push(("b789-viewer".into(), "crates/viewer".into()));
     members.push(("xtask".into(), "tools/xtask".into()));
     let mut ok = true;
     let mut edges = 0;

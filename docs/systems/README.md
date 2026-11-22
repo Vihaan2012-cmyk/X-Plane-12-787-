@@ -41,7 +41,7 @@ Hardware, physics, software behaviour, links, failures, temperature/wear/airfram
 | S5 | Shared: timing | [shared-timing.md](shared-timing.md) | Draft |
 | S7 | Shared: system inspector pages | [shared-inspector.md](shared-inspector.md) | Draft + mockups |
 | 1 | Inertial (2 IRU + 2 AHRU) and air data (ADRS) | [34-adirs.md](34-adirs.md) | Draft, corrected against the LOT FCOM |
-| 2 | Electrical, including every circuit breaker | [24-electrical.md](24-electrical.md) | First pass |
+| 2 | Electrical, including every circuit breaker | [24-electrical.md](24-electrical.md) | Full plan |
 | 3 | Central computers and data network (CCS/CDN) | [42-ccs-cdn.md](42-ccs-cdn.md) | Draft |
 | 4 | Engines (Trent 1000-J3) | [71-engines.md](71-engines.md) | Draft, from 711 verified facts |
 | 5 | APU | | |

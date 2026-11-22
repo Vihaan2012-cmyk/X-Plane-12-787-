@@ -1,0 +1,29 @@
+[[fact]]
+id = "F24-057"
+quantity = "start.fire_bottle_warm_threshold_f"
+expected = -40.0
+unit = "F"
+tol = 0.0
+condition = "parked unpowered"
+approx = false
+cite = "facts_elec_gen.verified.md:161"
+
+[[fact]]
+id = "F24-058"
+quantity = "start.fire_bottle_warm_target_f"
+expected = -10.0
+unit = "F"
+tol = 0.0
+condition = "warm to"
+approx = false
+cite = "facts_elec_gen.verified.md:161"
+
+[[fact]]
+id = "F24-059"
+quantity = "start.fire_bottle_warm_time_h"
+expected = 1.5
+unit = "h"
+tol = 0.0
+condition = "minimum"
+approx = false
+cite = "facts_elec_gen.verified.md:161"

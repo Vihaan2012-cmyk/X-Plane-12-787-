@@ -1,0 +1,119 @@
+[[fact]]
+id = "F24-050"
+quantity = "start.time_two_vfsg_min_s"
+expected = 55.0
+unit = "s"
+tol = 0.0
+condition = "both VFSGs"
+approx = false
+cite = "facts_elec_gen.verified.md:109"
+
+[[fact]]
+id = "F24-051"
+quantity = "start.time_two_vfsg_max_s"
+expected = 60.0
+unit = "s"
+tol = 0.0
+condition = "both VFSGs"
+approx = false
+cite = "facts_elec_gen.verified.md:109"
+
+[[fact]]
+id = "F24-052"
+quantity = "start.time_one_vfsg_min_s"
+expected = 75.0
+unit = "s"
+tol = 0.0
+condition = "one VFSG"
+approx = false
+cite = "facts_elec_gen.verified.md:108"
+
+[[fact]]
+id = "F24-053"
+quantity = "start.time_one_vfsg_max_s"
+expected = 80.0
+unit = "s"
+tol = 0.0
+condition = "one VFSG"
+approx = false
+cite = "facts_elec_gen.verified.md:108"
+
+[[fact]]
+id = "F24-056"
+quantity = "start.oil_min_temp_c"
+expected = -40.0
+unit = "C"
+tol = 0.0
+condition = "must exceed"
+approx = false
+cite = "facts_elec_gen.verified.md:160"
+
+[[fact]]
+id = "F24-061"
+quantity = "start.ignitor_n2_rr_pct"
+expected = 6.0
+unit = "%N2"
+tol = 0.0
+condition = "one ignitor RR"
+approx = false
+cite = "facts_elec_gen.verified.md:141"
+
+[[fact]]
+id = "F24-062"
+quantity = "start.ignitor_n2_ge_pct"
+expected = 15.0
+unit = "%N2"
+tol = 0.0
+condition = "one ignitor GE"
+approx = false
+cite = "facts_elec_gen.verified.md:142"
+
+[[fact]]
+id = "F24-063"
+quantity = "start.vfsg_cutout_n2_rr_pct"
+expected = 46.7
+unit = "%N2"
+tol = 0.0
+condition = "RR"
+approx = false
+cite = "facts_elec_gen.verified.md:143"
+
+[[fact]]
+id = "F24-064"
+quantity = "start.vfsg_cutout_n2_ge_pct"
+expected = 65.0
+unit = "%N2"
+tol = 0.0
+condition = "GE"
+approx = false
+cite = "facts_elec_gen.verified.md:144"
+
+[[fact]]
+id = "F24-065"
+quantity = "start.stabilize_n2_ge_pct"
+expected = 66.0
+unit = "%N2"
+tol = 0.0
+condition = "GE"
+approx = false
+cite = "facts_elec_gen.verified.md:146"
+
+[[fact]]
+id = "F24-066"
+quantity = "start.warmup_min"
+expected = 2.0
+unit = "min"
+tol = 0.0
+condition = "minimum at or near idle"
+approx = false
+cite = "facts_elec_gen.verified.md:148"
+
+[[fact]]
+id = "F24-067"
+quantity = "start.cooldown_before_shutdown_min"
+expected = 3.0
+unit = "min"
+tol = 0.0
+condition = "minimum"
+approx = false
+cite = "facts_elec_gen.verified.md:149"

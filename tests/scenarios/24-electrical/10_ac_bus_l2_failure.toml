@@ -1,0 +1,110 @@
+[scenario]
+id = "10_ac_bus_l2_failure"
+title = "L2 235 VAC bus failure, QRH inoperative items"
+system = "24-electrical"
+aircraft = "787-9"
+engines = "trent1000"
+tick_hz = 1000
+summary = "L2 bus lost with lockout; QRH inoperative item list per conditions file rows."
+
+[initial]
+airplane_state = "cruise"
+on_ground = false
+battery_switch = "ON"
+apu_battery_connected = true
+ext_pwr_fwd_l = "unplugged"
+ext_pwr_fwd_r = "unplugged"
+ext_pwr_aft = "unplugged"
+gen_ctrl_switches = "ON"
+oat_c = 15.0
+engines_running = [true, true]
+apu_running = false
+alt_ft = 35000.0
+
+[[step]]
+t_s = 10.0
+actor = "fault"
+action = "bus_fail"
+target = "L2_235"
+value = "dead_short_lockout"
+
+[[expect]]
+id = "10_ac_bus_l2_failure.e01"
+t_s = 10.1
+signal = "elec.bus.L2_235.energized"
+op = "false"
+approx = false
+cite = "facts_elec_dist.verified.md:45"
+
+[[expect]]
+id = "10_ac_bus_l2_failure.e02"
+t_s = 10.6
+signal = "elec.msg.ELEC_AC_BUS_L2"
+op = "present"
+approx = false
+cite = "elec2_r7_crew_interface.verified.md:195"
+
+[[expect]]
+id = "10_ac_bus_l2_failure.e03"
+t_s = 10.5
+signal = "elec.load.spoilers_one_or_more"
+op = "false"
+approx = false
+cite = "elec_conditions.verified.md:11"
+
+[[expect]]
+id = "10_ac_bus_l2_failure.e04"
+t_s = 10.5
+signal = "elec.load.right_demand_hydraulic_pump"
+op = "false"
+approx = false
+cite = "elec_conditions.verified.md:12"
+
+[[expect]]
+id = "10_ac_bus_l2_failure.e05"
+t_s = 10.5
+signal = "elec.load.right_aft_fuel_pump"
+op = "false"
+approx = false
+cite = "elec_conditions.verified.md:13"
+
+[[expect]]
+id = "10_ac_bus_l2_failure.e06"
+t_s = 10.5
+signal = "elec.load.l2_stabilizer"
+op = "false"
+approx = false
+cite = "elec_conditions.verified.md:14"
+
+[[expect]]
+id = "10_ac_bus_l2_failure.e07"
+t_s = 10.5
+signal = "elec.load.wing_anti_ice"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:10"
+
+[[expect]]
+id = "10_ac_bus_l2_failure.e08"
+t_s = 10.5
+signal = "elec.condition.apu_started_required"
+op = "true"
+approx = false
+cite = "elec_conditions.verified.md:10"
+
+[[expect]]
+id = "10_ac_bus_l2_failure.e09"
+t_s = 10.5
+signal = "elec.rat.deployed"
+op = "false"
+approx = true
+cite = "none"
+
+[[expect]]
+id = "10_ac_bus_l2_failure.e10"
+t_s = 10.5
+signal = "elec.other_ac_buses.energized_count"
+op = "eq"
+value = 3
+approx = true
+cite = "none"

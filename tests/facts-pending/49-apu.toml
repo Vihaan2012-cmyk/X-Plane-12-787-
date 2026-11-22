@@ -1,0 +1,19 @@
+[[fact]]
+id = "F24-070"
+quantity = "asg.rpm_min"
+expected = 11600.0
+unit = "rpm"
+tol = 0.0
+condition = "generator mode"
+approx = false
+cite = "facts_elec_gen.verified.md:174"
+
+[[fact]]
+id = "F24-071"
+quantity = "asg.rpm_max"
+expected = 13200.0
+unit = "rpm"
+tol = 0.0
+condition = "generator mode"
+approx = false
+cite = "facts_elec_gen.verified.md:174"

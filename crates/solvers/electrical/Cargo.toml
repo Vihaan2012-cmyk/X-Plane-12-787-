@@ -10,7 +10,6 @@ publish.workspace = true
 name = "solver_electrical"
 
 [dependencies]
-b789-units.workspace = true
 b789-solver-common.workspace = true
 
 [lints]
