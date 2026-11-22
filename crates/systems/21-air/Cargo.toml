@@ -1,0 +1,16 @@
+[package]
+name = "b789-sys-air"
+description = "ATA 21: air conditioning, pressurisation, cooling."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "sys_air"
+
+[dependencies]
+
+
+[lints]
+workspace = true

@@ -1,0 +1,16 @@
+[package]
+name = "b789-sys-cmcf"
+description = "ATA 45: central maintenance computing."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "sys_cmcf"
+
+[dependencies]
+
+
+[lints]
+workspace = true

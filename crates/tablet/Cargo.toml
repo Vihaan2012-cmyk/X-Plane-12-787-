@@ -1,0 +1,17 @@
+[package]
+name = "b789-tablet"
+description = "The sim tablet: inspector, failures, ground services, settings. Systems register their own pages."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "tablet"
+
+[dependencies]
+b789-render.workspace = true
+b789-store.workspace = true
+
+[lints]
+workspace = true

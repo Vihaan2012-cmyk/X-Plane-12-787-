@@ -1,0 +1,16 @@
+[package]
+name = "b789-sys-gear"
+description = "ATA 32: landing gear, brakes, steering."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "sys_gear"
+
+[dependencies]
+
+
+[lints]
+workspace = true

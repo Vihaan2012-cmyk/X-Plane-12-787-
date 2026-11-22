@@ -1,0 +1,16 @@
+[package]
+name = "b789-sys-fuel"
+description = "ATA 28/47: fuel and nitrogen generation."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "sys_fuel"
+
+[dependencies]
+
+
+[lints]
+workspace = true

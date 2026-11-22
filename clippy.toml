@@ -1,0 +1,8 @@
+disallowed-types = [
+  { path = "std::collections::HashMap", reason = "random iteration order breaks determinism; use BTreeMap or the store" },
+  { path = "std::collections::HashSet", reason = "random iteration order breaks determinism; use BTreeSet" },
+]
+disallowed-methods = [
+  { path = "std::time::Instant::now", reason = "sim time comes only from the clock crate" },
+  { path = "std::time::SystemTime::now", reason = "sim time comes only from the clock crate" },
+]

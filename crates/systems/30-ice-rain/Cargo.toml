@@ -1,0 +1,16 @@
+[package]
+name = "b789-sys-ice-rain"
+description = "ATA 30: ice and rain protection."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "sys_ice_rain"
+
+[dependencies]
+
+
+[lints]
+workspace = true

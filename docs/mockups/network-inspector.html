@@ -1,0 +1,126 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>CDN Inspector mockup</title>
+<style>
+:root{--bg:#111;--txt:#ddd;--dim:#888;--line:#2a2a2a;--sel:#1e1e1e;--bad:#e05555}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font:12px/1.45 Consolas,"Cascadia Mono",monospace;width:1600px;height:960px;overflow:hidden}
+.top{display:flex;gap:28px;padding:10px 16px;border-bottom:1px solid var(--line)}
+.top b{font-weight:600}
+.dim{color:var(--dim)}.bad{color:var(--bad)}
+.wrap{display:grid;grid-template-columns:1fr 520px;grid-template-rows:1fr 230px;height:918px}
+.box{border-right:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+.box h2{margin:0;font-size:12px;font-weight:600;padding:8px 16px;border-bottom:1px solid var(--line)}
+.box h2 span{color:var(--dim);font-weight:400;margin-left:12px}
+table{border-collapse:collapse;width:100%}
+th{color:var(--dim);font-weight:400;text-align:left;padding:5px 16px 5px 0;border-bottom:1px solid var(--line)}
+td{padding:3px 16px 3px 0;white-space:nowrap}
+th:first-child,td:first-child{padding-left:16px}
+tr.sel td{background:var(--sel)}
+.pad{padding:10px 16px}
+.kv{display:grid;grid-template-columns:110px 1fr;gap:3px 12px}
+.kv div:nth-child(odd){color:var(--dim)}
+h3{font-size:12px;font-weight:600;margin:16px 0 6px}
+.raw{color:var(--dim);line-height:1.6}
+</style></head><body>
+
+<div class="top">
+  <b>CDN INSPECTOR</b>
+  <span>ARINC 664 P7</span>
+  <span class="dim">sim time</span><span>2843.112085 s</span>
+  <span class="dim">filter</span><span>VL any · src any · param CAS* · ch A+B</span>
+  <span class="dim">rate</span><span>68 412 frames/s</span>
+  <span class="dim">state</span><span>recording</span>
+</div>
+
+<div class="wrap">
+
+<div class="box"><h2>Frames <span>18 shown · newest first</span></h2>
+<table>
+<tr><th>time</th><th>VL</th><th>source → destination</th><th>hop</th><th>ch</th><th>seq</th><th>bytes</th><th>latency</th><th>result</th></tr>
+<tr><td>2843.112044</td><td>0412</td><td>ADRF (GPM L2) → DCAS (GG L1)</td><td>ACS-L A</td><td>A</td><td>187</td><td>164</td><td>71 µs</td><td>ok, first</td></tr>
+<tr class="sel"><td>2843.112085</td><td>0412</td><td>ADRF (GPM L2) → DCAS (GG L1)</td><td>ACS-L B</td><td>B</td><td>187</td><td>164</td><td>112 µs</td><td class="dim">duplicate, discarded</td></tr>
+<tr><td>2843.111930</td><td>05A0</td><td>EEC L → DCAS, TMF, FMF</td><td>FOX-L A</td><td>A</td><td>9041</td><td>212</td><td>48 µs</td><td>ok, first</td></tr>
+<tr><td>2843.111902</td><td>0233</td><td>ADM C pitot → ADRF (GPM L2)</td><td>RDC 5</td><td>A</td><td>52218</td><td>84</td><td>39 µs</td><td>ok, first</td></tr>
+<tr><td>2843.111877</td><td>0233</td><td>ADM C pitot → ADRF (GPM R2)</td><td>ARS FWD-R B</td><td>B</td><td>52218</td><td>84</td><td>55 µs</td><td>ok, first</td></tr>
+<tr><td>2843.111640</td><td>07C1</td><td>BPCU 1 → EPDC (GPM L1, L4)</td><td>ACS-L A</td><td>A</td><td>3310</td><td>296</td><td>83 µs</td><td>ok, first</td></tr>
+<tr><td>2843.111502</td><td>0A18</td><td>RDC 12 → FQS (GPM L6)</td><td>ARS AFT-R2 B</td><td>B</td><td>—</td><td>128</td><td>—</td><td class="bad">CRC error, dropped</td></tr>
+<tr><td>2843.111498</td><td>0A18</td><td>RDC 12 → FQS (GPM L6)</td><td>ACS-L A</td><td>A</td><td>771</td><td>128</td><td>61 µs</td><td>ok, first</td></tr>
+<tr><td>2843.111390</td><td>0B07</td><td>CAC MC 3 → CATC (GPM L4)</td><td>ACS-L B</td><td>B</td><td>15006</td><td>96</td><td>—</td><td class="bad">policed, BAG violation</td></tr>
+<tr><td>2843.111201</td><td>0412</td><td>ADRF (GPM R2) → DCAS (GG R1)</td><td>ACS-R A</td><td>A</td><td>187</td><td>164</td><td>69 µs</td><td>ok, first</td></tr>
+<tr><td>2843.110844</td><td>0C40</td><td>FCM C1 → PFCF, DCAS</td><td>FOX-L A</td><td>A</td><td>40112</td><td>248</td><td>52 µs</td><td>ok, first</td></tr>
+<tr><td>2843.110731</td><td>0D02</td><td>IRU L → ADRF, FMF, DCAS</td><td>ACS-L A</td><td>A</td><td>63400</td><td>176</td><td>44 µs</td><td>ok, first</td></tr>
+<tr><td>2843.110509</td><td>0E91</td><td>RPDU 75 → CBIC (GPM L1)</td><td>ARS AFT-L1 A</td><td>A</td><td>1288</td><td>320</td><td>94 µs</td><td>ok, first</td></tr>
+<tr><td>2843.110337</td><td>0F1C</td><td>WHC 2 → WHS (GPM R4)</td><td>ACS-R B</td><td>B</td><td>9210</td><td>72</td><td>—</td><td class="bad">stale, 412 ms</td></tr>
+<tr><td>2843.110120</td><td>05A1</td><td>EEC R → DCAS, TMF, FMF</td><td>FOX-R A</td><td>A</td><td>9044</td><td>212</td><td>47 µs</td><td>ok, first</td></tr>
+<tr><td>2843.109988</td><td>1204</td><td>FMF (GPM L5) → DCAS (ND)</td><td>ACS-L A</td><td>A</td><td>2017</td><td>1471</td><td>133 µs</td><td>ok, first</td></tr>
+<tr><td>2843.109760</td><td>0233</td><td>ADM L pitot → ADRF (GPM L2)</td><td>RDC 1</td><td>A</td><td>52204</td><td>84</td><td>40 µs</td><td>ok, first</td></tr>
+<tr><td>2843.109601</td><td>1330</td><td>GCU L1 → BPCU 1, ESIC</td><td>ACS-L A</td><td>A</td><td>12885</td><td>140</td><td>58 µs</td><td>ok, first</td></tr>
+</table>
+</div>
+
+<div class="box" style="grid-row:span 2;border-right:none"><h2>Frame <span>VL 0412 · seq 187 · ch B</span></h2>
+<div class="pad">
+<div class="kv">
+  <div>captured</div><div>2843.112085 s</div>
+  <div>virtual link</div><div>0412 ADRF_AIRDATA_L</div>
+  <div>BAG / Lmax</div><div>16 ms / 200 B</div>
+  <div>dest MAC</div><div>03:00:00:00:04:12</div>
+  <div>src MAC</div><div>02:00:00:22:02:40 (GPM L2, ch B)</div>
+  <div>UDP</div><div>10.2.2.40 → 224.224.4.18 : 41012</div>
+  <div>redundancy</div><div>A accepted at +0 µs, B at +41 µs</div>
+  <div>integrity</div><div>seq 186 → 187, CRC ok</div>
+</div>
+
+<h3>Path</h3>
+<table>
+<tr><td>GPM L2 transmit</td><td>2843.111973</td><td class="dim">+0 µs</td></tr>
+<tr><td>ACS-L B port 3 → 11</td><td>2843.112016</td><td class="dim">+43 µs</td></tr>
+<tr><td>FOX-L B fibre</td><td>2843.112047</td><td class="dim">+31 µs</td></tr>
+<tr><td>GG L1 receive (duplicate)</td><td>2843.112085</td><td class="dim">+38 µs</td></tr>
+</table>
+
+<h3>Payload · ICD 4.12 · data set 1 · status normal</h3>
+<table>
+<tr><th>parameter</th><th>encoding</th><th>raw</th><th>value</th></tr>
+<tr><td>CAS</td><td>BNR16</td><td>3ED4</td><td>251.31 kt</td></tr>
+<tr><td>MACH</td><td>BNR16</td><td>6463</td><td>0.7843</td></tr>
+<tr><td>ALT_BARO</td><td>BNR20</td><td>2421A</td><td>37002 ft</td></tr>
+<tr><td>BARO_SET_CA</td><td>BCD</td><td>1013</td><td>1013 hPa</td></tr>
+<tr><td>SAT</td><td>BNR12</td><td>C6A</td><td>−56.6 °C</td></tr>
+<tr><td>AOA_L</td><td>BNR14</td><td>00E2</td><td>2.48°</td></tr>
+<tr><td>AOA_SPD_ACT</td><td>DISC</td><td>0</td><td>false</td></tr>
+</table>
+
+<h3>Data set 2 · status no computed data</h3>
+<table><tr><td>PITOT_HEAT_R_FB</td><td>DISC</td><td>—</td><td class="bad">no data (RDC 12 path down)</td></tr></table>
+
+<h3>Raw</h3>
+<div class="raw">
+03 00 00 00 04 12 02 00 00 22 02 40 08 00 45 00 00 92 ...<br>
+a0 3c 00 bb 03 3e d4 64 63 00 24 21 a0 10 13 0c 6a 00 e2<br>
+00 01 0d 00 00 00 00 00 00 00 ... bb   fcs 9f 2a 71 c4
+</div>
+</div></div>
+
+<div class="box" style="display:grid;grid-template-columns:1fr 1fr">
+<div style="border-right:1px solid var(--line)"><h2 style="border-bottom:1px solid var(--line)">Virtual links <span>last 10 s</span></h2>
+<table>
+<tr><th>VL</th><th>name</th><th>rate</th><th>latency avg/max</th><th>A/B skew</th><th>drops</th></tr>
+<tr><td>0412</td><td>ADRF_AIRDATA_L</td><td>62.5/s</td><td>74 / 133 µs</td><td>41 µs</td><td>0</td></tr>
+<tr><td>05A0</td><td>EEC_L_ENGDATA</td><td>50/s</td><td>49 / 90 µs</td><td>29 µs</td><td>0</td></tr>
+<tr><td>0A18</td><td>RDC12_FQS_PROBES</td><td>25/s</td><td>63 / 120 µs</td><td class="bad">B down</td><td class="bad">31 CRC</td></tr>
+<tr><td>0B07</td><td>CAC_MC3_STATUS</td><td>83/s</td><td>—</td><td>—</td><td class="bad">412 policed</td></tr>
+<tr><td>0F1C</td><td>WHC2_STATUS</td><td class="bad">0/s</td><td>—</td><td>—</td><td class="bad">stale 412 ms</td></tr>
+</table></div>
+<div><h2 style="border-bottom:1px solid var(--line)">Switch ports <span>since power-up</span></h2>
+<table>
+<tr><th>switch</th><th>port</th><th>link</th><th>frames</th><th>CRC</th><th>policed</th><th>queue</th></tr>
+<tr><td>ACS-L A</td><td>3</td><td>100M up</td><td>41882170</td><td>0</td><td>0</td><td>2/32</td></tr>
+<tr><td>ACS-L B</td><td>7</td><td>10M up</td><td>3120551</td><td>0</td><td class="bad">412</td><td>5/32</td></tr>
+<tr><td>ARS AFT-R1 B</td><td>12</td><td>100M up</td><td>9004312</td><td class="bad">31</td><td>0</td><td>1/32</td></tr>
+<tr><td>ARS AFT-R2 B</td><td>—</td><td class="bad">down</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>FOX-L A</td><td>fibre 2</td><td>100M up</td><td>58120904</td><td>0</td><td>0</td><td>1/32</td></tr>
+</table></div>
+</div>
+
+</div></body></html>

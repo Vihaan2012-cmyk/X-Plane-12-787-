@@ -1,0 +1,16 @@
+[package]
+name = "b789-sys-flight-controls"
+description = "ATA 27: flight control computers, actuators, high lift."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "sys_flight_controls"
+
+[dependencies]
+
+
+[lints]
+workspace = true

@@ -1,0 +1,16 @@
+[package]
+name = "b789-units"
+description = "Typed SI quantities (volts, amps, kelvin, pascals, ...) so units can't be mixed up."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "units"
+
+[dependencies]
+
+
+[lints]
+workspace = true

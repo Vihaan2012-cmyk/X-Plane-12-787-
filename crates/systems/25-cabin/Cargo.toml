@@ -1,0 +1,16 @@
+[package]
+name = "b789-sys-cabin"
+description = "ATA 25/44: cabin equipment and cabin systems."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "sys_cabin"
+
+[dependencies]
+
+
+[lints]
+workspace = true

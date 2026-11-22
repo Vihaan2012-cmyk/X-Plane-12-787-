@@ -1,0 +1,233 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css"><title>Fuel</title></head><body>
+<div class="top"><b>SYSTEMS</b><span>Fuel</span><span class="dim">sim time</span><span>2843.112 s</span><span class="dim">phase</span><span>cruise FL370</span><span class="dim">view</span><span>every valve, pump, check valve, sensor</span><span class="dim">components</span><span>71 (ATA 28 / STM / LOT facts)</span></div>
+<div class="shell"><nav><div class="h">POWER</div><div>Electrical</div><div>Engines</div><div>APU</div><div class="on">Fuel</div><div>Hydraulics</div><div class="h">FLIGHT</div><div>Flight controls</div><div>Gear, brakes</div><div>Autoflight</div><div>FMS</div><div class="h">ENVIRONMENT</div><div>Air, pressurisation</div><div>Ice and rain</div><div>Fire</div><div class="h">AVIONICS</div><div>Air data, inertial</div><div>Navigation radios</div><div>Surveillance</div><div>Communications</div><div>Displays, alerting</div><div>CCS computers</div><div>CDN network</div><div class="h">CABIN</div><div>Lights</div><div>Doors, oxygen, water</div><div>EFB, info systems</div></nav>
+<div class="diag"><h2>Fuel system <span>■ open · □ shut · ○ pump (▶ running) · △ check valve · &gt; jet pump · red = disagree / failed</span></h2><svg width="1000" height="610" viewBox="0 0 1000 610"><rect x="40" y="200" width="340" height="170" fill="#151515" stroke="#666"/>
+<rect x="400" y="200" width="200" height="170" fill="#151515" stroke="#666"/>
+<rect x="620" y="200" width="340" height="170" fill="#151515" stroke="#666"/>
+<rect x="8" y="230" width="26" height="110" fill="#131313" stroke="#555"/>
+<rect x="966" y="230" width="26" height="110" fill="#131313" stroke="#555"/>
+<text x="170" y="365" fill="#ccc" font-size="10">L MAIN 18 420 kg · −22.4 °C</text>
+<text x="440" y="365" fill="#ccc" font-size="10">CENTER 4 110 kg · −14.0 °C</text>
+<text x="730" y="365" fill="#ccc" font-size="10">R MAIN 18 380 kg · −22.1 °C</text>
+<text x="8" y="226" fill="#666" font-size="9">surge L</text>
+<text x="950" y="226" fill="#666" font-size="9">surge R</text>
+<rect x="100" y="20" width="100" height="40" fill="#1a1a1a" stroke="#ddd"/>
+<text x="110" y="37" fill="#ddd" font-size="11">ENG L</text>
+<text x="110" y="52" fill="#888" font-size="10">1 408 kg/h</text>
+<rect x="800" y="20" width="100" height="40" fill="#1a1a1a" stroke="#ddd"/>
+<text x="810" y="37" fill="#ddd" font-size="11">ENG R</text>
+<text x="810" y="52" fill="#888" font-size="10">1 412 kg/h</text>
+<rect x="470" y="20" width="60" height="40" fill="#1a1a1a" stroke="#555"/>
+<text x="482" y="37" fill="#888" font-size="11">APU</text>
+<text x="482" y="52" fill="#666" font-size="10">off</text>
+<rect x="560" y="20" width="96" height="40" fill="#1a1a1a" stroke="#777"/>
+<text x="566" y="37" fill="#bbb" font-size="10">FSM</text>
+<text x="566" y="52" fill="#888" font-size="9">hold-up 100 %</text>
+<line x1="150" y1="60" x2="150" y2="170" stroke="#e8e8e8" stroke-width="2"/>
+<rect x="145" y="95" width="10" height="10" fill="#ddd" stroke="#ddd" stroke-width="1.2"/>
+<text x="132" y="91" fill="#888" font-size="9">SPAR-L</text>
+<line x1="850" y1="60" x2="850" y2="170" stroke="#e8e8e8" stroke-width="2"/>
+<rect x="845" y="95" width="10" height="10" fill="#ddd" stroke="#ddd" stroke-width="1.2"/>
+<text x="832" y="91" fill="#888" font-size="9">SPAR-R</text>
+<line x1="500" y1="60" x2="500" y2="230" stroke="#444" stroke-dasharray="4 3" stroke-width="1.5"/>
+<rect x="495" y="95" width="10" height="10" fill="none" stroke="#ddd" stroke-width="1.2"/>
+<text x="479" y="91" fill="#888" font-size="9">APU-SOV</text>
+<line x1="60" y1="170" x2="470" y2="170" stroke="#e8e8e8" stroke-width="3"/>
+<line x1="530" y1="170" x2="940" y2="170" stroke="#e8e8e8" stroke-width="3"/>
+<line x1="470" y1="170" x2="530" y2="170" stroke="#444" stroke-dasharray="4 3" stroke-width="3"/>
+<rect x="495" y="165" width="10" height="10" fill="none" stroke="#ddd" stroke-width="1.2"/>
+<text x="485" y="161" fill="#888" font-size="9">XFEED</text>
+<line x1="110" y1="170" x2="110" y2="232" stroke="#e8e8e8" stroke-width="2"/>
+<circle cx="110" cy="240" r="8" fill="#111" stroke="#ddd" stroke-width="1.4"/>
+<path d="M107,236 L114,240 L107,244 z" fill="#ddd"/>
+<text x="95" y="260" fill="#bbb" font-size="9">L FWD</text>
+<path d="M105,218 L115,218 L110,210 z" fill="none" stroke="#999"/>
+<text x="118" y="214" fill="#666" font-size="8">PRV</text>
+<line x1="190" y1="170" x2="190" y2="232" stroke="#e8e8e8" stroke-width="2"/>
+<circle cx="190" cy="240" r="8" fill="#111" stroke="#ddd" stroke-width="1.4"/>
+<path d="M187,236 L194,240 L187,244 z" fill="#ddd"/>
+<text x="175" y="260" fill="#bbb" font-size="9">L AFT</text>
+<path d="M185,218 L195,218 L190,210 z" fill="none" stroke="#999"/>
+<text x="198" y="214" fill="#666" font-size="8">PRV</text>
+<path d="M265,234 L275,234 L270,226 z" fill="none" stroke="#999"/>
+<text x="277" y="234" fill="#666" font-size="8">suction L</text>
+<line x1="270" y1="170" x2="270" y2="226" stroke="#444" stroke-dasharray="4 3" stroke-width="1"/>
+<path d="M184,296 L196,300 L184,304" fill="none" stroke="#bbb"/>
+<text x="166" y="314" fill="#888" font-size="8">WS jet L</text>
+<line x1="810" y1="170" x2="810" y2="232" stroke="#e8e8e8" stroke-width="2"/>
+<circle cx="810" cy="240" r="8" fill="#111" stroke="#ddd" stroke-width="1.4"/>
+<path d="M807,236 L814,240 L807,244 z" fill="#ddd"/>
+<text x="795" y="260" fill="#bbb" font-size="9">R FWD</text>
+<path d="M805,218 L815,218 L810,210 z" fill="none" stroke="#999"/>
+<text x="818" y="214" fill="#666" font-size="8">PRV</text>
+<line x1="890" y1="170" x2="890" y2="232" stroke="#e8e8e8" stroke-width="2"/>
+<circle cx="890" cy="240" r="8" fill="#111" stroke="#ddd" stroke-width="1.4"/>
+<path d="M887,236 L894,240 L887,244 z" fill="#ddd"/>
+<text x="875" y="260" fill="#bbb" font-size="9">R AFT</text>
+<path d="M885,218 L895,218 L890,210 z" fill="none" stroke="#999"/>
+<text x="898" y="214" fill="#666" font-size="8">PRV</text>
+<path d="M725,234 L735,234 L730,226 z" fill="none" stroke="#999"/>
+<text x="737" y="234" fill="#666" font-size="8">suction R</text>
+<line x1="730" y1="170" x2="730" y2="226" stroke="#444" stroke-dasharray="4 3" stroke-width="1"/>
+<path d="M884,296 L896,300 L884,304" fill="none" stroke="#bbb"/>
+<text x="866" y="314" fill="#888" font-size="8">WS jet R</text>
+<line x1="440" y1="170" x2="440" y2="232" stroke="#e8e8e8" stroke-width="2.5"/>
+<circle cx="440" cy="240" r="8" fill="#111" stroke="#ddd" stroke-width="1.4"/>
+<path d="M437,236 L444,240 L437,244 z" fill="#ddd"/>
+<text x="425" y="260" fill="#bbb" font-size="9">O/J L</text>
+<path d="M435,216 L445,216 L440,208 z" fill="none" stroke="#999"/>
+<line x1="560" y1="170" x2="560" y2="232" stroke="#e8e8e8" stroke-width="2.5"/>
+<circle cx="560" cy="240" r="8" fill="#111" stroke="#ddd" stroke-width="1.4"/>
+<path d="M557,236 L564,240 L557,244 z" fill="#ddd"/>
+<text x="545" y="260" fill="#bbb" font-size="9">O/J R</text>
+<path d="M555,216 L565,216 L560,208 z" fill="none" stroke="#999"/>
+<circle cx="500" cy="240" r="8" fill="#111" stroke="#555" stroke-width="1.4"/>
+<text x="482" y="260" fill="#666" font-size="9">APU DC</text>
+<path d="M424,311 L436,315 L424,319" fill="none" stroke="#bbb"/>
+<text x="400" y="329" fill="#888" font-size="8">SCAV jet L</text>
+<path d="M564,311 L576,315 L564,319" fill="none" stroke="#bbb"/>
+<text x="540" y="329" fill="#888" font-size="8">SCAV jet R</text>
+<line x1="420" y1="315" x2="385" y2="315" stroke="#444" stroke-dasharray="4 3" stroke-width="1"/>
+<rect x="385" y="310" width="10" height="10" fill="none" stroke="#ddd" stroke-width="1.2"/>
+<text x="360" y="306" fill="#888" font-size="9">SCAV-ISO L</text>
+<line x1="580" y1="315" x2="615" y2="315" stroke="#444" stroke-dasharray="4 3" stroke-width="1"/>
+<rect x="605" y="310" width="10" height="10" fill="none" stroke="#ddd" stroke-width="1.2"/>
+<text x="580" y="306" fill="#888" font-size="9">SCAV-ISO R</text>
+<rect x="65" y="205" width="10" height="10" fill="#ddd" stroke="#ddd" stroke-width="1.2"/>
+<text x="65" y="225" fill="#555" font-size="7">VD</text>
+<rect x="85" y="205" width="10" height="10" fill="#ddd" stroke="#ddd" stroke-width="1.2"/>
+<text x="85" y="225" fill="#555" font-size="7">VD</text>
+<rect x="645" y="205" width="10" height="10" fill="#ddd" stroke="#ddd" stroke-width="1.2"/>
+<text x="645" y="225" fill="#555" font-size="7">VD</text>
+<rect x="665" y="205" width="10" height="10" fill="#ddd" stroke="#ddd" stroke-width="1.2"/>
+<text x="665" y="225" fill="#555" font-size="7">VD</text>
+<rect x="415" y="205" width="10" height="10" fill="#ddd" stroke="#ddd" stroke-width="1.2"/>
+<text x="415" y="225" fill="#555" font-size="7">VD</text>
+<rect x="435" y="205" width="10" height="10" fill="#ddd" stroke="#ddd" stroke-width="1.2"/>
+<text x="435" y="225" fill="#555" font-size="7">VD</text>
+<rect x="455" y="205" width="10" height="10" fill="#ddd" stroke="#ddd" stroke-width="1.2"/>
+<text x="455" y="225" fill="#555" font-size="7">VD</text>
+<rect x="475" y="205" width="10" height="10" fill="#ddd" stroke="#ddd" stroke-width="1.2"/>
+<text x="475" y="225" fill="#555" font-size="7">VD</text>
+<rect x="335" y="205" width="10" height="10" fill="#ddd" stroke="#ddd" stroke-width="1.2"/>
+<text x="328" y="226" fill="#888" font-size="9">VF L</text>
+<rect x="575" y="205" width="10" height="10" fill="#ddd" stroke="#ddd" stroke-width="1.2"/>
+<text x="568" y="226" fill="#888" font-size="9">VF C</text>
+<rect x="915" y="205" width="10" height="10" fill="#ddd" stroke="#ddd" stroke-width="1.2"/>
+<text x="908" y="226" fill="#888" font-size="9">VF R</text>
+<path d="M16,256 L26,256 L21,264 z" fill="none" stroke="#999"/>
+<path d="M974,256 L984,256 L979,264 z" fill="none" stroke="#999"/>
+<path d="M16,276 L26,276 L21,284 z" fill="none" stroke="#999"/>
+<path d="M974,276 L984,276 L979,284 z" fill="none" stroke="#999"/>
+<path d="M16,296 L26,296 L21,304 z" fill="none" stroke="#999"/>
+<path d="M974,296 L984,296 L979,304 z" fill="none" stroke="#999"/>
+<text x="10" y="352" fill="#555" font-size="8">drain ×3</text>
+<text x="950" y="352" fill="#555" font-size="8">drain ×3</text>
+<rect x="16" y="240" width="10" height="10" fill="none" stroke="#ddd" stroke-width="1.2"/>
+<rect x="974" y="240" width="10" height="10" fill="none" stroke="#ddd" stroke-width="1.2"/>
+<text x="8" y="375" fill="#555" font-size="8">PRV</text>
+<path d="M539,276 L551,280 L539,284" fill="none" stroke="#bbb"/>
+<text x="512" y="294" fill="#888" font-size="8">NGS ejector</text>
+<path d="M591,259 L601,259 L596,251 z" fill="none" stroke="#999"/>
+<text x="603" y="259" fill="#666" font-size="8">ACF ×2</text>
+<rect x="296" y="366" width="8" height="8" fill="none" stroke="#777"/>
+<rect x="466" y="366" width="8" height="8" fill="none" stroke="#777"/>
+<rect x="526" y="366" width="8" height="8" fill="none" stroke="#777"/>
+<rect x="696" y="366" width="8" height="8" fill="none" stroke="#777"/>
+<text x="285" y="386" fill="#555" font-size="8">sump</text>
+<text x="685" y="386" fill="#555" font-size="8">sump</text>
+<text x="482" y="386" fill="#555" font-size="8">sump ×2</text>
+<line x1="40" y1="430" x2="960" y2="430" stroke="#444" stroke-dasharray="4 3" stroke-width="2"/>
+<text x="380" y="446" fill="#666" font-size="9">refuel / jettison manifold · not in use</text>
+<rect x="40" y="440" width="70" height="22" fill="#1a1a1a" stroke="#555"/>
+<text x="46" y="455" fill="#777" font-size="8">REFUEL ADPT</text>
+<line x1="100" y1="370" x2="100" y2="430" stroke="#444" stroke-dasharray="4 3" stroke-width="1"/>
+<rect x="95" y="395" width="10" height="10" fill="none" stroke="#ddd" stroke-width="1.2"/>
+<text x="79" y="392" fill="#888" font-size="9">RF L-OB</text>
+<line x1="300" y1="370" x2="300" y2="430" stroke="#444" stroke-dasharray="4 3" stroke-width="1"/>
+<rect x="295" y="395" width="10" height="10" fill="none" stroke="#ddd" stroke-width="1.2"/>
+<text x="279" y="392" fill="#888" font-size="9">RF L-IB</text>
+<line x1="460" y1="370" x2="460" y2="430" stroke="#444" stroke-dasharray="4 3" stroke-width="1"/>
+<rect x="455" y="395" width="10" height="10" fill="none" stroke="#ddd" stroke-width="1.2"/>
+<text x="445" y="392" fill="#888" font-size="9">RF C1</text>
+<line x1="540" y1="370" x2="540" y2="430" stroke="#444" stroke-dasharray="4 3" stroke-width="1"/>
+<rect x="535" y="395" width="10" height="10" fill="none" stroke="#ddd" stroke-width="1.2"/>
+<text x="525" y="392" fill="#888" font-size="9">RF C2</text>
+<line x1="700" y1="370" x2="700" y2="430" stroke="#444" stroke-dasharray="4 3" stroke-width="1"/>
+<rect x="695" y="395" width="10" height="10" fill="none" stroke="#ddd" stroke-width="1.2"/>
+<text x="679" y="392" fill="#888" font-size="9">RF R-IB</text>
+<line x1="900" y1="370" x2="900" y2="430" stroke="#444" stroke-dasharray="4 3" stroke-width="1"/>
+<rect x="895" y="395" width="10" height="10" fill="none" stroke="#ddd" stroke-width="1.2"/>
+<text x="879" y="392" fill="#888" font-size="9">RF R-OB</text>
+<rect x="385" y="445" width="10" height="10" fill="none" stroke="#ddd" stroke-width="1.2"/>
+<text x="363" y="468" fill="#888" font-size="9">DEF-ISO L</text>
+<rect x="605" y="445" width="10" height="10" fill="none" stroke="#ddd" stroke-width="1.2"/>
+<text x="583" y="468" fill="#888" font-size="9">DEF-ISO R</text>
+<line x1="430" y1="248" x2="430" y2="430" stroke="#444" stroke-dasharray="4 3" stroke-width="1"/>
+<rect x="425" y="415" width="10" height="10" fill="none" stroke="#ddd" stroke-width="1.2"/>
+<text x="400" y="418" fill="#888" font-size="9">JETT-ISO L</text>
+<line x1="570" y1="248" x2="570" y2="430" stroke="#444" stroke-dasharray="4 3" stroke-width="1"/>
+<rect x="565" y="415" width="10" height="10" fill="none" stroke="#ddd" stroke-width="1.2"/>
+<text x="540" y="418" fill="#888" font-size="9">JETT-ISO R</text>
+<rect x="325" y="440" width="10" height="10" fill="#ddd" stroke="#ddd" stroke-width="1.2"/>
+<text x="315" y="463" fill="#888" font-size="9">MDV L</text>
+<rect x="665" y="440" width="10" height="10" fill="#ddd" stroke="#ddd" stroke-width="1.2"/>
+<text x="655" y="463" fill="#888" font-size="9">MDV R</text>
+<line x1="150" y1="430" x2="150" y2="480" stroke="#444" stroke-dasharray="4 3" stroke-width="1.5"/>
+<rect x="145" y="475" width="10" height="10" fill="none" stroke="#ddd" stroke-width="1.2"/>
+<text x="135" y="498" fill="#888" font-size="9">NOZ L</text>
+<line x1="850" y1="430" x2="850" y2="480" stroke="#444" stroke-dasharray="4 3" stroke-width="1.5"/>
+<rect x="845" y="475" width="10" height="10" fill="none" stroke="#ddd" stroke-width="1.2"/>
+<text x="835" y="498" fill="#888" font-size="9">NOZ R</text>
+<text x="120" y="512" fill="#555" font-size="8">jettison nozzle · TE inboard of aileron</text>
+<rect x="112" y="530" width="76" height="22" fill="#1a1a1a" stroke="#888"/>
+<text x="120" y="545" fill="#bbb" font-size="9">FQDC L</text>
+<rect x="462" y="530" width="76" height="22" fill="#1a1a1a" stroke="#888"/>
+<text x="470" y="545" fill="#bbb" font-size="9">FQDC C</text>
+<rect x="812" y="530" width="76" height="22" fill="#1a1a1a" stroke="#888"/>
+<text x="820" y="545" fill="#bbb" font-size="9">FQDC R</text>
+<text x="60" y="572" fill="#777" font-size="9">CAN → RDC ×2 per FQDC · channels A/B · FDS ×2 · FCS ×4 · height sensors · overfill ×6 · RTD per tank</text>
+<text x="60" y="594" fill="#888" font-size="10">FOB 40 910 kg · imbalance 40 kg · flow bars from valve/pump config (not sensed) · CG 26.4 % MAC</text></svg></div>
+<div class="side"><h2>XFEED <span>crossfeed valve · shut</span></h2><div class="pad">
+<div class="kv">
+ <div>type</div><div>motor-operated ball valve</div>
+ <div>location</div><div>centre tank manifold · actuator in L wheel well</div>
+ <div>power</div><div>28 VDC · RPDU 72 ch 9 · SSPC 5 A</div>
+ <div>command</div><div>FQMS (CCS) via RPDU · FCP switch</div>
+ <div>position</div><div>0 % (shut)</div>
+ <div>micro-switches</div><div>OPEN off · CLOSED on</div>
+ <div>motor current</div><div>0.0 A (limit switch cut power)</div>
+ <div>last travel</div><div>2.1 s · 3.4 A peak</div>
+ <div>actuator temp</div><div>−8 °C (wheel well)</div>
+ <div>cycles</div><div>1 204</div>
+ <div>actuator rev.</div><div>post SB 280015 replacement</div>
+</div>
+<h3>Indication logic</h3>
+<div class="kv">
+ <div>FCP VALVE light</div><div>off (position agrees)</div>
+ <div>EICAS</div><div>FUEL CROSSFEED if disagree</div>
+ <div>synoptic</div><div>white = shut · green = open/transit · amber ✕ = failed</div>
+</div>
+<h3>History</h3>
+<table>
+<tr><td>2611.0</td><td>cmd SHUT (balance done)</td><td>2.1 s</td></tr>
+<tr><td>2430.4</td><td>cmd OPEN (balance)</td><td>2.2 s</td></tr>
+<tr><td>0.0</td><td>power-up BIT pass</td><td></td></tr>
+</table>
+<h3>Failures armed</h3>
+<div class="kv"><div>motor</div><div>0.00</div><div>micro-switch stuck</div><div>0.00</div><div>ball seized</div><div>0.00</div><div>external leak</div><div>0.00</div></div>
+</div></div>
+<div class="bottom"><h2>Every valve <span>11 of 71 shown</span></h2>
+<table><tr><th>id</th><th>item</th><th>type</th><th>power</th><th>commanded by</th><th>cmd</th><th>actual</th><th>pos</th><th>switches</th><th>last travel</th></tr>
+<tr><td>SPAR-L</td><td>engine fuel shutoff L</td><td>ball · 28 VDC motor</td><td>RPDU · FSM backup</td><td>fuel ctl / fire sw</td><td>open</td><td>open</td><td>100 %</td><td>O on · C off</td><td>2.3 s</td></tr>
+<tr><td>SPAR-R</td><td>engine fuel shutoff R</td><td>ball · 28 VDC motor</td><td>RPDU · FSM backup</td><td>fuel ctl / fire sw</td><td>open</td><td>open</td><td>100 %</td><td>O on · C off</td><td>2.2 s</td></tr>
+<tr><td>APU-SOV</td><td>APU shutoff</td><td>ball · 28 VDC motor</td><td>RPDU · FSM backup</td><td>APUC / fire sw</td><td>shut</td><td>shut</td><td>0 %</td><td>O off · C on</td><td>2.4 s</td></tr>
+<tr><td>XFEED</td><td>crossfeed</td><td>ball · 28 VDC motor</td><td>RPDU</td><td>FQMS / FCP</td><td>shut</td><td>shut</td><td>0 %</td><td>O off · C on</td><td>2.1 s</td></tr>
+<tr><td>SCAV-ISO L</td><td>scavenge isolation L</td><td>28 VDC</td><td>RPDU</td><td>FQMS</td><td>shut</td><td>shut</td><td>0 %</td><td>—</td><td>1.8 s</td></tr>
+<tr><td>JETT-ISO L</td><td>jettison isolation L (2 in)</td><td>28 VDC</td><td>RPDU</td><td>FQMS</td><td>shut</td><td>shut</td><td>0 %</td><td>—</td><td>—</td></tr>
+<tr><td>DEF-ISO L</td><td>defuel / isolation L</td><td>28 VDC motor</td><td>RPDU</td><td>RCP / FQMS</td><td>shut</td><td>shut</td><td>0 %</td><td>—</td><td>—</td></tr>
+<tr><td>RF L-OB</td><td>refuel valve L outboard</td><td>ball · 28 VDC motor</td><td>RPDU</td><td>FQMS</td><td>shut</td><td>shut</td><td>0 %</td><td>—</td><td>3.0 s</td></tr>
+<tr><td>NOZ L</td><td>jettison nozzle L (2 in)</td><td>ball · 28 VDC motor</td><td>RPDU, hard-wired</td><td>NOZZLE sw</td><td>shut</td><td>shut</td><td>0 %</td><td>—</td><td>—</td></tr>
+<tr><td>MDV L</td><td>manifold drain L</td><td>spring poppet</td><td>—</td><td>pressure</td><td>—</td><td>open</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>VF L</td><td>vent float L</td><td>float</td><td>—</td><td>fuel level</td><td>—</td><td>open</td><td>—</td><td>—</td><td>—</td></tr></table></div>
+</div></body></html>

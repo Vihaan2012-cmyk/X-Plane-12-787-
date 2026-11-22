@@ -1,0 +1,16 @@
+[package]
+name = "b789-clock"
+description = "The discrete-event scheduler: one sim clock at microsecond resolution, fixed event order."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "clock"
+
+[dependencies]
+
+
+[lints]
+workspace = true

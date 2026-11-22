@@ -1,0 +1,17 @@
+[package]
+name = "b789-xp-host"
+description = "X-Plane 12 plugin: fills the truth interface and writes outputs. Built last."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "xp_host"
+crate-type = ["cdylib"]
+
+[dependencies]
+
+# FFI to the XPLM SDK needs unsafe, so this crate has its own lints.
+[lints.rust]
+unsafe_code = "allow"

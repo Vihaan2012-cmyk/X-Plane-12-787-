@@ -1,0 +1,16 @@
+[package]
+name = "b789-world"
+description = "The world outside the aircraft: atmosphere, terrain, GNSS constellation, radio propagation."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "world"
+
+[dependencies]
+
+
+[lints]
+workspace = true

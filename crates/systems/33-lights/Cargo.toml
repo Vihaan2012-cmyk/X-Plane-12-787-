@@ -1,0 +1,16 @@
+[package]
+name = "b789-sys-lights"
+description = "ATA 33: exterior and interior lights."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "sys_lights"
+
+[dependencies]
+
+
+[lints]
+workspace = true

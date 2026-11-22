@@ -1,0 +1,16 @@
+[package]
+name = "b789-bus"
+description = "Data links with real packing and timing: AFDX/CDN, ARINC 429, CAN, discrete and analog wires."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "bus"
+
+[dependencies]
+
+
+[lints]
+workspace = true

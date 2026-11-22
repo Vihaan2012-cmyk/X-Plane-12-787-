@@ -1,0 +1,114 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css"><title>Electrical</title>
+<style>.on{stroke:#e8e8e8}.off{stroke:#444;stroke-dasharray:4 3}.bus{stroke-width:4}.box{fill:#1a1a1a;stroke:#777}.boxon{fill:#1a1a1a;stroke:#ddd}.k{fill:#111;stroke:#ddd}</style></head><body>
+<div class="top"><b>SYSTEMS</b><span>Electrical</span><span class="dim">sim time</span><span>2843.112 s</span><span class="dim">phase</span><span>cruise FL370</span><span class="dim">view</span><span>single-line diagram · live</span><span class="dim">topology</span><span>from ATA 24 / EPGSS course (verify)</span></div>
+<div class="shell">
+<nav>
+<div class="h">POWER</div><div class="on">Electrical</div><div>Engines</div><div>APU</div><div>Fuel</div><div>Hydraulics</div>
+<div class="h">FLIGHT</div><div>Flight controls</div><div>Gear, brakes</div><div>Autoflight</div><div>FMS</div>
+<div class="h">ENVIRONMENT</div><div>Air, pressurisation</div><div>Ice and rain</div><div>Fire</div>
+<div class="h">AVIONICS</div><div>Air data, inertial</div><div>Navigation radios</div><div>Surveillance</div><div>Communications</div><div>Displays, alerting</div><div>CCS computers</div><div>CDN network</div>
+<div class="h">CABIN</div><div>Lights</div><div>Doors, oxygen, water</div><div>EFB, info systems</div>
+</nav>
+
+<div class="diag"><h2>Single-line diagram <span>solid = powered · dashed = dead · ■ closed contactor · □ open</span></h2>
+<svg width="1000" height="610" viewBox="0 0 1000 610">
+ <!-- sources -->
+ <rect x="30" y="20" width="96" height="44" class="boxon"/><text x="40" y="38">VFSG L1</text><text x="40" y="54" class="d">235V 398Hz</text>
+ <rect x="140" y="20" width="96" height="44" class="boxon"/><text x="150" y="38">VFSG L2</text><text x="150" y="54" class="d">235V 398Hz</text>
+ <rect x="330" y="20" width="96" height="44" class="box"/><text x="340" y="38">ASG L</text><text x="340" y="54" class="f">APU off</text>
+ <rect x="440" y="20" width="96" height="44" class="box"/><text x="450" y="38">ASG R</text><text x="450" y="54" class="f">APU off</text>
+ <rect x="650" y="20" width="96" height="44" class="boxon"/><text x="660" y="38">VFSG R1</text><text x="660" y="54" class="d">235V 401Hz</text>
+ <rect x="760" y="20" width="96" height="44" class="boxon"/><text x="770" y="38">VFSG R2</text><text x="770" y="54" class="d">235V 401Hz</text>
+ <rect x="880" y="20" width="96" height="44" class="box"/><text x="890" y="38">RAT GEN</text><text x="890" y="54" class="f">stowed</text>
+ <!-- GCBs -->
+ <line x1="78" y1="64" x2="78" y2="120" class="on" stroke-width="2"/><rect x="72" y="86" width="12" height="12" fill="#ddd"/><text x="88" y="96" class="d">GCB</text>
+ <line x1="188" y1="64" x2="188" y2="120" class="on" stroke-width="2"/><rect x="182" y="86" width="12" height="12" fill="#ddd"/>
+ <line x1="378" y1="64" x2="378" y2="120" class="off" stroke-width="2"/><rect x="372" y="86" width="12" height="12" fill="none" stroke="#666"/><text x="388" y="96" class="f">APB</text>
+ <line x1="488" y1="64" x2="488" y2="120" class="off" stroke-width="2"/><rect x="482" y="86" width="12" height="12" fill="none" stroke="#666"/>
+ <line x1="698" y1="64" x2="698" y2="120" class="on" stroke-width="2"/><rect x="692" y="86" width="12" height="12" fill="#ddd"/>
+ <line x1="808" y1="64" x2="808" y2="120" class="on" stroke-width="2"/><rect x="802" y="86" width="12" height="12" fill="#ddd"/>
+ <!-- 235 VAC buses -->
+ <line x1="30" y1="120" x2="126" y2="120" class="on bus"/><text x="30" y="140">235 L1  P100</text>
+ <line x1="140" y1="120" x2="236" y2="120" class="on bus"/><text x="140" y="140">235 L2</text>
+ <line x1="330" y1="120" x2="536" y2="120" class="off bus"/><text x="380" y="140" class="f">P150 APU bus</text>
+ <line x1="650" y1="120" x2="746" y2="120" class="on bus"/><text x="650" y="140">235 R1  P200</text>
+ <line x1="760" y1="120" x2="856" y2="120" class="on bus"/><text x="760" y="140">235 R2</text>
+ <!-- bus ties -->
+ <line x1="236" y1="120" x2="330" y2="120" class="off" stroke-width="2"/><rect x="277" y="114" width="12" height="12" fill="none" stroke="#666"/><text x="262" y="108" class="f">BTB L</text>
+ <line x1="536" y1="120" x2="650" y2="120" class="off" stroke-width="2"/><rect x="587" y="114" width="12" height="12" fill="none" stroke="#666"/><text x="572" y="108" class="f">BTB R</text>
+ <!-- external power -->
+ <rect x="260" y="168" width="86" height="34" class="box"/><text x="266" y="184">EXT FWD L</text><text x="266" y="197" class="f">not avail</text>
+ <rect x="360" y="168" width="86" height="34" class="box"/><text x="366" y="184">EXT FWD R</text><text x="366" y="197" class="f">not avail</text>
+ <rect x="460" y="168" width="86" height="34" class="box"/><text x="466" y="184">EXT AFT</text><text x="466" y="197" class="f">not avail</text>
+ <!-- ATRUs to ±270 -->
+ <g>
+  <line x1="78" y1="120" x2="78" y2="240" class="on" stroke-width="2"/><rect x="40" y="240" width="76" height="34" class="boxon"/><text x="48" y="256">ATRU 1</text><text x="48" y="269" class="d">±270 12.1kW</text>
+  <line x1="188" y1="120" x2="188" y2="240" class="on" stroke-width="2"/><rect x="150" y="240" width="76" height="34" class="boxon"/><text x="158" y="256">ATRU 2</text><text x="158" y="269" class="d">±270 11.8kW</text>
+  <line x1="698" y1="120" x2="698" y2="240" class="on" stroke-width="2"/><rect x="660" y="240" width="76" height="34" class="boxon"/><text x="668" y="256">ATRU 3</text><text x="668" y="269" class="d">±270 12.4kW</text>
+  <line x1="808" y1="120" x2="808" y2="240" class="on" stroke-width="2"/><rect x="770" y="240" width="76" height="34" class="boxon"/><text x="778" y="256">ATRU 4</text><text x="778" y="269" class="d">±270 11.9kW</text>
+  <line x1="40" y1="300" x2="226" y2="300" class="on bus"/><text x="40" y="318">±270 VDC L → CMSC 1–4 (CAC 1,2, EMP)</text>
+  <line x1="660" y1="300" x2="846" y2="300" class="on bus"/><text x="620" y="318">±270 VDC R → CMSC 5–8 (CAC 3,4, EMP)</text>
+  <line x1="78" y1="274" x2="78" y2="300" class="on" stroke-width="2"/><line x1="188" y1="274" x2="188" y2="300" class="on" stroke-width="2"/>
+  <line x1="698" y1="274" x2="698" y2="300" class="on" stroke-width="2"/><line x1="808" y1="274" x2="808" y2="300" class="on" stroke-width="2"/>
+ </g>
+ <!-- ATUs to 115 -->
+ <line x1="126" y1="120" x2="126" y2="370" class="on" stroke-width="2"/><rect x="96" y="370" width="64" height="30" class="boxon"/><text x="104" y="389">ATU L</text>
+ <line x1="760" y1="120" x2="760" y2="370" class="on" stroke-width="2"/><rect x="730" y="370" width="64" height="30" class="boxon"/><text x="738" y="389">ATU R</text>
+ <line x1="40" y1="430" x2="300" y2="430" class="on bus"/><text x="40" y="448">115 VAC L  P300 · 41 A</text>
+ <line x1="600" y1="430" x2="860" y2="430" class="on bus"/><text x="660" y="448">115 VAC R  P400 · 38 A</text>
+ <line x1="128" y1="400" x2="128" y2="430" class="on" stroke-width="2"/><line x1="762" y1="400" x2="762" y2="430" class="on" stroke-width="2"/>
+ <!-- TRUs to 28 -->
+ <line x1="230" y1="430" x2="230" y2="470" class="on" stroke-width="2"/><rect x="200" y="470" width="64" height="28" class="boxon"/><text x="210" y="488">TRU L</text>
+ <line x1="640" y1="430" x2="640" y2="470" class="on" stroke-width="2"/><rect x="610" y="470" width="64" height="28" class="boxon"/><text x="620" y="488">TRU R</text>
+ <line x1="160" y1="530" x2="380" y2="530" class="on bus"/><text x="160" y="548">28 VDC L · 27.9 V</text>
+ <line x1="520" y1="530" x2="740" y2="530" class="on bus"/><text x="560" y="548">28 VDC R · 27.9 V</text>
+ <line x1="232" y1="498" x2="232" y2="530" class="on" stroke-width="2"/><line x1="642" y1="498" x2="642" y2="530" class="on" stroke-width="2"/>
+ <!-- battery and hot bus -->
+ <rect x="410" y="470" width="96" height="44" class="boxon"/><text x="418" y="488">MAIN BATT</text><text x="418" y="503" class="d">29.4V +3.1A</text>
+ <line x1="458" y1="514" x2="458" y2="580" class="on" stroke-width="2"/>
+ <line x1="380" y1="580" x2="540" y2="580" class="on bus"/><text x="384" y="598">HOT BATT bus</text>
+ <rect x="560" y="560" width="96" height="40" class="boxon"/><text x="568" y="578">APU BATT</text><text x="568" y="592" class="d">29.5V +1.2A</text>
+ <text x="880" y="250" class="d">CBIC</text><text x="880" y="266" class="d">SSPC 1 482</text><text x="880" y="282" class="d">open 3</text><text x="880" y="298" class="r">tripped 1</text>
+ <text x="880" y="340" class="d">RPDU ×17</text><text x="880" y="356" class="d">all on CDN</text>
+</svg></div>
+
+<div class="side"><h2>VFSG L1 <span>generate mode · GCB closed</span></h2><div class="pad">
+<div class="kv">
+ <div>output</div><div>235.1 V · 398.2 Hz</div>
+ <div>load</div><div>92.3 kVA (37 %) · PF 0.94</div>
+ <div>phase current</div><div>131 / 129 / 133 A</div>
+ <div>drive speed</div><div>7 964 rpm (IP spool)</div>
+ <div>oil temp in / out</div><div>88 / 101 °C</div>
+ <div>stator temp</div><div>134 °C</div>
+ <div>bearing wear</div><div>0.08</div>
+</div>
+<h3>GCU L1</h3>
+<div class="kv">
+ <div>state</div><div>regulating · field 2.7 A</div>
+ <div>protections armed</div><div>OV UV OF UF OC DP OP</div>
+ <div>last trip</div><div>none this flight</div>
+ <div>powered-time counter</div><div>31.2 days (overflow at 248)</div>
+ <div>software</div><div>part 2.4.1 (post AD 2018-20-15)</div>
+</div>
+<h3>Feeds</h3>
+<table>
+<tr><td>235 L1 bus</td><td>131 A</td></tr>
+<tr><td>ATRU 1</td><td>12.1 kW</td></tr>
+<tr><td>RPDU 71, 73, 75 (via P300)</td><td>18.4 kW</td></tr>
+<tr><td>WIPS L mats (off)</td><td>0 kW</td></tr>
+</table>
+<h3>Failures armed</h3>
+<div class="kv"><div>bearing</div><div>0.00</div><div>regulator</div><div>0.00</div><div>GCU internal</div><div>0.00</div></div>
+</div></div>
+
+<div class="bottom"><h2>Connections <span>every feeder · 42 of 1 611 shown</span></h2>
+<table>
+<tr><th>from</th><th>to</th><th>device</th><th>state</th><th>V</th><th>A</th><th>wire</th><th>wire temp</th><th>trip margin</th></tr>
+<tr><td>VFSG L1</td><td>235 L1</td><td>GCB L1</td><td>closed</td><td>235.1</td><td>131</td><td>4/0 · 7.2 m · nacelle→P100</td><td>48 °C</td><td>—</td></tr>
+<tr><td>235 L1</td><td>ATRU 1</td><td>contactor</td><td>closed</td><td>235.0</td><td>17</td><td>4 AWG · 2.1 m · aft EE</td><td>31 °C</td><td>—</td></tr>
+<tr><td>235 L1</td><td>BTB L</td><td>contactor</td><td>open</td><td>—</td><td>0</td><td>4/0 · 0.6 m</td><td>24 °C</td><td>—</td></tr>
+<tr><td>115 L</td><td>RPDU 75 · ch 12 pitot heat C</td><td>SSPC 10 A</td><td>on</td><td>115.2</td><td>6.4</td><td>18 AWG · 14 m · fwd</td><td>27 °C</td><td>64 %</td></tr>
+<tr><td>115 L</td><td>RPDU 71 · ch 3 galley 2</td><td>SSPC 25 A</td><td>shed</td><td>—</td><td>0</td><td>12 AWG · 21 m</td><td>22 °C</td><td>—</td></tr>
+<tr><td>28 L</td><td>RPDU 73 · ch 7 logo light</td><td>SSPC 5 A</td><td class="bad">tripped (arc)</td><td>—</td><td>0</td><td>22 AWG · 31 m · tail</td><td>23 °C</td><td>—</td></tr>
+</table></div>
+</div></body></html>

@@ -1,0 +1,20 @@
+[package]
+name = "b789-sim-cli"
+description = "Offline runner: stand-in truth, the tablet screen in a desktop window, scenarios, replay."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[[bin]]
+name = "sim-cli"
+path = "src/main.rs"
+
+[dependencies]
+b789-clock.workspace = true
+b789-store.workspace = true
+b789-tablet.workspace = true
+b789-sys-electrical.workspace = true
+
+[lints]
+workspace = true

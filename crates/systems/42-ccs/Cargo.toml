@@ -1,0 +1,16 @@
+[package]
+name = "b789-sys-ccs"
+description = "ATA 42: Common Core System cabinets and the CDN network."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "sys_ccs"
+
+[dependencies]
+
+
+[lints]
+workspace = true

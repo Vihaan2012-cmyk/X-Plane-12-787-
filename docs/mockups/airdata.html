@@ -1,0 +1,123 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css"><title>Air data, inertial</title>
+<style>.on{stroke:#e8e8e8}.off{stroke:#444;stroke-dasharray:4 3}.box{fill:#1a1a1a;stroke:#888}.boxon{fill:#1a1a1a;stroke:#ddd}</style></head><body>
+<div class="top"><b>SYSTEMS</b><span>Air data, inertial, GNSS</span><span class="dim">sim time</span><span>2843.112 s</span><span class="dim">position</span><span>N52°14.6' E016°02.3' FL370</span><span class="dim">view</span><span>sensors · links · satellites</span></div>
+<div class="shell">
+<nav>
+<div class="h">POWER</div><div>Electrical</div><div>Engines</div><div>APU</div><div>Fuel</div><div>Hydraulics</div>
+<div class="h">FLIGHT</div><div>Flight controls</div><div>Gear, brakes</div><div>Autoflight</div><div>FMS</div>
+<div class="h">ENVIRONMENT</div><div>Air, pressurisation</div><div>Ice and rain</div><div>Fire</div>
+<div class="h">AVIONICS</div><div class="on">Air data, inertial</div><div>Navigation radios</div><div>Surveillance</div><div>Communications</div><div>Displays, alerting</div><div>CCS computers</div><div>CDN network</div>
+<div class="h">CABIN</div><div>Lights</div><div>Doors, oxygen, water</div><div>EFB, info systems</div>
+</nav>
+<div class="diag"><h2>Sensors and links <span>truth → probe → ADM → RDC → CDN → ADRF · satellites → antennas → INR → IRU</span></h2>
+<svg width="1000" height="610" viewBox="0 0 1000 610">
+ <!-- aircraft side view -->
+ <path d="M40,300 C60,270 110,262 170,262 L560,262 C600,262 640,255 680,230 L720,170 L760,170 L745,262 C770,268 790,282 790,300 C790,318 770,330 740,334 L170,338 C110,338 60,330 40,300 z" fill="#151515" stroke="#888"/>
+ <text x="300" y="304" class="f">787-9 · left side</text>
+ <!-- pitot probes -->
+ <line x1="88" y1="284" x2="70" y2="278" stroke="#ddd" stroke-width="2"/><text x="40" y="270">pitot L</text>
+ <line x1="96" y1="314" x2="76" y2="322" stroke="#666" stroke-width="2"/><text x="40" y="340" class="d">pitot C, R (right side)</text>
+ <!-- static ports -->
+ <circle cx="190" cy="296" r="3" fill="#ddd"/><circle cx="198" cy="296" r="3" fill="#ddd"/><circle cx="206" cy="296" r="3" fill="#ddd"/><text x="172" y="284" class="d">static ×3 (L)</text>
+ <!-- AOA and TAT -->
+ <line x1="120" y1="292" x2="112" y2="286" stroke="#ddd" stroke-width="2"/><text x="110" y="250">AOA L</text>
+ <rect x="140" y="318" width="6" height="10" fill="#ddd"/><text x="130" y="354" class="d">TAT</text>
+ <!-- ADMs -->
+ <rect x="200" y="380" width="64" height="26" class="boxon"/><text x="206" y="397">ADM L P</text>
+ <rect x="270" y="380" width="64" height="26" class="boxon"/><text x="276" y="397">ADM L S</text>
+ <rect x="340" y="380" width="64" height="26" class="boxon"/><text x="346" y="397">ADM C P</text>
+ <rect x="410" y="380" width="64" height="26" class="boxon"/><text x="416" y="397">ADM C S</text>
+ <rect x="480" y="380" width="64" height="26" class="boxon"/><text x="486" y="397">ADM R P</text>
+ <rect x="550" y="380" width="64" height="26" class="box"/><text x="556" y="397" class="r">ADM R S</text>
+ <path d="M70,278 L70,370 L232,370 L232,380" class="on" fill="none"/>
+ <path d="M200,296 L200,360 L302,360 L302,380" class="on" fill="none"/>
+ <!-- RDCs and CDN -->
+ <rect x="230" y="440" width="84" height="26" class="boxon"/><text x="238" y="457">RDC 1</text>
+ <rect x="370" y="440" width="84" height="26" class="boxon"/><text x="378" y="457">RDC 5</text>
+ <rect x="510" y="440" width="84" height="26" class="boxon"/><text x="518" y="457">RDC 12</text>
+ <line x1="232" y1="406" x2="270" y2="440" class="on"/><line x1="302" y1="406" x2="270" y2="440" class="on"/>
+ <line x1="372" y1="406" x2="412" y2="440" class="on"/><line x1="442" y1="406" x2="412" y2="440" class="on"/>
+ <line x1="512" y1="406" x2="552" y2="440" class="on"/><line x1="582" y1="406" x2="552" y2="440" class="off"/>
+ <line x1="230" y1="500" x2="620" y2="500" stroke="#ddd" stroke-width="3"/><text x="230" y="520">CDN A/B → ADRF (GPM L2, R2) · voting L/C/R</text>
+ <line x1="272" y1="466" x2="272" y2="500" class="on"/><line x1="412" y1="466" x2="412" y2="500" class="on"/><line x1="552" y1="466" x2="552" y2="500" class="on"/>
+ <!-- IRU / AHRU -->
+ <rect x="640" y="380" width="70" height="26" class="boxon"/><text x="648" y="397">IRU L</text>
+ <rect x="716" y="380" width="70" height="26" class="boxon"/><text x="724" y="397">IRU R</text>
+ <rect x="640" y="412" width="70" height="26" class="boxon"/><text x="648" y="429">AHRU L</text>
+ <rect x="716" y="412" width="70" height="26" class="boxon"/><text x="724" y="429">AHRU R</text>
+ <text x="640" y="372" class="d">aft EE bay</text>
+ <line x1="712" y1="438" x2="712" y2="500" class="on"/><line x1="620" y1="500" x2="712" y2="500" class="on" stroke-width="3"/>
+ <!-- GNSS antennas -->
+ <rect x="420" y="252" width="14" height="8" fill="#ddd"/><rect x="470" y="252" width="14" height="8" fill="#ddd"/><text x="410" y="246" class="d">GNSS antennas ×2</text>
+ <path d="M427,252 L427,230 L820,230 L820,380" class="on" fill="none" stroke-dasharray="1 0"/>
+ <rect x="800" y="380" width="80" height="26" class="boxon"/><text x="806" y="397">INR 1, 2</text>
+ <line x1="800" y1="393" x2="786" y2="393" class="on"/>
+ <!-- signals from orbit -->
+ <g stroke="#666" stroke-width="1">
+  <line x1="427" y1="252" x2="300" y2="40"/><line x1="427" y1="252" x2="470" y2="30"/><line x1="477" y1="252" x2="640" y2="44"/>
+  <line x1="477" y1="252" x2="760" y2="70"/><line x1="427" y1="252" x2="150" y2="90"/>
+ </g>
+ <g>
+  <circle cx="300" cy="40" r="4" fill="#ddd"/><text x="308" y="44">G12</text>
+  <circle cx="470" cy="30" r="4" fill="#ddd"/><text x="478" y="34">G05</text>
+  <circle cx="640" cy="44" r="4" fill="#ddd"/><text x="648" y="48">G25</text>
+  <circle cx="760" cy="70" r="4" fill="#ddd"/><text x="768" y="74">G29</text>
+  <circle cx="150" cy="90" r="4" fill="#888"/><text x="158" y="94" class="d">G20 low el</text>
+ </g>
+ <text x="40" y="20" class="d">signal paths: geometric range + Sagnac + iono (Klobuchar residual) + tropo + multipath</text>
+ <!-- sky plot -->
+ <g transform="translate(895,120)">
+  <circle r="80" fill="none" stroke="#444"/><circle r="53" fill="none" stroke="#2c2c2c"/><circle r="27" fill="none" stroke="#2c2c2c"/>
+  <line x1="-80" y1="0" x2="80" y2="0" stroke="#2c2c2c"/><line x1="0" y1="-80" x2="0" y2="80" stroke="#2c2c2c"/>
+  <text x="-4" y="-84" class="d">N</text>
+  <circle cx="-30" cy="-40" r="4" fill="#ddd"/><text x="-26" y="-44">05</text>
+  <circle cx="22" cy="-18" r="4" fill="#ddd"/><text x="26" y="-22">12</text>
+  <circle cx="44" cy="30" r="4" fill="#ddd"/><text x="48" y="26">25</text>
+  <circle cx="-50" cy="22" r="4" fill="#ddd"/><text x="-46" y="18">29</text>
+  <circle cx="-8" cy="56" r="4" fill="#ddd"/><text x="-4" y="52">02</text>
+  <circle cx="64" cy="-46" r="4" fill="#888"/><text x="44" y="-54" class="d">20 masked</text>
+  <circle cx="-70" cy="-20" r="4" fill="none" stroke="#666"/><text x="-74" y="-28" class="f">31</text>
+  <text x="-74" y="104" class="d">sky plot · antenna 1</text>
+ </g>
+</svg></div>
+<div class="side"><h2>IRU L <span>NAV · GPS blended</span></h2><div class="pad">
+<div class="kv">
+ <div>mode</div><div>NAV (aligned 7 m 42 s at 52.2° N)</div>
+ <div>blend</div><div>GPS hybrid · INR 1 · HPL 0.08 nm</div>
+ <div>pure-inertial error</div><div>0.41 nm (truth view)</div>
+ <div>Schuler phase</div><div>63 of 84.4 min</div>
+ <div>gyro bias (est.)</div><div>0.004 °/h · cold-start term decayed</div>
+ <div>heading</div><div>271.4° T · mag var table 2025.0</div>
+ <div>temperature</div><div>41 °C (aft EE bay 24 °C)</div>
+</div>
+<h3>ADRF voting</h3>
+<div class="kv">
+ <div>CAS L / C / R</div><div>251.3 / 251.4 / 251.2 kt</div>
+ <div>ALT L / C / R</div><div>37 002 / 37 004 / <span class="bad">— (ADM R S fault)</span></div>
+ <div>selected</div><div>mid-value L/C · R static excluded</div>
+ <div>AOA L / R</div><div>2.48° / 2.51°</div>
+ <div>TAT (6 inputs)</div><div>−29.1 °C weighted</div>
+ <div>AOA SPD</div><div>inactive</div>
+</div>
+<h3>GNSS · INR 1</h3>
+<table>
+<tr><th>PRN</th><th>el</th><th>C/N0</th><th>used</th><th>resid</th></tr>
+<tr><td>05</td><td>62°</td><td>47</td><td>yes</td><td>0.8 m</td></tr>
+<tr><td>12</td><td>71°</td><td>48</td><td>yes</td><td>−0.4 m</td></tr>
+<tr><td>25</td><td>38°</td><td>44</td><td>yes</td><td>1.1 m</td></tr>
+<tr><td>29</td><td>41°</td><td>43</td><td>yes</td><td>−1.3 m</td></tr>
+<tr><td>02</td><td>24°</td><td>39</td><td>yes</td><td>2.0 m</td></tr>
+<tr><td>20</td><td>9°</td><td class="bad">masked</td><td>no</td><td>—</td></tr>
+</table>
+</div></div>
+<div class="bottom"><h2>Links <span>sensor → consumer</span></h2>
+<table>
+<tr><th>source</th><th>via</th><th>port / VL</th><th>rate</th><th>age</th><th>consumers</th><th>status</th></tr>
+<tr><td>Pitot L</td><td>ADM L P → RDC 1</td><td>VL 0233</td><td>62.5/s</td><td>3 ms</td><td>ADRF L, R</td><td>ok</td></tr>
+<tr><td>Static R (×2 ports)</td><td>ADM R S → RDC 12</td><td>VL 0236</td><td>—</td><td class="bad">412 ms</td><td>ADRF L, R</td><td class="bad">ADM fault · excluded</td></tr>
+<tr><td>AOA L</td><td>RDC 1 (resolver)</td><td>VL 0240</td><td>100/s</td><td>2 ms</td><td>ADRF, FCM</td><td>ok</td></tr>
+<tr><td>IRU L</td><td>CDN direct</td><td>VL 0D02</td><td>50/s</td><td>4 ms</td><td>ADRF, FMF, DCAS, FCM</td><td>ok</td></tr>
+<tr><td>INR 1 GNSS</td><td>CDN direct</td><td>VL 0D40</td><td>5/s</td><td>81 ms</td><td>IRU L/R, FMF, ATC</td><td>ok</td></tr>
+<tr><td>ADRF L</td><td>GPM L2</td><td>VL 0412</td><td>62.5/s</td><td>2 ms</td><td>DCAS, FCM, EEC, AFDS</td><td>ok</td></tr>
+</table></div>
+</div></body></html>

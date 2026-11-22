@@ -1,0 +1,16 @@
+[package]
+name = "b789-render"
+description = "One 2D drawing API. CPU backend for the tablet, tests and golden images; GPU backend later if needed."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "render"
+
+[dependencies]
+
+
+[lints]
+workspace = true

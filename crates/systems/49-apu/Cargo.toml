@@ -1,0 +1,16 @@
+[package]
+name = "b789-sys-apu"
+description = "ATA 49: APU (APS5000)."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "sys_apu"
+
+[dependencies]
+
+
+[lints]
+workspace = true

@@ -1,0 +1,16 @@
+[package]
+name = "b789-solver-common"
+description = "Shared maths for the solvers: sparse linear algebra, integrators, root finding."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "solver_common"
+
+[dependencies]
+b789-units.workspace = true
+
+[lints]
+workspace = true

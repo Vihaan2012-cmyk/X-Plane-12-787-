@@ -1,0 +1,16 @@
+[package]
+name = "b789-sys-autoflight"
+description = "ATA 22: autopilot, flight directors, autothrottle."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "sys_autoflight"
+
+[dependencies]
+
+
+[lints]
+workspace = true

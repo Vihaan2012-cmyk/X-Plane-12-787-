@@ -1,0 +1,96 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css"><title>Electrical breaker</title>
+<style>.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;padding:12px 16px}
+.ch{border:1px solid #333;background:#1a1a1a;padding:5px 7px;height:58px;font-size:11px;line-height:1.35}
+.ch b{font-weight:600}.ch .dim{color:#8f8f8f}
+.ch.sel{border-color:#ffffff;background:#262626}.ch.off{color:#777}.ch.bad{border-color:#e05555}
+.crumb{padding:8px 16px;color:#8f8f8f;border-bottom:1px solid #333}.crumb b{color:#fff;font-weight:600}</style></head><body>
+<div class="top"><b>SYSTEMS</b><span>Electrical</span><span class="dim">sim time</span><span>2843.112 s</span><span class="dim">view</span><span>zoom: RPDU 75 · channel 12</span></div>
+<div class="shell">
+<nav>
+<div class="h">POWER</div><div class="on">Electrical</div><div>Engines</div><div>APU</div><div>Fuel</div><div>Hydraulics</div>
+<div class="h">FLIGHT</div><div>Flight controls</div><div>Gear, brakes</div><div>Autoflight</div><div>FMS</div>
+<div class="h">ENVIRONMENT</div><div>Air, pressurisation</div><div>Ice and rain</div><div>Fire</div>
+<div class="h">AVIONICS</div><div>Air data, inertial</div><div>Navigation radios</div><div>Surveillance</div><div>Communications</div><div>Displays, alerting</div><div>CCS computers</div><div>CDN network</div>
+<div class="h">CABIN</div><div>Lights</div><div>Doors, oxygen, water</div><div>EFB, info systems</div>
+</nav>
+<div class="diag">
+<div class="crumb">aircraft › 115 VAC L (P300) › <b>RPDU 75</b> (fwd E/E) › channel 12   ·   RPDU 75: 48 channels · 41 on · 4 off · 2 shed · 1 tripped · input 115.2 V · 61.4 A</div>
+<div class="grid">
+<div class="ch"><b>01</b> 5A<br>window heat ctl 1<br><span class="dim">on · 1.8 A</span></div>
+<div class="ch"><b>02</b> 5A<br>window heat ctl 2<br><span class="dim">on · 1.7 A</span></div>
+<div class="ch"><b>03</b> 7.5A<br>wiper L motor<br><span class="dim">off · 0 A</span></div>
+<div class="ch"><b>04</b> 7.5A<br>wiper R motor<br><span class="dim">off · 0 A</span></div>
+<div class="ch"><b>05</b> 3A<br>ISS 1 power<br><span class="dim">on · 1.1 A</span></div>
+<div class="ch"><b>06</b> 3A<br>WXR R/T<br><span class="dim">on · 2.2 A</span></div>
+<div class="ch"><b>07</b> 10A<br>pitot heat L<br><span class="dim">on · 6.3 A</span></div>
+<div class="ch"><b>08</b> 10A<br>pitot heat R<br><span class="dim">on · 6.5 A</span></div>
+<div class="ch"><b>09</b> 5A<br>AOA heat L<br><span class="dim">on · 2.9 A</span></div>
+<div class="ch"><b>10</b> 5A<br>AOA heat R<br><span class="dim">on · 3.0 A</span></div>
+<div class="ch"><b>11</b> 5A<br>TAT probe heat<br><span class="dim">on · 1.4 A</span></div>
+<div class="ch sel"><b>12</b> 10A<br>pitot heat C<br><span>on · 6.4 A</span></div>
+<div class="ch"><b>13</b> 15A<br>PDOS pump L<br><span class="dim">off · 0 A</span></div>
+<div class="ch"><b>14</b> 15A<br>PDOS pump R<br><span class="dim">off · 0 A</span></div>
+<div class="ch off"><b>15</b> 25A<br>galley 1 chiller<br><span>shed</span></div>
+<div class="ch off"><b>16</b> 25A<br>galley 2 chiller<br><span>shed</span></div>
+<div class="ch"><b>17</b> 3A<br>FD door lock<br><span class="dim">on · 0.4 A</span></div>
+<div class="ch"><b>18</b> 3A<br>EFB DU L<br><span class="dim">on · 1.9 A</span></div>
+<div class="ch bad"><b>19</b> 5A<br>landing light nose<br><span class="bad">tripped · arc</span></div>
+<div class="ch"><b>20</b> 5A<br>taxi light<br><span class="dim">off · 0 A</span></div>
+<div class="ch"><b>21</b> 5A<br>logo light L<br><span class="dim">off · 0 A</span></div>
+<div class="ch"><b>22</b> 5A<br>logo light R<br><span class="dim">off · 0 A</span></div>
+<div class="ch"><b>23</b> 3A<br>printer<br><span class="dim">on · 0.3 A</span></div>
+<div class="ch"><b>24</b> 3A<br>cabin sign ctl<br><span class="dim">on · 0.6 A</span></div>
+<div class="ch"><b>25</b> 10A<br>lav water heater<br><span class="dim">on · 4.8 A</span></div>
+<div class="ch"><b>26</b> 5A<br>CSS FAP<br><span class="dim">on · 1.2 A</span></div>
+<div class="ch"><b>27</b> 3A<br>SATCOM HPA ctl<br><span class="dim">on · 0.9 A</span></div>
+<div class="ch"><b>28</b> 7.5A<br>recirc fan fwd<br><span class="dim">on · 5.1 A</span></div>
+<div class="ch"><b>29</b> 3A<br>crew rest smoke det<br><span class="dim">on · 0.2 A</span></div>
+<div class="ch"><b>30</b> 5A<br>…<br><span class="dim">18 more</span></div>
+</div>
+<div class="pad dim">channel names and ratings are placeholders until the breaker list (WDM / CBIC list) is in refs · layout is the real RPDU zoom level</div>
+</div>
+<div class="side"><h2>RPDU 75 · ch 12 <span>SSPC 10 A · pitot heat C</span></h2><div class="pad">
+<div class="kv">
+ <div>state</div><div>on (commanded by CCS ice &amp; rain fn)</div>
+ <div>current</div><div>6.40 A rms</div>
+ <div>voltage in / out</div><div>115.2 / 114.9 V</div>
+ <div>I²t accumulated</div><div>36 % of trip</div>
+ <div>arc-fault detector</div><div>clean · 0 events</div>
+ <div>instant trip</div><div>armed · 80 A</div>
+ <div>SSPC temp</div><div>34 °C</div>
+ <div>trips (life)</div><div>0</div>
+</div>
+<h3>Trip curve</h3>
+<svg width="398" height="170" viewBox="0 0 398 170">
+ <line x1="40" y1="10" x2="40" y2="140" stroke="#555"/><line x1="40" y1="140" x2="390" y2="140" stroke="#555"/>
+ <text x="2" y="16" fill="#8f8f8f" font-size="9">100 s</text><text x="8" y="78" fill="#8f8f8f" font-size="9">1 s</text><text x="2" y="138" fill="#8f8f8f" font-size="9">10 ms</text>
+ <text x="40" y="154" fill="#8f8f8f" font-size="9">1×</text><text x="150" y="154" fill="#8f8f8f" font-size="9">2×</text><text x="260" y="154" fill="#8f8f8f" font-size="9">5×</text><text x="360" y="154" fill="#8f8f8f" font-size="9">10× rated</text>
+ <path d="M60,10 C80,40 110,62 160,78 C220,96 280,110 330,120 L340,120 L340,138 L390,138" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+ <circle cx="20" cy="140" r="0" fill="none"/>
+ <line x1="31" y1="10" x2="31" y2="140" stroke="#8f8f8f" stroke-dasharray="3 3"/><text x="44" y="30" fill="#ffffff" font-size="9">now 0.64×</text>
+ <text x="200" y="86" fill="#8f8f8f" font-size="9">thermal (I²t)</text><text x="300" y="132" fill="#8f8f8f" font-size="9">instant</text>
+</svg>
+<h3>Wire and load</h3>
+<div class="kv">
+ <div>wire</div><div>18 AWG · 14.2 m · fwd E/E → nose</div>
+ <div>bundle / zone</div><div>W5013 · zone 110 → 120</div>
+ <div>wire temp</div><div>27 °C</div>
+ <div>load</div><div>pitot C heater · 735 W</div>
+ <div>heater resistance</div><div>17.9 Ω at −56 °C (rises with age)</div>
+ <div>consumer</div><div>ADM C P (via probe heat)</div>
+</div>
+<h3>History</h3>
+<table><tr><td>2011.6</td><td>on (air, icing)</td></tr><tr><td>1842.0</td><td>low-power (ground)</td></tr><tr><td>0.0</td><td>power-up BIT pass</td></tr></table>
+<h3>Failures armed</h3>
+<div class="kv"><div>SSPC stuck open</div><div>0.00</div><div>spurious trip</div><div>0.00</div><div>wire chafe (arc)</div><div>0.00</div><div>heater open</div><div>0.00</div></div>
+</div></div>
+<div class="bottom"><h2>Channel 12 current <span>last 120 s</span></h2>
+<svg width="1000" height="200" viewBox="0 0 1000 200">
+ <line x1="40" y1="20" x2="40" y2="170" stroke="#444"/><line x1="40" y1="170" x2="980" y2="170" stroke="#444"/>
+ <text x="4" y="24" fill="#8f8f8f" font-size="10">10 A</text><text x="10" y="98" fill="#8f8f8f" font-size="10">5 A</text><text x="10" y="172" fill="#8f8f8f" font-size="10">0 A</text>
+ <line x1="40" y1="95" x2="980" y2="95" stroke="#2a2a2a"/>
+ <path d="M40,74 L120,73 L200,75 L280,74 L360,72 L440,73 L520,74 L600,73 L680,72 L760,74 L840,73 L920,73 L980,74" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+ <text x="50" y="190" fill="#8f8f8f" font-size="10">−120 s</text><text x="940" y="190" fill="#8f8f8f" font-size="10">now</text>
+ <text x="560" y="60" fill="#8f8f8f" font-size="10">6.4 A steady · heater resistance drift +0.4 % / 1000 h</text>
+</svg></div>
+</div></body></html>

@@ -1,0 +1,16 @@
+[package]
+name = "b789-sys-gnss"
+description = "ATA 34: GNSS receivers."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "sys_gnss"
+
+[dependencies]
+
+
+[lints]
+workspace = true

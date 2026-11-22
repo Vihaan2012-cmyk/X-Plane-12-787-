@@ -1,0 +1,17 @@
+[package]
+name = "b789-solver-electrical"
+description = "Electrical network solver: sparse MNA, unbalanced 3-phase phasors, DC, converters, dynamics."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "solver_electrical"
+
+[dependencies]
+b789-units.workspace = true
+b789-solver-common.workspace = true
+
+[lints]
+workspace = true

@@ -1,0 +1,16 @@
+[package]
+name = "b789-sys-hydraulics"
+description = "ATA 29: hydraulic power, L/C/R systems."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "sys_hydraulics"
+
+[dependencies]
+
+
+[lints]
+workspace = true

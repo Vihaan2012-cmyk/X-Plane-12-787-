@@ -1,0 +1,8 @@
+# Reference documents: proprietary, never publish. Only the index is tracked.
+refs/*
+!refs/INDEX.md
+!refs/LINKS.md
+
+# Build output and the local refs archive
+/target/
+/refs.7z

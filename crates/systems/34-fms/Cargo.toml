@@ -1,0 +1,16 @@
+[package]
+name = "b789-sys-fms"
+description = "ATA 34: flight management."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "sys_fms"
+
+[dependencies]
+
+
+[lints]
+workspace = true

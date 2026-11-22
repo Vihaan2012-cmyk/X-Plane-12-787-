@@ -1,0 +1,95 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css"><title>Hydraulics</title>
+<style>.on{stroke:#e8e8e8}.off{stroke:#444;stroke-dasharray:4 3}.box{fill:#1a1a1a;stroke:#888}.boxon{fill:#1a1a1a;stroke:#ddd}</style></head><body>
+<div class="top"><b>SYSTEMS</b><span>Hydraulics</span><span class="dim">sim time</span><span>2843.112 s</span><span class="dim">phase</span><span>cruise FL370</span><span class="dim">view</span><span>L / C / R schematic · live</span></div>
+<div class="shell">
+<nav>
+<div class="h">POWER</div><div>Electrical</div><div>Engines</div><div>APU</div><div>Fuel</div><div class="on">Hydraulics</div>
+<div class="h">FLIGHT</div><div>Flight controls</div><div>Gear, brakes</div><div>Autoflight</div><div>FMS</div>
+<div class="h">ENVIRONMENT</div><div>Air, pressurisation</div><div>Ice and rain</div><div>Fire</div>
+<div class="h">AVIONICS</div><div>Air data, inertial</div><div>Navigation radios</div><div>Surveillance</div><div>Communications</div><div>Displays, alerting</div><div>CCS computers</div><div>CDN network</div>
+<div class="h">CABIN</div><div>Lights</div><div>Doors, oxygen, water</div><div>EFB, info systems</div>
+</nav>
+<div class="diag"><h2>Systems L · C · R <span>solid = pressurised · dashed = not pressurised</span></h2>
+<svg width="1000" height="610" viewBox="0 0 1000 610">
+ <!-- columns -->
+ <g>
+  <text x="120" y="30">LEFT  5 040 psi</text><text x="440" y="30">CENTER  5 020 psi</text><text x="780" y="30">RIGHT  5 035 psi</text>
+  <!-- reservoirs -->
+  <rect x="90" y="50" width="150" height="40" class="boxon"/><text x="100" y="68">reservoir L</text><text x="100" y="82" class="d">0.86 · 61 °C</text>
+  <rect x="420" y="50" width="160" height="40" class="boxon"/><text x="430" y="68">reservoir C</text><text x="430" y="82" class="d">0.91 · 57 °C</text>
+  <rect x="760" y="50" width="150" height="40" class="boxon"/><text x="770" y="68">reservoir R</text><text x="770" y="82" class="d">0.84 · 62 °C</text>
+  <!-- pumps -->
+  <rect x="70" y="130" width="90" height="40" class="boxon"/><text x="80" y="148">EDP L</text><text x="80" y="162" class="d">on · 24.1 gpm</text>
+  <rect x="170" y="130" width="90" height="40" class="box"/><text x="180" y="148">EMP L</text><text x="180" y="162" class="f">auto · off</text>
+  <rect x="380" y="130" width="76" height="40" class="boxon"/><text x="388" y="148">EMP C1</text><text x="388" y="162" class="d">on · 6.2 gpm</text>
+  <rect x="462" y="130" width="76" height="40" class="box"/><text x="470" y="148">EMP C2</text><text x="470" y="162" class="f">standby</text>
+  <rect x="544" y="130" width="76" height="40" class="box"/><text x="552" y="148">RAT</text><text x="552" y="162" class="f">stowed</text>
+  <rect x="740" y="130" width="90" height="40" class="boxon"/><text x="750" y="148">EDP R</text><text x="750" y="162" class="d">on · 23.8 gpm</text>
+  <rect x="840" y="130" width="90" height="40" class="box"/><text x="850" y="148">EMP R</text><text x="850" y="162" class="f">auto · off</text>
+  <!-- supply lines -->
+  <line x1="115" y1="90" x2="115" y2="130" class="on" stroke-width="2"/><line x1="215" y1="90" x2="215" y2="130" class="off" stroke-width="2"/>
+  <line x1="418" y1="90" x2="418" y2="130" class="on" stroke-width="2"/><line x1="500" y1="90" x2="500" y2="130" class="off" stroke-width="2"/>
+  <line x1="785" y1="90" x2="785" y2="130" class="on" stroke-width="2"/><line x1="885" y1="90" x2="885" y2="130" class="off" stroke-width="2"/>
+  <!-- pressure manifolds -->
+  <line x1="60" y1="210" x2="280" y2="210" class="on" stroke-width="4"/><line x1="115" y1="170" x2="115" y2="210" class="on" stroke-width="2"/><line x1="215" y1="170" x2="215" y2="210" class="off" stroke-width="2"/>
+  <line x1="370" y1="210" x2="630" y2="210" class="on" stroke-width="4"/><line x1="418" y1="170" x2="418" y2="210" class="on" stroke-width="2"/><line x1="500" y1="170" x2="500" y2="210" class="off" stroke-width="2"/><line x1="582" y1="170" x2="582" y2="210" class="off" stroke-width="2"/>
+  <line x1="720" y1="210" x2="940" y2="210" class="on" stroke-width="4"/><line x1="785" y1="170" x2="785" y2="210" class="on" stroke-width="2"/><line x1="885" y1="170" x2="885" y2="210" class="off" stroke-width="2"/>
+  <!-- accumulators / HX -->
+  <text x="70" y="236" class="d">accum L 3 120 psi N2 · HX in L main tank</text>
+  <text x="380" y="236" class="d">accum C 3 090 psi N2</text>
+  <text x="730" y="236" class="d">accum R 3 110 psi N2 · HX in R main tank</text>
+ </g>
+ <!-- users -->
+ <g>
+  <text x="60" y="270" class="d">USERS</text>
+  <text x="60" y="292">L: spoilers 2,3,12,13 · aileron L OB · elev L OB</text>
+  <text x="60" y="310">   rudder (upper) · reverser L · flaperon L</text>
+  <text x="370" y="292">C: elevators IB · rudder (mid) · ailerons IB</text>
+  <text x="370" y="310">   gear actuation · NWS · alt extension · flaps/slats PDU</text>
+  <text x="720" y="292">R: spoilers 1,6,7,8,9,14 · aileron R OB · elev R OB</text>
+  <text x="720" y="310">   rudder (lower) · reverser R · flaperon R</text>
+  <text x="60" y="336" class="f">user lists illustrative · verify against ATA 27/29 facts</text>
+ </g>
+ <!-- demand bars -->
+ <g>
+  <text x="60" y="380">demand</text>
+  <rect x="140" y="370" width="200" height="10" fill="#222"/><rect x="140" y="370" width="54" height="10" fill="#bbb"/><text x="350" y="380" class="d">L 6.4 gpm</text>
+  <rect x="140" y="390" width="200" height="10" fill="#222"/><rect x="140" y="390" width="40" height="10" fill="#bbb"/><text x="350" y="400" class="d">C 4.7 gpm</text>
+  <rect x="140" y="410" width="200" height="10" fill="#222"/><rect x="140" y="410" width="57" height="10" fill="#bbb"/><text x="350" y="420" class="d">R 6.8 gpm</text>
+ </g>
+ <text x="520" y="380" class="d">C1 primary today (calendar alternation), C2 standby</text>
+ <text x="520" y="398" class="d">EMP L/R demand logic: armed for flaps, gear, low RA</text>
+ <text x="520" y="416" class="d">RAT: armed · auto-deploy on loss of all pressure / power</text>
+</svg></div>
+<div class="side"><h2>EMP C1 <span>on · primary</span></h2><div class="pad">
+<div class="kv">
+ <div>motor controller</div><div>CMSC 3 · ±270 VDC · 21.4 A</div>
+ <div>motor speed</div><div>7 380 rpm</div>
+ <div>outlet</div><div>5 020 psi · 6.2 gpm</div>
+ <div>case drain</div><div>0.41 gpm · 71 °C</div>
+ <div>inlet</div><div>48 psi (reservoir pressurised)</div>
+ <div>swash plate</div><div>18 % stroke</div>
+ <div>run hours</div><div>8 213 · next swap at day change</div>
+ <div>wear</div><div>0.14 (case drain trend)</div>
+</div>
+<h3>System C</h3>
+<div class="kv">
+ <div>fluid</div><div>Skydrol type IV · 57 °C</div>
+ <div>quantity</div><div>0.91 (of normal)</div>
+ <div>filters ΔP</div><div>press 12 psi · return 9 psi</div>
+ <div>HYDIF</div><div>centre · on CDN</div>
+</div>
+<h3>Failures armed</h3>
+<div class="kv"><div>pump wear</div><div>0.00</div><div>leak (C system)</div><div>0.00</div><div>reservoir press</div><div>0.00</div></div>
+</div></div>
+<div class="bottom"><h2>Lines and users</h2>
+<table>
+<tr><th>user</th><th>system</th><th>demand</th><th>pressure at user</th><th>temp</th><th>state</th></tr>
+<tr><td>Elevator PCU L IB</td><td>C</td><td>0.4 gpm</td><td>4 980 psi</td><td>49 °C</td><td>active</td></tr>
+<tr><td>Rudder PCU mid</td><td>C</td><td>0.2 gpm</td><td>4 990 psi</td><td>45 °C</td><td>active</td></tr>
+<tr><td>Spoiler 3 PCU</td><td>L</td><td>0.0 gpm</td><td>5 030 psi</td><td>41 °C</td><td>faired</td></tr>
+<tr><td>Reverser L HCU</td><td>L</td><td>0.0 gpm</td><td>—</td><td>38 °C</td><td>isolated</td></tr>
+<tr><td>Gear actuation</td><td>C</td><td>0.0 gpm</td><td>—</td><td>36 °C</td><td>isolated (up, locked)</td></tr>
+<tr><td>NWS</td><td>C</td><td>0.0 gpm</td><td>—</td><td>35 °C</td><td>isolated (in air)</td></tr>
+</table></div>
+</div></body></html>

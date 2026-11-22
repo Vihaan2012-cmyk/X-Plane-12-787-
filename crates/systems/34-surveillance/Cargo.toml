@@ -1,0 +1,16 @@
+[package]
+name = "b789-sys-surveillance"
+description = "ATA 34: transponder/ADS-B, TCAS, terrain warning, weather radar."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "sys_surveillance"
+
+[dependencies]
+
+
+[lints]
+workspace = true

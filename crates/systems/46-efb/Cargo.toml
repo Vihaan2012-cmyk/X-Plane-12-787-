@@ -1,0 +1,16 @@
+[package]
+name = "b789-sys-efb"
+description = "ATA 46: the Boeing installed EFB (not the sim tablet)."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "sys_efb"
+
+[dependencies]
+
+
+[lints]
+workspace = true

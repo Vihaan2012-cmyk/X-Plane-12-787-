@@ -1,0 +1,16 @@
+[package]
+name = "b789-sys-airframe"
+description = "Airframe: zones, structure temperatures, lightning, water ingress, vibration."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "sys_airframe"
+
+[dependencies]
+
+
+[lints]
+workspace = true

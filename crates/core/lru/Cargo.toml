@@ -1,0 +1,16 @@
+[package]
+name = "b789-lru"
+description = "The generic computer (LRU) model: power, boot, partitions, BITE, NVM, oscillator, hosted apps."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "lru"
+
+[dependencies]
+
+
+[lints]
+workspace = true

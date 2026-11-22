@@ -1,0 +1,16 @@
+[package]
+name = "b789-sys-water-waste"
+description = "ATA 38: potable water, waste."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "sys_water_waste"
+
+[dependencies]
+
+
+[lints]
+workspace = true

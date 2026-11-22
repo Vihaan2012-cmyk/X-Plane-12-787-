@@ -1,0 +1,16 @@
+[package]
+name = "b789-persist"
+description = "Airframe state kept between sessions: NVM, wear, counters, maintenance history."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "persist"
+
+[dependencies]
+
+
+[lints]
+workspace = true

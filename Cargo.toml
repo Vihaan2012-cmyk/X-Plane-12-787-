@@ -1,0 +1,73 @@
+[workspace]
+resolver = "3"
+members = ["crates/core/*", "crates/solvers/*", "crates/systems/*", "crates/tablet", "crates/sim-cli", "crates/xp-host", "tools/xtask"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.97"
+publish = false
+
+# Every local crate, so members write `b789-units.workspace = true`.
+[workspace.dependencies]
+b789-units = { path = "crates/core/units" }
+b789-clock = { path = "crates/core/clock" }
+b789-store = { path = "crates/core/store" }
+b789-bus = { path = "crates/core/bus" }
+b789-icd = { path = "crates/core/icd" }
+b789-lru = { path = "crates/core/lru" }
+b789-failures = { path = "crates/core/failures" }
+b789-persist = { path = "crates/core/persist" }
+b789-world = { path = "crates/core/world" }
+b789-render = { path = "crates/core/render" }
+b789-solver-common = { path = "crates/solvers/common" }
+b789-solver-electrical = { path = "crates/solvers/electrical" }
+b789-solver-fluid = { path = "crates/solvers/fluid" }
+b789-solver-thermal = { path = "crates/solvers/thermal" }
+b789-solver-gas-path = { path = "crates/solvers/gas-path" }
+b789-solver-mechanical = { path = "crates/solvers/mechanical" }
+b789-sys-air = { path = "crates/systems/21-air" }
+b789-sys-autoflight = { path = "crates/systems/22-autoflight" }
+b789-sys-comms = { path = "crates/systems/23-comms" }
+b789-sys-electrical = { path = "crates/systems/24-electrical" }
+b789-sys-cabin = { path = "crates/systems/25-cabin" }
+b789-sys-fire = { path = "crates/systems/26-fire" }
+b789-sys-flight-controls = { path = "crates/systems/27-flight-controls" }
+b789-sys-fuel = { path = "crates/systems/28-fuel" }
+b789-sys-hydraulics = { path = "crates/systems/29-hydraulics" }
+b789-sys-ice-rain = { path = "crates/systems/30-ice-rain" }
+b789-sys-displays = { path = "crates/systems/31-displays" }
+b789-sys-gear = { path = "crates/systems/32-gear" }
+b789-sys-lights = { path = "crates/systems/33-lights" }
+b789-sys-adirs = { path = "crates/systems/34-adirs" }
+b789-sys-gnss = { path = "crates/systems/34-gnss" }
+b789-sys-radio-nav = { path = "crates/systems/34-radio-nav" }
+b789-sys-surveillance = { path = "crates/systems/34-surveillance" }
+b789-sys-fms = { path = "crates/systems/34-fms" }
+b789-sys-oxygen = { path = "crates/systems/35-oxygen" }
+b789-sys-water-waste = { path = "crates/systems/38-water-waste" }
+b789-sys-ccs = { path = "crates/systems/42-ccs" }
+b789-sys-cmcf = { path = "crates/systems/45-cmcf" }
+b789-sys-efb = { path = "crates/systems/46-efb" }
+b789-sys-apu = { path = "crates/systems/49-apu" }
+b789-sys-airframe = { path = "crates/systems/51-airframe" }
+b789-sys-doors = { path = "crates/systems/52-doors" }
+b789-sys-engines = { path = "crates/systems/71-engines" }
+b789-tablet = { path = "crates/tablet" }
+
+[workspace.lints.rust]
+unsafe_code = "deny"
+
+[workspace.lints.clippy]
+# Determinism rules (see clippy.toml): no random-order maps, no wall clock in sim code.
+disallowed_types = "deny"
+disallowed_methods = "deny"
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 2
+
+[profile.release]
+debug = 1

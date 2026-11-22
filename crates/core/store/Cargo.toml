@@ -1,0 +1,16 @@
+[package]
+name = "b789-store"
+description = "Part storage with stable IDs. Every part carries temperature, wear, tolerance, failures and zone."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "store"
+
+[dependencies]
+
+
+[lints]
+workspace = true

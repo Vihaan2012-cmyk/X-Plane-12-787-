@@ -1,0 +1,16 @@
+[package]
+name = "b789-sys-doors"
+description = "ATA 52/56: doors and windows."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "sys_doors"
+
+[dependencies]
+
+
+[lints]
+workspace = true

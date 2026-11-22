@@ -1,0 +1,17 @@
+[package]
+name = "b789-solver-mechanical"
+description = "Shafts, spools, gearboxes and actuator mechanics."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[lib]
+name = "solver_mechanical"
+
+[dependencies]
+b789-units.workspace = true
+b789-solver-common.workspace = true
+
+[lints]
+workspace = true
