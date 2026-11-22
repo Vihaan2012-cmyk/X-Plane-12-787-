@@ -1,0 +1,10 @@
+item,component,installed,required,condition,source
+42-21-01-01,GPM position 8L,1,0,(M) 8R operates normally; if CN-AA39640 not incorporated one HF system is also considered inoperative,mmel87.txt:15716
+42-21-01-02,GPM position 8R,1,0,(M) 8L operates normally,mmel87.txt:15716
+42-21-02-01A,RDCs 1 and 3,2,1,CCS RDC FAULT; remaining RDCs normal; left thrust reverser locking actuator proximity sensors normal,mmel87.txt:15730
+42-21-02-01B,RDCs 1 and 3,2,1,CCS RDC FAULT; remaining RDCs normal; left thrust reverser considered inoperative,mmel87.txt:15738
+42-21-02-02A,RDCs 2 and 4,2,1,CCS RDC FAULT; remaining RDCs normal; right thrust reverser locking actuator proximity sensors normal,mmel87.txt:15782
+42-21-02-02B,RDCs 2 and 4,2,1,CCS RDC FAULT; remaining RDCs normal; right thrust reverser considered inoperative,mmel87.txt:15782
+42-21-02-03,RDCs 5-18 21 23,16,15,CCS RDC FAULT; remaining RDCs normal,mmel87.txt:15790
+42-21-02-04A,RDC 19,1,0,CCS RDC FAULT; remaining RDCs normal,mmel87.txt:15784
+42-21-02-04B,RDC 19,1,0,(M)(O) deactivated; remaining RDCs normal,mmel87.txt:15784

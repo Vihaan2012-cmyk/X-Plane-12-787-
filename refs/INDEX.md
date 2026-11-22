@@ -59,7 +59,7 @@ Source of everything in `incoming/`: a SwissTransfer link the user shared, downl
 | ATA_49.pdf | 147 Technic training: Auxiliary Power Unit | 787 | Rev 00, 2026-05-01 | 141 | Yes. Scanned clean |
 | rrtcds.pdf | **EASA TCDS E.036, Trent 1000 series**, including **-J3**, the engine on LOT's 787-9 | Trent 1000 | Issue 24, 2026-06-09 | 35 | Scanned, OCR in ocr/ |
 | mmel87.pdf | FAA MMEL Rev 19 (2025-05-20), a scanned copy. Same revision as public/Boeing_787_MMEL_Rev_19 | All | Rev 19 | 266 | Scanned, OCR in ocr/ |
-| TAT_B787_ATA42.pdf | TAT Jordan training manual: ATA 42 Common Core System (-8/-9/-10, GEnx and Trent) | 787 | ? | 102 | **Broken: only pages 1–3 have content. Re-download needed.** Scanned clean |
+| TAT_B787_ATA42.pdf | TAT Jordan training manual: ATA 42 Common Core System (-8/-9/-10, GEnx and Trent) | 787 | MAR 2023 | 102 | Yes. Replaced the broken copy on 2026-11-22; Defender and static scan clean |
 | 787-8 to -9 GE Differences attachments/ | 10 PDFs extracted from the notebook: HF antenna, rudder and yaw control, EDAS, MLG retraction, AVS. They contain 3D models and Flash animations | — | — | — | Scanned clean, see the safety note |
 
 The user copied the first batch from `E:\Downloads` on 2026-11-19. The 8 files above were moved from there the same day; Defender and the static scan found them clean. The ATA books, Locator, Refresher, Trent record and GPM task were moved from there the same day. Public documents fetched from the bundle's links are in `public/`.
